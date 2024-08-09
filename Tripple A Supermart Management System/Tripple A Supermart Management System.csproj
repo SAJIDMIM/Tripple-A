@@ -113,7 +113,7 @@
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CadminUpdateProfile.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
-    <Compile Include="controller\CEmployee.cs" />
+    <Compile Include="controller\EmployeeController.cs" />
     <Compile Include="controller\CEmployeePerformance.cs" />
     <Compile Include="controller\CForgotPassword.cs" />
     <Compile Include="controller\CHealthInsurance.cs" />
@@ -121,10 +121,7 @@
     <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\CLogin.cs" />
     <Compile Include="controller\CJob.cs" />
-    <Compile Include="controller\CPredictiveInventory.cs" />
-    <Compile Include="controller\CRecruitEmployee.cs" />
     <Compile Include="controller\CRetirementPlan.cs" />
-    <Compile Include="controller\CVerifyStock.cs" />
     <Compile Include="model\MEmployee.cs" />
     <Compile Include="model\MEmployeePerformance.cs" />
     <Compile Include="model\MHealthInsurance.cs" />
@@ -137,10 +134,7 @@
     <Compile Include="model\MForgotPassword.cs" />
     <Compile Include="model\MLeave.cs" />
     <Compile Include="model\MLogin.cs" />
-    <Compile Include="model\MPredictInventory.cs" />
     <Compile Include="model\MRetirementPlan.cs" />
-    <Compile Include="model\MVerifyStock.cs" />
-    <Compile Include="model\MRecruitEmployee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\AdminDashboard.cs">
@@ -191,12 +185,6 @@
     <Compile Include="view\PromoteSale.Designer.cs">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\RecruitEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\RecruitEmployee.Designer.cs">
-      <DependentUpon>RecruitEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\RetirementPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,12 +196,6 @@
     </Compile>
     <Compile Include="view\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\VerifyStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\VerifyStock.Designer.cs">
-      <DependentUpon>VerifyStock.cs</DependentUpon>
     </Compile>
     <Compile Include="view\CreateAccount.cs">
       <SubType>Form</SubType>
@@ -232,12 +214,6 @@
     </Compile>
     <Compile Include="view\Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\PredictInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\PredictInventory.Designer.cs">
-      <DependentUpon>PredictInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Forgot_Password.cs">
       <SubType>Form</SubType>
@@ -274,12 +250,6 @@
     </Compile>
     <Compile Include="view\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\SaleData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\SaleData.Designer.cs">
-      <DependentUpon>SaleData.cs</DependentUpon>
     </Compile>
     <Compile Include="view\SplashScreen.cs">
       <SubType>Form</SubType>
@@ -351,17 +321,11 @@
     <EmbeddedResource Include="view\PromoteSale.resx">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\RecruitEmployee.resx">
-      <DependentUpon>RecruitEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\RetirementPlan.resx">
       <DependentUpon>RetirementPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\VerifyStock.resx">
-      <DependentUpon>VerifyStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
@@ -371,9 +335,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\PredictInventory.resx">
-      <DependentUpon>PredictInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Forgot_Password.resx">
       <DependentUpon>Forgot_Password.cs</DependentUpon>
@@ -392,9 +353,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\SaleData.resx">
-      <DependentUpon>SaleData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

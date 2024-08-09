@@ -34,6 +34,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Hr_Dashboard = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_Last_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.cmbRetirement = new System.Windows.Forms.ComboBox();
             this.dtp_Date_Join = new System.Windows.Forms.DateTimePicker();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -42,7 +44,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Actor_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_Clear_Employee = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Update_Employee = new Guna.UI2.WinForms.Guna2Button();
@@ -56,8 +58,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Employee_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Last_Name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hr_Dashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,7 +120,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.guna2TextBox1);
+            this.panel2.Controls.Add(this.txt_Actor_Id);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.btn_Clear_Employee);
             this.panel2.Controls.Add(this.btn_Update_Employee);
@@ -138,6 +138,40 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(854, 579);
             this.panel2.TabIndex = 1;
+            // 
+            // txt_Last_Name
+            // 
+            this.txt_Last_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Last_Name.DefaultText = "";
+            this.txt_Last_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Last_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Last_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Last_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Last_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Last_Name.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.txt_Last_Name.ForeColor = System.Drawing.Color.Black;
+            this.txt_Last_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Last_Name.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
+            this.txt_Last_Name.Location = new System.Drawing.Point(52, 314);
+            this.txt_Last_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Last_Name.Name = "txt_Last_Name";
+            this.txt_Last_Name.PasswordChar = '\0';
+            this.txt_Last_Name.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_Last_Name.PlaceholderText = "Enter Last Name";
+            this.txt_Last_Name.SelectedText = "";
+            this.txt_Last_Name.Size = new System.Drawing.Size(179, 40);
+            this.txt_Last_Name.TabIndex = 166;
+            this.txt_Last_Name.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(47, 268);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 29);
+            this.label11.TabIndex = 165;
+            this.label11.Text = "Last Name";
             // 
             // cmbRetirement
             // 
@@ -161,7 +195,8 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Items.AddRange(new object[] {
-            "Human Resource ",
+            "Supervising",
+            "Marketing ",
             "Stock",
             "Sale",
             "Cashier"});
@@ -233,28 +268,28 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label5.TabIndex = 157;
             this.label5.Text = "Department ";
             // 
-            // guna2TextBox1
+            // txt_Actor_Id
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.guna2TextBox1.Location = new System.Drawing.Point(52, 514);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "Enter Actor Id";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(179, 40);
-            this.guna2TextBox1.TabIndex = 156;
+            this.txt_Actor_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Actor_Id.DefaultText = "";
+            this.txt_Actor_Id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Actor_Id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Actor_Id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Actor_Id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Actor_Id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Actor_Id.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.txt_Actor_Id.ForeColor = System.Drawing.Color.Black;
+            this.txt_Actor_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Actor_Id.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.txt_Actor_Id.Location = new System.Drawing.Point(52, 514);
+            this.txt_Actor_Id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Actor_Id.Name = "txt_Actor_Id";
+            this.txt_Actor_Id.PasswordChar = '\0';
+            this.txt_Actor_Id.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_Actor_Id.PlaceholderText = "Enter Actor Id";
+            this.txt_Actor_Id.SelectedText = "";
+            this.txt_Actor_Id.Size = new System.Drawing.Size(179, 40);
+            this.txt_Actor_Id.TabIndex = 156;
             // 
             // label10
             // 
@@ -349,9 +384,11 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmb_UserType.FormattingEnabled = true;
             this.cmb_UserType.Items.AddRange(new object[] {
-            "HR Manager",
+            "Supervisor",
+            "Digital Marketer",
+            "Accountant",
             "Storekeeper",
-            "Sale Representive",
+            "Sale Representative",
             "Cashier"});
             this.cmb_UserType.Location = new System.Drawing.Point(52, 422);
             this.cmb_UserType.Name = "cmb_UserType";
@@ -433,6 +470,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Employee_Id.SelectedText = "";
             this.txt_Employee_Id.Size = new System.Drawing.Size(179, 40);
             this.txt_Employee_Id.TabIndex = 130;
+            this.txt_Employee_Id.TextChanged += new System.EventHandler(this.txt_Employee_Id_TextChanged);
             // 
             // label4
             // 
@@ -443,40 +481,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label4.Size = new System.Drawing.Size(135, 29);
             this.label4.TabIndex = 129;
             this.label4.Text = "Employee Id";
-            // 
-            // txt_Last_Name
-            // 
-            this.txt_Last_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Last_Name.DefaultText = "";
-            this.txt_Last_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Last_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Last_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Last_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Last_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Last_Name.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.txt_Last_Name.ForeColor = System.Drawing.Color.Black;
-            this.txt_Last_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Last_Name.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
-            this.txt_Last_Name.Location = new System.Drawing.Point(52, 314);
-            this.txt_Last_Name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_Last_Name.Name = "txt_Last_Name";
-            this.txt_Last_Name.PasswordChar = '\0';
-            this.txt_Last_Name.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_Last_Name.PlaceholderText = "Enter Last Name";
-            this.txt_Last_Name.SelectedText = "";
-            this.txt_Last_Name.Size = new System.Drawing.Size(179, 40);
-            this.txt_Last_Name.TabIndex = 166;
-            this.txt_Last_Name.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(47, 268);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 29);
-            this.label11.TabIndex = 165;
-            this.label11.Text = "Last Name";
             // 
             // Employee
             // 
@@ -527,7 +531,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Actor_Id;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txt_Last_Name;
         private System.Windows.Forms.Label label11;

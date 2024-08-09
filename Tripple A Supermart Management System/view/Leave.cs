@@ -16,7 +16,7 @@ namespace Tripple_A_Supermart_Management_System.view
     public partial class Leave : Form
     {
         private MLeave _mLeave;
-        private CLeave _cLeave;
+        private CEmployee _cLeave;
 
         public Leave()
         {
@@ -24,7 +24,7 @@ namespace Tripple_A_Supermart_Management_System.view
             _mLeave = new MLeave();
 
 
-            _cLeave = new CLeave();
+            _cLeave = new CEmployee();
             txt_leaveId.Text = _cLeave.getleaveRequest().ToString();// Corrected method call to get leave request ID
 
         }
@@ -58,7 +58,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 return; // Exit the method if any field is empty
             }
 
-            CLeave cleave = new CLeave();
+            CEmployee cleave = new CEmployee();
             cleave.addLeaveRequest(employeeId, userType, firstName, lastName, leaveType, reason, leaveStartDate, leaveEndDate);
             if (leaveStartDate == leaveEndDate)
             {
