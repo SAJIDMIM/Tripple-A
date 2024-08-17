@@ -94,9 +94,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void pic_Hr_Dashboard_Click(object sender, EventArgs e)
         {
-            HumanResourceDashboard goesBack = new HumanResourceDashboard();
-            goesBack.Show();
-            this.Hide();
+            
         }
     }
     }

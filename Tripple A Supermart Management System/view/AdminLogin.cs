@@ -129,9 +129,7 @@ namespace Tripple_A_Supermart_Management_System.view
                             break;
 
                         case "Director":
-                            DirectorAdminDashboard directorAdminDashboard = new DirectorAdminDashboard();
-                            directorAdminDashboard.Show();
-                            break;
+                           
                         default:
                             MessageBox.Show("Invalid role.","Invalid Type",MessageBoxButtons.OK,MessageBoxIcon.Error);
                             break;

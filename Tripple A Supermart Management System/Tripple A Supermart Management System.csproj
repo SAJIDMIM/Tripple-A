@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -111,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\CAdminLogin.cs" />
-    <Compile Include="controller\CadminUpdateProfile.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\EmployeeController.cs" />
     <Compile Include="controller\CEmployeePerformance.cs" />
@@ -125,7 +124,6 @@
     <Compile Include="model\MEmployee.cs" />
     <Compile Include="model\MEmployeePerformance.cs" />
     <Compile Include="model\MHealthInsurance.cs" />
-    <Compile Include="model\MadminUpdateProfile.cs" />
     <Compile Include="model\MInterview.cs" />
     <Compile Include="model\MJob.cs" />
     <Compile Include="model\MAdmin.cs" />
@@ -137,6 +135,12 @@
     <Compile Include="model\MRetirementPlan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +152,12 @@
     </Compile>
     <Compile Include="view\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CustomerBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CustomerBill.Designer.cs">
+      <DependentUpon>CustomerBill.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Employee.cs">
       <SubType>Form</SubType>
@@ -173,11 +183,11 @@
     <Compile Include="view\Interview.Designer.cs">
       <DependentUpon>Interview.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Profile.cs">
+    <Compile Include="view\MinimumStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <Compile Include="view\MinimumStock.Designer.cs">
+      <DependentUpon>MinimumStock.cs</DependentUpon>
     </Compile>
     <Compile Include="view\PromoteSale.cs">
       <SubType>Form</SubType>
@@ -203,12 +213,6 @@
     <Compile Include="view\CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\DirectorAdminDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\DirectorAdminDashboard.Designer.cs">
-      <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\Feedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,18 +224,6 @@
     </Compile>
     <Compile Include="view\Forgot_Password.Designer.cs">
       <DependentUpon>Forgot_Password.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\GeneralDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\GeneralDashboard.Designer.cs">
-      <DependentUpon>GeneralDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\HumanResourceDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\HumanResourceDashboard.Designer.cs">
-      <DependentUpon>HumanResourceDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Job.cs">
       <SubType>Form</SubType>
@@ -257,17 +249,29 @@
     <Compile Include="view\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\SupervisorDasboard.cs">
+    <Compile Include="view\StockPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\SupervisorDasboard.Designer.cs">
-      <DependentUpon>SupervisorDasboard.cs</DependentUpon>
+    <Compile Include="view\StockPrice.Designer.cs">
+      <DependentUpon>StockPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="view\TargetSale.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\TargetSale.Designer.cs">
       <DependentUpon>TargetSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Transfer_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Transfer_Item.Designer.cs">
+      <DependentUpon>Transfer_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="view\VerificationCode.cs">
       <SubType>Form</SubType>
@@ -297,11 +301,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="view\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CustomerBill.resx">
+      <DependentUpon>CustomerBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
@@ -315,8 +325,8 @@
     <EmbeddedResource Include="view\Interview.resx">
       <DependentUpon>Interview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Profile.resx">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <EmbeddedResource Include="view\MinimumStock.resx">
+      <DependentUpon>MinimumStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PromoteSale.resx">
       <DependentUpon>PromoteSale.cs</DependentUpon>
@@ -330,20 +340,11 @@
     <EmbeddedResource Include="view\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\DirectorAdminDashboard.resx">
-      <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Forgot_Password.resx">
       <DependentUpon>Forgot_Password.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\GeneralDashboard.resx">
-      <DependentUpon>GeneralDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\HumanResourceDashboard.resx">
-      <DependentUpon>HumanResourceDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
@@ -357,11 +358,17 @@
     <EmbeddedResource Include="view\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\SupervisorDasboard.resx">
-      <DependentUpon>SupervisorDasboard.cs</DependentUpon>
+    <EmbeddedResource Include="view\StockPrice.resx">
+      <DependentUpon>StockPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\TargetSale.resx">
       <DependentUpon>TargetSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Transfer_Item.resx">
+      <DependentUpon>Transfer_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\VerificationCode.resx">
       <DependentUpon>VerificationCode.cs</DependentUpon>
@@ -421,6 +428,17 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\quantity.png" />
+    <None Include="Resources\15308669.png" />
+    <None Include="Resources\pasted image 0.png" />
+    <None Include="Resources\increase.png" />
+    <None Include="Resources\tag1.png" />
+    <None Include="Resources\How-to-Set-Stock-Price-Alerts-_-Step-by-Step-Guide-1.jpg" />
+    <None Include="Resources\download1.jpeg" />
+    <None Include="Resources\pngtree-adminconsolepanelrootsoftware-flat-color-icon-vector-png-image_1494043.jpg" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\coreui_1200_600.jpg" />
+    <None Include="Resources\94097e458fbb22184941be57aaab2c8f.png" />
     <None Include="Resources\employee2.png" />
     <None Include="Resources\images %281%292.jpeg" />
     <None Include="Resources\Drawing+or+Cartoon.png" />

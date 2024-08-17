@@ -39,18 +39,18 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_adminusername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_adminpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.chShowPassword = new System.Windows.Forms.CheckBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.linkClear = new System.Windows.Forms.LinkLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txt_adminusername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_adminpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -69,7 +69,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(38, 118);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(37, 50);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(298, 169);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,6 +161,64 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label1.TabIndex = 88;
             this.label1.Text = "Username";
             // 
+            // chShowPassword
+            // 
+            this.chShowPassword.AutoSize = true;
+            this.chShowPassword.Location = new System.Drawing.Point(746, 460);
+            this.chShowPassword.Name = "chShowPassword";
+            this.chShowPassword.Size = new System.Drawing.Size(22, 21);
+            this.chShowPassword.TabIndex = 90;
+            this.chShowPassword.UseVisualStyleBackColor = true;
+            this.chShowPassword.CheckedChanged += new System.EventHandler(this.chShowPassword_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(373, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 29);
+            this.label4.TabIndex = 124;
+            this.label4.Text = "Type";
+            // 
+            // cmbType
+            // 
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(378, 227);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(121, 28);
+            this.cmbType.TabIndex = 125;
+            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged_1);
+            // 
+            // linkClear
+            // 
+            this.linkClear.AutoSize = true;
+            this.linkClear.DisabledLinkColor = System.Drawing.Color.White;
+            this.linkClear.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkClear.ForeColor = System.Drawing.Color.DarkBlue;
+            this.linkClear.LinkColor = System.Drawing.Color.DarkBlue;
+            this.linkClear.Location = new System.Drawing.Point(727, 512);
+            this.linkClear.Name = "linkClear";
+            this.linkClear.Size = new System.Drawing.Size(53, 24);
+            this.linkClear.TabIndex = 126;
+            this.linkClear.TabStop = true;
+            this.linkClear.Text = "Clear";
+            this.linkClear.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClear_LinkClicked);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.next;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(374, 12);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 42);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 123;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            // 
             // txt_adminusername
             // 
             this.txt_adminusername.BorderColor = System.Drawing.Color.Black;
@@ -226,64 +284,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picClose.UseTransparentBackground = true;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // chShowPassword
-            // 
-            this.chShowPassword.AutoSize = true;
-            this.chShowPassword.Location = new System.Drawing.Point(746, 460);
-            this.chShowPassword.Name = "chShowPassword";
-            this.chShowPassword.Size = new System.Drawing.Size(22, 21);
-            this.chShowPassword.TabIndex = 90;
-            this.chShowPassword.UseVisualStyleBackColor = true;
-            this.chShowPassword.CheckedChanged += new System.EventHandler(this.chShowPassword_CheckedChanged);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.next;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(374, 12);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 42);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 123;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
-            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(373, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 29);
-            this.label4.TabIndex = 124;
-            this.label4.Text = "Type";
-            // 
-            // cmbType
-            // 
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(378, 227);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(121, 28);
-            this.cmbType.TabIndex = 125;
-            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged_1);
-            // 
-            // linkClear
-            // 
-            this.linkClear.AutoSize = true;
-            this.linkClear.DisabledLinkColor = System.Drawing.Color.White;
-            this.linkClear.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkClear.ForeColor = System.Drawing.Color.DarkBlue;
-            this.linkClear.LinkColor = System.Drawing.Color.DarkBlue;
-            this.linkClear.Location = new System.Drawing.Point(727, 512);
-            this.linkClear.Name = "linkClear";
-            this.linkClear.Size = new System.Drawing.Size(53, 24);
-            this.linkClear.TabIndex = 126;
-            this.linkClear.TabStop = true;
-            this.linkClear.Text = "Clear";
-            this.linkClear.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClear_LinkClicked);
-            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -313,8 +313,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Load += new System.EventHandler(this.AdminLogin_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

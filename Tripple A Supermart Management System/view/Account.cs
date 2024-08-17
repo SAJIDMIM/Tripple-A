@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
-    public partial class GeneralDashboard : Form
+    public partial class Account : Form
     {
-        public GeneralDashboard()
+        public Account()
         {
             InitializeComponent();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

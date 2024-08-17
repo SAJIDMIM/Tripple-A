@@ -17,50 +17,55 @@ namespace Tripple_A_Supermart_Management_System.view
             InitializeComponent();
         }
 
-        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provideOptionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void generateSaleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void existingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
 
         }
 
         private void updateProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdminProfile profile = new AdminProfile();
-            profile.Show();
+           
+        }
+
+        private void stockPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockPrice setStockPrice = new StockPrice();
+            setStockPrice.Show();
+            this.Hide();
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateProfile updateProfile = new UpdateProfile();
+            updateProfile.Show();
+            this.Hide();
+        }
+
+        private void generateCustomerBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerBill generateCustomerBill = new CustomerBill();
+            generateCustomerBill.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Account viewAccount = new Account();
+            viewAccount.Show();
+            this.Hide();
+        }
+
+        private void minimumStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MinimumStock setMinimum = new MinimumStock();
+            setMinimum.Show();
+            this.Hide();
+        }
+
+        private void transferItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Transfer_Item transferItemDetails = new Transfer_Item();
+            transferItemDetails.Show();
             this.Hide();
         }
     }

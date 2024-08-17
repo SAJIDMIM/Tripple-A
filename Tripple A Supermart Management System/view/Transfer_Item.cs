@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
-    public partial class SupervisorDasboard : Form
+    public partial class Transfer_Item : Form
     {
-        public SupervisorDasboard()
+        public Transfer_Item()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

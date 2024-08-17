@@ -131,20 +131,15 @@ namespace Tripple_A_Supermart_Management_System.view
                     switch (user.Role)
                     {
                         case "HR":
-                            HumanResourceDashboard hrDashboard = new HumanResourceDashboard();
-                            hrDashboard.Show();
                             break;
                         case "General":
-                            GeneralDashboard generalDashboard = new GeneralDashboard();
-                            generalDashboard.Show();
-                            break;
+                           
                         // Add other roles as needed
                         case "Junior":
                             break;
                         case "Supervisor":
-                            SupervisorDasboard sd = new SupervisorDasboard();
-                            sd.Show();
-                            break;
+                           
+                            
                         case "Digital":
                             break;
                         case "Accountant":

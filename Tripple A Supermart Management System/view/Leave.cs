@@ -138,10 +138,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void pic_back_login_Click(object sender, EventArgs e)
         {
-            //goes back to hr dashboard and hide the current form
-            HumanResourceDashboard humanResourceDashboard = new HumanResourceDashboard();
-            humanResourceDashboard.Show();
-            this.Hide();
+           
         }
 
         private void txtReason_TextChanged(object sender, EventArgs e)
