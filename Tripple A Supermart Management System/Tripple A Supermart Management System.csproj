@@ -110,8 +110,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\CAccount.cs" />
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
+    <Compile Include="controller\CMinimumStock.cs" />
+    <Compile Include="controller\CStockPrice.cs" />
+    <Compile Include="controller\CTransferItem.cs" />
     <Compile Include="controller\EmployeeController.cs" />
     <Compile Include="controller\CEmployeePerformance.cs" />
     <Compile Include="controller\CForgotPassword.cs" />
@@ -132,7 +136,11 @@
     <Compile Include="model\MForgotPassword.cs" />
     <Compile Include="model\MLeave.cs" />
     <Compile Include="model\MLogin.cs" />
+    <Compile Include="model\MMinimumStock.cs" />
     <Compile Include="model\MRetirementPlan.cs" />
+    <Compile Include="model\MAccount.cs" />
+    <Compile Include="model\MStockPrice.cs" />
+    <Compile Include="model\MTransferItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Account.cs">
@@ -428,6 +436,7 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\9176221_6620.jpg" />
     <None Include="Resources\quantity.png" />
     <None Include="Resources\15308669.png" />
     <None Include="Resources\pasted image 0.png" />

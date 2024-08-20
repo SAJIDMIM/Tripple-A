@@ -35,7 +35,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Search_Stock = new Guna.UI2.WinForms.Guna2Button();
             this.dtpLastUpdated = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDateEdited = new System.Windows.Forms.DateTimePicker();
@@ -43,9 +43,10 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbStockType = new System.Windows.Forms.ComboBox();
-            this.txtStockId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtStockname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_stockId = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Set_Stock_Price = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,8 +94,9 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_Set_Stock_Price);
             this.panel1.Controls.Add(this.picGoBackAdminLogin);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btn_Search_Stock);
             this.panel1.Controls.Add(this.dtpLastUpdated);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.dtpDateEdited);
@@ -103,7 +105,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cmbStockType);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtStockId);
+            this.panel1.Controls.Add(this.txtStockname);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_stockId);
             this.panel1.Controls.Add(this.label7);
@@ -125,22 +127,24 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackAdminLogin.TabIndex = 144;
             this.picGoBackAdminLogin.TabStop = false;
             this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
             // 
-            // guna2Button1
+            // btn_Search_Stock
             // 
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(57, 442);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(425, 45);
-            this.guna2Button1.TabIndex = 104;
-            this.guna2Button1.Text = "Set ";
+            this.btn_Search_Stock.BorderThickness = 1;
+            this.btn_Search_Stock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Stock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Stock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search_Stock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search_Stock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Search_Stock.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Search_Stock.ForeColor = System.Drawing.Color.Black;
+            this.btn_Search_Stock.Location = new System.Drawing.Point(57, 434);
+            this.btn_Search_Stock.Name = "btn_Search_Stock";
+            this.btn_Search_Stock.Size = new System.Drawing.Size(120, 45);
+            this.btn_Search_Stock.TabIndex = 104;
+            this.btn_Search_Stock.Text = "Search";
+            this.btn_Search_Stock.Click += new System.EventHandler(this.btn_Search_Stock_Click);
             // 
             // dtpLastUpdated
             // 
@@ -215,36 +219,40 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbStockType
             // 
             this.cmbStockType.FormattingEnabled = true;
+            this.cmbStockType.Items.AddRange(new object[] {
+            "Vejetables",
+            "Fruits",
+            "Chocolates"});
             this.cmbStockType.Location = new System.Drawing.Point(57, 379);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.Size = new System.Drawing.Size(113, 28);
             this.cmbStockType.TabIndex = 97;
             // 
-            // txtStockId
+            // txtStockname
             // 
-            this.txtStockId.BorderColor = System.Drawing.Color.Black;
-            this.txtStockId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStockId.DefaultText = "";
-            this.txtStockId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStockId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStockId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStockId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStockId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStockId.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtStockId.ForeColor = System.Drawing.Color.Black;
-            this.txtStockId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStockId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.tag1;
-            this.txtStockId.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtStockId.Location = new System.Drawing.Point(57, 262);
-            this.txtStockId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtStockId.Name = "txtStockId";
-            this.txtStockId.PasswordChar = '\0';
-            this.txtStockId.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.txtStockId.PlaceholderText = "Enter Stock Name";
-            this.txtStockId.SelectedText = "";
-            this.txtStockId.Size = new System.Drawing.Size(178, 38);
-            this.txtStockId.TabIndex = 95;
-            this.txtStockId.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtStockname.BorderColor = System.Drawing.Color.Black;
+            this.txtStockname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStockname.DefaultText = "";
+            this.txtStockname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStockname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStockname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockname.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtStockname.ForeColor = System.Drawing.Color.Black;
+            this.txtStockname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockname.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.tag1;
+            this.txtStockname.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtStockname.Location = new System.Drawing.Point(57, 262);
+            this.txtStockname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStockname.Name = "txtStockname";
+            this.txtStockname.PasswordChar = '\0';
+            this.txtStockname.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtStockname.PlaceholderText = "Enter Stock Name";
+            this.txtStockname.SelectedText = "";
+            this.txtStockname.Size = new System.Drawing.Size(178, 38);
+            this.txtStockname.TabIndex = 95;
+            this.txtStockname.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // txt_stockId
             // 
@@ -281,6 +289,23 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btn_Set_Stock_Price
+            // 
+            this.btn_Set_Stock_Price.BorderThickness = 1;
+            this.btn_Set_Stock_Price.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Set_Stock_Price.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Set_Stock_Price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Set_Stock_Price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Set_Stock_Price.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Set_Stock_Price.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Set_Stock_Price.ForeColor = System.Drawing.Color.Black;
+            this.btn_Set_Stock_Price.Location = new System.Drawing.Point(362, 434);
+            this.btn_Set_Stock_Price.Name = "btn_Set_Stock_Price";
+            this.btn_Set_Stock_Price.Size = new System.Drawing.Size(120, 45);
+            this.btn_Set_Stock_Price.TabIndex = 145;
+            this.btn_Set_Stock_Price.Text = "Set ";
+            this.btn_Set_Stock_Price.Click += new System.EventHandler(this.btn_Set_Stock_Price_Click);
+            // 
             // StockPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -308,7 +333,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txt_stockId;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtStockId;
+        private Guna.UI2.WinForms.Guna2TextBox txtStockname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtCost;
@@ -318,7 +343,8 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDateEdited;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Search_Stock;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackAdminLogin;
+        private Guna.UI2.WinForms.Guna2Button btn_Set_Stock_Price;
     }
 }
