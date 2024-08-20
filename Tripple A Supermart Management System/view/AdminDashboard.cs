@@ -68,5 +68,17 @@ namespace Tripple_A_Supermart_Management_System.view
             transferItemDetails.Show();
             this.Hide();
         }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            AdminLogin goBackLogin = new AdminLogin();
+            goBackLogin.Show();
+            this.Hide();
+        }
     }
 }

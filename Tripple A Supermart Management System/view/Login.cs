@@ -261,6 +261,13 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             LoadCredentials();
         }
+
+        private void picAdminLogin_Click(object sender, EventArgs e)
+        {
+            AdminLogin goBack = new AdminLogin();
+            goBack.Show();
+            this.Hide();
+        }
     }
 
 }

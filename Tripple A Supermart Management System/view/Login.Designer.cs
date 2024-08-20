@@ -48,9 +48,11 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdminLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -294,12 +296,27 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_username.Size = new System.Drawing.Size(405, 44);
             this.txt_username.TabIndex = 62;
             // 
+            // picAdminLogin
+            // 
+            this.picAdminLogin.BackColor = System.Drawing.Color.Transparent;
+            this.picAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picAdminLogin.ImageRotate = 0F;
+            this.picAdminLogin.Location = new System.Drawing.Point(390, 12);
+            this.picAdminLogin.Name = "picAdminLogin";
+            this.picAdminLogin.Size = new System.Drawing.Size(33, 42);
+            this.picAdminLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdminLogin.TabIndex = 143;
+            this.picAdminLogin.TabStop = false;
+            this.picAdminLogin.UseTransparentBackground = true;
+            this.picAdminLogin.Click += new System.EventHandler(this.picAdminLogin_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(890, 732);
+            this.Controls.Add(this.picAdminLogin);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
@@ -325,6 +342,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdminLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +368,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbType;
+        private Guna.UI2.WinForms.Guna2PictureBox picAdminLogin;
     }
 }

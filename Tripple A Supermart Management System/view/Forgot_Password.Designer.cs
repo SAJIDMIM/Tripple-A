@@ -70,6 +70,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_backLogin.TabIndex = 84;
             this.pic_backLogin.TabStop = false;
             this.pic_backLogin.UseTransparentBackground = true;
+            this.pic_backLogin.Click += new System.EventHandler(this.pic_backLogin_Click);
             // 
             // label7
             // 
@@ -93,6 +94,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picClose.TabIndex = 83;
             this.picClose.TabStop = false;
             this.picClose.UseTransparentBackground = true;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label3
             // 

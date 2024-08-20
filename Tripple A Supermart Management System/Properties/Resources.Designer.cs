@@ -83,6 +83,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32791e5dea5ad5c47a84ca6070e22707 {
+            get {
+                object obj = ResourceManager.GetObject("32791e5dea5ad5c47a84ca6070e22707", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9176221_6620 {
             get {
                 object obj = ResourceManager.GetObject("9176221_6620", resourceCulture);
