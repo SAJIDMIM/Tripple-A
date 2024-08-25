@@ -81,7 +81,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void picGoBackAdminLogin_Click(object sender, EventArgs e)
         {
-            AdminDashboard goBack = new AdminDashboard();
+            DirectorAdminDashboard goBack = new DirectorAdminDashboard();
             goBack.Show();
             this.Hide();
         }

@@ -31,6 +31,8 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btn_Generate_Weekly_Stock = new Guna.UI2.WinForms.Guna2Button();
+            this.picDirDash = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picDirDash)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -61,18 +63,34 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Generate_Weekly_Stock.Text = "Generate ";
             this.btn_Generate_Weekly_Stock.Click += new System.EventHandler(this.btn_Generate_Weekly_Stock_Click);
             // 
+            // picDirDash
+            // 
+            this.picDirDash.BackColor = System.Drawing.Color.Transparent;
+            this.picDirDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picDirDash.ImageRotate = 0F;
+            this.picDirDash.Location = new System.Drawing.Point(12, 506);
+            this.picDirDash.Name = "picDirDash";
+            this.picDirDash.Size = new System.Drawing.Size(33, 42);
+            this.picDirDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDirDash.TabIndex = 151;
+            this.picDirDash.TabStop = false;
+            this.picDirDash.UseTransparentBackground = true;
+            this.picDirDash.Click += new System.EventHandler(this.picDirDash_Click);
+            // 
             // WeeklyStockReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(805, 599);
+            this.Controls.Add(this.picDirDash);
             this.Controls.Add(this.btn_Generate_Weekly_Stock);
             this.Controls.Add(this.crystalReportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WeeklyStockReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.picDirDash)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,5 +99,6 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Guna.UI2.WinForms.Guna2Button btn_Generate_Weekly_Stock;
+        private Guna.UI2.WinForms.Guna2PictureBox picDirDash;
     }
 }

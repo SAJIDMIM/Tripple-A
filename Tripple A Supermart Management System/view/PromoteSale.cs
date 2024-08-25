@@ -114,6 +114,13 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             
         }
+
+        private void picGoBackDiradminDashboard_Click(object sender, EventArgs e)
+        {
+            DirectorAdminDashboard goBack = new DirectorAdminDashboard();
+            goBack.Show();
+            this.Hide();
+        }
     }
 }
   

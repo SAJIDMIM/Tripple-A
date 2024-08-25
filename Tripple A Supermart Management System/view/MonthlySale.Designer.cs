@@ -31,6 +31,8 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btn_Generate_Monthly_Sale = new Guna.UI2.WinForms.Guna2Button();
+            this.dirAdminDash = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dirAdminDash)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -61,18 +63,34 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Generate_Monthly_Sale.Text = "Generate ";
             this.btn_Generate_Monthly_Sale.Click += new System.EventHandler(this.btn_Generate_Monthly_Sale_Click);
             // 
+            // dirAdminDash
+            // 
+            this.dirAdminDash.BackColor = System.Drawing.Color.Transparent;
+            this.dirAdminDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.dirAdminDash.ImageRotate = 0F;
+            this.dirAdminDash.Location = new System.Drawing.Point(12, 513);
+            this.dirAdminDash.Name = "dirAdminDash";
+            this.dirAdminDash.Size = new System.Drawing.Size(33, 42);
+            this.dirAdminDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dirAdminDash.TabIndex = 152;
+            this.dirAdminDash.TabStop = false;
+            this.dirAdminDash.UseTransparentBackground = true;
+            this.dirAdminDash.Click += new System.EventHandler(this.dirAdminDash_Click);
+            // 
             // MonthlySale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 605);
+            this.Controls.Add(this.dirAdminDash);
             this.Controls.Add(this.btn_Generate_Monthly_Sale);
             this.Controls.Add(this.crystalReportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MonthlySale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MonthlySale";
+            ((System.ComponentModel.ISupportInitialize)(this.dirAdminDash)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,5 +99,6 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Guna.UI2.WinForms.Guna2Button btn_Generate_Monthly_Sale;
+        private Guna.UI2.WinForms.Guna2PictureBox dirAdminDash;
     }
 }

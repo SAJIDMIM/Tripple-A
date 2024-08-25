@@ -38,6 +38,13 @@ namespace Tripple_A_Supermart_Management_System.view
             }
                 
         }
+
+        private void picDirDash_Click(object sender, EventArgs e)
+        {
+            DirectorAdminDashboard back = new DirectorAdminDashboard();
+            back.Show();
+            this.Hide();
+        }
     }
        
 }

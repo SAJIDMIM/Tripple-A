@@ -37,5 +37,12 @@ namespace Tripple_A_Supermart_Management_System.view
                 crystalReportViewer1.ReportSource = rprt;
             }
         }
+
+        private void dirAdminDash_Click(object sender, EventArgs e)
+        {
+            DirectorAdminDashboard back = new DirectorAdminDashboard();
+            back.Show();
+            this.Hide();
+        }
     }
 }
