@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace Tripple_A_Supermart_Management_System.model
 
 {
-    public class User
+    public class Users
     {
         public string Username { get; set; }
         public string Role { get; set; }
@@ -19,7 +19,7 @@ namespace Tripple_A_Supermart_Management_System.model
     {
        
         
-            public User Login(string usertype, string username, string password)
+            public Users Login(string usertype, string username, string password)
             {
                 using (SqlConnection con = MDBConnection.createConnection())
                 {
@@ -38,7 +38,7 @@ namespace Tripple_A_Supermart_Management_System.model
                             if (reader.Read()) // Check if there are any rows
                             {
                                 // If there are rows, create a new User object
-                                return new User
+                                return new Users
                                 {
                                     Username = reader["username"].ToString(),
                                     Role = reader["user_type"].ToString()

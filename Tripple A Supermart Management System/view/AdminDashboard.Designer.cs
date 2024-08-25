@@ -48,6 +48,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.billingReminderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -119,7 +121,6 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setStockToolStripMenuItem,
@@ -176,14 +177,14 @@ namespace Tripple_A_Supermart_Management_System.view
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.accountToolStripMenuItem.Text = "Profile";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(179, 34);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.toolStripMenuItem2.Text = "Account";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -196,9 +197,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.billingReminderToolStripMenuItem,
+            this.feedbackToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(148, 29);
-            this.toolStripMenuItem1.Text = "Send Feedback";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 29);
+            this.toolStripMenuItem1.Text = "Send ";
             // 
             // panel1
             // 
@@ -234,6 +238,18 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // billingReminderToolStripMenuItem
+            // 
+            this.billingReminderToolStripMenuItem.Name = "billingReminderToolStripMenuItem";
+            this.billingReminderToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.billingReminderToolStripMenuItem.Text = "Billing Reminder";
+            // 
+            // feedbackToolStripMenuItem
+            // 
+            this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.feedbackToolStripMenuItem.Text = "Feedback";
             // 
             // AdminDashboard
             // 
@@ -285,5 +301,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem billingReminderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
     }
 }

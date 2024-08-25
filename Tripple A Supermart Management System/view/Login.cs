@@ -14,6 +14,7 @@ using Tripple_A_Supermart_Management_System.model;
 
 
 
+
 namespace Tripple_A_Supermart_Management_System.view
 {
     public partial class Login : Form
@@ -109,7 +110,7 @@ namespace Tripple_A_Supermart_Management_System.view
             }
 
             CLogin CL = new CLogin();//callinbg package
-            User user = CL.Login(role,username, password);
+            model.Users user = CL.Login(role, username, password);
 
 
 
@@ -131,6 +132,9 @@ namespace Tripple_A_Supermart_Management_System.view
                     switch (user.Role)
                     {
                         case "HR":
+                            Form2 f2 = new Form2();
+                            f2.Show();
+                            this.Hide();
                             break;
                         case "General":
                            

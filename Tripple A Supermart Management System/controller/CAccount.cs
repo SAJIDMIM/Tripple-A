@@ -17,5 +17,6 @@ namespace Tripple_A_Supermart_Management_System.controller
             return modelAccount.viewAccount(userId); // Pass the userId to the model method
         }
 
+
     }
 }

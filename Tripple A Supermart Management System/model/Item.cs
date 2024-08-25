@@ -7,9 +7,10 @@ using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Windows.Forms;
 
+
 namespace Tripple_A_Supermart_Management_System.model
 {
-    class MTransferItem
+    class Item
     {
         private string itemId { get; set; }
         private string itemName { get; set; }
@@ -31,15 +32,15 @@ namespace Tripple_A_Supermart_Management_System.model
             this.Quantity = Quantity;
             this.Category = Category;
 
-          
 
-        // Construct the email body with the transfer details.
-        string emailBody = $"Transfer Item Details:\n\n" +
-                              $"Item ID: {itemId}\n" +
-                              $"Item Name: {itemName}\n" +
-                              $"Description: {Description}\n" +
-                              $"Quantity: {Quantity}\n" +
-                              $"Category: {Category}";
+
+            // Construct the email body with the transfer details.
+            string emailBody = $"Transfer Item Details:\n\n" +
+                                  $"Item ID: {itemId}\n" +
+                                  $"Item Name: {itemName}\n" +
+                                  $"Description: {Description}\n" +
+                                  $"Quantity: {Quantity}\n" +
+                                  $"Category: {Category}";
 
             // Send the email to multiple recipients.
             try
@@ -49,7 +50,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 smtpClient.EnableSsl = true;
                 smtpClient.Credentials = new System.Net.NetworkCredential(senderEmail, senderPassword);
 
-                MailMessage mailMessage = new MailMessage(senderEmail,recipientEmail);
+                MailMessage mailMessage = new MailMessage(senderEmail, recipientEmail);
                 mailMessage.Subject = "Transfer Items Details";
                 mailMessage.Body = emailBody;
 
@@ -59,7 +60,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid Transfer.Please check the details and retry it","Invalid Transfer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Transfer.Please check the details and retry it", "Invalid Transfer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -69,5 +70,5 @@ namespace Tripple_A_Supermart_Management_System.model
 
 
     }
-
 }
+

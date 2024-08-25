@@ -37,7 +37,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string stockId = txt_stockId.Text;
 
-            CStockPrice createCost = new CStockPrice();
+            CStock createCost = new CStock();
             DataTable stockDetails = createCost.getStockDetails(stockId);
 
             if (stockDetails.Rows.Count > 0)
@@ -83,7 +83,7 @@ namespace Tripple_A_Supermart_Management_System.view
             double cost = Convert.ToDouble(txtCost.Text); // Assuming txtCost is the TextBox control where the user enters the cost
             DateTime lastUpdatedStock = dtpLastUpdated.Value;
 
-            CStockPrice setPrice = new CStockPrice();
+            CStock setPrice = new CStock();
             setPrice.setStockPrice(stockId,cost,lastUpdatedStock);
         }
 

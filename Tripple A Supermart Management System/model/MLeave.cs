@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -46,6 +47,40 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
         }
+        public DataTable viewLeaveRequest(int leaveRequestId)
+        {
+            DataTable leaveDetails = new DataTable(); // Create a DataTable to hold results
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM Leave WHERE leaveRequestId = @leaveRequestId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userId", leaveRequestId); // Use the userId parameter
+
+                    try
+                    {
+                        connection.Open(); // Open the connection
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(leaveDetails); // Fill the DataTable with retrieved data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions, such as connection errors or database issues
+                        Console.WriteLine("Error retrieving user details: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close(); // Close the connection
+                    }
+                }
+            }
+
+            return leaveDetails; // Return the DataTable with user details
+        }
 
         // Method to get the next leave request ID (already provided)
         public int GetNextLeaveRequestId()
@@ -75,6 +110,8 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return nextLeaveRequestId;
         }
+
+       
 
         // Method to get employees by user type
         public List<Employees> GetEmployeesByUserType(string userType)
@@ -108,5 +145,8 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return employees;
         }
+
+      
     }
 }
+

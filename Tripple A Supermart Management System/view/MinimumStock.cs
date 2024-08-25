@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
+using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
@@ -48,7 +49,7 @@ namespace Tripple_A_Supermart_Management_System.view
             }
 
 
-            CMinimumStock minimumStock = new CMinimumStock();
+            controller.CStock minimumStock = new controller.CStock();
             minimumStock.setMinimumStock(stockId, quantity, lastUpdatedStock, reorderLevel);
 
           
@@ -66,7 +67,7 @@ namespace Tripple_A_Supermart_Management_System.view
             string stockId = txt_stockId.Text;
 
            // Create an instance of the CMinimumStock controller class
-           CMinimumStock minimumStockController = new CMinimumStock();
+           controller.CStock minimumStockController = new controller.CStock();
            DataTable stockDetails = minimumStockController.getStockDetails(stockId);
 
            if (stockDetails.Rows.Count > 0)

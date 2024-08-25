@@ -14,7 +14,7 @@ namespace Tripple_A_Supermart_Management_System.view
 {
     public partial class Employee : Form
     {
-        private CEmployee _employeeController;
+        //private CEmployee _employeeController;
 
       
         
@@ -23,7 +23,7 @@ namespace Tripple_A_Supermart_Management_System.view
         public Employee()
         {
             InitializeComponent();
-            _employeeController = new CEmployee();
+           // _employeeController = new CEmployee();
         }
         private void btn_Add_Employee_Click(object sender, EventArgs e)
         {

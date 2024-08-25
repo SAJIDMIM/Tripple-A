@@ -38,9 +38,30 @@ namespace Tripple_A_Supermart_Management_System.view
             string recipientEmail = txtEmail.Text; // Get email from UI element.
 
 
+           
+            // Validate input before calling the transferItem method
+            if (string.IsNullOrEmpty(itemId) || string.IsNullOrEmpty(itemName) || string.IsNullOrEmpty(recipientEmail))
+            {
+                MessageBox.Show("Item ID, Item Name, and Recipient Email are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Assuming sendItems is your ItemController instance
+            CItem sendItems = new CItem();
 
-            CTransferItem sendItems = new CTransferItem();
+            // Call transferItem
+            bool isTransferred = sendItems.transferItem(itemId,itemName,Description,Quantity,Category,recipientEmail);
+
+            if (isTransferred)
+            {
+                MessageBox.Show("Item successfully transferred!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Failed to transfer item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+          
             sendItems.transferItem(itemId, itemName, Description, Quantity, Category,recipientEmail);
 
 

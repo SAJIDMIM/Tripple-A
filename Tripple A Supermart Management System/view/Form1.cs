@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
-    public partial class viewPostJob : Form
+    public partial class Form1 : Form
     {
-        public viewPostJob()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btn_Search_Post_Job_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -72,6 +72,10 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -97,6 +101,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -113,20 +118,25 @@
     <Compile Include="controller\CAccount.cs" />
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
-    <Compile Include="controller\CMinimumStock.cs" />
-    <Compile Include="controller\CStockPrice.cs" />
-    <Compile Include="controller\CTransferItem.cs" />
+    <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\EmployeeController.cs" />
-    <Compile Include="controller\CEmployeePerformance.cs" />
     <Compile Include="controller\CForgotPassword.cs" />
     <Compile Include="controller\CHealthInsurance.cs" />
     <Compile Include="controller\CInterview.cs" />
-    <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\CLogin.cs" />
     <Compile Include="controller\CJob.cs" />
     <Compile Include="controller\CRetirementPlan.cs" />
+    <Compile Include="controller\CItem.cs" />
+    <Compile Include="controller\CSale.cs" />
+    <Compile Include="controller\CStock.cs" />
+    <Compile Include="view\DirectorAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DirectorAdminDashboard.Designer.cs">
+      <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Item.cs" />
     <Compile Include="model\MEmployee.cs" />
-    <Compile Include="model\MEmployeePerformance.cs" />
     <Compile Include="model\MHealthInsurance.cs" />
     <Compile Include="model\MInterview.cs" />
     <Compile Include="model\MJob.cs" />
@@ -136,11 +146,10 @@
     <Compile Include="model\MForgotPassword.cs" />
     <Compile Include="model\MLeave.cs" />
     <Compile Include="model\MLogin.cs" />
-    <Compile Include="model\MMinimumStock.cs" />
     <Compile Include="model\MRetirementPlan.cs" />
     <Compile Include="model\MAccount.cs" />
-    <Compile Include="model\MStockPrice.cs" />
-    <Compile Include="model\MTransferItem.cs" />
+    <Compile Include="model\Sale.cs" />
+    <Compile Include="model\Stock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Account.cs">
@@ -167,6 +176,54 @@
     <Compile Include="view\Analyse Sales Data.designer.cs">
       <DependentUpon>Analyse Sales Data.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\BillingReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\BillingReminder.Designer.cs">
+      <DependentUpon>BillingReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MonthlySale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MonthlySale.Designer.cs">
+      <DependentUpon>MonthlySale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MonthlySaleReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlySaleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\PromoteSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PromoteSale.Designer.cs">
+      <DependentUpon>PromoteSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ViewLeaveRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ViewLeaveRequest.designer.cs">
+      <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\View_Employee_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\View_Employee_Information.designer.cs">
+      <DependentUpon>View_Employee_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\WeeklyStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeeklyStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="view\CustomerBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +242,12 @@
     <Compile Include="view\EmployeePerformance.Designer.cs">
       <DependentUpon>EmployeePerformance.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\WeeklyStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\WeeklyStockReport.Designer.cs">
+      <DependentUpon>WeeklyStockReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\HealthInsurance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,12 +265,6 @@
     </Compile>
     <Compile Include="view\MinimumStock.Designer.cs">
       <DependentUpon>MinimumStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\PromoteSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\PromoteSale.Designer.cs">
-      <DependentUpon>PromoteSale.cs</DependentUpon>
     </Compile>
     <Compile Include="view\RetirementPlan.cs">
       <SubType>Form</SubType>
@@ -299,12 +356,9 @@
     <Compile Include="view\ViewEmployeeDetails.Designer.cs">
       <DependentUpon>ViewEmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\viewPostJob.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\viewPostJob.Designer.cs">
-      <DependentUpon>viewPostJob.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="view\DirectorAdminDashboard.resx">
+      <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -327,6 +381,32 @@
     <EmbeddedResource Include="view\Analyse Sales Data.resx">
       <DependentUpon>Analyse Sales Data.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\BillingReminder.resx">
+      <DependentUpon>BillingReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MonthlySale.resx">
+      <DependentUpon>MonthlySale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MonthlySaleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlySaleReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PromoteSale.resx">
+      <DependentUpon>PromoteSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ViewLeaveRequest.resx">
+      <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\View_Employee_Information.resx">
+      <DependentUpon>View_Employee_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\WeeklyStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WeeklyStock.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\CustomerBill.resx">
       <DependentUpon>CustomerBill.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +416,9 @@
     <EmbeddedResource Include="view\EmployeePerformance.resx">
       <DependentUpon>EmployeePerformance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\WeeklyStockReport.resx">
+      <DependentUpon>WeeklyStockReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\HealthInsurance.resx">
       <DependentUpon>HealthInsurance.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,9 +427,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\MinimumStock.resx">
       <DependentUpon>MinimumStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\PromoteSale.resx">
-      <DependentUpon>PromoteSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\RetirementPlan.resx">
       <DependentUpon>RetirementPlan.cs</DependentUpon>
@@ -392,9 +472,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\ViewEmployeeDetails.resx">
       <DependentUpon>ViewEmployeeDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\viewPostJob.resx">
-      <DependentUpon>viewPostJob.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
@@ -445,6 +522,10 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\coupon.png" />
+    <None Include="Resources\images %281%29.png" />
+    <None Include="Resources\Salesforce-self-service-portal.jpg" />
+    <None Include="Resources\GoSite_ Blog - Your Guide to Friendly Payment Remidners.png" />
     <None Include="Resources\32791e5dea5ad5c47a84ca6070e22707.jpg" />
     <None Include="Resources\9176221_6620.jpg" />
     <None Include="Resources\quantity.png" />
@@ -506,6 +587,9 @@
     <None Include="Resources\user.png" />
     <None Include="Resources\icons8-username-100.png" />
     <None Include="Resources\icons8-arrow-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

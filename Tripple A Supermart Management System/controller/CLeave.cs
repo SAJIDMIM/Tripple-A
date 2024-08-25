@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.controller
 {
-    public class CEmployee
+    public class CLeave
     {
         private MLeave _mLeave;
 
-        public CEmployee()
+        public CLeave()
         {
             _mLeave = new MLeave();
         }
@@ -19,14 +20,19 @@ namespace Tripple_A_Supermart_Management_System.controller
             return _mLeave.GetNextLeaveRequestId();
         }
 
-        
+
 
         public void addLeaveRequest(string employeeId, string userType, string firstName, string lastName, string leaveType, string reason, DateTime leaveStartDate, DateTime leaveEndDate)
         {
             _mLeave.addLeaveRequest(employeeId, userType, firstName, lastName, leaveType, reason, leaveStartDate, leaveEndDate);
         }
 
-       
+
+        public DataTable viewLeaveRequest(int leaveRequestId)
+        {
+            MLeave modelLeave = new MLeave();
+            return modelLeave.viewLeaveRequest(leaveRequestId); // Pass the userId to the model method
+        }
 
         public List<Employees> GetEmployeesByUserType(string userType)
         {
@@ -42,5 +48,8 @@ namespace Tripple_A_Supermart_Management_System.controller
         {
             throw new NotImplementedException();
         }
+        
+
     }
+
 }

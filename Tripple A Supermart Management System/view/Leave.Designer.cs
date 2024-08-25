@@ -1,7 +1,7 @@
 ﻿
 namespace Tripple_A_Supermart_Management_System.view
 {
-    partial class Leave
+    partial class CLeave
     {
         /// <summary>
         /// Required designer variable.

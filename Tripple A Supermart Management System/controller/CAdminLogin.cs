@@ -17,6 +17,7 @@ namespace Tripple_A_Supermart_Management_System.controller
     {
         //calling the method with enum
         private MAdmin login;
+
         public CAdminLogin()
         {
             login = new MAdmin(); // Initialize the instance of LoginModel
@@ -28,4 +29,5 @@ namespace Tripple_A_Supermart_Management_System.controller
             return login.Login(Type, username, password);
         }
     }
-}
+    }
+

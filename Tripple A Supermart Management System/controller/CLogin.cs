@@ -17,7 +17,7 @@ namespace Tripple_A_Supermart_Management_System.controller
             login = new MLogin(); // Initialize the instance of LoginModel
         }
         
-        public User Login(string usertype,string username, string password)
+        public Users Login(string usertype,string username, string password)
         {
             // Call the Login method of LoginModel
             return login.Login(usertype,username, password);

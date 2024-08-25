@@ -29,23 +29,22 @@ namespace Tripple_A_Supermart_Management_System.view
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.dgvAccount_Details = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btn_Search_Sale = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvSale_Details = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btn_Analyze_Sale = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Sale_Id = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount_Details)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -59,25 +58,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel2.Size = new System.Drawing.Size(702, 663);
             this.panel2.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._32791e5dea5ad5c47a84ca6070e22707;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(687, 697);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SpringGreen;
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.picGoBackAdminLogin);
-            this.panel3.Controls.Add(this.dgvAccount_Details);
-            this.panel3.Controls.Add(this.btn_Search_Sale);
+            this.panel3.Controls.Add(this.dgvSale_Details);
+            this.panel3.Controls.Add(this.btn_Analyze_Sale);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txt_Sale_Id);
             this.panel3.Location = new System.Drawing.Point(55, 102);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(621, 478);
@@ -93,6 +81,85 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.TabIndex = 148;
             this.label7.Text = "Analyze Sales Data";
             // 
+            // dgvSale_Details
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvSale_Details.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale_Details.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSale_Details.ColumnHeadersHeight = 4;
+            this.dgvSale_Details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSale_Details.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvSale_Details.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSale_Details.Location = new System.Drawing.Point(51, 119);
+            this.dgvSale_Details.Name = "dgvSale_Details";
+            this.dgvSale_Details.RowHeadersVisible = false;
+            this.dgvSale_Details.RowHeadersWidth = 62;
+            this.dgvSale_Details.RowTemplate.Height = 28;
+            this.dgvSale_Details.Size = new System.Drawing.Size(528, 267);
+            this.dgvSale_Details.TabIndex = 106;
+            this.dgvSale_Details.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSale_Details.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvSale_Details.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvSale_Details.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvSale_Details.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvSale_Details.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSale_Details.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvSale_Details.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvSale_Details.ThemeStyle.ReadOnly = false;
+            this.dgvSale_Details.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSale_Details.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvSale_Details.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSale_Details.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvSale_Details.ThemeStyle.RowsStyle.Height = 28;
+            this.dgvSale_Details.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSale_Details.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btn_Analyze_Sale
+            // 
+            this.btn_Analyze_Sale.BorderThickness = 1;
+            this.btn_Analyze_Sale.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Analyze_Sale.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Analyze_Sale.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Analyze_Sale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Analyze_Sale.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Analyze_Sale.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Analyze_Sale.ForeColor = System.Drawing.Color.Black;
+            this.btn_Analyze_Sale.Location = new System.Drawing.Point(256, 401);
+            this.btn_Analyze_Sale.Name = "btn_Analyze_Sale";
+            this.btn_Analyze_Sale.Size = new System.Drawing.Size(108, 45);
+            this.btn_Analyze_Sale.TabIndex = 105;
+            this.btn_Analyze_Sale.Text = "Analyze ";
+            this.btn_Analyze_Sale.Click += new System.EventHandler(this.btn_Analyze_Sale_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 29);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Sale Id";
+            // 
             // picGoBackAdminLogin
             // 
             this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
@@ -105,105 +172,17 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackAdminLogin.TabIndex = 146;
             this.picGoBackAdminLogin.TabStop = false;
             this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
             // 
-            // dgvAccount_Details
+            // pictureBox1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvAccount_Details.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount_Details.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvAccount_Details.ColumnHeadersHeight = 4;
-            this.dgvAccount_Details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccount_Details.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvAccount_Details.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAccount_Details.Location = new System.Drawing.Point(51, 189);
-            this.dgvAccount_Details.Name = "dgvAccount_Details";
-            this.dgvAccount_Details.RowHeadersVisible = false;
-            this.dgvAccount_Details.RowHeadersWidth = 62;
-            this.dgvAccount_Details.RowTemplate.Height = 28;
-            this.dgvAccount_Details.Size = new System.Drawing.Size(528, 267);
-            this.dgvAccount_Details.TabIndex = 106;
-            this.dgvAccount_Details.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAccount_Details.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvAccount_Details.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvAccount_Details.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvAccount_Details.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvAccount_Details.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAccount_Details.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAccount_Details.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvAccount_Details.ThemeStyle.ReadOnly = false;
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.Height = 28;
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAccount_Details.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btn_Search_Sale
-            // 
-            this.btn_Search_Sale.BorderThickness = 1;
-            this.btn_Search_Sale.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search_Sale.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search_Sale.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Search_Sale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Search_Sale.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Search_Sale.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btn_Search_Sale.ForeColor = System.Drawing.Color.Black;
-            this.btn_Search_Sale.Location = new System.Drawing.Point(471, 103);
-            this.btn_Search_Sale.Name = "btn_Search_Sale";
-            this.btn_Search_Sale.Size = new System.Drawing.Size(108, 45);
-            this.btn_Search_Sale.TabIndex = 105;
-            this.btn_Search_Sale.Text = "Search ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 29);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Sale Id";
-            // 
-            // txt_Sale_Id
-            // 
-            this.txt_Sale_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Sale_Id.DefaultText = "";
-            this.txt_Sale_Id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Sale_Id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Sale_Id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Sale_Id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Sale_Id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Sale_Id.Font = new System.Drawing.Font("Calibri", 10F);
-            this.txt_Sale_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Sale_Id.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.txt_Sale_Id.Location = new System.Drawing.Point(144, 114);
-            this.txt_Sale_Id.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.txt_Sale_Id.Name = "txt_Sale_Id";
-            this.txt_Sale_Id.PasswordChar = '\0';
-            this.txt_Sale_Id.PlaceholderText = "Enter Sale Id";
-            this.txt_Sale_Id.SelectedText = "";
-            this.txt_Sale_Id.Size = new System.Drawing.Size(309, 34);
-            this.txt_Sale_Id.TabIndex = 83;
+            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._32791e5dea5ad5c47a84ca6070e22707;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(687, 697);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Analyse_Sales_Data
             // 
@@ -217,24 +196,23 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Name = "Analyse_Sales_Data";
             this.Text = "Analyse_Sales_Data";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount_Details)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackAdminLogin;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvAccount_Details;
-        private Guna.UI2.WinForms.Guna2Button btn_Search_Sale;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvSale_Details;
+        private Guna.UI2.WinForms.Guna2Button btn_Analyze_Sale;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Sale_Id;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

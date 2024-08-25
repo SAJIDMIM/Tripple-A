@@ -193,6 +193,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coupon {
+            get {
+                object obj = ResourceManager.GetObject("coupon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cross_mark_8369334 {
             get {
                 object obj = ResourceManager.GetObject("cross-mark_8369334", resourceCulture);
@@ -286,6 +296,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         internal static System.Drawing.Bitmap free_interview_scheduling_tool_ee8ad7c6c1 {
             get {
                 object obj = ResourceManager.GetObject("free_interview_scheduling_tool_ee8ad7c6c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GoSite__Blog___Your_Guide_to_Friendly_Payment_Remidners {
+            get {
+                object obj = ResourceManager.GetObject("GoSite_ Blog - Your Guide to Friendly Payment Remidners", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +446,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         internal static System.Drawing.Bitmap images__1_2 {
             get {
                 object obj = ResourceManager.GetObject("images (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("images (1)3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -656,6 +686,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         internal static System.Drawing.Bitmap salary {
             get {
                 object obj = ResourceManager.GetObject("salary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salesforce_self_service_portal {
+            get {
+                object obj = ResourceManager.GetObject("Salesforce-self-service-portal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

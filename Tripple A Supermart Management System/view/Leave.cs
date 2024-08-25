@@ -13,26 +13,29 @@ using Tripple_A_Supermart_Management_System.controller;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
-    public partial class Leave : Form
+    public partial class CLeave : Form
     {
         private MLeave _mLeave;
-        private CEmployee _cLeave;
+       // private CEmployee _cLeave;
 
-        public Leave()
+        public CLeave()
         {
             InitializeComponent();
             _mLeave = new MLeave();
 
 
-            _cLeave = new CEmployee();
-            txt_leaveId.Text = _cLeave.getleaveRequest().ToString();// Corrected method call to get leave request ID
+            //_cLeave = new CEmployee();
+            //txt_leaveId.Text = _cLeave.getleaveRequest().ToString();// Corrected method call to get leave request ID
 
         }
 
+        
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
+
+       
 
         private void txt_leaveId_TextChanged(object sender, EventArgs e)
         {
@@ -58,8 +61,8 @@ namespace Tripple_A_Supermart_Management_System.view
                 return; // Exit the method if any field is empty
             }
 
-            CEmployee cleave = new CEmployee();
-            cleave.addLeaveRequest(employeeId, userType, firstName, lastName, leaveType, reason, leaveStartDate, leaveEndDate);
+            CLeave cleave = new CLeave();
+            //cleave.addLeaveRequest(employeeId, userType, firstName, lastName, leaveType, reason, leaveStartDate, leaveEndDate);
             if (leaveStartDate == leaveEndDate)
             {
                 MessageBox.Show("End date cannot be same as the start date", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,53 +78,10 @@ namespace Tripple_A_Supermart_Management_System.view
 
         }
 
-        public  void cmbuserType_SelectedIndexChanged(object sender, EventArgs e)
+        public void cmbuserType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear the text boxes initially
-            txt_employeeId.Text = string.Empty;
-            txtFirstname.Text = string.Empty;
-            txtLastname.Text = string.Empty;
 
-            try
-            {
-                // Check if an item is selected in the combo box
-                if (cmbuserType.SelectedItem != null)
-                {
-                    // Get the selected user type as string
-                    string userType = cmbuserType.SelectedItem.ToString();
-
-                    // Ensure _cLeave is not null
-                    if (_cLeave != null)
-                    {
-                        
-                        // Retrieve the list of employees of the selected type using CLeave instance
-                        List<model.Employees> employees = _cLeave.GetEmployeesByUserType(userType);
-
-                        // If employees are found, populate the first employee's details into text boxes
-                        if (employees != null && employees.Count > 0)
-                        {
-                            model.Employees employee = employees[0];
-                            txt_employeeId.Text = employee.EmployeeId;
-                            txtFirstname.Text = employee.FirstName;
-                            txtLastname.Text = employee.LastName;
-                        }
-                    }
-                    else
-                    {
-                        // Log or handle the case where _cLeave is null
-                        MessageBox.Show("Error: _cLeave instance is not initialized.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle the exception as needed
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
         }
-
-
-
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             //clear all the fields

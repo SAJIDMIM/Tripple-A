@@ -43,14 +43,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label4 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.linkClear = new System.Windows.Forms.LinkLabel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_adminusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_adminpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -205,20 +205,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.linkClear.Text = "Clear";
             this.linkClear.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClear_LinkClicked);
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.next;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(374, 12);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 42);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 123;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
-            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
-            // 
             // txt_adminusername
             // 
             this.txt_adminusername.BorderColor = System.Drawing.Color.Black;
@@ -284,16 +270,30 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picClose.UseTransparentBackground = true;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
+            // picLogin
+            // 
+            this.picLogin.BackColor = System.Drawing.Color.Transparent;
+            this.picLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.icons8_arrow_100;
+            this.picLogin.ImageRotate = 0F;
+            this.picLogin.Location = new System.Drawing.Point(373, 12);
+            this.picLogin.Name = "picLogin";
+            this.picLogin.Size = new System.Drawing.Size(33, 42);
+            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogin.TabIndex = 144;
+            this.picLogin.TabStop = false;
+            this.picLogin.UseTransparentBackground = true;
+            this.picLogin.Click += new System.EventHandler(this.picLogin_Click);
+            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(815, 716);
+            this.Controls.Add(this.picLogin);
             this.Controls.Add(this.linkClear);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.chShowPassword);
             this.Controls.Add(this.txt_adminusername);
             this.Controls.Add(this.chRememberMe);
@@ -313,8 +313,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Load += new System.EventHandler(this.AdminLogin_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,9 +335,9 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2TextBox txt_adminusername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chShowPassword;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.LinkLabel linkClear;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogin;
     }
 }
