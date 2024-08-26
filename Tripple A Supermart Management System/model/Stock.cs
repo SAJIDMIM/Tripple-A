@@ -88,7 +88,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
             using (SqlConnection connection = MDBConnection.createConnection())
             {
-                string query = "SELECT stockName,stockType,stockQuantity,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
+                string query = "SELECT stockName,stockType,stockQuantity,cost,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
