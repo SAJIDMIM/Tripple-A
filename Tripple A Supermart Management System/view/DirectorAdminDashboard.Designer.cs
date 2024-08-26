@@ -38,8 +38,10 @@ namespace Tripple_A_Supermart_Management_System
             this.analyzeSaleDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promoteSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
+            this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -121,12 +123,27 @@ namespace Tripple_A_Supermart_Management_System
             this.label7.TabIndex = 82;
             this.label7.Text = "Director Admin Dashboard";
             // 
+            // picGoBackDir
+            // 
+            this.picGoBackDir.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picGoBackDir.ImageRotate = 0F;
+            this.picGoBackDir.Location = new System.Drawing.Point(743, 49);
+            this.picGoBackDir.Name = "picGoBackDir";
+            this.picGoBackDir.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackDir.TabIndex = 143;
+            this.picGoBackDir.TabStop = false;
+            this.picGoBackDir.UseTransparentBackground = true;
+            this.picGoBackDir.Click += new System.EventHandler(this.picGoBackDir_Click);
+            // 
             // DirectorAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 479);
+            this.Controls.Add(this.picGoBackDir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -138,6 +155,7 @@ namespace Tripple_A_Supermart_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +172,6 @@ namespace Tripple_A_Supermart_Management_System
         private System.Windows.Forms.ToolStripMenuItem analyzeSaleDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem promoteSaleToolStripMenuItem;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
     }
 }

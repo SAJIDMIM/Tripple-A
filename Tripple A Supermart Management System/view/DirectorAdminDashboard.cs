@@ -46,5 +46,12 @@ namespace Tripple_A_Supermart_Management_System
             newSale.Show();
             this.Show();
         }
+
+        private void picGoBackDir_Click(object sender, EventArgs e)
+        {
+            AdminLogin back = new AdminLogin();
+            back.Show();
+            this.Hide();
+        }
     }
 }
