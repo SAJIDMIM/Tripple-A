@@ -46,11 +46,12 @@ namespace Tripple_A_Supermart_Management_System.view
 
                 // Update the fields with the retrieved data
                 txtStockname.Text = row["stockName"].ToString();
-
+               
 
                 // Assuming cmbStockType has items matching the stock types in your database
                 cmbStockType.SelectedItem = row["stockType"].ToString();
 
+                cmbStockWeight.Text = row["stockWeight"].ToString();
                 if (double.TryParse(row["cost"].ToString(), out double cost))
                 {
                     txtCost.Text = cost.ToString();
@@ -70,6 +71,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 // Clear or reset the fields if no stock is found
                 txtStockname.Text = "";
                 cmbStockType.SelectedIndex = -1; // Reset the combobox
+                cmbStockWeight.SelectedIndex = -1;
                 txtCost.Text = "";
                 dtpDateEdited.Value = DateTime.Now; // Or a default date
                 dtpLastUpdated.Value = DateTime.Now; // Or a default date
@@ -85,6 +87,17 @@ namespace Tripple_A_Supermart_Management_System.view
 
             CStock setPrice = new CStock();
             setPrice.setStockPrice(stockId,cost,lastUpdatedStock);
+
+            // Clear the fields
+            txt_stockId.Text = "";
+            txtStockname.Text = "";
+            cmbStockType.SelectedIndex = -1;
+            cmbStockWeight.SelectedIndex = -1;
+
+            txtCost.Text = "";
+            dtpDateEdited.Value = DateTime.Now;
+
+            dtpLastUpdated.Value = DateTime.Now;
         }
 
         private void picGoBackAdminLogin_Click(object sender, EventArgs e)
@@ -92,6 +105,11 @@ namespace Tripple_A_Supermart_Management_System.view
             AdminDashboard goBack = new AdminDashboard();
             goBack.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

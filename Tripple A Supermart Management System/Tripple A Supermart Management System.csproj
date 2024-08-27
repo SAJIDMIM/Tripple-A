@@ -119,6 +119,7 @@
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CLeave.cs" />
+    <Compile Include="controller\CProfile.cs" />
     <Compile Include="controller\EmployeeController.cs" />
     <Compile Include="controller\CForgotPassword.cs" />
     <Compile Include="controller\CHealthInsurance.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="model\Profile.cs" />
     <Compile Include="view\DirectorAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +189,12 @@
     </Compile>
     <Compile Include="view\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\HRManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\HRManager.Designer.cs">
+      <DependentUpon>HRManager.cs</DependentUpon>
     </Compile>
     <Compile Include="view\MonthlySale.cs">
       <SubType>Form</SubType>
@@ -387,6 +395,9 @@
     <EmbeddedResource Include="view\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\HRManager.resx">
+      <DependentUpon>HRManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\MonthlySale.resx">
       <DependentUpon>MonthlySale.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +533,7 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data-png-image_12724502.png" />
     <None Include="Resources\coupon.png" />
     <None Include="Resources\images %281%29.png" />
     <None Include="Resources\Salesforce-self-service-portal.jpg" />

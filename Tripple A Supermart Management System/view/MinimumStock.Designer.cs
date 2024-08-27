@@ -101,7 +101,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Stock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Search_Stock.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Search_Stock.ForeColor = System.Drawing.Color.Black;
-            this.btn_Search_Stock.Location = new System.Drawing.Point(486, 433);
+            this.btn_Search_Stock.Location = new System.Drawing.Point(484, 458);
             this.btn_Search_Stock.Name = "btn_Search_Stock";
             this.btn_Search_Stock.Size = new System.Drawing.Size(99, 45);
             this.btn_Search_Stock.TabIndex = 146;
@@ -132,7 +132,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Set_Minimum_Stock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Set_Minimum_Stock.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Set_Minimum_Stock.ForeColor = System.Drawing.Color.Black;
-            this.btn_Set_Minimum_Stock.Location = new System.Drawing.Point(365, 433);
+            this.btn_Set_Minimum_Stock.Location = new System.Drawing.Point(365, 458);
             this.btn_Set_Minimum_Stock.Name = "btn_Set_Minimum_Stock";
             this.btn_Set_Minimum_Stock.Size = new System.Drawing.Size(99, 45);
             this.btn_Set_Minimum_Stock.TabIndex = 107;

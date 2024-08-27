@@ -14,7 +14,7 @@ namespace Tripple_A_Supermart_Management_System.controller
         {
             // Create an instance of the MMinimumStock model class
             Stock minimumStockModel = new Stock();
-            minimumStockModel.setMinimumStock(stockId, quantity, lastUpdatedStock, reorderLevel);
+            minimumStockModel.setMinimumStock(stockId,quantity, lastUpdatedStock, reorderLevel);
 
 
 

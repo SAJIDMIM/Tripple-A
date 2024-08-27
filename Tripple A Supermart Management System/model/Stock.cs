@@ -13,13 +13,16 @@ namespace Tripple_A_Supermart_Management_System.model
     {
         private string stockId;
         private int quantity;
+        private string stockWeight;
         private DateTime lastUpdatedStock;
         private int reorderLevel;
         private double cost;
-        public void setMinimumStock(string stockId, int quantity, DateTime lastUpdatedStock, int reorderLevel)
+       
+        public void setMinimumStock(string stockId, int quantity,DateTime lastUpdatedStock, int reorderLevel)
         {
             this.stockId = stockId;
             this.quantity = quantity;
+            
             this.lastUpdatedStock = lastUpdatedStock;
             this.reorderLevel = reorderLevel;
 
@@ -54,6 +57,7 @@ namespace Tripple_A_Supermart_Management_System.model
                         // Add parameters to the command
                         command.Parameters.AddWithValue("@stockId", stockId);
                         command.Parameters.AddWithValue("@stockQuantity", quantity);
+                        
                         command.Parameters.AddWithValue("@reorderLevel", reorderLevel);
                         command.Parameters.AddWithValue("@lastUpdatedDate", DateTime.Now);
 
@@ -69,7 +73,7 @@ namespace Tripple_A_Supermart_Management_System.model
                         }
                         else
                         {
-                            MessageBox.Show("Stocks have not been updated successfully", "Invalid minimum stock update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Stock update on Quantity.Please check on reorder level and maintain the quantity level", "Invalid Quantity Level Updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -88,7 +92,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
             using (SqlConnection connection = MDBConnection.createConnection())
             {
-                string query = "SELECT stockName,stockType,stockQuantity,cost,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
+                string query = "SELECT stockName,stockType,stockQuantity,stockWeight,cost,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -170,7 +174,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
             using (SqlConnection connection = MDBConnection.createConnection())
             {
-                string query = "SELECT stockName,stockType,cost,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
+                string query = "SELECT stockName,stockType,stockWeight,cost,stockDate,lastUpdatedDate,reorderLevel FROM Stock WHERE stockId = @stockId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

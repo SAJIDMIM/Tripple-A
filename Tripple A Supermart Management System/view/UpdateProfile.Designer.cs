@@ -34,11 +34,10 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Search_adminId = new Guna.UI2.WinForms.Guna2Button();
             this.lblAdminName = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.cmbAdminType = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.rbFemale = new System.Windows.Forms.RadioButton();
@@ -77,7 +76,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(549, 46);
+            this.label7.Location = new System.Drawing.Point(570, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(236, 44);
             this.label7.TabIndex = 82;
@@ -96,11 +95,10 @@ namespace Tripple_A_Supermart_Management_System.view
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SpringGreen;
+            this.panel1.Controls.Add(this.btn_Search_adminId);
             this.panel1.Controls.Add(this.lblAdminName);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.cmbAdminType);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.rbFemale);
@@ -115,10 +113,27 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Controls.Add(this.txt_adminId);
             this.panel1.Controls.Add(this.picAdminProfile);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(310, 187);
+            this.panel1.Location = new System.Drawing.Point(310, 168);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 485);
             this.panel1.TabIndex = 84;
+            // 
+            // btn_Search_adminId
+            // 
+            this.btn_Search_adminId.BorderThickness = 1;
+            this.btn_Search_adminId.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_adminId.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_adminId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search_adminId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search_adminId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Search_adminId.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Search_adminId.ForeColor = System.Drawing.Color.Black;
+            this.btn_Search_adminId.Location = new System.Drawing.Point(540, 107);
+            this.btn_Search_adminId.Name = "btn_Search_adminId";
+            this.btn_Search_adminId.Size = new System.Drawing.Size(121, 41);
+            this.btn_Search_adminId.TabIndex = 110;
+            this.btn_Search_adminId.Text = "Search";
+            this.btn_Search_adminId.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // lblAdminName
             // 
@@ -140,11 +155,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClear.Font = new System.Drawing.Font("Calibri", 10F);
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(540, 338);
+            this.btnClear.Location = new System.Drawing.Point(540, 271);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(121, 41);
             this.btnClear.TabIndex = 107;
             this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -156,30 +172,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(540, 265);
+            this.btnSave.Location = new System.Drawing.Point(540, 191);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(121, 41);
             this.btnSave.TabIndex = 106;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // cmbAdminType
-            // 
-            this.cmbAdminType.FormattingEnabled = true;
-            this.cmbAdminType.Location = new System.Drawing.Point(540, 203);
-            this.cmbAdminType.Name = "cmbAdminType";
-            this.cmbAdminType.Size = new System.Drawing.Size(121, 28);
-            this.cmbAdminType.TabIndex = 105;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(535, 145);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 29);
-            this.label10.TabIndex = 104;
-            this.label10.Text = "Type";
             // 
             // txtEmail
             // 
@@ -205,6 +203,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(181, 38);
             this.txtEmail.TabIndex = 103;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label9
             // 
@@ -359,6 +358,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_adminId.SelectedText = "";
             this.txt_adminId.Size = new System.Drawing.Size(143, 38);
             this.txt_adminId.TabIndex = 91;
+            this.txt_adminId.TextChanged += new System.EventHandler(this.txt_adminId_TextChanged);
             // 
             // picAdminProfile
             // 
@@ -370,6 +370,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picAdminProfile.Size = new System.Drawing.Size(64, 64);
             this.picAdminProfile.TabIndex = 85;
             this.picAdminProfile.TabStop = false;
+            this.picAdminProfile.Click += new System.EventHandler(this.picAdminProfile_Click);
             // 
             // label3
             // 
@@ -384,10 +385,10 @@ namespace Tripple_A_Supermart_Management_System.view
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(553, 120);
+            this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(574, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 24);
+            this.label2.Size = new System.Drawing.Size(229, 24);
             this.label2.TabIndex = 85;
             this.label2.Text = "Welcome to Admin Profile";
             // 
@@ -403,6 +404,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picClose.TabIndex = 86;
             this.picClose.TabStop = false;
             this.picClose.UseTransparentBackground = true;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // picGoBackAdminLogin
             // 
@@ -416,13 +418,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackAdminLogin.TabIndex = 143;
             this.picGoBackAdminLogin.TabStop = false;
             this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
             // 
             // UpdateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1035, 695);
+            this.ClientSize = new System.Drawing.Size(1040, 695);
             this.Controls.Add(this.picGoBackAdminLogin);
             this.Controls.Add(this.picClose);
             this.Controls.Add(this.label2);
@@ -432,7 +435,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateProfile";
+            this.Load += new System.EventHandler(this.UpdateProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -455,8 +460,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label lblAdminName;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private System.Windows.Forms.ComboBox cmbAdminType;
-        private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton rbFemale;
@@ -472,5 +475,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackAdminLogin;
+        private Guna.UI2.WinForms.Guna2Button btn_Search_adminId;
     }
 }

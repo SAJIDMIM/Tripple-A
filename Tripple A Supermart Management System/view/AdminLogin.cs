@@ -183,6 +183,24 @@ namespace Tripple_A_Supermart_Management_System.view
             vc.Show();
             this.Hide();
         }
+        public void ClearFields()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedItem = null;
+                }
+                else if (c is CheckBox)
+                {
+                    ((CheckBox)c).Checked = false;
+                }
+            }
+        }
 
         private void picClose_Click(object sender, EventArgs e)
         {

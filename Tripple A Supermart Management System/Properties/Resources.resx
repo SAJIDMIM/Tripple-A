@@ -247,6 +247,9 @@
   <data name="quantity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quantity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Drawing+or+Cartoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drawing+or+Cartoon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -328,7 +331,7 @@
   <data name="salary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data-png-image_12724502" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data-png-image_12724502.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

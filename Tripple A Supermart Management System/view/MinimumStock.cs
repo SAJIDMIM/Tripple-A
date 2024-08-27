@@ -49,8 +49,16 @@ namespace Tripple_A_Supermart_Management_System.view
             }
 
 
-            controller.CStock minimumStock = new controller.CStock();
+            CStock minimumStock = new CStock();
             minimumStock.setMinimumStock(stockId, quantity, lastUpdatedStock, reorderLevel);
+
+            txt_stockId.Text = "";
+            txtStockname.Text = "";
+            cmbStockType.SelectedIndex = -1;
+            txtQuantity.Text = "";
+            dtpStockDate.Value = DateTime.Now;
+            dtpLastStock.Value = DateTime.Now;
+            cmbReorderLevel.SelectedIndex = -1;
 
           
             }

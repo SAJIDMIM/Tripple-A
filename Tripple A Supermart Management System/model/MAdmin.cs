@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;//without this statement sql won't be work
 using System.Windows.Forms;//getting features from form
 using Tripple_A_Supermart_Management_System.view;//import view package
+using System.Drawing;
+using System.IO;
+
 
 
 
@@ -14,8 +17,17 @@ namespace Tripple_A_Supermart_Management_System.model
 {
     public class Admin
     {
+        internal string firstName;
+        internal string lastName;
+        internal string gender;
+        internal string email;
+        internal DateTime doB;
+        internal Image adminPhoto;
+
         public string Username { get; set; }
         public string Role { get; set; }
+
+       
     }
     public class MAdmin
     {
@@ -27,7 +39,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
 
                 con.Open();
-                string query_select = "select user_type,username,password from admin where username = @Username and password = @Password and user_type = @UserType ";
+                string query_select = "select user_type,username,password from Admin where username = @Username and password = @Password and user_type = @UserType ";
                 using (SqlCommand cmd = new SqlCommand(query_select, con))
                 {
                     cmd.Parameters.AddWithValue("@UserType", Type);

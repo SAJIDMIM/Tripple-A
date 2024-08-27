@@ -643,6 +643,17 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_kpi_flat_icon_for_marketing_design_financial_investment_and_business_data_png_image_12724502 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data" +
+                        "-png-image_12724502", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap position {
             get {
                 object obj = ResourceManager.GetObject("position", resourceCulture);
