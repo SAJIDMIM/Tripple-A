@@ -19,7 +19,7 @@ namespace Tripple_A_Supermart_Management_System.view
     public partial class UpdateProfile : Form
     {
         private byte[] adminPhoto;
-        private object adminPhotoBytes;
+ 
 
         public UpdateProfile()
         {
@@ -44,11 +44,14 @@ namespace Tripple_A_Supermart_Management_System.view
                 gender = "Female";
             }
             string email = txtEmail.Text;
-            Image adminPhoto = null; // Initialize adminPhoto to null
-           
+
+            // Convert the Image object to a byte[] array
+            //MemoryStream ms = new MemoryStream();
+            //picAdminProfile.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //byte[] adminPhotoBytes = ms.ToArray();
 
             CProfile newProfile = new CProfile();
-            newProfile.updateProfile(adminId, firstName, lastName, gender, email, doB,adminPhoto);
+            newProfile.updateProfile(adminId, firstName, lastName, gender, email, doB);
 
             // Load the updated profile details for ordinary admins only
             // When the ordinary admin logs in
@@ -60,7 +63,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 DoB = doB,
                 Gender = gender,
                 Email = email,
-                AdminPhoto = adminPhotoBytes
+                //AdminPhoto = adminPhotoBytes
             };
             SessionManager.SetSession("AdminProfile", profile);
         }
@@ -111,6 +114,28 @@ namespace Tripple_A_Supermart_Management_System.view
                 else if (row["gender"].ToString() == "Female")
                 {
                     rbFemale.Checked = true;
+                }
+                // Convert the admin photo from base64 string to byte array
+                byte[] adminPhotoBytes = (byte[])Convert.FromBase64String(adminDetails.Rows[0]["adminPhoto"].ToString());
+                // Load the admin photo
+                if (adminDetails.Rows[0]["adminPhoto"] != DBNull.Value)
+                {
+                    string adminPhotoBase64String = adminDetails.Rows[0]["adminPhoto"].ToString();
+                    byte[] adminPhotoUTF8Bytes = Encoding.UTF8.GetBytes(adminPhotoBase64String);
+                   adminPhotoBytes = Convert.FromBase64String(Encoding.UTF8.GetString(adminPhotoUTF8Bytes));
+
+                    if (adminPhotoBytes != null)
+                    {
+                        try
+                        {
+                            MemoryStream ms = new MemoryStream(adminPhotoBytes);
+                            picAdminProfile.Image = Image.FromStream(ms);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error loading admin photo: " + ex.Message);
+                        }
+                    }
                 }
 
             }
@@ -193,12 +218,16 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            Regex emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
-            string email = txtEmail.Text;
-            if (!emailRegex.IsMatch(email))
+
+            if (!string.IsNullOrEmpty(txtEmail.Text)) // Add this check
             {
-                MessageBox.Show("Invalid email address. Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus(); // This will bring the focus back to the text box
+                Regex emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+                string email = txtEmail.Text;
+                if (!emailRegex.IsMatch(email))
+                {
+                    MessageBox.Show("Invalid email address. Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Focus(); // This will bring the focus back to the text box
+                }
             }
         }
 

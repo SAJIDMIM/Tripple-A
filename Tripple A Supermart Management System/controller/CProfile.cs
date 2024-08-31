@@ -11,9 +11,9 @@ public class CProfile
 
     private Profile profile = new Profile();
 
-    public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB, Image adminPhoto)
+    public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB)
     {
-        profile.updateProfile(adminId, firstName, lastName, gender, email, doB, adminPhoto);
+        profile.updateProfile(adminId, firstName, lastName, gender, email, doB);
     }
     public DataTable getAdminDetails(int adminId)
     {
@@ -21,6 +21,5 @@ public class CProfile
         return adminDetails.getAdminDetails(adminId);
     }
 
-
-  
+   
 }

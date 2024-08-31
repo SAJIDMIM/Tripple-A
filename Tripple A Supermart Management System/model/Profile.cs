@@ -9,22 +9,19 @@ using System.Drawing.Imaging;
 
 public class Profile
 {
-    private int adminId { get; set; }
-    private string firstName { get; set; }
-    private string lastName { get; set; }
-    private string gender { get; set; }
-    private string email { get; set; }
-    private DateTime doB { get; set; }
-    private byte adminPhoto { get; set; }
-    public string Gender { get; internal set; }
-    public string Email { get; internal set; }
-    public DateTime DoB { get; internal set; }
-    public string LastName { get; internal set; }
-    public string FirstName { get; internal set; }
-    public int AdminId { get; internal set; }
-    public object AdminPhoto { get; internal set; }
+    public int AdminId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
 
-    public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB, Image adminPhoto)
+   
+
+    public string Gender { get; set; }
+    public string Email { get; set; }
+    public DateTime DoB { get; set; }
+    public byte[] AdminPhoto { get; set; }
+
+
+    public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB)
     {
        // Connect to the database
     using (SqlConnection con = MDBConnection.createConnection())
@@ -45,19 +42,19 @@ public class Profile
                 command.Parameters.AddWithValue("@gender", gender);
                 command.Parameters.AddWithValue("@email", email);
 
-                    if (adminPhoto != null)
+                    /*if (adminPhoto != null)
                     {
                         using (MemoryStream ms = new MemoryStream())
                         {
                             adminPhoto.Save(ms, ImageFormat.Png); // Choose appropriate image format
                             byte[] adminPhotoBytes = ms.ToArray();
-                            command.Parameters.AddWithValue("@adminPhoto", adminPhotoBytes);
+                            command.Parameters.AddWithValue("@adminPhoto", Convert.ToString(adminPhotoBytes));
                         }
                     }
                     else
                     {
                         command.Parameters.AddWithValue("@adminPhoto", DBNull.Value); // Handle case of null image
-                    }
+                    }*/
 
                     int count = command.ExecuteNonQuery();
                 if (count > 0)
@@ -120,4 +117,6 @@ public class Profile
 
         return adminDetails;
     }
+
+    
 }
