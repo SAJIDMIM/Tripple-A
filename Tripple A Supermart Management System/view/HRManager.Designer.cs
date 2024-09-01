@@ -32,33 +32,36 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.postJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDeductionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leaveRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.healthInsuranceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.retirementPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monitorEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleEmployeeInterviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postJobToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.leaveRequestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.healthInsuranceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.retirementPlanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDeductionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leaveRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retirementPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.healthInsuranceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitorEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleEmployeeInterviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyEmployeeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.postJobToolStripMenuItem,
@@ -92,46 +95,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.viewToolStripMenuItem.Text = "View";
             // 
-            // addDeductionToolStripMenuItem
-            // 
-            this.addDeductionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.leaveRequestToolStripMenuItem,
-            this.retirementPlanToolStripMenuItem,
-            this.healthInsuranceToolStripMenuItem});
-            this.addDeductionToolStripMenuItem.Name = "addDeductionToolStripMenuItem";
-            this.addDeductionToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
-            this.addDeductionToolStripMenuItem.Text = "Add Deduction";
-            // 
-            // leaveRequestToolStripMenuItem
-            // 
-            this.leaveRequestToolStripMenuItem.Name = "leaveRequestToolStripMenuItem";
-            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
-            this.leaveRequestToolStripMenuItem.Text = "Leave Request";
-            // 
-            // healthInsuranceToolStripMenuItem
-            // 
-            this.healthInsuranceToolStripMenuItem.Name = "healthInsuranceToolStripMenuItem";
-            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
-            this.healthInsuranceToolStripMenuItem.Text = "Health Insurance";
-            // 
-            // retirementPlanToolStripMenuItem
-            // 
-            this.retirementPlanToolStripMenuItem.Name = "retirementPlanToolStripMenuItem";
-            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
-            this.retirementPlanToolStripMenuItem.Text = "Retirement Plan";
-            // 
-            // monitorEmployeeToolStripMenuItem
-            // 
-            this.monitorEmployeeToolStripMenuItem.Name = "monitorEmployeeToolStripMenuItem";
-            this.monitorEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 29);
-            this.monitorEmployeeToolStripMenuItem.Text = "Monitor Employee";
-            // 
-            // scheduleEmployeeInterviewToolStripMenuItem
-            // 
-            this.scheduleEmployeeInterviewToolStripMenuItem.Name = "scheduleEmployeeInterviewToolStripMenuItem";
-            this.scheduleEmployeeInterviewToolStripMenuItem.Size = new System.Drawing.Size(258, 29);
-            this.scheduleEmployeeInterviewToolStripMenuItem.Text = "Schedule Employee Interview";
-            // 
             // postJobToolStripMenuItem1
             // 
             this.postJobToolStripMenuItem1.Name = "postJobToolStripMenuItem1";
@@ -162,6 +125,52 @@ namespace Tripple_A_Supermart_Management_System.view
             this.employeeInformationToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.employeeInformationToolStripMenuItem.Text = "Employee Information";
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // addDeductionToolStripMenuItem
+            // 
+            this.addDeductionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leaveRequestToolStripMenuItem,
+            this.retirementPlanToolStripMenuItem,
+            this.healthInsuranceToolStripMenuItem});
+            this.addDeductionToolStripMenuItem.Name = "addDeductionToolStripMenuItem";
+            this.addDeductionToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
+            this.addDeductionToolStripMenuItem.Text = "Add Deduction";
+            // 
+            // leaveRequestToolStripMenuItem
+            // 
+            this.leaveRequestToolStripMenuItem.Name = "leaveRequestToolStripMenuItem";
+            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
+            this.leaveRequestToolStripMenuItem.Text = "Leave Request";
+            // 
+            // retirementPlanToolStripMenuItem
+            // 
+            this.retirementPlanToolStripMenuItem.Name = "retirementPlanToolStripMenuItem";
+            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
+            this.retirementPlanToolStripMenuItem.Text = "Retirement Plan";
+            // 
+            // healthInsuranceToolStripMenuItem
+            // 
+            this.healthInsuranceToolStripMenuItem.Name = "healthInsuranceToolStripMenuItem";
+            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
+            this.healthInsuranceToolStripMenuItem.Text = "Health Insurance";
+            // 
+            // monitorEmployeeToolStripMenuItem
+            // 
+            this.monitorEmployeeToolStripMenuItem.Name = "monitorEmployeeToolStripMenuItem";
+            this.monitorEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 29);
+            this.monitorEmployeeToolStripMenuItem.Text = "Monitor Employee";
+            // 
+            // scheduleEmployeeInterviewToolStripMenuItem
+            // 
+            this.scheduleEmployeeInterviewToolStripMenuItem.Name = "scheduleEmployeeInterviewToolStripMenuItem";
+            this.scheduleEmployeeInterviewToolStripMenuItem.Size = new System.Drawing.Size(258, 29);
+            this.scheduleEmployeeInterviewToolStripMenuItem.Text = "Schedule Employee Interview";
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -188,11 +197,21 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.picGoBackDir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 251);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(988, 359);
             this.panel1.TabIndex = 83;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_kpi_flat_icon_for_marketing_design_financial_investment_and_business_data_png_image_12724502;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(988, 367);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -216,20 +235,19 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2CirclePictureBox1.TabIndex = 84;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // pictureBox1
+            // picGoBackDir
             // 
-            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_kpi_flat_icon_for_marketing_design_financial_investment_and_business_data_png_image_12724502;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(988, 367);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.picGoBackDir.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
+            this.picGoBackDir.ImageRotate = 0F;
+            this.picGoBackDir.Location = new System.Drawing.Point(12, 307);
+            this.picGoBackDir.Name = "picGoBackDir";
+            this.picGoBackDir.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackDir.TabIndex = 144;
+            this.picGoBackDir.TabStop = false;
+            this.picGoBackDir.UseTransparentBackground = true;
+            this.picGoBackDir.Click += new System.EventHandler(this.picGoBackDir_Click);
             // 
             // HRManager
             // 
@@ -250,8 +268,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +300,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
     }
 }

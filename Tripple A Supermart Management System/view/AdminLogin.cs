@@ -126,11 +126,13 @@ namespace Tripple_A_Supermart_Management_System.view
                         case "Ordinary":
                             AdminDashboard adminDashboard = new AdminDashboard();
                             adminDashboard.Show();
+                            this.Hide();
                             break;
 
                         case "Director":
                             DirectorAdminDashboard directorDash = new DirectorAdminDashboard();
                             directorDash.Show();
+                            this.Hide();
                             break;
                            
                         default:

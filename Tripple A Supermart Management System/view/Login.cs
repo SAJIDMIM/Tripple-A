@@ -132,8 +132,8 @@ namespace Tripple_A_Supermart_Management_System.view
                     switch (user.Role)
                     {
                         case "HR":
-                            Form2 f2 = new Form2();
-                            f2.Show();
+                            HRManager go = new HRManager();
+                            go.Show();
                             this.Hide();
                             break;
                         case "General":
