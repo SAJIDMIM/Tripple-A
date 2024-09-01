@@ -163,5 +163,10 @@ namespace Tripple_A_Supermart_Management_System.view
                 ExpirationTime = expirationTime;
             }
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

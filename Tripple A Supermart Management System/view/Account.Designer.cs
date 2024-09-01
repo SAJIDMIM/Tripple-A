@@ -31,16 +31,16 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvAccountDetails = new System.Windows.Forms.DataGridView();
             this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Search_Account = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgvAccountDetails = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,10 +66,21 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Size = new System.Drawing.Size(573, 458);
             this.panel1.TabIndex = 1;
             // 
+            // dgvAccountDetails
+            // 
+            this.dgvAccountDetails.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccountDetails.Location = new System.Drawing.Point(40, 172);
+            this.dgvAccountDetails.Name = "dgvAccountDetails";
+            this.dgvAccountDetails.RowHeadersWidth = 62;
+            this.dgvAccountDetails.RowTemplate.Height = 28;
+            this.dgvAccountDetails.Size = new System.Drawing.Size(514, 253);
+            this.dgvAccountDetails.TabIndex = 147;
+            // 
             // picGoBackAdminLogin
             // 
             this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picGoBackAdminLogin.ImageRotate = 0F;
             this.picGoBackAdminLogin.Location = new System.Drawing.Point(22, 15);
             this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";
@@ -139,17 +150,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.TabIndex = 82;
             this.label7.Text = "View Account";
             // 
-            // dgvAccountDetails
-            // 
-            this.dgvAccountDetails.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccountDetails.Location = new System.Drawing.Point(40, 172);
-            this.dgvAccountDetails.Name = "dgvAccountDetails";
-            this.dgvAccountDetails.RowHeadersWidth = 62;
-            this.dgvAccountDetails.RowTemplate.Height = 28;
-            this.dgvAccountDetails.Size = new System.Drawing.Size(514, 253);
-            this.dgvAccountDetails.TabIndex = 147;
-            // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -165,8 +165,8 @@ namespace Tripple_A_Supermart_Management_System.view
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
             this.ResumeLayout(false);
 
         }

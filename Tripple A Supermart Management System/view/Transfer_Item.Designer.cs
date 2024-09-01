@@ -201,7 +201,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // picGoBackAdminLogin
             // 
             this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picGoBackAdminLogin.ImageRotate = 0F;
             this.picGoBackAdminLogin.Location = new System.Drawing.Point(27, 20);
             this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";

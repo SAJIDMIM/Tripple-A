@@ -23,7 +23,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             try
             {
-                string nextRetirementId = MRetirementPlan.GetNextRetirementId();
+                string nextRetirementId = model.RetirementPlan.GetNextRetirementId();
                 txt_Retirement_Plan.Text = nextRetirementId;
             }
             catch (Exception ex)
@@ -76,7 +76,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             if (!string.IsNullOrEmpty(txt_Employee_Id.Text))
             {
-                var details = MRetirementPlan.GetEmployeeDetails(txt_Employee_Id.Text);
+                var details = model.RetirementPlan.GetEmployeeDetails(txt_Employee_Id.Text);
                 txt_Employee_First_Name.Text = details.Item1;
                 txt_Employee_Last_Name.Text = details.Item2;
                 txt_Employee_Position.Text = details.Item3;
@@ -94,7 +94,9 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void pic_Hr_Dashboard_Click(object sender, EventArgs e)
         {
-            
+            HRManager back = new HRManager();
+            back.Show();
+            this.Hide();
         }
     }
     }

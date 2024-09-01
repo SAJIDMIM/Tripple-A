@@ -104,6 +104,11 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Hide();
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
    
 

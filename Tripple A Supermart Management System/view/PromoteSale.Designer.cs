@@ -375,7 +375,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // picGoBackDiradminDashboard
             // 
             this.picGoBackDiradminDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackDiradminDashboard.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picGoBackDiradminDashboard.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picGoBackDiradminDashboard.ImageRotate = 0F;
             this.picGoBackDiradminDashboard.Location = new System.Drawing.Point(12, 12);
             this.picGoBackDiradminDashboard.Name = "picGoBackDiradminDashboard";

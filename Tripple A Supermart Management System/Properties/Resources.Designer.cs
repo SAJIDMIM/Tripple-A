@@ -213,6 +213,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashboard {
+            get {
+                object obj = ResourceManager.GetObject("dashboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap description {
             get {
                 object obj = ResourceManager.GetObject("description", resourceCulture);
@@ -316,6 +326,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         internal static System.Drawing.Bitmap hide {
             get {
                 object obj = ResourceManager.GetObject("hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +563,26 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_arrow_symbol_entering_back_into_a_square {
+            get {
+                object obj = ResourceManager.GetObject("login-arrow-symbol-entering-back-into-a-square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_arrow_symbol_entering_back_into_a_square1 {
+            get {
+                object obj = ResourceManager.GetObject("login-arrow-symbol-entering-back-into-a-square1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail {
             get {
                 object obj = ResourceManager.GetObject("mail", resourceCulture);
@@ -647,6 +687,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
             get {
                 object obj = ResourceManager.GetObject("pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data" +
                         "-png-image_12724502", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_retirement_planning_vector_infographic_infochart_png_image_8417922 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-retirement-planning-vector-infographic-infochart-png-image_8417922", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

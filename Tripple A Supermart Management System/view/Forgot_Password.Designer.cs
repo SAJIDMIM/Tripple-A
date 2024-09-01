@@ -61,7 +61,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // pic_backLogin
             // 
             this.pic_backLogin.BackColor = System.Drawing.Color.Transparent;
-            this.pic_backLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.back;
+            this.pic_backLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
             this.pic_backLogin.ImageRotate = 0F;
             this.pic_backLogin.Location = new System.Drawing.Point(712, 43);
             this.pic_backLogin.Name = "pic_backLogin";

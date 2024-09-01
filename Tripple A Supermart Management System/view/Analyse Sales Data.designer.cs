@@ -29,21 +29,21 @@ namespace Tripple_A_Supermart_Management_System.view
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dgvSale_Details = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_Analyze_Sale = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,28 +81,42 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.TabIndex = 148;
             this.label7.Text = "Analyze Sales Data";
             // 
+            // picGoBackAdminLogin
+            // 
+            this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackAdminLogin.ImageRotate = 0F;
+            this.picGoBackAdminLogin.Location = new System.Drawing.Point(51, 28);
+            this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";
+            this.picGoBackAdminLogin.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackAdminLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackAdminLogin.TabIndex = 146;
+            this.picGoBackAdminLogin.TabStop = false;
+            this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
+            // 
             // dgvSale_Details
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvSale_Details.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSale_Details.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvSale_Details.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale_Details.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSale_Details.ColumnHeadersHeight = 4;
             this.dgvSale_Details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSale_Details.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSale_Details.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSale_Details.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSale_Details.Location = new System.Drawing.Point(51, 119);
             this.dgvSale_Details.Name = "dgvSale_Details";
@@ -160,20 +174,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3.TabIndex = 93;
             this.label3.Text = "Sale Id";
             // 
-            // picGoBackAdminLogin
-            // 
-            this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
-            this.picGoBackAdminLogin.ImageRotate = 0F;
-            this.picGoBackAdminLogin.Location = new System.Drawing.Point(51, 28);
-            this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";
-            this.picGoBackAdminLogin.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackAdminLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackAdminLogin.TabIndex = 146;
-            this.picGoBackAdminLogin.TabStop = false;
-            this.picGoBackAdminLogin.UseTransparentBackground = true;
-            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._32791e5dea5ad5c47a84ca6070e22707;
@@ -198,8 +198,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSale_Details)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

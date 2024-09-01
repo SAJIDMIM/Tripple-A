@@ -292,7 +292,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.guna2PictureBox3.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(915, 48);
             this.guna2PictureBox3.Name = "guna2PictureBox3";

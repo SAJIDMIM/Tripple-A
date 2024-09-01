@@ -14,7 +14,7 @@ namespace Tripple_A_Supermart_Management_System.controller
                 return;
             }
 
-            MRetirementPlan newRetire = new MRetirementPlan
+            RetirementPlan newRetire = new RetirementPlan
             {
                 RetirementId = retirementId,
                 EmployeeId = employeeId,

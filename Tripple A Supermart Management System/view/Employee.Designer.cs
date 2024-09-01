@@ -87,7 +87,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // pic_Hr_Dashboard
             // 
             this.pic_Hr_Dashboard.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Hr_Dashboard.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.back;
+            this.pic_Hr_Dashboard.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.pic_Hr_Dashboard.ImageRotate = 0F;
             this.pic_Hr_Dashboard.Location = new System.Drawing.Point(787, 30);
             this.pic_Hr_Dashboard.Name = "pic_Hr_Dashboard";

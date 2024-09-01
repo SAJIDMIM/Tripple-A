@@ -66,7 +66,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // dirAdminDash
             // 
             this.dirAdminDash.BackColor = System.Drawing.Color.Transparent;
-            this.dirAdminDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.dirAdminDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.dirAdminDash.ImageRotate = 0F;
             this.dirAdminDash.Location = new System.Drawing.Point(12, 513);
             this.dirAdminDash.Name = "dirAdminDash";

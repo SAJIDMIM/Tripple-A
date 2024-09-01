@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    class MRetirementPlan
+    class RetirementPlan
     {
         // Private fields
         private string retirementId;

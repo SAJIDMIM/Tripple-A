@@ -36,12 +36,12 @@ namespace Tripple_A_Supermart_Management_System
             this.monthlySaleReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analyzeSaleDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promoteSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,6 +107,12 @@ namespace Tripple_A_Supermart_Management_System
             this.promoteSaleToolStripMenuItem.Text = "Promote Sale";
             this.promoteSaleToolStripMenuItem.Click += new System.EventHandler(this.promoteSaleToolStripMenuItem_Click);
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -120,7 +126,7 @@ namespace Tripple_A_Supermart_Management_System
             // picGoBackDir
             // 
             this.picGoBackDir.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
             this.picGoBackDir.ImageRotate = 0F;
             this.picGoBackDir.Location = new System.Drawing.Point(12, 51);
             this.picGoBackDir.Name = "picGoBackDir";
@@ -162,12 +168,6 @@ namespace Tripple_A_Supermart_Management_System
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 144;
             this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
-            this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // DirectorAdminDashboard
             // 

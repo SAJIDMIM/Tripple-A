@@ -30,7 +30,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cmb_user_type = new System.Windows.Forms.ComboBox();
@@ -44,15 +43,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.chShowPassword = new System.Windows.Forms.CheckBox();
             this.pic_back_login = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txt_confirm_password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.pic_close = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txt_confirm_password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -63,23 +63,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(402, 844);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 1;
-            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.Aaa_Supermart;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 146);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(298, 169);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // label7
             // 
@@ -181,7 +164,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Create.FillColor = System.Drawing.Color.DodgerBlue;
             this.btn_Create.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Create.ForeColor = System.Drawing.Color.Black;
-            this.btn_Create.Location = new System.Drawing.Point(460, 696);
+            this.btn_Create.Location = new System.Drawing.Point(460, 682);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(411, 45);
             this.btn_Create.TabIndex = 101;
@@ -225,7 +208,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // pic_back_login
             // 
             this.pic_back_login.BackColor = System.Drawing.Color.Transparent;
-            this.pic_back_login.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.back;
+            this.pic_back_login.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square1;
             this.pic_back_login.ImageRotate = 0F;
             this.pic_back_login.Location = new System.Drawing.Point(429, 15);
             this.pic_back_login.Name = "pic_back_login";
@@ -235,6 +218,20 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_back_login.TabStop = false;
             this.pic_back_login.UseTransparentBackground = true;
             this.pic_back_login.Click += new System.EventHandler(this.pic_back_login_Click);
+            // 
+            // pic_close
+            // 
+            this.pic_close.BackColor = System.Drawing.Color.Transparent;
+            this.pic_close.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.cross_mark_8369334;
+            this.pic_close.ImageRotate = 0F;
+            this.pic_close.Location = new System.Drawing.Point(891, 15);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(33, 42);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 99;
+            this.pic_close.TabStop = false;
+            this.pic_close.UseTransparentBackground = true;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
             // txt_confirm_password
             // 
@@ -263,6 +260,23 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_confirm_password.TabIndex = 110;
             this.txt_confirm_password.UseSystemPasswordChar = true;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 1;
+            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.Asset_4_2x;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 146);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(298, 169);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // txt_password
             // 
             this.txt_password.BorderColor = System.Drawing.Color.Black;
@@ -288,32 +302,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(397, 44);
             this.txt_password.TabIndex = 109;
-            // 
-            // txt_email
-            // 
-            this.txt_email.BorderColor = System.Drawing.Color.Black;
-            this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email.DefaultText = "";
-            this.txt_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txt_email.ForeColor = System.Drawing.Color.Black;
-            this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mail;
-            this.txt_email.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txt_email.Location = new System.Drawing.Point(474, 339);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.PasswordChar = '\0';
-            this.txt_email.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_email.PlaceholderText = "Enter Email";
-            this.txt_email.SelectedText = "";
-            this.txt_email.Size = new System.Drawing.Size(401, 44);
-            this.txt_email.TabIndex = 108;
-            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // txt_username
             // 
@@ -341,26 +329,38 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_username.TabIndex = 107;
             this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
-            // pic_close
+            // txt_email
             // 
-            this.pic_close.BackColor = System.Drawing.Color.Transparent;
-            this.pic_close.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.cross_mark_8369334;
-            this.pic_close.ImageRotate = 0F;
-            this.pic_close.Location = new System.Drawing.Point(891, 15);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(33, 42);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 99;
-            this.pic_close.TabStop = false;
-            this.pic_close.UseTransparentBackground = true;
-            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            this.txt_email.BorderColor = System.Drawing.Color.Black;
+            this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_email.DefaultText = "";
+            this.txt_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_email.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txt_email.ForeColor = System.Drawing.Color.Black;
+            this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_email.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mail;
+            this.txt_email.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txt_email.Location = new System.Drawing.Point(474, 339);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.PasswordChar = '\0';
+            this.txt_email.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_email.PlaceholderText = "Enter Email";
+            this.txt_email.SelectedText = "";
+            this.txt_email.Size = new System.Drawing.Size(401, 44);
+            this.txt_email.TabIndex = 108;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(956, 798);
+            this.ClientSize = new System.Drawing.Size(956, 758);
             this.Controls.Add(this.chShowPassword);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmb_user_type);
@@ -385,9 +385,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

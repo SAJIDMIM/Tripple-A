@@ -148,7 +148,7 @@
     <Compile Include="model\MForgotPassword.cs" />
     <Compile Include="model\MLeave.cs" />
     <Compile Include="model\MLogin.cs" />
-    <Compile Include="model\MRetirementPlan.cs" />
+    <Compile Include="model\RetirementPlan.cs" />
     <Compile Include="model\MAccount.cs" />
     <Compile Include="model\Sale.cs" />
     <Compile Include="model\Stock.cs" />
@@ -244,12 +244,6 @@
     <Compile Include="view\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\EmployeePerformance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\EmployeePerformance.Designer.cs">
-      <DependentUpon>EmployeePerformance.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\WeeklyStockReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,12 +327,6 @@
     </Compile>
     <Compile Include="view\StockPrice.Designer.cs">
       <DependentUpon>StockPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\TargetSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\TargetSale.Designer.cs">
-      <DependentUpon>TargetSale.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Transfer_Item.cs">
       <SubType>Form</SubType>
@@ -424,9 +412,6 @@
     <EmbeddedResource Include="view\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\EmployeePerformance.resx">
-      <DependentUpon>EmployeePerformance.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStockReport.resx">
       <DependentUpon>WeeklyStockReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,9 +453,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\StockPrice.resx">
       <DependentUpon>StockPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\TargetSale.resx">
-      <DependentUpon>TargetSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Transfer_Item.resx">
       <DependentUpon>Transfer_Item.cs</DependentUpon>
@@ -533,6 +515,11 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\login-arrow-symbol-entering-back-into-a-square1.png" />
+    <None Include="Resources\login-arrow-symbol-entering-back-into-a-square.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\dashboard.png" />
+    <None Include="Resources\pngtree-retirement-planning-vector-infographic-infochart-png-image_8417922.png" />
     <None Include="Resources\pngtree-kpi-flat-icon-for-marketing-design-financial-investment-and-business-data-png-image_12724502.png" />
     <None Include="Resources\coupon.png" />
     <None Include="Resources\images %281%29.png" />

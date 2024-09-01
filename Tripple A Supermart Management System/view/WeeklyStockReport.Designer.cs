@@ -66,7 +66,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // picDirDash
             // 
             this.picDirDash.BackColor = System.Drawing.Color.Transparent;
-            this.picDirDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources._return;
+            this.picDirDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picDirDash.ImageRotate = 0F;
             this.picDirDash.Location = new System.Drawing.Point(12, 506);
             this.picDirDash.Name = "picDirDash";
