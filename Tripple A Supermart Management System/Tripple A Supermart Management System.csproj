@@ -138,18 +138,18 @@
       <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Item.cs" />
-    <Compile Include="model\MEmployee.cs" />
-    <Compile Include="model\MHealthInsurance.cs" />
-    <Compile Include="model\MInterview.cs" />
-    <Compile Include="model\MJob.cs" />
-    <Compile Include="model\MAdmin.cs" />
+    <Compile Include="model\Employee.cs" />
+    <Compile Include="model\HealthInsurance.cs" />
+    <Compile Include="model\Interview.cs" />
+    <Compile Include="model\Job.cs" />
+    <Compile Include="model\Admin.cs" />
     <Compile Include="model\MDBConnection.cs" />
-    <Compile Include="model\MCreateAccount.cs" />
-    <Compile Include="model\MForgotPassword.cs" />
-    <Compile Include="model\MLeave.cs" />
-    <Compile Include="model\MLogin.cs" />
+    <Compile Include="model\CreateAccount.cs" />
+    <Compile Include="model\ForgotPassword.cs" />
+    <Compile Include="model\Leave.cs" />
+    <Compile Include="model\Login.cs" />
     <Compile Include="model\RetirementPlan.cs" />
-    <Compile Include="model\MAccount.cs" />
+    <Compile Include="model\Account.cs" />
     <Compile Include="model\Sale.cs" />
     <Compile Include="model\Stock.cs" />
     <Compile Include="Program.cs" />
@@ -196,6 +196,12 @@
     <Compile Include="view\HRManager.Designer.cs">
       <DependentUpon>HRManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\LeaveRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LeaveRequest.Designer.cs">
+      <DependentUpon>LeaveRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\MonthlySale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,18 @@
     </Compile>
     <Compile Include="view\ViewLeaveRequest.designer.cs">
       <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewPostJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewPostJob.Designer.cs">
+      <DependentUpon>viewPostJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewRetirementPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewRetirementPlan.Designer.cs">
+      <DependentUpon>viewRetirementPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="view\View_Employee_Information.cs">
       <SubType>Form</SubType>
@@ -304,12 +322,6 @@
     <Compile Include="view\Job.Designer.cs">
       <DependentUpon>Job.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Leave.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\Leave.Designer.cs">
-      <DependentUpon>Leave.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,11 +392,11 @@
     <EmbeddedResource Include="view\BillingReminder.resx">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\HRManager.resx">
       <DependentUpon>HRManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LeaveRequest.resx">
+      <DependentUpon>LeaveRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\MonthlySale.resx">
       <DependentUpon>MonthlySale.cs</DependentUpon>
@@ -398,6 +410,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\ViewLeaveRequest.resx">
       <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewPostJob.resx">
+      <DependentUpon>viewPostJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewRetirementPlan.resx">
+      <DependentUpon>viewRetirementPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\View_Employee_Information.resx">
       <DependentUpon>View_Employee_Information.cs</DependentUpon>
@@ -441,9 +459,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\Leave.resx">
-      <DependentUpon>Leave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -515,6 +530,10 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\pngtree-online-leave-request-process-png-image_12966823.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\health-insurance-1.png" />
+    <None Include="Resources\How-to-post-a-job-on-Twitter-Blog-Image-1280x720.png" />
     <None Include="Resources\login-arrow-symbol-entering-back-into-a-square1.png" />
     <None Include="Resources\login-arrow-symbol-entering-back-into-a-square.png" />
     <None Include="Resources\home.png" />

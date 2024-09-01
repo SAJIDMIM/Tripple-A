@@ -46,7 +46,7 @@ namespace Tripple_A_Supermart_Management_System.view
             string contribution = cmb_Contribution.Text;
 
             CRetirementPlan newRetire = new CRetirementPlan();
-            newRetire.RetireEmployee(retirementId, employeeId, employeeFirstName, employeeLastName, position, retireType, dateJoined, expectedRetireDate, contribution);
+            newRetire.addretireEmployee(retirementId, employeeId, employeeFirstName, employeeLastName, position, retireType, dateJoined, expectedRetireDate, contribution);
 
             // Clear the fields after recording
             ClearFields();

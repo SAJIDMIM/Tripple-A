@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    public class MCreateAccount
+    public class CreateAccount
     {
         public void createAccount(string user_type, string username, string email, string password, string confirm_password)
         {

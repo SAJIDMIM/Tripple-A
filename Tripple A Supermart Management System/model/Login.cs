@@ -15,11 +15,11 @@ namespace Tripple_A_Supermart_Management_System.model
         public string Username { get; set; }
         public string Role { get; set; }
     }
-    public class MLogin
+    public class Login
     {
-       
-        
-            public Users Login(string usertype, string username, string password)
+
+
+        public Users Login(string usertype, string username, string password)
             {
                 using (SqlConnection con = MDBConnection.createConnection())
                 {

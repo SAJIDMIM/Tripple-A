@@ -178,6 +178,9 @@
   <data name="icons8-username-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-username-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="health-insurance-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\health-insurance-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,6 +223,12 @@
   <data name="position" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\position.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="quantity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quantity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="How-to-post-a-job-on-Twitter-Blog-Image-1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\How-to-post-a-job-on-Twitter-Blog-Image-1280x720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="telephone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telephone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,8 +262,8 @@
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quantity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quantity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login-arrow-symbol-entering-back-into-a-square1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-arrow-symbol-entering-back-into-a-square1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Drawing+or+Cartoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drawing+or+Cartoon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,6 +273,9 @@
   </data>
   <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images (1).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paper-clip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paper-clip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,7 +358,7 @@
   <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login-arrow-symbol-entering-back-into-a-square1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login-arrow-symbol-entering-back-into-a-square1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-online-leave-request-process-png-image_12966823" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-online-leave-request-process-png-image_12966823.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

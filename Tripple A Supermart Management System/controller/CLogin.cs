@@ -11,10 +11,10 @@ namespace Tripple_A_Supermart_Management_System.controller
 {
     public class CLogin
     {
-        private MLogin login;
+        private model.Login login;
         public CLogin()
         {
-            login = new MLogin(); // Initialize the instance of LoginModel
+            login = new model.Login(); // Initialize the instance of LoginModel
         }
         
         public Users Login(string usertype,string username, string password)

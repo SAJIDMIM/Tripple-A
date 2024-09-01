@@ -13,7 +13,7 @@ namespace Tripple_A_Supermart_Management_System.controller
 
         public DataTable viewAccount(int userId)
         {
-            MAccount modelAccount = new MAccount();
+            Account modelAccount = new Account();
             return modelAccount.viewAccount(userId); // Pass the userId to the model method
         }
 

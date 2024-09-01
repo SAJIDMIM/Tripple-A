@@ -375,7 +375,7 @@ namespace Tripple_A_Supermart_Management_System.view
             "Junior",
             "Intern",
             ""});
-            this.cmbPosition.Location = new System.Drawing.Point(408, 83);
+            this.cmbPosition.Location = new System.Drawing.Point(408, 96);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(121, 28);
             this.cmbPosition.TabIndex = 146;

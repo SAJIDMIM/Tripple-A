@@ -14,16 +14,13 @@ namespace Tripple_A_Supermart_Management_System.view
     public partial class Job : Form
     {
 
-        private string _postId;
-        private string _jobTitle;
-        private List<string> _jobTypes;
-        private string _jobDescription;
+        
 
-        private controller.CJob _cPostJob;
+        
         public Job()
         {
             InitializeComponent();
-            _cPostJob = new controller.CJob();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,28 +55,23 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Post_Click(object sender, EventArgs e)
         {
-            _postId = txt_publishId.Text;
-            _jobTitle = txt_jobTitle.Text;
+            string post_Id = txt_publishId.Text;
+            string Job_Title = txt_jobTitle.Text;
+            string jobType = cmbjobType.SelectedItem.ToString();
+            string Job_Description = txt_JobDescription.Text;
+            DateTime Date = dtpPostDate.Value;
+            CJob newJob = new CJob();
+            newJob.postJob(post_Id, Job_Title, jobType, Job_Description, Date);
 
-            _jobTypes = new List<string>();
-            if (cmbjobType.SelectedItem != null)
-            {
-                _jobTypes.Add(cmbjobType.SelectedItem.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Please select a job type.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit the method if no job type is selected
-            }
 
-            _jobDescription = txt_JobDescription.Text;
-            if (string.IsNullOrWhiteSpace(_postId) || string.IsNullOrWhiteSpace(_jobTitle) || string.IsNullOrWhiteSpace(_jobDescription))
+
+            if (string.IsNullOrWhiteSpace(post_Id) || string.IsNullOrWhiteSpace(Job_Title) || string.IsNullOrWhiteSpace(Job_Description))
             {
                 MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Exit the method if any field is empty
             }
 
-            _cPostJob.postJob(_postId, _jobTitle, _jobTypes, _jobDescription);
+           
         }
 
 
@@ -96,6 +88,18 @@ namespace Tripple_A_Supermart_Management_System.view
             txt_jobTitle.Clear();
             cmbjobType.SelectedIndex = -1;
             txt_JobDescription.Clear();
+        }
+
+        private void picHrDish_Click(object sender, EventArgs e)
+        {
+            HRManager back = new HRManager();
+            back.Show();
+            this.Hide();
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

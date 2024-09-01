@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.model;
 
@@ -6,7 +7,7 @@ namespace Tripple_A_Supermart_Management_System.controller
 {
     class CRetirementPlan
     {
-        public void RetireEmployee(string retirementId, string employeeId, string employeeFirstName, string employeeLastName, string position, string retireType, DateTime dateJoined, DateTime expectedDate, string contribution)
+        public void addretireEmployee(string retirementId, string employeeId, string employeeFirstName, string employeeLastName, string position, string retireType, DateTime dateJoined, DateTime expectedDate, string contribution)
         {
             if (string.IsNullOrEmpty(retirementId) || string.IsNullOrEmpty(employeeId) || string.IsNullOrEmpty(employeeFirstName) || string.IsNullOrEmpty(employeeLastName) || string.IsNullOrEmpty(position) || string.IsNullOrEmpty(retireType) || string.IsNullOrEmpty(contribution))
             {
@@ -27,8 +28,14 @@ namespace Tripple_A_Supermart_Management_System.controller
                 Contribution = contribution
             };
 
-            newRetire.RetireEmployee(); // Call the RetireEmployee method to insert data into the database
+            newRetire.addretireEmployee(); 
         }
+        public DataTable viewretirementPlan(string retirementId)
+        {
+            RetirementPlan modelRetire = new RetirementPlan();
+            return modelRetire.viewretirementPlan(retirementId); 
+        }
+
     }
 }
 

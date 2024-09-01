@@ -7,11 +7,11 @@ namespace Tripple_A_Supermart_Management_System.controller
 {
     public class CLeave
     {
-        private MLeave _mLeave;
+        private Leave _mLeave;
 
         public CLeave()
         {
-            _mLeave = new MLeave();
+            _mLeave = new Leave();
         }
 
         public int getleaveRequest()
@@ -30,7 +30,7 @@ namespace Tripple_A_Supermart_Management_System.controller
 
         public DataTable viewLeaveRequest(int leaveRequestId)
         {
-            MLeave modelLeave = new MLeave();
+            Leave modelLeave = new Leave();
             return modelLeave.viewLeaveRequest(leaveRequestId); // Pass the userId to the model method
         }
 
@@ -44,7 +44,7 @@ namespace Tripple_A_Supermart_Management_System.controller
             throw new NotImplementedException();
         }
 
-        internal MEmployee displayEmployee(string employeeId)
+        internal Employee displayEmployee(string employeeId)
         {
             throw new NotImplementedException();
         }

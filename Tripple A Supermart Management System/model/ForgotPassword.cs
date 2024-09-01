@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    public class MForgotPassword
+    public class ForgotPassword
     {
         public void ForgotPassword(string username,string password,string confirm_password)
         {

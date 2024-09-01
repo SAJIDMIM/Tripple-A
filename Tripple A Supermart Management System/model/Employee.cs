@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    public class MEmployee
+    public class Employee
     {
         protected string EmployeeId { get; set; }
         protected string FirstName { get; set; }
@@ -17,7 +17,6 @@ namespace Tripple_A_Supermart_Management_System.model
         protected float Salary { get; set; }
         protected string Retirement { get; set; }
 
-        
 
 
         public virtual void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
@@ -27,7 +26,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 con.Open();
 
                 string query = @"
-                INSERT INTO Employees (employeeId, firstName, lastName, empType, actorId, position, department, DateJoined, Salary, Retirement, 
+                INSERT INTO Employee (employeeId, firstName, lastName, empType, actorId, position, department, DateJoined, Salary, Retirement, 
                                       supervisorId, digitalMarketerId, accountantId, storekeeperId, salesRepId, cashierId)
                 VALUES (@employeeId, @firstName, @lastName, @empType, @actorId, @position, @department, @dateJoined, @salary, @retirement, 
                         CASE WHEN @empType = 'Supervisor' THEN @actorId ELSE NULL END, 
@@ -62,54 +61,15 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
         }
-        public MEmployee LoadEmployeeData(string employeeId)
-        {
-            MEmployee employee = new MEmployee();
-            try
-            {
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    string query = @"
-                SELECT firstName, lastName, empType, actorId, position, department, DateJoined, Salary, Retirement
-                FROM Employees
-                WHERE employeeId = @employeeId";
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        if (reader.Read())
-                        {
-                            employee.FirstName = reader["firstName"].ToString();
-                            employee.LastName = reader["lastName"].ToString();
-                            employee.EmpType = reader["empType"].ToString();
-                            employee.ActorId = reader["actorId"].ToString();
-                            employee.Position = reader["position"].ToString();
-                            employee.Department = reader["department"].ToString();
-                            employee.DateJoined = Convert.ToDateTime(reader["DateJoined"]);
-                            employee.Salary = float.Parse(reader["Salary"].ToString());
-                            employee.Retirement = reader["Retirement"].ToString();
-                        }
-                        else
-                        {
-                            throw new Exception("No employee data found.");
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error loading employee data: {ex.Message}");
-            }
-            return employee;
-        }
-
+    }
+            
+         
     
 
-    class Storekeeper : MEmployee
+
+
+
+    class Storekeeper : Employee
         {
             private string StorekeeperId { get; set; }
 
@@ -131,7 +91,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        class Cashier : MEmployee
+        class Cashier : Employee
         {
             private string CashierId { get; set; }
 
@@ -153,7 +113,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        class SalesRepresentative : MEmployee
+        class SalesRepresentative : Employee
         {
             private string SalesRepId { get; set; }
 
@@ -175,7 +135,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        class Supervisor : MEmployee
+        class Supervisor : Employee
         {
             private string SupervisorId { get; set; }
 
@@ -197,7 +157,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        class DigitalMarketer : MEmployee
+        class DigitalMarketer : Employee
         {
             private string DigitalMarketerId { get; set; }
 
@@ -219,7 +179,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        class Accountant : MEmployee
+        class Accountant : Employee
         {
             private string AccountantId { get; set; }
 
@@ -241,4 +201,4 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
     }
-}
+

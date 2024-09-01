@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    class MAccount
+    class Account
     {
         public DataTable viewAccount(int userId)
         {

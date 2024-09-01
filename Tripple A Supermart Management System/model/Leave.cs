@@ -13,7 +13,7 @@ namespace Tripple_A_Supermart_Management_System.model
         public string LastName { get; set; }
     }
 
-    public class MLeave
+    public class Leave
     {
         // Method to add a leave request (already provided)
         public void addLeaveRequest(string employeeId, string userType, string firstName, string lastName, string leaveType, string reason, DateTime leaveStartDate, DateTime leaveEndDate)
@@ -47,6 +47,12 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
         }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable viewLeaveRequest(int leaveRequestId)
         {
             DataTable leaveDetails = new DataTable(); // Create a DataTable to hold results

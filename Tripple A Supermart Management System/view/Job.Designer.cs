@@ -29,8 +29,6 @@ namespace Tripple_A_Supermart_Management_System.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,32 +36,19 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Post = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2Button();
-            this.linkClear = new System.Windows.Forms.LinkLabel();
             this.txt_JobDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_jobTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_publishId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.picHrDish = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpPostDate = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHrDish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SpringGreen;
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(-2, -8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 188);
-            this.panel1.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 44);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Post Job";
             // 
             // label3
             // 
@@ -133,7 +118,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Post.FillColor = System.Drawing.Color.DodgerBlue;
             this.btn_Post.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Post.ForeColor = System.Drawing.Color.Black;
-            this.btn_Post.Location = new System.Drawing.Point(592, 213);
+            this.btn_Post.Location = new System.Drawing.Point(383, 340);
             this.btn_Post.Name = "btn_Post";
             this.btn_Post.Size = new System.Drawing.Size(126, 45);
             this.btn_Post.TabIndex = 72;
@@ -150,25 +135,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btn_Cancel.Font = new System.Drawing.Font("Calibri", 12F);
             this.btn_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cancel.Location = new System.Drawing.Point(592, 292);
+            this.btn_Cancel.Location = new System.Drawing.Point(527, 340);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(124, 45);
             this.btn_Cancel.TabIndex = 119;
             this.btn_Cancel.Text = "Abort";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
-            // linkClear
-            // 
-            this.linkClear.AutoSize = true;
-            this.linkClear.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkClear.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.linkClear.Location = new System.Drawing.Point(657, 372);
-            this.linkClear.Name = "linkClear";
-            this.linkClear.Size = new System.Drawing.Size(53, 24);
-            this.linkClear.TabIndex = 124;
-            this.linkClear.TabStop = true;
-            this.linkClear.Text = "Clear";
-            this.linkClear.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClear_LinkClicked);
             // 
             // txt_JobDescription
             // 
@@ -192,7 +164,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_JobDescription.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txt_JobDescription.PlaceholderText = "Enter Job Description";
             this.txt_JobDescription.SelectedText = "";
-            this.txt_JobDescription.Size = new System.Drawing.Size(319, 81);
+            this.txt_JobDescription.Size = new System.Drawing.Size(228, 81);
             this.txt_JobDescription.TabIndex = 71;
             this.txt_JobDescription.TextChanged += new System.EventHandler(this.txt_JobDescription_TextChanged);
             // 
@@ -218,7 +190,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_jobTitle.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txt_jobTitle.PlaceholderText = "Enter the Job Title";
             this.txt_jobTitle.SelectedText = "";
-            this.txt_jobTitle.Size = new System.Drawing.Size(319, 44);
+            this.txt_jobTitle.Size = new System.Drawing.Size(228, 44);
             this.txt_jobTitle.TabIndex = 67;
             this.txt_jobTitle.TextChanged += new System.EventHandler(this.txt_jobTitle_TextChanged);
             // 
@@ -248,13 +220,83 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_publishId.TabIndex = 65;
             this.txt_publishId.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
-            // PostJob
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.How_to_post_a_job_on_Twitter_Blog_Image_1280x720;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(672, 188);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(66, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 44);
+            this.label7.TabIndex = 120;
+            this.label7.Text = "Post Job";
+            // 
+            // picHrDish
+            // 
+            this.picHrDish.BackColor = System.Drawing.Color.Transparent;
+            this.picHrDish.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picHrDish.ImageRotate = 0F;
+            this.picHrDish.Location = new System.Drawing.Point(573, 29);
+            this.picHrDish.Name = "picHrDish";
+            this.picHrDish.Size = new System.Drawing.Size(33, 42);
+            this.picHrDish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHrDish.TabIndex = 144;
+            this.picHrDish.TabStop = false;
+            this.picHrDish.UseTransparentBackground = true;
+            this.picHrDish.Click += new System.EventHandler(this.picHrDish_Click);
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.cross_mark_8369334;
+            this.picClose.ImageRotate = 0F;
+            this.picClose.Location = new System.Drawing.Point(618, 29);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(33, 42);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 145;
+            this.picClose.TabStop = false;
+            this.picClose.UseTransparentBackground = true;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(378, 204);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 29);
+            this.label5.TabIndex = 146;
+            this.label5.Text = "Date";
+            // 
+            // dtpPostDate
+            // 
+            this.dtpPostDate.Location = new System.Drawing.Point(383, 265);
+            this.dtpPostDate.Name = "dtpPostDate";
+            this.dtpPostDate.Size = new System.Drawing.Size(268, 26);
+            this.dtpPostDate.TabIndex = 147;
+            // 
+            // Job
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(765, 709);
-            this.Controls.Add(this.linkClear);
+            this.ClientSize = new System.Drawing.Size(663, 709);
+            this.Controls.Add(this.dtpPostDate);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.picClose);
+            this.Controls.Add(this.picHrDish);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Post);
             this.Controls.Add(this.txt_JobDescription);
@@ -265,22 +307,19 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_publishId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PostJob";
+            this.Name = "Job";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Job";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHrDish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txt_publishId;
         private System.Windows.Forms.Label label1;
@@ -291,6 +330,11 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2TextBox txt_JobDescription;
         private Guna.UI2.WinForms.Guna2Button btn_Post;
         private Guna.UI2.WinForms.Guna2Button btn_Cancel;
-        private System.Windows.Forms.LinkLabel linkClear;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2PictureBox picHrDish;
+        private Guna.UI2.WinForms.Guna2PictureBox picClose;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpPostDate;
     }
 }

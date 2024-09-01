@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -29,7 +30,7 @@ namespace Tripple_A_Supermart_Management_System.model
         public string Contribution { get => contribution; set => contribution = value; }
 
         // Method to retire an employee
-        public void RetireEmployee()
+        public void addretireEmployee()
         {
             try
             {
@@ -137,5 +138,42 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return (firstName, lastName, position, dateJoined);
         }
+
+        public DataTable viewretirementPlan(string retirementId)
+        {
+            DataTable retireDetails = new DataTable(); // Create a DataTable to hold results
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM RetirementPlan WHERE retirementId = @retirementId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@retirementId",retirementId); // Use the userId parameter
+
+                    try
+                    {
+                        connection.Open(); // Open the connection
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(retireDetails); // Fill the DataTable with retrieved data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions, such as connection errors or database issues
+                        Console.WriteLine("Error retrieving Retirement details: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close(); // Close the connection
+                    }
+                }
+            }
+
+            return retireDetails; // Return the DataTable with user details
+        }
     }
 }
+
+

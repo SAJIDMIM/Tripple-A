@@ -106,16 +106,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txt_Employee_Id_TextChanged(object sender, EventArgs e)
         {
-            string employeeId = txt_Employee_Id.Text; // Assuming txtEmployeeId is the input field for the ID
-            
-            if (!string.IsNullOrEmpty(employeeId))
-            {
-                EmployeeController employeeController = new EmployeeController();
-                MEmployee employee = employeeController.LoadEmployeeData(employeeId);
-
-
-               
-            }
+           
 
         }
 
