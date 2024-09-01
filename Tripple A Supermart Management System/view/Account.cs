@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -30,7 +24,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Account_Click(object sender, EventArgs e)
         {
-            int userId =  Convert.ToInt32(txtUserId.Text);
+            int userId = Convert.ToInt32(txtUserId.Text);
 
 
             // Validate User ID
@@ -43,7 +37,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // Create an instance of the CAccount class.
             CAccount viewAccountDetails = new CAccount();
 
-           
+
             // Call the viewAccount method to retrieve and display account details.
             DataTable accountDetails = viewAccountDetails.viewAccount(userId);
 

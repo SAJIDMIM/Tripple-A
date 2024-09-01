@@ -100,7 +100,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return nextRetirementId;
         }
-        
+
 
         public static (string, string, string, DateTime) GetEmployeeDetails(string employeeId)
         {
@@ -149,7 +149,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@retirementId",retirementId); // Use the userId parameter
+                    command.Parameters.AddWithValue("@retirementId", retirementId); // Use the userId parameter
 
                     try
                     {

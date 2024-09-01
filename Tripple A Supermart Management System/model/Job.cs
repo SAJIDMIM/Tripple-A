@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
@@ -18,22 +14,22 @@ namespace Tripple_A_Supermart_Management_System.model
         private DateTime Date { get; set; }
 
         // Method to post a job
-        public void postJob(string post_Id, string Job_Title,string jobType, string Job_Description,DateTime Date)
+        public void postJob(string post_Id, string Job_Title, string jobType, string Job_Description, DateTime Date)
         {
-            
+
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                
+
 
                 // Insert job details
                 string query_insert = "insert into Job (post_Id, Job_Title, jobType, Job_Description,Date) VALUES (@postId, @jobTitle, @jobType, @jobDescription,@Date)";
                 using (SqlCommand cmd = new SqlCommand(query_insert, con))
                 {
                     cmd.Parameters.AddWithValue("@postId", post_Id);
-                    cmd.Parameters.AddWithValue("@jobTitle",Job_Title);
+                    cmd.Parameters.AddWithValue("@jobTitle", Job_Title);
                     cmd.Parameters.AddWithValue("@jobType", jobType);
                     cmd.Parameters.AddWithValue("@jobDescription", Job_Description);
-                    cmd.Parameters.AddWithValue("@Date",Date);
+                    cmd.Parameters.AddWithValue("@Date", Date);
                     con.Open();
 
                     int count = cmd.ExecuteNonQuery();
@@ -57,7 +53,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 string query_select = "select * from Job where post_Id = @post_Id ";
                 using (SqlCommand cmd = new SqlCommand(query_select, con))
                 {
-                    cmd.Parameters.AddWithValue("@post_Id",post_Id);
+                    cmd.Parameters.AddWithValue("@post_Id", post_Id);
                     con.Open();
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))

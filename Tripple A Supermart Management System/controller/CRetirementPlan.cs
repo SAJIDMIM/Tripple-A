@@ -28,12 +28,12 @@ namespace Tripple_A_Supermart_Management_System.controller
                 Contribution = contribution
             };
 
-            newRetire.addretireEmployee(); 
+            newRetire.addretireEmployee();
         }
         public DataTable viewretirementPlan(string retirementId)
         {
             RetirementPlan modelRetire = new RetirementPlan();
-            return modelRetire.viewretirementPlan(retirementId); 
+            return modelRetire.viewretirementPlan(retirementId);
         }
 
     }

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Data.SqlClient;
-using Tripple_A_Supermart_Management_System.model;
-using System.Drawing;
-using System.Windows.Forms;
-using System.IO;
 using System.Data;
-using System.Drawing.Imaging;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using Tripple_A_Supermart_Management_System.model;
 
 public class Profile
 {
@@ -13,7 +10,7 @@ public class Profile
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
-   
+
 
     public string Gender { get; set; }
     public string Email { get; set; }
@@ -23,24 +20,24 @@ public class Profile
 
     public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB)
     {
-       // Connect to the database
-    using (SqlConnection con = MDBConnection.createConnection())
-    {
-        try
+        // Connect to the database
+        using (SqlConnection con = MDBConnection.createConnection())
         {
-            // Open the connection before executing the command
-            con.Open();
-
-            string query = "UPDATE Admin SET firstName = @firstName, lastName = @lastName, doB = @doB, gender = @gender, email = @email WHERE adminId = @adminId";
-
-            using (SqlCommand command = new SqlCommand(query, con))
+            try
             {
-                command.Parameters.AddWithValue("@adminId", adminId);
-                command.Parameters.AddWithValue("@firstName", firstName);
-                command.Parameters.AddWithValue("@lastName", lastName);
-                command.Parameters.AddWithValue("@doB", doB);
-                command.Parameters.AddWithValue("@gender", gender);
-                command.Parameters.AddWithValue("@email", email);
+                // Open the connection before executing the command
+                con.Open();
+
+                string query = "UPDATE Admin SET firstName = @firstName, lastName = @lastName, doB = @doB, gender = @gender, email = @email WHERE adminId = @adminId";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@adminId", adminId);
+                    command.Parameters.AddWithValue("@firstName", firstName);
+                    command.Parameters.AddWithValue("@lastName", lastName);
+                    command.Parameters.AddWithValue("@doB", doB);
+                    command.Parameters.AddWithValue("@gender", gender);
+                    command.Parameters.AddWithValue("@email", email);
 
                     /*if (adminPhoto != null)
                     {
@@ -57,26 +54,26 @@ public class Profile
                     }*/
 
                     int count = command.ExecuteNonQuery();
-                if (count > 0)
-                {
-                    MessageBox.Show("Admin Profile Updated Successfully.","Updated Profile",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Encountered issue on update,please try again later!","Invalid Update Profile",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Admin Profile Updated Successfully.", "Updated Profile", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Encountered issue on update,please try again later!", "Invalid Update Profile", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating admin profile: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection even if an exception occurred
+                con.Close();
+            }
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Error updating admin profile: " + ex.Message);
-        }
-        finally
-        {
-            // Close the connection even if an exception occurred
-            con.Close();
-        }
-    }
     }
 
     public DataTable getAdminDetails(int adminId)
@@ -99,9 +96,9 @@ public class Profile
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(adminDetails);
-                        
+
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -118,5 +115,5 @@ public class Profile
         return adminDetails;
     }
 
-    
+
 }

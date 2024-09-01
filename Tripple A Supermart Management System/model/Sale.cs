@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
@@ -51,7 +47,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return saleDetails; // Return the DataTable with sale details
         }
-       
+
 
         public void promoteSale(int saleId, DateTime saleStartDate, DateTime saleEndDate, double price, double discount)
         {
@@ -116,9 +112,9 @@ namespace Tripple_A_Supermart_Management_System.model
 
                             con.Open();
                             int count = command.ExecuteNonQuery();
-                            if(count > 0)
+                            if (count > 0)
                             {
-                                MessageBox.Show("Successfully Predicted the Sale","Promote Sale",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                MessageBox.Show("Successfully Predicted the Sale", "Promote Sale", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
@@ -130,14 +126,14 @@ namespace Tripple_A_Supermart_Management_System.model
 
 
                         }
-                        
+
                     }
-                  
+
                 }
             }
 
         }
-    
+
 
         public DataTable getSaleDetails(int saleId)
         {

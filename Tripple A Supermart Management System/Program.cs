@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.view;
 namespace Tripple_A_Supermart_Management_System
@@ -14,11 +11,11 @@ namespace Tripple_A_Supermart_Management_System
         [STAThread]
         static void Main()
         {
-            
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Splash());
-            
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Splash());
+
         }
     }
 }

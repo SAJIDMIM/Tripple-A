@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
-using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
@@ -67,9 +59,9 @@ namespace Tripple_A_Supermart_Management_System.view
             cmb_Contribution.SelectedIndex = -1;
         }
 
-       private void txt_Employee_Id_Leave(object sender, EventArgs e)
+        private void txt_Employee_Id_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txt_Employee_Id_TextChanged(object sender, EventArgs e)
@@ -88,7 +80,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 {
                     dtp_Joined_Date.Value = dateJoined;
                 }
-                
+
             }
         }
 
@@ -99,6 +91,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Hide();
         }
     }
-    }
+}
 
 

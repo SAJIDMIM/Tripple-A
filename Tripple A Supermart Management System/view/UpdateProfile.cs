@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
-using Tripple_A_Supermart_Management_System.controller;
-using Tripple_A_Supermart_Management_System.model;
 //using System.Drawing;
 namespace Tripple_A_Supermart_Management_System.view
 
@@ -19,7 +13,7 @@ namespace Tripple_A_Supermart_Management_System.view
     public partial class UpdateProfile : Form
     {
         private byte[] adminPhoto;
- 
+
 
         public UpdateProfile()
         {
@@ -122,7 +116,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 {
                     string adminPhotoBase64String = adminDetails.Rows[0]["adminPhoto"].ToString();
                     byte[] adminPhotoUTF8Bytes = Encoding.UTF8.GetBytes(adminPhotoBase64String);
-                   adminPhotoBytes = Convert.FromBase64String(Encoding.UTF8.GetString(adminPhotoUTF8Bytes));
+                    adminPhotoBytes = Convert.FromBase64String(Encoding.UTF8.GetString(adminPhotoUTF8Bytes));
 
                     if (adminPhotoBytes != null)
                     {
@@ -152,7 +146,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 rbMale.Checked = false;
                 rbFemale.Checked = false;
             }
-            }
+        }
 
         private void UpdateProfile_Load(object sender, EventArgs e)
         {
@@ -205,13 +199,13 @@ namespace Tripple_A_Supermart_Management_System.view
                 int adminId = Convert.ToInt32(txt_adminId.Text);
                 if (adminId == 2)
                 {
-                    MessageBox.Show("You are not authorized to use this ID. Please enter your own ID.","Unauthorized Access",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("You are not authorized to use this ID. Please enter your own ID.", "Unauthorized Access", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txt_adminId.Clear();
                     txt_adminId.Focus();
                 }
                 else
                 {
-                    
+
                 }
             }
         }
@@ -262,8 +256,8 @@ namespace Tripple_A_Supermart_Management_System.view
         }
     }
 }
-    
 
-    
-    
+
+
+
 

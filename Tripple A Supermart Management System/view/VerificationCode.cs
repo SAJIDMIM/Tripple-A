@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Net;
 using System.Net.Mail;
+using System.Windows.Forms;
 
 
 namespace Tripple_A_Supermart_Management_System.view
@@ -43,45 +36,45 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime expirationTime = DateTime.Now.AddMinutes(CodeExpirationMinutes);
             VerificationCodeInfo codeInfo = new VerificationCodeInfo(vCode, expirationTime);
 
-           
 
 
-                // Store the verification code associated with the email
-               
+
+            // Store the verification code associated with the email
 
 
-                    if (verificationCodes.ContainsKey(to))
-                    {
-                        verificationCodes[to] = codeInfo; // Update the code if the email is already present
-                    }
-                    else
-                    {
-                        verificationCodes.Add(to, codeInfo); // Add a new entry if the email is not present
-                    }
-                    MailMessage message = new MailMessage();
-                    message.To.Add(to);
-                    message.From = new MailAddress(from);
-                    message.Subject = "Your Verification code for reset password";
-                    message.Body = mail;
-                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                    smtp.EnableSsl = true;
-                    smtp.Port = 587;
-                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    smtp.Credentials = new NetworkCredential(from, pass);
-                    try
-                    {
-                        smtp.Send(message);
-                        MessageBox.Show("Successfully sent a verificaton code to your gmail", "Verification Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_verificationCode.Enabled = true;
-                        btn_verify_Code.Enabled = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                
-               
-            
+
+            if (verificationCodes.ContainsKey(to))
+            {
+                verificationCodes[to] = codeInfo; // Update the code if the email is already present
+            }
+            else
+            {
+                verificationCodes.Add(to, codeInfo); // Add a new entry if the email is not present
+            }
+            MailMessage message = new MailMessage();
+            message.To.Add(to);
+            message.From = new MailAddress(from);
+            message.Subject = "Your Verification code for reset password";
+            message.Body = mail;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Credentials = new NetworkCredential(from, pass);
+            try
+            {
+                smtp.Send(message);
+                MessageBox.Show("Successfully sent a verificaton code to your gmail", "Verification Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_verificationCode.Enabled = true;
+                btn_verify_Code.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
         }
 
         private void btn_verify_Code_Click(object sender, EventArgs e)
@@ -102,32 +95,32 @@ namespace Tripple_A_Supermart_Management_System.view
 
 
             if (verificationCodes.ContainsKey(email))
-                {
-                    VerificationCodeInfo codeInfo = verificationCodes[email];
+            {
+                VerificationCodeInfo codeInfo = verificationCodes[email];
 
-                    if (DateTime.Now > codeInfo.ExpirationTime)
-                    {
-                        MessageBox.Show("Verification code has expired", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else if (enteredCode == codeInfo.Code.ToString())
-                    {
-                        MessageBox.Show("Successfully Verified", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Forgot_Password forgot = new Forgot_Password();
-                        forgot.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid verification code", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                if (DateTime.Now > codeInfo.ExpirationTime)
+                {
+                    MessageBox.Show("Verification code has expired", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (enteredCode == codeInfo.Code.ToString())
+                {
+                    MessageBox.Show("Successfully Verified", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Forgot_Password forgot = new Forgot_Password();
+                    forgot.Show();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Email address not found", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid verification code", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-        
+            else
+            {
+                MessageBox.Show("Email address not found", "Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -148,8 +141,8 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txt_email_TextChanged(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
         public class VerificationCodeInfo

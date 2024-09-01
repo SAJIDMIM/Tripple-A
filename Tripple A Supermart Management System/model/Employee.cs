@@ -62,143 +62,143 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
     }
-            
-         
-    
+
+
+
 
 
 
 
     class Storekeeper : Employee
+    {
+        private string StorekeeperId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
         {
-            private string StorekeeperId { get; set; }
+            StorekeeperId = "ST" + employeeId; // Generate Storekeeper ID
+            base.addEmployee(employeeId, firstName, lastName, empType, StorekeeperId, position, department, dateJoined, salary, retirement);
 
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+            using (SqlConnection con = MDBConnection.createConnection())
             {
-                StorekeeperId = "ST" + employeeId; // Generate Storekeeper ID
-                base.addEmployee(employeeId, firstName, lastName, empType, StorekeeperId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Storekeeper (storekeeperId, employeeId) VALUES (@storekeeperId, @employeeId)", con))
                 {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Storekeeper (storekeeperId, employeeId) VALUES (@storekeeperId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@storekeeperId", StorekeeperId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        class Cashier : Employee
-        {
-            private string CashierId { get; set; }
-
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
-            {
-                CashierId = "C" + employeeId; // Generate Cashier ID
-                base.addEmployee(employeeId, firstName, lastName, empType, CashierId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Cashier (cashierId, employeeId) VALUES (@cashierId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@cashierId", CashierId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        class SalesRepresentative : Employee
-        {
-            private string SalesRepId { get; set; }
-
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
-            {
-                SalesRepId = "SR" + employeeId; // Generate Sales Representative ID
-                base.addEmployee(employeeId, firstName, lastName, empType, SalesRepId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO SalesRepresentative (salesRepId, employeeId) VALUES (@salesRepId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@salesRepId", SalesRepId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        class Supervisor : Employee
-        {
-            private string SupervisorId { get; set; }
-
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
-            {
-                SupervisorId = "SU" + employeeId; // Generate Supervisor ID
-                base.addEmployee(employeeId, firstName, lastName, empType, SupervisorId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Supervisor (supervisorId, employeeId) VALUES (@supervisorId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@supervisorId", SupervisorId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        class DigitalMarketer : Employee
-        {
-            private string DigitalMarketerId { get; set; }
-
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
-            {
-                DigitalMarketerId = "DM" + employeeId; // Generate Digital Marketer ID
-                base.addEmployee(employeeId, firstName, lastName, empType, DigitalMarketerId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO DigitalMarketer (digitalMarketerId, employeeId) VALUES (@digitalMarketerId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@digitalMarketerId", DigitalMarketerId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        class Accountant : Employee
-        {
-            private string AccountantId { get; set; }
-
-            public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
-            {
-                AccountantId = "A" + employeeId; // Generate Accountant ID
-                base.addEmployee(employeeId, firstName, lastName, empType, AccountantId, position, department, dateJoined, salary, retirement);
-
-                using (SqlConnection con = MDBConnection.createConnection())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Accountant (accountantId, employeeId) VALUES (@accountantId, @employeeId)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@accountantId", AccountantId);
-                        cmd.Parameters.AddWithValue("@employeeId", employeeId);
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.Parameters.AddWithValue("@storekeeperId", StorekeeperId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
     }
+
+    class Cashier : Employee
+    {
+        private string CashierId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+        {
+            CashierId = "C" + employeeId; // Generate Cashier ID
+            base.addEmployee(employeeId, firstName, lastName, empType, CashierId, position, department, dateJoined, salary, retirement);
+
+            using (SqlConnection con = MDBConnection.createConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Cashier (cashierId, employeeId) VALUES (@cashierId, @employeeId)", con))
+                {
+                    cmd.Parameters.AddWithValue("@cashierId", CashierId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }
+
+    class SalesRepresentative : Employee
+    {
+        private string SalesRepId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+        {
+            SalesRepId = "SR" + employeeId; // Generate Sales Representative ID
+            base.addEmployee(employeeId, firstName, lastName, empType, SalesRepId, position, department, dateJoined, salary, retirement);
+
+            using (SqlConnection con = MDBConnection.createConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO SalesRepresentative (salesRepId, employeeId) VALUES (@salesRepId, @employeeId)", con))
+                {
+                    cmd.Parameters.AddWithValue("@salesRepId", SalesRepId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }
+
+    class Supervisor : Employee
+    {
+        private string SupervisorId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+        {
+            SupervisorId = "SU" + employeeId; // Generate Supervisor ID
+            base.addEmployee(employeeId, firstName, lastName, empType, SupervisorId, position, department, dateJoined, salary, retirement);
+
+            using (SqlConnection con = MDBConnection.createConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Supervisor (supervisorId, employeeId) VALUES (@supervisorId, @employeeId)", con))
+                {
+                    cmd.Parameters.AddWithValue("@supervisorId", SupervisorId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }
+
+    class DigitalMarketer : Employee
+    {
+        private string DigitalMarketerId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+        {
+            DigitalMarketerId = "DM" + employeeId; // Generate Digital Marketer ID
+            base.addEmployee(employeeId, firstName, lastName, empType, DigitalMarketerId, position, department, dateJoined, salary, retirement);
+
+            using (SqlConnection con = MDBConnection.createConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO DigitalMarketer (digitalMarketerId, employeeId) VALUES (@digitalMarketerId, @employeeId)", con))
+                {
+                    cmd.Parameters.AddWithValue("@digitalMarketerId", DigitalMarketerId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }
+
+    class Accountant : Employee
+    {
+        private string AccountantId { get; set; }
+
+        public override void addEmployee(string employeeId, string firstName, string lastName, string empType, string actorId, string position, string department, DateTime dateJoined, float salary, string retirement)
+        {
+            AccountantId = "A" + employeeId; // Generate Accountant ID
+            base.addEmployee(employeeId, firstName, lastName, empType, AccountantId, position, department, dateJoined, salary, retirement);
+
+            using (SqlConnection con = MDBConnection.createConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Accountant (accountantId, employeeId) VALUES (@accountantId, @employeeId)", con))
+                {
+                    cmd.Parameters.AddWithValue("@accountantId", AccountantId);
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }
+}
 

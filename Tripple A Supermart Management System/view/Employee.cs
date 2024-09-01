@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
-using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
@@ -16,14 +8,14 @@ namespace Tripple_A_Supermart_Management_System.view
     {
         //private CEmployee _employeeController;
 
-      
-        
+
+
 
 
         public Employee()
         {
             InitializeComponent();
-           // _employeeController = new CEmployee();
+            // _employeeController = new CEmployee();
         }
         private void btn_Add_Employee_Click(object sender, EventArgs e)
         {
@@ -64,7 +56,7 @@ namespace Tripple_A_Supermart_Management_System.view
             txt_Salary.Text = string.Empty;
             cmbRetirement.SelectedItem = null;
 
-           
+
 
 
 
@@ -106,15 +98,15 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txt_Employee_Id_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
-        }
-       
+    }
+
 
 }
 
-    
+
 
 

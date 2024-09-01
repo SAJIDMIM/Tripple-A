@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -42,13 +35,13 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime EffectiveDate = dtp_Effective_Date.Value;
             DateTime ExpiryDate = dtp_Expiry_Date.Value;
             double PremiumAmount = Convert.ToDouble(txt_Premium_Amount.Text);
-            double DeductibleAmount =Convert.ToDouble(txt_Deductable_Amount.Text);
+            double DeductibleAmount = Convert.ToDouble(txt_Deductable_Amount.Text);
             string RenewalOption = cmbRenewalType.SelectedItem.ToString();
 
             CHealthInsurance newHealth = new CHealthInsurance();
             newHealth.AddHealthInsurance(HealthInsuranceID, employeeId, firstName, lastName, Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, DeductibleAmount, RenewalOption);
-            
-       
+
+
         }
 
         private void btn_Search_Employee_Details_Click(object sender, EventArgs e)

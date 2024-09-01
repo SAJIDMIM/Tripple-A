@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
-using Tripple_A_Supermart_Management_System.model;
 
 
 
@@ -42,7 +34,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         }
         //save login details of a particular user
-        private void SaveCredentials(string usertype,string username,string password)//saving the details
+        private void SaveCredentials(string usertype, string username, string password)//saving the details
         {
             Properties.Settings.Default[$"{usertype}_username"] = username;
             Properties.Settings.Default[$"{usertype}_password"] = null;
@@ -54,7 +46,7 @@ namespace Tripple_A_Supermart_Management_System.view
         //load login details to particular user is selected
         private void LoadCredentials()
         {
-           
+
             {
                 if (cmbType.SelectedItem != null)
                 {
@@ -62,13 +54,13 @@ namespace Tripple_A_Supermart_Management_System.view
                     if (Properties.Settings.Default[$"{usertype}_RememberMe"] != null && (bool)Properties.Settings.Default[$"{usertype}_RememberMe"])
                     {
                         txt_username.Text = Properties.Settings.Default[$"{usertype}_username"]?.ToString();
-                     
+
                         chRemberMe.Checked = true;
                     }
                     else
                     {
                         txt_username.Text = "";
-                        
+
                         chRemberMe.Checked = false;
                     }
                 }
@@ -99,9 +91,9 @@ namespace Tripple_A_Supermart_Management_System.view
             string password = txt_password.Text;
             string role = cmbType.SelectedItem?.ToString();
 
-            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(role))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(role))
             {
-                MessageBox.Show("Please Enter all the fields.","Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Please Enter all the fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (role == "User")
             {
@@ -118,9 +110,9 @@ namespace Tripple_A_Supermart_Management_System.view
             {
                 if (user != null)
                 {
-                    MessageBox.Show("You have successfully logged in to the System.","Login Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("You have successfully logged in to the System.", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if(chRemberMe.Checked)
+                    if (chRemberMe.Checked)
                     {
                         SaveCredentials(role, username, password);
                     }
@@ -137,13 +129,13 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "General":
-                           
+
                         // Add other roles as needed
                         case "Junior":
                             break;
                         case "Supervisor":
-                           
-                            
+
+
                         case "Digital":
                             break;
                         case "Accountant":
@@ -163,7 +155,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username, password, or role.","Login Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid username, password, or role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -173,7 +165,7 @@ namespace Tripple_A_Supermart_Management_System.view
         }
 
 
-            
+
 
 
 
@@ -212,7 +204,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //link to connect the create account form
-            CreateAccount account  = new CreateAccount();
+            CreateAccount account = new CreateAccount();
             account.Show();
             this.Hide();
         }
@@ -224,7 +216,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
@@ -240,14 +232,14 @@ namespace Tripple_A_Supermart_Management_System.view
             //clear all the fields
             txt_username.Clear();
             txt_password.Clear();
-           
+
             chRemberMe.Checked = false;
 
         }
 
         private void chRemberMe_CheckedChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -22,7 +16,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string retirementId = txtRetireId.Text;
 
-            if(retirementId == null)
+            if (retirementId == null)
             {
                 MessageBox.Show("Please enter valid Retirement Id to be process", "Invalid Retirement Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -37,10 +31,10 @@ namespace Tripple_A_Supermart_Management_System.view
 
                 dgvRetire.DataSource = retireDetails;
             }
-            
 
-        
-          
+
+
+
         }
 
         private void picHrManagerDash_Click(object sender, EventArgs e)

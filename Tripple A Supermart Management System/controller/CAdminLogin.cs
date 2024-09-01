@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tripple_A_Supermart_Management_System.model;//import model package to connect with controller package
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Tripple_A_Supermart_Management_System.view;
+﻿using Tripple_A_Supermart_Management_System.model;//import model package to connect with controller package
 
 
 
@@ -29,5 +21,5 @@ namespace Tripple_A_Supermart_Management_System.controller
             return login.Login(Type, username, password);
         }
     }
-    }
+}
 

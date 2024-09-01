@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;//without this statement sql won't be work
-using System.Windows.Forms;//getting features from form
-using Tripple_A_Supermart_Management_System.view;//import view package
 using System.Drawing;
-using System.IO;
 
 
 
@@ -27,7 +20,7 @@ namespace Tripple_A_Supermart_Management_System.model
         public string Username { get; set; }
         public string Role { get; set; }
 
-       
+
     }
     public class MAdmin
     {
@@ -69,7 +62,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
     }
 
-}      
+}
 
-       
+
 

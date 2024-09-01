@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -18,8 +11,8 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             InitializeComponent();
             chShowPassword.Checked = true;
-            
-           
+
+
 
         }
 
@@ -167,27 +160,27 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void pic_show_password_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void chShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-           
+
             if (chShowPassword.Checked == false)
             {
                 txt_password.UseSystemPasswordChar = false;
 
-                
+
             }
             else
             {
                 txt_password.UseSystemPasswordChar = true;
-                
+
 
 
 
             }
-            
+
 
         }
 

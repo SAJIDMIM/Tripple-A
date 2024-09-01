@@ -117,7 +117,7 @@ namespace Tripple_A_Supermart_Management_System.model
             return nextLeaveRequestId;
         }
 
-       
+
 
         // Method to get employees by user type
         public List<Employees> GetEmployeesByUserType(string userType)
@@ -152,7 +152,7 @@ namespace Tripple_A_Supermart_Management_System.model
             return employees;
         }
 
-      
+
     }
 }
 

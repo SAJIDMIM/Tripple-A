@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.controller
@@ -14,7 +10,7 @@ namespace Tripple_A_Supermart_Management_System.controller
         {
             // Create an instance of the MMinimumStock model class
             Stock minimumStockModel = new Stock();
-            minimumStockModel.setMinimumStock(stockId,quantity, lastUpdatedStock, reorderLevel);
+            minimumStockModel.setMinimumStock(stockId, quantity, lastUpdatedStock, reorderLevel);
 
 
 

@@ -1,22 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
     public partial class AdminDashboard : Form
     {
-        
+
 
         public AdminDashboard()
         {
@@ -25,7 +14,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void updateProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +81,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
 
-           
+
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +99,6 @@ namespace Tripple_A_Supermart_Management_System.view
 
         }
     }
-   
+
 
 }

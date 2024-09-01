@@ -1,6 +1,4 @@
 ﻿using System;
-using Tripple_A_Supermart_Management_System.model;
-using System.Drawing;
 using System.Data;
 
 public class CProfile
@@ -21,5 +19,5 @@ public class CProfile
         return adminDetails.getAdminDetails(adminId);
     }
 
-   
+
 }

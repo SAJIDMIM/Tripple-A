@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 using Tripple_A_Supermart_Management_System.model;
@@ -24,7 +17,7 @@ namespace Tripple_A_Supermart_Management_System.view
             cmbType.Items.Add("Director");
             cmbType.Items.Add("User");
 
-            
+
 
         }
         private void SaveCredentials(string usertype, string username, string password)//saving the details
@@ -45,13 +38,13 @@ namespace Tripple_A_Supermart_Management_System.view
                 if (Properties.Settings.Default[$"{usertype}_RememberMe"] != null && (bool)Properties.Settings.Default[$"{usertype}_RememberMe"])
                 {
                     txt_adminusername.Text = Properties.Settings.Default[$"{usertype}_username"]?.ToString();
-                   
+
                     chRememberMe.Checked = true;
                 }
                 else
                 {
                     txt_adminusername.Text = "";
-                    
+
                     chRememberMe.Checked = false;
                 }
             }
@@ -89,22 +82,22 @@ namespace Tripple_A_Supermart_Management_System.view
 
             string username = txt_adminusername.Text;
             string password = txt_adminpassword.Text;
-            
+
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(adminrole))
             {
                 MessageBox.Show("Please Enter all the fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           else if(adminrole == "User")
-           {
+            else if (adminrole == "User")
+            {
                 MessageBox.Show("Invalid role.", "Invalid Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-           }
+            }
 
 
             CAdminLogin adminlogin = new CAdminLogin();
 
 
-            Admin admin  = adminlogin.Login(adminrole,username, password);
+            Admin admin = adminlogin.Login(adminrole, username, password);
 
             try
             {
@@ -134,9 +127,9 @@ namespace Tripple_A_Supermart_Management_System.view
                             directorDash.Show();
                             this.Hide();
                             break;
-                           
+
                         default:
-                            MessageBox.Show("Invalid role.","Invalid Type",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid role.", "Invalid Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                     }
 
@@ -156,27 +149,27 @@ namespace Tripple_A_Supermart_Management_System.view
 
 
         }
-    
 
 
-            private void chShowPassword_CheckedChanged(object sender, EventArgs e)
+
+        private void chShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            //check if the password for show and hidden purpose
+            if (chShowPassword.Checked == false)
             {
-                //check if the password for show and hidden purpose
-                if (chShowPassword.Checked == false)
-                {
-                    txt_adminpassword.UseSystemPasswordChar = false;
+                txt_adminpassword.UseSystemPasswordChar = false;
 
 
-                }
-                else
-                {
-                    txt_adminpassword.UseSystemPasswordChar = true;
-
-
-
-
-                }
             }
+            else
+            {
+                txt_adminpassword.UseSystemPasswordChar = true;
+
+
+
+
+            }
+        }
 
         private void linkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -223,7 +216,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             LoadCredentials();
 
-            
+
         }
 
         private void picLogin_Click(object sender, EventArgs e)
@@ -233,4 +226,4 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Hide();
         }
     }
-    }
+}

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -46,7 +40,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
                 // Update the fields with the retrieved data
                 txtStockname.Text = row["stockName"].ToString();
-               
+
 
                 // Assuming cmbStockType has items matching the stock types in your database
                 cmbStockType.SelectedItem = row["stockType"].ToString();
@@ -75,7 +69,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 txtCost.Text = "";
                 dtpDateEdited.Value = DateTime.Now; // Or a default date
                 dtpLastUpdated.Value = DateTime.Now; // Or a default date
-               
+
             }
         }
 
@@ -86,7 +80,7 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime lastUpdatedStock = dtpLastUpdated.Value;
 
             CStock setPrice = new CStock();
-            setPrice.setStockPrice(stockId,cost,lastUpdatedStock);
+            setPrice.setStockPrice(stockId, cost, lastUpdatedStock);
 
             // Clear the fields
             txt_stockId.Text = "";

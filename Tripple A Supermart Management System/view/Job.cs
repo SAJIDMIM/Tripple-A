@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -14,13 +7,13 @@ namespace Tripple_A_Supermart_Management_System.view
     public partial class Job : Form
     {
 
-        
 
-        
+
+
         public Job()
         {
             InitializeComponent();
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,7 +28,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txt_jobTitle_TextChanged(object sender, EventArgs e)
@@ -71,13 +64,13 @@ namespace Tripple_A_Supermart_Management_System.view
                 return; // Exit the method if any field is empty
             }
 
-           
+
         }
 
 
-    
 
-    private void btn_Cancel_Click(object sender, EventArgs e)
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

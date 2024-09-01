@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
@@ -24,7 +17,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Generate_Weekly_Stock_Click(object sender, EventArgs e)
         {
-            using(SqlConnection con = MDBConnection.createConnection())
+            using (SqlConnection con = MDBConnection.createConnection())
             {
                 string query = "select * from Stock";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
@@ -36,7 +29,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
                 crystalReportViewer1.ReportSource = rprt;
             }
-                
+
         }
 
         private void picDirDash_Click(object sender, EventArgs e)
@@ -46,5 +39,5 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Hide();
         }
     }
-       
+
 }

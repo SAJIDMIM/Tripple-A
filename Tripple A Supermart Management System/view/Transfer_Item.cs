@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -38,7 +31,7 @@ namespace Tripple_A_Supermart_Management_System.view
             string recipientEmail = txtEmail.Text; // Get email from UI element.
 
 
-           
+
             // Validate input before calling the transferItem method
             if (string.IsNullOrEmpty(itemId) || string.IsNullOrEmpty(itemName) || string.IsNullOrEmpty(recipientEmail))
             {
@@ -50,7 +43,7 @@ namespace Tripple_A_Supermart_Management_System.view
             CItem sendItems = new CItem();
 
             // Call transferItem
-            bool isTransferred = sendItems.transferItem(itemId,itemName,Description,Quantity,Category,recipientEmail);
+            bool isTransferred = sendItems.transferItem(itemId, itemName, Description, Quantity, Category, recipientEmail);
 
             if (isTransferred)
             {
@@ -61,8 +54,8 @@ namespace Tripple_A_Supermart_Management_System.view
                 MessageBox.Show("Failed to transfer item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-          
-            sendItems.transferItem(itemId, itemName, Description, Quantity, Category,recipientEmail);
+
+            sendItems.transferItem(itemId, itemName, Description, Quantity, Category, recipientEmail);
 
 
 

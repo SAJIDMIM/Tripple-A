@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tripple_A_Supermart_Management_System.controller;
-using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.view
 {
@@ -54,24 +45,24 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Promote_Sale_Click(object sender, EventArgs e)
         {
 
-          
-            
-                int saleId = Convert.ToInt32(txt_saleId.Text);
-                string productId = txtProdId.Text;
-                string productName = txtProdName.Text;
-                DateTime saleStartDate = dtpStartSale.Value;
-                DateTime saleEndDate = dtpSaleEndDate.Value;
-                double price = Convert.ToDouble(txtPrice.Text);
-                double discount = Convert.ToDouble(txtDiscount.Text);
+
+
+            int saleId = Convert.ToInt32(txt_saleId.Text);
+            string productId = txtProdId.Text;
+            string productName = txtProdName.Text;
+            DateTime saleStartDate = dtpStartSale.Value;
+            DateTime saleEndDate = dtpSaleEndDate.Value;
+            double price = Convert.ToDouble(txtPrice.Text);
+            double discount = Convert.ToDouble(txtDiscount.Text);
 
 
 
-                // Proceed with promoting the sale (no need for the if condition now)
-                controller.CSale promoteSale = new controller.CSale();
-                promoteSale.promoteSale(saleId, dtpStartSale.Value, dtpSaleEndDate.Value, price, discount);
-                ClearFormFields();
+            // Proceed with promoting the sale (no need for the if condition now)
+            controller.CSale promoteSale = new controller.CSale();
+            promoteSale.promoteSale(saleId, dtpStartSale.Value, dtpSaleEndDate.Value, price, discount);
+            ClearFormFields();
 
-           
+
 
 
 
@@ -106,13 +97,13 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void txtDiscount_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void picGoBackDiradminDashboard_Click(object sender, EventArgs e)
@@ -123,4 +114,3 @@ namespace Tripple_A_Supermart_Management_System.view
         }
     }
 }
-  

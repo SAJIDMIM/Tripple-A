@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
@@ -17,12 +13,12 @@ namespace Tripple_A_Supermart_Management_System.model
         private DateTime lastUpdatedStock;
         private int reorderLevel;
         private double cost;
-       
-        public void setMinimumStock(string stockId, int quantity,DateTime lastUpdatedStock, int reorderLevel)
+
+        public void setMinimumStock(string stockId, int quantity, DateTime lastUpdatedStock, int reorderLevel)
         {
             this.stockId = stockId;
             this.quantity = quantity;
-            
+
             this.lastUpdatedStock = lastUpdatedStock;
             this.reorderLevel = reorderLevel;
 
@@ -57,7 +53,7 @@ namespace Tripple_A_Supermart_Management_System.model
                         // Add parameters to the command
                         command.Parameters.AddWithValue("@stockId", stockId);
                         command.Parameters.AddWithValue("@stockQuantity", quantity);
-                        
+
                         command.Parameters.AddWithValue("@reorderLevel", reorderLevel);
                         command.Parameters.AddWithValue("@lastUpdatedDate", DateTime.Now);
 
@@ -166,7 +162,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
 
         }
-  
+
 
         public DataTable getStock(string stockId)
         {

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tripple_A_Supermart_Management_System.controller
 {
@@ -16,7 +12,7 @@ namespace Tripple_A_Supermart_Management_System.controller
             // Call the model's analyzeSale method to get the sale data
             return modelSale.analyzeSale();
         }
-        public void promoteSale(int saleId,DateTime saleStartDate, DateTime saleEndDate, double price, double discount)
+        public void promoteSale(int saleId, DateTime saleStartDate, DateTime saleEndDate, double price, double discount)
         {
             // Create an instance of the model Sale class
             Tripple_A_Supermart_Management_System.model.Sale modelSale = new Tripple_A_Supermart_Management_System.model.Sale();

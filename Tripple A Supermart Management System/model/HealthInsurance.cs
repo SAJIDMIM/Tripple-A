@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
@@ -22,7 +18,7 @@ namespace Tripple_A_Supermart_Management_System.model
         public double DeductibleAmount { get; set; }
         public string RenewalOption { get; set; }
 
-        public void AddHealthInsurance(int healthInsuranceID, string employeeID,string firstName,string lastName, string type, string description, DateTime effectiveDate, DateTime expiryDate, double premiumAmount, double deductibleAmount, string renewalOption)
+        public void AddHealthInsurance(int healthInsuranceID, string employeeID, string firstName, string lastName, string type, string description, DateTime effectiveDate, DateTime expiryDate, double premiumAmount, double deductibleAmount, string renewalOption)
         {
             try
             {
@@ -102,7 +98,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@employeeId",employeeId); 
+                    command.Parameters.AddWithValue("@employeeId", employeeId);
 
                     try
                     {
@@ -124,7 +120,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
 
-            return employeeDetails; 
+            return employeeDetails;
         }
     }
 }
