@@ -52,6 +52,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.scheduleInterviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
@@ -91,6 +92,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.healthInsuranceToolStripMenuItem1,
             this.retirementPlanToolStripMenuItem1,
             this.employeeInformationToolStripMenuItem,
+            this.scheduleInterviewToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
@@ -108,12 +110,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.leaveRequestToolStripMenuItem1.Name = "leaveRequestToolStripMenuItem1";
             this.leaveRequestToolStripMenuItem1.Size = new System.Drawing.Size(291, 34);
             this.leaveRequestToolStripMenuItem1.Text = "Leave Request";
+            this.leaveRequestToolStripMenuItem1.Click += new System.EventHandler(this.leaveRequestToolStripMenuItem1_Click);
             // 
             // healthInsuranceToolStripMenuItem1
             // 
             this.healthInsuranceToolStripMenuItem1.Name = "healthInsuranceToolStripMenuItem1";
             this.healthInsuranceToolStripMenuItem1.Size = new System.Drawing.Size(291, 34);
             this.healthInsuranceToolStripMenuItem1.Text = "Health Insurance";
+            this.healthInsuranceToolStripMenuItem1.Click += new System.EventHandler(this.healthInsuranceToolStripMenuItem1_Click);
             // 
             // retirementPlanToolStripMenuItem1
             // 
@@ -127,12 +131,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.employeeInformationToolStripMenuItem.Name = "employeeInformationToolStripMenuItem";
             this.employeeInformationToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.employeeInformationToolStripMenuItem.Text = "Employee Information";
+            this.employeeInformationToolStripMenuItem.Click += new System.EventHandler(this.employeeInformationToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // addDeductionToolStripMenuItem
             // 
@@ -147,21 +153,21 @@ namespace Tripple_A_Supermart_Management_System.view
             // retirementPlanToolStripMenuItem
             // 
             this.retirementPlanToolStripMenuItem.Name = "retirementPlanToolStripMenuItem";
-            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.retirementPlanToolStripMenuItem.Text = "Retirement Plan";
             this.retirementPlanToolStripMenuItem.Click += new System.EventHandler(this.retirementPlanToolStripMenuItem_Click);
             // 
             // healthInsuranceToolStripMenuItem
             // 
             this.healthInsuranceToolStripMenuItem.Name = "healthInsuranceToolStripMenuItem";
-            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.healthInsuranceToolStripMenuItem.Text = "Health Insurance";
             this.healthInsuranceToolStripMenuItem.Click += new System.EventHandler(this.healthInsuranceToolStripMenuItem_Click);
             // 
             // leaveRequestToolStripMenuItem
             // 
             this.leaveRequestToolStripMenuItem.Name = "leaveRequestToolStripMenuItem";
-            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.leaveRequestToolStripMenuItem.Text = "Leave Request";
             this.leaveRequestToolStripMenuItem.Click += new System.EventHandler(this.leaveRequestToolStripMenuItem_Click_1);
             // 
@@ -186,12 +192,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(239, 29);
             this.toolStripMenuItem1.Text = "Generate Employee Report";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // monthlyEmployeeReportToolStripMenuItem
             // 
             this.monthlyEmployeeReportToolStripMenuItem.Name = "monthlyEmployeeReportToolStripMenuItem";
             this.monthlyEmployeeReportToolStripMenuItem.Size = new System.Drawing.Size(321, 34);
             this.monthlyEmployeeReportToolStripMenuItem.Text = "Monthly Employee Report";
+            this.monthlyEmployeeReportToolStripMenuItem.Click += new System.EventHandler(this.monthlyEmployeeReportToolStripMenuItem_Click);
             // 
             // label7
             // 
@@ -257,6 +265,13 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2CirclePictureBox1.TabIndex = 84;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // scheduleInterviewToolStripMenuItem
+            // 
+            this.scheduleInterviewToolStripMenuItem.Name = "scheduleInterviewToolStripMenuItem";
+            this.scheduleInterviewToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.scheduleInterviewToolStripMenuItem.Text = "Schedule Interview";
+            this.scheduleInterviewToolStripMenuItem.Click += new System.EventHandler(this.scheduleInterviewToolStripMenuItem_Click);
+            // 
             // HRManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -309,5 +324,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
         private System.Windows.Forms.ToolStripMenuItem leaveRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleInterviewToolStripMenuItem;
     }
 }

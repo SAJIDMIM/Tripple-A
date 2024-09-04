@@ -46,16 +46,17 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pic_back_login = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtReason = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_employeeId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_leaveId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Search_Leave = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -73,7 +74,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(276, 461);
+            this.label10.Location = new System.Drawing.Point(274, 478);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 29);
             this.label10.TabIndex = 147;
@@ -89,7 +90,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Clear.FillColor = System.Drawing.Color.LightGray;
             this.btn_Clear.Font = new System.Drawing.Font("Calibri", 12F);
             this.btn_Clear.ForeColor = System.Drawing.Color.Black;
-            this.btn_Clear.Location = new System.Drawing.Point(778, 539);
+            this.btn_Clear.Location = new System.Drawing.Point(638, 544);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(124, 45);
             this.btn_Clear.TabIndex = 143;
@@ -109,7 +110,7 @@ namespace Tripple_A_Supermart_Management_System.view
             "Storekeeper",
             "Sale",
             "Cashier"});
-            this.cmbuserType.Location = new System.Drawing.Point(280, 298);
+            this.cmbuserType.Location = new System.Drawing.Point(276, 314);
             this.cmbuserType.Name = "cmbuserType";
             this.cmbuserType.Size = new System.Drawing.Size(121, 28);
             this.cmbuserType.TabIndex = 146;
@@ -125,11 +126,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_AddLeave.FillColor = System.Drawing.Color.DodgerBlue;
             this.btn_AddLeave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btn_AddLeave.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddLeave.Location = new System.Drawing.Point(638, 539);
+            this.btn_AddLeave.Location = new System.Drawing.Point(638, 478);
             this.btn_AddLeave.Name = "btn_AddLeave";
             this.btn_AddLeave.Size = new System.Drawing.Size(126, 45);
             this.btn_AddLeave.TabIndex = 141;
             this.btn_AddLeave.Text = "Add";
+            this.btn_AddLeave.Click += new System.EventHandler(this.btn_AddLeave_Click);
             // 
             // label6
             // 
@@ -157,9 +159,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(271, 254);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 29);
+            this.label9.Size = new System.Drawing.Size(163, 29);
             this.label9.TabIndex = 144;
-            this.label9.Text = "User Type";
+            this.label9.Text = "Employee Type";
             // 
             // cmbLeaveType
             // 
@@ -193,7 +195,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(276, 572);
+            this.label4.Location = new System.Drawing.Point(276, 595);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 29);
             this.label4.TabIndex = 133;
@@ -201,7 +203,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // dtpleaveStartDate
             // 
-            this.dtpleaveStartDate.Location = new System.Drawing.Point(281, 618);
+            this.dtpleaveStartDate.Location = new System.Drawing.Point(281, 649);
             this.dtpleaveStartDate.Name = "dtpleaveStartDate";
             this.dtpleaveStartDate.Size = new System.Drawing.Size(276, 26);
             this.dtpleaveStartDate.TabIndex = 134;
@@ -210,7 +212,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 346);
+            this.label2.Location = new System.Drawing.Point(275, 362);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 29);
             this.label2.TabIndex = 131;
@@ -245,6 +247,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Size = new System.Drawing.Size(262, 746);
             this.panel1.TabIndex = 126;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_online_leave_request_process_png_image_12966823;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(259, 660);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 126;
+            this.pictureBox1.TabStop = false;
+            // 
             // pic_back_login
             // 
             this.pic_back_login.BackColor = System.Drawing.Color.Transparent;
@@ -257,6 +269,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_back_login.TabIndex = 145;
             this.pic_back_login.TabStop = false;
             this.pic_back_login.UseTransparentBackground = true;
+            this.pic_back_login.Click += new System.EventHandler(this.pic_back_login_Click);
             // 
             // txtLastname
             // 
@@ -273,7 +286,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastname.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
             this.txtLastname.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtLastname.Location = new System.Drawing.Point(280, 511);
+            this.txtLastname.Location = new System.Drawing.Point(280, 529);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PasswordChar = '\0';
@@ -323,7 +336,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstname.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
             this.txtFirstname.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtFirstname.Location = new System.Drawing.Point(279, 396);
+            this.txtFirstname.Location = new System.Drawing.Point(280, 418);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.PasswordChar = '\0';
@@ -383,22 +396,30 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_leaveId.Size = new System.Drawing.Size(202, 44);
             this.txt_leaveId.TabIndex = 128;
             // 
-            // pictureBox1
+            // btn_Search_Leave
             // 
-            this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_online_leave_request_process_png_image_12966823;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 660);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 126;
-            this.pictureBox1.TabStop = false;
+            this.btn_Search_Leave.BorderThickness = 1;
+            this.btn_Search_Leave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Leave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Leave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search_Leave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search_Leave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Search_Leave.Font = new System.Drawing.Font("Calibri", 12F);
+            this.btn_Search_Leave.ForeColor = System.Drawing.Color.Black;
+            this.btn_Search_Leave.Location = new System.Drawing.Point(781, 478);
+            this.btn_Search_Leave.Name = "btn_Search_Leave";
+            this.btn_Search_Leave.Size = new System.Drawing.Size(124, 45);
+            this.btn_Search_Leave.TabIndex = 149;
+            this.btn_Search_Leave.Text = "Search";
+            this.btn_Search_Leave.Click += new System.EventHandler(this.btn_Search_Leave_Click);
             // 
-            // Leave
+            // LeaveRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(931, 707);
+            this.Controls.Add(this.btn_Search_Leave);
             this.Controls.Add(this.pic_back_login);
             this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.label8);
@@ -423,12 +444,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Leave";
+            this.Name = "LeaveRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leave";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_back_login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,5 +481,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Search_Leave;
     }
 }

@@ -5,6 +5,8 @@ namespace Tripple_A_Supermart_Management_System.view
 {
     public partial class HRManager : Form
     {
+        public object EmployeeReport { get; private set; }
+
         public HRManager()
         {
             InitializeComponent();
@@ -12,7 +14,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void picGoBackDir_Click(object sender, EventArgs e)
         {
-            HRManager back = new HRManager();
+            Login back = new Login();
             back.Show();
             this.Hide();
         }
@@ -66,22 +68,64 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void leaveRequestToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                Form2 newLeave = new Form2();
-                newLeave.Show();
-                this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
+            LeaveRequest newLeave = new LeaveRequest();
+            newLeave.Show();
+            this.Hide();
         }
 
         private void scheduleEmployeeInterviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 newLeave = new Form2();
-            newLeave.Show();
+            ScheduleInterview newInterview = new ScheduleInterview();
+            newInterview.Show();
+            this.Hide();
+        }
+
+        private void leaveRequestToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ViewLeaveRequest showLeaves = new ViewLeaveRequest();
+            showLeaves.Show();
+            this.Hide();
+        }
+
+        private void healthInsuranceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            viewHealthInsurance showHealth = new viewHealthInsurance();
+            showHealth.Show();
+            this.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login back = new Login();
+            back.Show();
+            this.Hide();
+
+            
+        }
+
+        private void employeeInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewEmployeeInformation showEmployee = new viewEmployeeInformation();
+            showEmployee.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void monthlyEmployeeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonthlyEmployee showEmployee = new MonthlyEmployee();
+            showEmployee.Show();
+            this.Hide();
+        }
+
+        private void scheduleInterviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewInterview show = new viewInterview();
+            show.Show();
             this.Hide();
         }
     }

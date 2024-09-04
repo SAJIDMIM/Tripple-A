@@ -9,7 +9,7 @@ namespace Tripple_A_Supermart_Management_System.model
         public string Username { get; set; }
         public string Role { get; set; }
     }
-    public class Login
+    public class MLogin
     {
 
 

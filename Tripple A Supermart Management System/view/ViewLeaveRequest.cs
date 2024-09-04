@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -13,10 +14,20 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Sale_Click(object sender, EventArgs e)
         {
-            int leaveRequestId = Convert.ToInt32(txt_Sale_Id.Text);
-            CLeave viewLeaveDetails = new CLeave();
+            int leaveRequestId = Convert.ToInt32(txt_Leave_Id.Text);
+          
 
-            // DataTable accountDetails = viewLeaveDetails.viewLeaveRequest(leaveRequestId);
+            if (leaveRequestId <=0)
+            {
+                MessageBox.Show("Please enter valid Leave Id to be process", "Invalid Leave Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                CLeave viewLeaveDetails = new CLeave();
+                DataTable leaveDetails = viewLeaveDetails.getLeave(leaveRequestId);
+                dgvLeaveRequest.DataSource = leaveDetails;
+            }
+
 
 
         }

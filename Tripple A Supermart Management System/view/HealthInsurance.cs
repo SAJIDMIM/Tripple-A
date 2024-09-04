@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
 
@@ -26,7 +27,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Add_Health_Click(object sender, EventArgs e)
         {
-            int HealthInsuranceID = Convert.ToInt32(txt_health_InsuranceId.Text);
+            //int HealthInsuranceID = Convert.ToInt32(txt_health_InsuranceId.Text);
             string employeeId = txtEmpId.Text;
             string firstName = txt_First_Name.Text;
             string lastName = txt_Last_Name.Text;
@@ -39,7 +40,7 @@ namespace Tripple_A_Supermart_Management_System.view
             string RenewalOption = cmbRenewalType.SelectedItem.ToString();
 
             CHealthInsurance newHealth = new CHealthInsurance();
-            newHealth.AddHealthInsurance(HealthInsuranceID, employeeId, firstName, lastName, Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, DeductibleAmount, RenewalOption);
+            newHealth.AddHealthInsurance(employeeId, firstName, lastName, Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, DeductibleAmount, RenewalOption);
 
 
         }
@@ -49,7 +50,16 @@ namespace Tripple_A_Supermart_Management_System.view
             string employeeId = txtEmpId.Text;
 
             CHealthInsurance viewEmployee = new CHealthInsurance();
-            viewEmployee.getEmployeeDetails(employeeId);
+            DataTable employeeDetails = viewEmployee.getEmployeeDetails(employeeId);
+            if (employeeDetails.Rows.Count > 0)
+            {
+                txt_First_Name.Text = employeeDetails.Rows[0]["firstName"].ToString();
+                txt_Last_Name.Text = employeeDetails.Rows[0]["lastName"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Employee not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pic_Hr_Dashboard_Click(object sender, EventArgs e)

@@ -130,6 +130,7 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="model\Interview.cs" />
     <Compile Include="model\Profile.cs" />
     <Compile Include="view\DirectorAdminDashboard.cs">
       <SubType>Form</SubType>
@@ -140,14 +141,13 @@
     <Compile Include="model\Item.cs" />
     <Compile Include="model\Employee.cs" />
     <Compile Include="model\HealthInsurance.cs" />
-    <Compile Include="model\Interview.cs" />
     <Compile Include="model\Job.cs" />
     <Compile Include="model\Admin.cs" />
     <Compile Include="model\MDBConnection.cs" />
     <Compile Include="model\CreateAccount.cs" />
-    <Compile Include="model\ForgotPassword.cs" />
+    <Compile Include="model\MForgotPassword.cs" />
     <Compile Include="model\Leave.cs" />
-    <Compile Include="model\Login.cs" />
+    <Compile Include="model\MLogin.cs" />
     <Compile Include="model\RetirementPlan.cs" />
     <Compile Include="model\Account.cs" />
     <Compile Include="model\Sale.cs" />
@@ -184,11 +184,11 @@
     <Compile Include="view\BillingReminder.Designer.cs">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Form2.cs">
+    <Compile Include="view\MonthlyEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="view\MonthlyEmployee.Designer.cs">
+      <DependentUpon>MonthlyEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="view\HRManager.cs">
       <SubType>Form</SubType>
@@ -201,6 +201,12 @@
     </Compile>
     <Compile Include="view\LeaveRequest.Designer.cs">
       <DependentUpon>LeaveRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MonthlyEmployeeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyEmployeeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="view\MonthlySale.cs">
       <SubType>Form</SubType>
@@ -220,6 +226,24 @@
     <Compile Include="view\PromoteSale.Designer.cs">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\viewEmployeeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewEmployeeInformation.Designer.cs">
+      <DependentUpon>viewEmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewHealthInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewHealthInsurance.Designer.cs">
+      <DependentUpon>viewHealthInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewInterview.Designer.cs">
+      <DependentUpon>viewInterview.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ViewLeaveRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,12 +261,6 @@
     </Compile>
     <Compile Include="view\viewRetirementPlan.Designer.cs">
       <DependentUpon>viewRetirementPlan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\View_Employee_Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\View_Employee_Information.designer.cs">
-      <DependentUpon>View_Employee_Information.cs</DependentUpon>
     </Compile>
     <Compile Include="view\WeeklyStock.cs">
       <AutoGen>True</AutoGen>
@@ -274,11 +292,11 @@
     <Compile Include="view\HealthInsurance.Designer.cs">
       <DependentUpon>HealthInsurance.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Interview.cs">
+    <Compile Include="view\ScheduleInterview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Interview.Designer.cs">
-      <DependentUpon>Interview.cs</DependentUpon>
+    <Compile Include="view\ScheduleInterview.Designer.cs">
+      <DependentUpon>ScheduleInterview.cs</DependentUpon>
     </Compile>
     <Compile Include="view\MinimumStock.cs">
       <SubType>Form</SubType>
@@ -358,12 +376,6 @@
     <Compile Include="view\VerificationCode.Designer.cs">
       <DependentUpon>VerificationCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\ViewEmployeeDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\ViewEmployeeDetails.Designer.cs">
-      <DependentUpon>ViewEmployeeDetails.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="view\DirectorAdminDashboard.resx">
       <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,11 +404,18 @@
     <EmbeddedResource Include="view\BillingReminder.resx">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\MonthlyEmployee.resx">
+      <DependentUpon>MonthlyEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\HRManager.resx">
       <DependentUpon>HRManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\LeaveRequest.resx">
       <DependentUpon>LeaveRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MonthlyEmployeeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyEmployeeReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="view\MonthlySale.resx">
       <DependentUpon>MonthlySale.cs</DependentUpon>
@@ -408,6 +427,15 @@
     <EmbeddedResource Include="view\PromoteSale.resx">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\viewEmployeeInformation.resx">
+      <DependentUpon>viewEmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewHealthInsurance.resx">
+      <DependentUpon>viewHealthInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewInterview.resx">
+      <DependentUpon>viewInterview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\ViewLeaveRequest.resx">
       <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,9 +444,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewRetirementPlan.resx">
       <DependentUpon>viewRetirementPlan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\View_Employee_Information.resx">
-      <DependentUpon>View_Employee_Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -436,8 +461,8 @@
     <EmbeddedResource Include="view\HealthInsurance.resx">
       <DependentUpon>HealthInsurance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Interview.resx">
-      <DependentUpon>Interview.cs</DependentUpon>
+    <EmbeddedResource Include="view\ScheduleInterview.resx">
+      <DependentUpon>ScheduleInterview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\MinimumStock.resx">
       <DependentUpon>MinimumStock.cs</DependentUpon>
@@ -477,9 +502,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\VerificationCode.resx">
       <DependentUpon>VerificationCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\ViewEmployeeDetails.resx">
-      <DependentUpon>ViewEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />

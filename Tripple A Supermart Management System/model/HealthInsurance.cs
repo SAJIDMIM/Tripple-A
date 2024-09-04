@@ -18,19 +18,18 @@ namespace Tripple_A_Supermart_Management_System.model
         public double DeductibleAmount { get; set; }
         public string RenewalOption { get; set; }
 
-        public void AddHealthInsurance(int healthInsuranceID, string employeeID, string firstName, string lastName, string type, string description, DateTime effectiveDate, DateTime expiryDate, double premiumAmount, double deductibleAmount, string renewalOption)
+        public void AddHealthInsurance(string employeeID, string firstName, string lastName, string type, string description, DateTime effectiveDate, DateTime expiryDate, double premiumAmount, double deductibleAmount, string renewalOption)
         {
             try
             {
                 using (SqlConnection con = MDBConnection.createConnection())
                 {
                     con.Open();
-                    string query = "INSERT INTO HealthInsurance (HealthInsuranceID, employeeID,firstName,lastName,Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, deductibleAmount, RenewalOption) " +
-                                   "VALUES (@HealthInsuranceID, @employeeID,@firstName,@lastName,@Type, @Description, @EffectiveDate, @ExpiryDate, @PremiumAmount, @deductibleAmount, @RenewalOption)";
+                    string query = "INSERT INTO HealthInsurance (employeeID, firstName, lastName, Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, deductibleAmount, RenewalOption) " +
+                                   "VALUES (@employeeID, @firstName, @lastName, @Type, @Description, @EffectiveDate, @ExpiryDate, @PremiumAmount, @deductibleAmount, @RenewalOption)";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@HealthInsuranceID", healthInsuranceID);
                         cmd.Parameters.AddWithValue("@employeeID", employeeID);
                         cmd.Parameters.AddWithValue("@firstName", firstName);
                         cmd.Parameters.AddWithValue("@lastName", lastName);
@@ -60,6 +59,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+    
         // Method to get the next retirement ID
         public static int GetNextHealthId()
         {
@@ -121,6 +121,40 @@ namespace Tripple_A_Supermart_Management_System.model
             }
 
             return employeeDetails;
+        }
+        public DataTable viewHealthInsurance(int HealthInsuranceID)
+        {
+            DataTable healthDetails = new DataTable(); // Create a DataTable to hold results
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM HealthInsurance WHERE HealthInsuranceId = @HealthInsuranceId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@HealthInsuranceId", HealthInsuranceID);
+
+                    try
+                    {
+                        connection.Open(); // Open the connection
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(healthDetails); // Fill the DataTable with retrieved data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions, such as connection errors or database issues
+                        MessageBox.Show("Error retrieving Health Insurance details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connection.Close(); // Close the connection
+                    }
+                }
+            }
+
+            return healthDetails;
         }
     }
 }

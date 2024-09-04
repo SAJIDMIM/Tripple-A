@@ -22,11 +22,12 @@ namespace Tripple_A_Supermart_Management_System.model
             {
                 con.Open();
                 string query = "INSERT INTO Leave (employeeId, userType, firstName, lastName, LeaveType, reason, leaveStartDate, leaveEndDate) " +
-                               "VALUES (@EmployeeId, @UserType, @firstName, @lastName, @LeaveType, @Reason, @LeaveStartDate, @LeaveEndDate); " +
-                               "SELECT SCOPE_IDENTITY()";
+                               "VALUES (@employeeId, @UserType, @firstName, @lastName, @LeaveType, @Reason, @LeaveStartDate, @LeaveEndDate)";
+                               
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+                    
+                    cmd.Parameters.AddWithValue("@employeeId", employeeId);
                     cmd.Parameters.AddWithValue("@UserType", userType);
                     cmd.Parameters.AddWithValue("@firstName", firstName);
                     cmd.Parameters.AddWithValue("@lastName", lastName);
@@ -35,7 +36,7 @@ namespace Tripple_A_Supermart_Management_System.model
                     cmd.Parameters.AddWithValue("@LeaveStartDate", leaveStartDate);
                     cmd.Parameters.AddWithValue("@LeaveEndDate", leaveEndDate);
 
-                    int leaveRequestId = Convert.ToInt32(cmd.ExecuteScalar());
+                    int leaveRequestId = cmd.ExecuteNonQuery();
                     if (leaveRequestId > 0)
                     {
                         MessageBox.Show("Leave has been successfully requested", "Leave Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -48,12 +49,9 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public DataTable viewLeaveRequest(int leaveRequestId)
+        public DataTable getLeave(int leaveRequestedId)
         {
             DataTable leaveDetails = new DataTable(); // Create a DataTable to hold results
 
@@ -63,7 +61,7 @@ namespace Tripple_A_Supermart_Management_System.model
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@userId", leaveRequestId); // Use the userId parameter
+                    command.Parameters.AddWithValue("@leaveRequestId",leaveRequestedId); 
 
                     try
                     {
@@ -76,7 +74,7 @@ namespace Tripple_A_Supermart_Management_System.model
                     catch (Exception ex)
                     {
                         // Handle any exceptions, such as connection errors or database issues
-                        Console.WriteLine("Error retrieving user details: " + ex.Message);
+                        MessageBox.Show("Error retrieving Leave details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
@@ -85,26 +83,59 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
 
-            return leaveDetails; // Return the DataTable with user details
+            return leaveDetails; 
+        }
+        public DataTable getEmployee(string employeeId)
+        {
+            DataTable empDetails = new DataTable(); // Create a DataTable to hold results
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM Employee WHERE employeeId = @employeeId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@leaveRequestedId",employeeId);
+
+                    try
+                    {
+                        connection.Open(); // Open the connection
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(empDetails); // Fill the DataTable with retrieved data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions, such as connection errors or database issues
+                        MessageBox.Show("Error retrieving Employee details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connection.Close(); // Close the connection
+                    }
+                }
+            }
+
+            return empDetails;
         }
 
-        // Method to get the next leave request ID (already provided)
-        public int GetNextLeaveRequestId()
+        // Method to get the next retirement ID
+        public static int GetNextLeaveId()
         {
-            int nextLeaveRequestId = 1; // Default to 1 if there are no records
+            int nextLeaveId = 1;
             try
             {
                 using (SqlConnection con = MDBConnection.createConnection())
                 {
                     con.Open();
-                    string query = "SELECT TOP 1 leaveRequestId FROM Leave ORDER BY leaveRequestId DESC";
+                    string query = "SELECT ISNULL(MAX(leaveRequestId), 0) + 1 FROM Leave";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != null)
                         {
-                            int lastIdNumber = Convert.ToInt32(result);
-                            nextLeaveRequestId = lastIdNumber + 1;
+                            nextLeaveId = (int)result;
                         }
                     }
                 }
@@ -114,7 +145,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return nextLeaveRequestId;
+            return nextLeaveId;
         }
 
 

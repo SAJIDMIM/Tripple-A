@@ -69,7 +69,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.health_insurance_1;
             this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(902, 775);
+            this.pictureBox1.Size = new System.Drawing.Size(932, 775);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

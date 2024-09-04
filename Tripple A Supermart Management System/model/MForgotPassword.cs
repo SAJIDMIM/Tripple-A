@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 {
-    public class ForgotPassword
+    public class MForgotPassword
     {
         public void ForgotPassword(string username, string password, string confirm_password)
         {

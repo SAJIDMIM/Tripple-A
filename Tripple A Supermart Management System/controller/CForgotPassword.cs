@@ -6,7 +6,7 @@ namespace Tripple_A_Supermart_Management_System.controller
     {
         public void ForgotPassword(string username, string password, string confirm_password)
         {
-            ForgotPassword forgot = new ForgotPassword();
+            MForgotPassword forgot = new MForgotPassword();
             forgot.ForgotPassword(username, password, confirm_password);
 
         }
