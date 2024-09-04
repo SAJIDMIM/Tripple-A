@@ -74,6 +74,18 @@ namespace Tripple_A_Supermart_Management_System.view
             string leaveType = cmbLeaveType.SelectedItem.ToString();
             string reason = txtReason.Text;
 
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(employeeId) ||
+                string.IsNullOrWhiteSpace(userType) ||
+                string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(leaveType) ||
+                string.IsNullOrWhiteSpace(reason))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
             CLeave newLeave = new CLeave();
             newLeave.addLeaveRequest(employeeId, userType, firstName, lastName,leaveType,reason,leaveStartDate,leaveEndDate);
 

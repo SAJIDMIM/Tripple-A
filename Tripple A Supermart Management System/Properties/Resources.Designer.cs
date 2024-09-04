@@ -764,6 +764,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Project_Dashboard_Template_Excel_image {
+            get {
+                object obj = ResourceManager.GetObject("Project-Dashboard-Template-Excel-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap quantity {
             get {
                 object obj = ResourceManager.GetObject("quantity", resourceCulture);

@@ -41,6 +41,28 @@ namespace Tripple_A_Supermart_Management_System.view
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(employeeId) ||
+        string.IsNullOrWhiteSpace(firstName) ||
+        string.IsNullOrWhiteSpace(lastName) ||
+        string.IsNullOrWhiteSpace(empType) ||
+        string.IsNullOrWhiteSpace(actorId) ||
+        string.IsNullOrWhiteSpace(position) ||
+        string.IsNullOrWhiteSpace(department) ||
+        string.IsNullOrWhiteSpace(retirement))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
+            // Check if salary can be parsed to double
+            if (!double.TryParse(txt_Salary.Text, out salary))
+            {
+                MessageBox.Show("Invalid Salary. Please enter a valid number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if salary is invalid
+            }
+
+
+
             // Validate other input fields as needed
 
             EmployeeController newEmployee = new EmployeeController();
@@ -106,7 +128,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Update_Employee_Click(object sender, EventArgs e)
         {
-
+            string originalEmployeeId = txt_Employee_Id.Text; // Store the original employee ID
             string employeeId = txt_Employee_Id.Text;
             string firstName = txt_First_Name.Text;
             string lastName = txt_Last_Name.Text;
@@ -117,6 +139,34 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime dateJoined = dtp_Date_Join.Value;
             double salary = double.Parse(txt_Salary.Text);
             string retirement = cmbRetirement.SelectedItem.ToString();
+
+
+
+            if (originalEmployeeId != employeeId)
+            {
+                MessageBox.Show("Cannot update the primary key (Employee ID).", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if employee ID is being updated
+            }
+
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(empType) ||
+                string.IsNullOrWhiteSpace(actorId) ||
+                string.IsNullOrWhiteSpace(position) ||
+                string.IsNullOrWhiteSpace(department) ||
+                string.IsNullOrWhiteSpace(retirement))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
+            // Check if salary can be parsed to double
+            if (!double.TryParse(txt_Salary.Text, out salary))
+            {
+                MessageBox.Show("Invalid Salary. Please enter a valid number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if salary is invalid
+            }
 
             EmployeeController updateEmployee = new EmployeeController();
             updateEmployee.editEmployee(employeeId, firstName, lastName, empType, actorId, position, department, dateJoined, salary, retirement);

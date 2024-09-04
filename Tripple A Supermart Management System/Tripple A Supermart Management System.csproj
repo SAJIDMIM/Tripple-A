@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -130,6 +130,12 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="GeneralDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDash.Designer.cs">
+      <DependentUpon>GeneralDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\Interview.cs" />
     <Compile Include="model\Profile.cs" />
     <Compile Include="view\DirectorAdminDashboard.cs">
@@ -376,6 +382,9 @@
     <Compile Include="view\VerificationCode.Designer.cs">
       <DependentUpon>VerificationCode.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GeneralDash.resx">
+      <DependentUpon>GeneralDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\DirectorAdminDashboard.resx">
       <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -552,6 +561,7 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Project-Dashboard-Template-Excel-image.png" />
     <None Include="Resources\pngtree-online-leave-request-process-png-image_12966823.png" />
     <None Include="Resources\images %282%29.png" />
     <None Include="Resources\health-insurance-1.png" />

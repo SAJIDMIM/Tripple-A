@@ -50,19 +50,22 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string post_Id = txt_publishId.Text;
             string Job_Title = txt_jobTitle.Text;
-            string jobType = cmbjobType.SelectedItem.ToString();
+            string jobType = cmbjobType.SelectedItem != null ? cmbjobType.SelectedItem.ToString() : string.Empty;
+
             string Job_Description = txt_JobDescription.Text;
             DateTime Date = dtpPostDate.Value;
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(post_Id) ||
+                string.IsNullOrWhiteSpace(Job_Title) ||
+                string.IsNullOrWhiteSpace(jobType) ||
+                string.IsNullOrWhiteSpace(Job_Description))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
             CJob newJob = new CJob();
             newJob.postJob(post_Id, Job_Title, jobType, Job_Description, Date);
-
-
-
-            if (string.IsNullOrWhiteSpace(post_Id) || string.IsNullOrWhiteSpace(Job_Title) || string.IsNullOrWhiteSpace(Job_Description))
-            {
-                MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit the method if any field is empty
-            }
 
 
         }

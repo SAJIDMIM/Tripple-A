@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
@@ -36,6 +37,7 @@ namespace Tripple_A_Supermart_Management_System.model
                     if (count > 0)
                     {
                         MessageBox.Show("Job has been successfully posted.", "Posted Job", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       
                     }
                     else
                     {
@@ -66,5 +68,6 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
         }
+       
     }
 }

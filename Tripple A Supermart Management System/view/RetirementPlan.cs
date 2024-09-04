@@ -37,6 +37,20 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime expectedRetireDate = dtp_expected_Retire.Value;
             string contribution = cmb_Contribution.Text;
 
+
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(retirementId) ||
+                string.IsNullOrWhiteSpace(employeeId) ||
+                string.IsNullOrWhiteSpace(employeeFirstName) ||
+                string.IsNullOrWhiteSpace(employeeLastName) ||
+                string.IsNullOrWhiteSpace(position) ||
+                string.IsNullOrWhiteSpace(retireType) ||
+                string.IsNullOrWhiteSpace(contribution))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
             CRetirementPlan newRetire = new CRetirementPlan();
             newRetire.addretireEmployee(retirementId, employeeId, employeeFirstName, employeeLastName, position, retireType, dateJoined, expectedRetireDate, contribution);
 
@@ -89,6 +103,11 @@ namespace Tripple_A_Supermart_Management_System.view
             HRManager back = new HRManager();
             back.Show();
             this.Hide();
+        }
+
+        private void btn_Search_Employee_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

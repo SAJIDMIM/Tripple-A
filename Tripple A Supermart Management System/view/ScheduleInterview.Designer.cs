@@ -34,6 +34,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Search_Employee = new Guna.UI2.WinForms.Guna2Button();
+            this.dtpendDate = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.txt_Last_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_Schedule_Interview = new Guna.UI2.WinForms.Guna2Button();
@@ -54,8 +56,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Interview_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pic_Hr_Dashboard = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtpendDate = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -128,6 +128,23 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Employee.TabIndex = 156;
             this.btn_Search_Employee.Text = "Search";
             this.btn_Search_Employee.Click += new System.EventHandler(this.btn_Search_Employee_Click);
+            // 
+            // dtpendDate
+            // 
+            this.dtpendDate.Location = new System.Drawing.Point(309, 211);
+            this.dtpendDate.Name = "dtpendDate";
+            this.dtpendDate.Size = new System.Drawing.Size(233, 26);
+            this.dtpendDate.TabIndex = 157;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(304, 147);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 29);
+            this.label11.TabIndex = 156;
+            this.label11.Text = "End Date";
             // 
             // txt_Last_Name
             // 
@@ -223,6 +240,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.cmb_Status_Interview.Name = "cmb_Status_Interview";
             this.cmb_Status_Interview.Size = new System.Drawing.Size(121, 28);
             this.cmb_Status_Interview.TabIndex = 150;
+            this.cmb_Status_Interview.SelectedIndexChanged += new System.EventHandler(this.cmb_Status_Interview_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -418,23 +436,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Hr_Dashboard.TabStop = false;
             this.pic_Hr_Dashboard.UseTransparentBackground = true;
             this.pic_Hr_Dashboard.Click += new System.EventHandler(this.pic_Hr_Dashboard_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(304, 147);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 29);
-            this.label11.TabIndex = 156;
-            this.label11.Text = "End Date";
-            // 
-            // dtpendDate
-            // 
-            this.dtpendDate.Location = new System.Drawing.Point(309, 211);
-            this.dtpendDate.Name = "dtpendDate";
-            this.dtpendDate.Size = new System.Drawing.Size(233, 26);
-            this.dtpendDate.TabIndex = 157;
             // 
             // ScheduleInterview
             // 

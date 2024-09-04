@@ -39,6 +39,27 @@ namespace Tripple_A_Supermart_Management_System.view
             double DeductibleAmount = Convert.ToDouble(txt_Deductable_Amount.Text);
             string RenewalOption = cmbRenewalType.SelectedItem.ToString();
 
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(employeeId) ||
+                string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(Type) ||
+                string.IsNullOrWhiteSpace(Description) ||
+                string.IsNullOrWhiteSpace(RenewalOption))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
+            // Check if PremiumAmount and DeductibleAmount can be parsed to double
+            if (!double.TryParse(txt_Premium_Amount.Text, out PremiumAmount) ||
+                !double.TryParse(txt_Deductable_Amount.Text, out DeductibleAmount))
+            {
+                MessageBox.Show("Invalid Premium Amount or Deductible Amount. Please enter a valid number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if PremiumAmount or DeductibleAmount is invalid
+            }
+
+
             CHealthInsurance newHealth = new CHealthInsurance();
             newHealth.AddHealthInsurance(employeeId, firstName, lastName, Type, Description, EffectiveDate, ExpiryDate, PremiumAmount, DeductibleAmount, RenewalOption);
 

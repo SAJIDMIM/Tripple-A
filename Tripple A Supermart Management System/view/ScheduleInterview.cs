@@ -38,6 +38,19 @@ namespace Tripple_A_Supermart_Management_System.view
             string Status = cmb_Status_Interview.SelectedItem.ToString();
             string scheduleEmail = txtScheduleEmail.Text;
 
+            
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(employeeId) ||
+                string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(Location) ||
+                string.IsNullOrWhiteSpace(Type) ||
+                string.IsNullOrWhiteSpace(scheduleEmail))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit the method if any required field is empty
+            }
+
             CInterview newInterview = new CInterview();
             newInterview.scheduleInterview(employeeId, firstName, lastName, Date,endDate,Location, Type, Status, scheduleEmail);
 
@@ -101,6 +114,11 @@ namespace Tripple_A_Supermart_Management_System.view
             HRManager back = new HRManager();
             back.Show();
             this.Hide();
+        }
+
+        private void cmb_Status_Interview_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
