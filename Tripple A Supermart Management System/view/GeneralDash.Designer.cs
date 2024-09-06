@@ -43,6 +43,7 @@ namespace Tripple_A_Supermart_Management_System
             this.picGoBackLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackLogin)).BeginInit();
@@ -52,7 +53,6 @@ namespace Tripple_A_Supermart_Management_System
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
@@ -68,7 +68,8 @@ namespace Tripple_A_Supermart_Management_System
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.normalCustomerToolStripMenuItem,
             this.loyaltyCustomerToolStripMenuItem,
-            this.supplierToolStripMenuItem});
+            this.supplierToolStripMenuItem,
+            this.updateProfileToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.viewToolStripMenuItem.Text = "View";
@@ -181,6 +182,12 @@ namespace Tripple_A_Supermart_Management_System
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            // 
             // GeneralDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -225,5 +232,6 @@ namespace Tripple_A_Supermart_Management_System
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackLogin;
         private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
     }
 }

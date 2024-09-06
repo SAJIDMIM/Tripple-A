@@ -40,12 +40,9 @@ namespace Tripple_A_Supermart_Management_System
             this.label7 = new System.Windows.Forms.Label();
             this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -147,36 +144,12 @@ namespace Tripple_A_Supermart_Management_System
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(699, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 29);
-            this.label3.TabIndex = 145;
-            this.label3.Text = "Name";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2CirclePictureBox1.ImageRotate = 1F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(694, 65);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(86, 84);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 144;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // DirectorAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 479);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.picGoBackDir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
@@ -190,7 +163,6 @@ namespace Tripple_A_Supermart_Management_System
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,8 +180,6 @@ namespace Tripple_A_Supermart_Management_System
         private System.Windows.Forms.ToolStripMenuItem promoteSaleToolStripMenuItem;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

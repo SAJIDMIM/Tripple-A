@@ -130,14 +130,32 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
-    <Compile Include="GeneralDash.cs">
+    <Compile Include="view\approvePurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneralDash.Designer.cs">
+    <Compile Include="view\approvePurchaseOrder.Designer.cs">
+      <DependentUpon>approvePurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\GeneralDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\GeneralDash.Designer.cs">
       <DependentUpon>GeneralDash.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Interview.cs" />
     <Compile Include="model\Profile.cs" />
+    <Compile Include="view\assignCustomerService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\assignCustomerService.Designer.cs">
+      <DependentUpon>assignCustomerService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\digitalMarketerDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\digitalMarketerDash.Designer.cs">
+      <DependentUpon>digitalMarketerDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\DirectorAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +208,36 @@
     <Compile Include="view\BillingReminder.Designer.cs">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\juniorManagerDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\juniorManagerDash.Designer.cs">
+      <DependentUpon>juniorManagerDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewPromotion.Designer.cs">
+      <DependentUpon>viewPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\generateCustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\generateCustomerReport.Designer.cs">
+      <DependentUpon>generateCustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MarketingPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MarketingPromotion.Designer.cs">
+      <DependentUpon>MarketingPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MonthlyCustomerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyCustomerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="view\MonthlyEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +280,12 @@
     <Compile Include="view\PromoteSale.Designer.cs">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\supervisorDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\supervisorDash.Designer.cs">
+      <DependentUpon>supervisorDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\viewEmployeeInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +310,18 @@
     <Compile Include="view\ViewLeaveRequest.designer.cs">
       <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\viewLoyaltyCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewLoyaltyCustomer.Designer.cs">
+      <DependentUpon>viewLoyaltyCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewNormalCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewNormalCustomer.Designer.cs">
+      <DependentUpon>viewNormalCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\viewPostJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +333,12 @@
     </Compile>
     <Compile Include="view\viewRetirementPlan.Designer.cs">
       <DependentUpon>viewRetirementPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewSupplier.Designer.cs">
+      <DependentUpon>viewSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="view\WeeklyStock.cs">
       <AutoGen>True</AutoGen>
@@ -382,8 +454,17 @@
     <Compile Include="view\VerificationCode.Designer.cs">
       <DependentUpon>VerificationCode.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GeneralDash.resx">
+    <EmbeddedResource Include="view\approvePurchaseOrder.resx">
+      <DependentUpon>approvePurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\GeneralDash.resx">
       <DependentUpon>GeneralDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\assignCustomerService.resx">
+      <DependentUpon>assignCustomerService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\digitalMarketerDash.resx">
+      <DependentUpon>digitalMarketerDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\DirectorAdminDashboard.resx">
       <DependentUpon>DirectorAdminDashboard.cs</DependentUpon>
@@ -413,6 +494,22 @@
     <EmbeddedResource Include="view\BillingReminder.resx">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\juniorManagerDash.resx">
+      <DependentUpon>juniorManagerDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewPromotion.resx">
+      <DependentUpon>viewPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\generateCustomerReport.resx">
+      <DependentUpon>generateCustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MarketingPromotion.resx">
+      <DependentUpon>MarketingPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MonthlyCustomerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyCustomerReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\MonthlyEmployee.resx">
       <DependentUpon>MonthlyEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +533,9 @@
     <EmbeddedResource Include="view\PromoteSale.resx">
       <DependentUpon>PromoteSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\supervisorDash.resx">
+      <DependentUpon>supervisorDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\viewEmployeeInformation.resx">
       <DependentUpon>viewEmployeeInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,11 +548,20 @@
     <EmbeddedResource Include="view\ViewLeaveRequest.resx">
       <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\viewLoyaltyCustomer.resx">
+      <DependentUpon>viewLoyaltyCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewNormalCustomer.resx">
+      <DependentUpon>viewNormalCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\viewPostJob.resx">
       <DependentUpon>viewPostJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewRetirementPlan.resx">
       <DependentUpon>viewRetirementPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewSupplier.resx">
+      <DependentUpon>viewSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -561,6 +670,17 @@
   <ItemGroup>
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\230-2303549_purchase-order-logo-png.png" />
+    <None Include="Resources\PngItem_30169631.png" />
+    <None Include="Resources\PngItem_3016963.png" />
+    <None Include="Resources\social-dashboard-concept-illustration_114360-1589.jpg" />
+    <None Include="Resources\4b382a8aafa0faf05b903224e749de12.jpg" />
+    <None Include="Resources\pngtree-clients-assistance-customer-care-personalized-png-image_5741395.png" />
+    <None Include="Resources\2782066.png" />
+    <None Include="Resources\pngtree-customer-and-supplier-shake-hands-on-smartphone-screens-png-image_4745924.png" />
+    <None Include="Resources\mobile.png" />
+    <None Include="Resources\113020_How-to-Deliver-Excellent-Customer-Experience_header.png" />
+    <None Include="Resources\images %283%29.png" />
     <None Include="Resources\Project-Dashboard-Template-Excel-image.png" />
     <None Include="Resources\pngtree-online-leave-request-process-png-image_12966823.png" />
     <None Include="Resources\images %282%29.png" />

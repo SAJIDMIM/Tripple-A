@@ -20,22 +20,30 @@ namespace Tripple_A_Supermart_Management_System
 
         private void normalCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            viewNormalCustomer showNormalCustomer = new viewNormalCustomer();
+            showNormalCustomer.Show();
+            this.Hide();
         }
 
         private void loyaltyCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            viewLoyaltyCustomer showLoyaltyCustomer = new viewLoyaltyCustomer();
+            showLoyaltyCustomer.Show();
+            this.Hide();
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            viewSupplier showSupplier = new viewSupplier();
+            showSupplier.Show();
+            this.Hide();
         }
 
         private void monthlyCustomerReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            generateCustomerReport generate = new generateCustomerReport();
+            generate.Show();
+            this.Hide();
         }
 
         private void picGoBackLogin_Click(object sender, EventArgs e)

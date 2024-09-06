@@ -63,6 +63,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _113020_How_to_Deliver_Excellent_Customer_Experience_header {
+            get {
+                object obj = ResourceManager.GetObject("113020_How-to-Deliver-Excellent-Customer-Experience_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _15308669 {
             get {
                 object obj = ResourceManager.GetObject("15308669", resourceCulture);
@@ -83,9 +93,39 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _230_2303549_purchase_order_logo_png {
+            get {
+                object obj = ResourceManager.GetObject("230-2303549_purchase-order-logo-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2782066 {
+            get {
+                object obj = ResourceManager.GetObject("2782066", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32791e5dea5ad5c47a84ca6070e22707 {
             get {
                 object obj = ResourceManager.GetObject("32791e5dea5ad5c47a84ca6070e22707", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4b382a8aafa0faf05b903224e749de12 {
+            get {
+                object obj = ResourceManager.GetObject("4b382a8aafa0faf05b903224e749de12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,6 +553,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images__3_ {
+            get {
+                object obj = ResourceManager.GetObject("images (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images1 {
             get {
                 object obj = ResourceManager.GetObject("images1", resourceCulture);
@@ -643,6 +693,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mobile {
+            get {
+                object obj = ResourceManager.GetObject("mobile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap need {
             get {
                 object obj = ResourceManager.GetObject("need", resourceCulture);
@@ -703,9 +763,50 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PngItem_3016963 {
+            get {
+                object obj = ResourceManager.GetObject("PngItem_3016963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PngItem_30169631 {
+            get {
+                object obj = ResourceManager.GetObject("PngItem_30169631", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_adminconsolepanelrootsoftware_flat_color_icon_vector_png_image_1494043 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-adminconsolepanelrootsoftware-flat-color-icon-vector-png-image_1494043", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_clients_assistance_customer_care_personalized_png_image_5741395 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-clients-assistance-customer-care-personalized-png-image_5741395", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_customer_and_supplier_shake_hands_on_smartphone_screens_png_image_4745924 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-customer-and-supplier-shake-hands-on-smartphone-screens-png-image_4745924" +
+                        "", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -817,6 +918,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         internal static System.Drawing.Bitmap shopping {
             get {
                 object obj = ResourceManager.GetObject("shopping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap social_dashboard_concept_illustration_114360_1589 {
+            get {
+                object obj = ResourceManager.GetObject("social-dashboard-concept-illustration_114360-1589", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -129,14 +129,27 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "General":
-
+                            GeneralDash goBack = new GeneralDash();
+                            goBack.Show();
+                            this.Hide();
+                            break;
                         // Add other roles as needed
                         case "Junior":
+                            juniorManagerDash show = new juniorManagerDash();
+                            show.Show();
+                            this.Hide();
+                            
+                            
                             break;
                         case "Supervisor":
-
-
+                            supervisorDash showSup = new supervisorDash();
+                            showSup.Show();
+                            this.Hide();
+                            break;
                         case "Digital":
+                            digitalMarketerDash showDM = new digitalMarketerDash();
+                            showDM.Show();
+                            this.Hide();
                             break;
                         case "Accountant":
                             break;

@@ -81,9 +81,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(296, 44);
+            this.label7.Size = new System.Drawing.Size(297, 44);
             this.label7.TabIndex = 82;
-            this.label7.Text = "Manage Employee";
+            this.label7.Text = "Monitor Employee";
             // 
             // pic_Hr_Dashboard
             // 
