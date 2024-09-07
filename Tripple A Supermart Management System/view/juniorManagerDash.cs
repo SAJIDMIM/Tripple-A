@@ -40,7 +40,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            viewSupplier showSupplier = new viewSupplier();
+            showSupplier showSupplier = new showSupplier();
             showSupplier.Show();
             this.Hide();
         }

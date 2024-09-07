@@ -21,5 +21,10 @@ namespace Tripple_A_Supermart_Management_System.view
         {
 
         }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

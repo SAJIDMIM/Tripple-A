@@ -38,6 +38,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.retirementPlanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleInterviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDeductionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirementPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,20 +50,18 @@ namespace Tripple_A_Supermart_Management_System.view
             this.monthlyEmployeeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.postJobToolStripMenuItem,
@@ -141,6 +140,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.scheduleInterviewToolStripMenuItem.Text = "Schedule Interview";
             this.scheduleInterviewToolStripMenuItem.Click += new System.EventHandler(this.scheduleInterviewToolStripMenuItem_Click);
             // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
@@ -161,21 +166,21 @@ namespace Tripple_A_Supermart_Management_System.view
             // retirementPlanToolStripMenuItem
             // 
             this.retirementPlanToolStripMenuItem.Name = "retirementPlanToolStripMenuItem";
-            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.retirementPlanToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.retirementPlanToolStripMenuItem.Text = "Retirement Plan";
             this.retirementPlanToolStripMenuItem.Click += new System.EventHandler(this.retirementPlanToolStripMenuItem_Click);
             // 
             // healthInsuranceToolStripMenuItem
             // 
             this.healthInsuranceToolStripMenuItem.Name = "healthInsuranceToolStripMenuItem";
-            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.healthInsuranceToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.healthInsuranceToolStripMenuItem.Text = "Health Insurance";
             this.healthInsuranceToolStripMenuItem.Click += new System.EventHandler(this.healthInsuranceToolStripMenuItem_Click);
             // 
             // leaveRequestToolStripMenuItem
             // 
             this.leaveRequestToolStripMenuItem.Name = "leaveRequestToolStripMenuItem";
-            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.leaveRequestToolStripMenuItem.Size = new System.Drawing.Size(245, 34);
             this.leaveRequestToolStripMenuItem.Text = "Leave Request";
             this.leaveRequestToolStripMenuItem.Click += new System.EventHandler(this.leaveRequestToolStripMenuItem_Click_1);
             // 
@@ -221,26 +226,11 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.picGoBackDir);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 251);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(988, 359);
             this.panel1.TabIndex = 83;
-            // 
-            // picGoBackDir
-            // 
-            this.picGoBackDir.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
-            this.picGoBackDir.ImageRotate = 0F;
-            this.picGoBackDir.Location = new System.Drawing.Point(12, 307);
-            this.picGoBackDir.Name = "picGoBackDir";
-            this.picGoBackDir.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackDir.TabIndex = 144;
-            this.picGoBackDir.TabStop = false;
-            this.picGoBackDir.UseTransparentBackground = true;
-            this.picGoBackDir.Click += new System.EventHandler(this.picGoBackDir_Click);
             // 
             // pictureBox1
             // 
@@ -273,12 +263,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.guna2CirclePictureBox1.TabIndex = 84;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // updateProfileToolStripMenuItem
-            // 
-            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
-            this.updateProfileToolStripMenuItem.Text = "Update Profile";
-            // 
             // HRManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -298,7 +282,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -329,7 +312,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
         private System.Windows.Forms.ToolStripMenuItem leaveRequestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scheduleInterviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;

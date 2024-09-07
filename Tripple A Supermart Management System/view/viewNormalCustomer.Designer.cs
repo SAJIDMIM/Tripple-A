@@ -31,11 +31,11 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_Search_Normal_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.dgvNormalCustomers = new System.Windows.Forms.DataGridView();
-            this.picGoBackGeneralManager = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_Search_Normal_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.picGoBackGeneralManager = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNormalCustomers)).BeginInit();
@@ -65,15 +65,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Size = new System.Drawing.Size(560, 415);
             this.panel1.TabIndex = 146;
             // 
-            // label3
+            // dgvNormalCustomers
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 29);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Mobile";
+            this.dgvNormalCustomers.BackgroundColor = System.Drawing.Color.White;
+            this.dgvNormalCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNormalCustomers.Location = new System.Drawing.Point(32, 108);
+            this.dgvNormalCustomers.Name = "dgvNormalCustomers";
+            this.dgvNormalCustomers.RowHeadersWidth = 62;
+            this.dgvNormalCustomers.RowTemplate.Height = 28;
+            this.dgvNormalCustomers.Size = new System.Drawing.Size(482, 285);
+            this.dgvNormalCustomers.TabIndex = 149;
             // 
             // btn_Search_Normal_Customer
             // 
@@ -90,30 +91,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Normal_Customer.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Normal_Customer.TabIndex = 148;
             this.btn_Search_Normal_Customer.Text = "Search ";
-            // 
-            // dgvNormalCustomers
-            // 
-            this.dgvNormalCustomers.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNormalCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNormalCustomers.Location = new System.Drawing.Point(32, 108);
-            this.dgvNormalCustomers.Name = "dgvNormalCustomers";
-            this.dgvNormalCustomers.RowHeadersWidth = 62;
-            this.dgvNormalCustomers.RowTemplate.Height = 28;
-            this.dgvNormalCustomers.Size = new System.Drawing.Size(482, 285);
-            this.dgvNormalCustomers.TabIndex = 149;
-            // 
-            // picGoBackGeneralManager
-            // 
-            this.picGoBackGeneralManager.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackGeneralManager.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackGeneralManager.ImageRotate = 0F;
-            this.picGoBackGeneralManager.Location = new System.Drawing.Point(30, 571);
-            this.picGoBackGeneralManager.Name = "picGoBackGeneralManager";
-            this.picGoBackGeneralManager.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackGeneralManager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackGeneralManager.TabIndex = 147;
-            this.picGoBackGeneralManager.TabStop = false;
-            this.picGoBackGeneralManager.UseTransparentBackground = true;
+            this.btn_Search_Normal_Customer.Click += new System.EventHandler(this.btn_Search_Normal_Customer_Click);
             // 
             // txtMobile
             // 
@@ -135,6 +113,30 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtMobile.SelectedText = "";
             this.txtMobile.Size = new System.Drawing.Size(230, 34);
             this.txtMobile.TabIndex = 147;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 29);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Mobile";
+            // 
+            // picGoBackGeneralManager
+            // 
+            this.picGoBackGeneralManager.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackGeneralManager.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackGeneralManager.ImageRotate = 0F;
+            this.picGoBackGeneralManager.Location = new System.Drawing.Point(30, 571);
+            this.picGoBackGeneralManager.Name = "picGoBackGeneralManager";
+            this.picGoBackGeneralManager.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackGeneralManager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackGeneralManager.TabIndex = 147;
+            this.picGoBackGeneralManager.TabStop = false;
+            this.picGoBackGeneralManager.UseTransparentBackground = true;
+            this.picGoBackGeneralManager.Click += new System.EventHandler(this.picGoBackGeneralManager_Click);
             // 
             // pictureBox1
             // 

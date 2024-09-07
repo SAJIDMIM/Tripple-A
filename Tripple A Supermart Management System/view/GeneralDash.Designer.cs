@@ -35,28 +35,29 @@ namespace Tripple_A_Supermart_Management_System
             this.normalCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loyaltyCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateCustomerReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyCustomerReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
-            this.generateCustomerReportToolStripMenuItem});
+            this.generateCustomerReportToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(691, 33);
@@ -77,23 +78,29 @@ namespace Tripple_A_Supermart_Management_System
             // normalCustomerToolStripMenuItem
             // 
             this.normalCustomerToolStripMenuItem.Name = "normalCustomerToolStripMenuItem";
-            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.normalCustomerToolStripMenuItem.Text = "Normal Customer";
             this.normalCustomerToolStripMenuItem.Click += new System.EventHandler(this.normalCustomerToolStripMenuItem_Click);
             // 
             // loyaltyCustomerToolStripMenuItem
             // 
             this.loyaltyCustomerToolStripMenuItem.Name = "loyaltyCustomerToolStripMenuItem";
-            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.loyaltyCustomerToolStripMenuItem.Text = "Loyalty Customer";
             this.loyaltyCustomerToolStripMenuItem.Click += new System.EventHandler(this.loyaltyCustomerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.supplierToolStripMenuItem.Text = "Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
+            // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
             // 
             // generateCustomerReportToolStripMenuItem
             // 
@@ -139,20 +146,6 @@ namespace Tripple_A_Supermart_Management_System
             this.label7.TabIndex = 144;
             this.label7.Text = "General Manager";
             // 
-            // picGoBackLogin
-            // 
-            this.picGoBackLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
-            this.picGoBackLogin.ImageRotate = 0F;
-            this.picGoBackLogin.Location = new System.Drawing.Point(12, 535);
-            this.picGoBackLogin.Name = "picGoBackLogin";
-            this.picGoBackLogin.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackLogin.TabIndex = 146;
-            this.picGoBackLogin.TabStop = false;
-            this.picGoBackLogin.UseTransparentBackground = true;
-            this.picGoBackLogin.Click += new System.EventHandler(this.picGoBackLogin_Click);
-            // 
             // picClose
             // 
             this.picClose.BackColor = System.Drawing.Color.Transparent;
@@ -182,21 +175,21 @@ namespace Tripple_A_Supermart_Management_System
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
-            // updateProfileToolStripMenuItem
+            // logoutToolStripMenuItem
             // 
-            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // GeneralDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(691, 589);
+            this.ClientSize = new System.Drawing.Size(691, 581);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.picClose);
-            this.Controls.Add(this.picGoBackLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
@@ -209,7 +202,6 @@ namespace Tripple_A_Supermart_Management_System
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -229,9 +221,9 @@ namespace Tripple_A_Supermart_Management_System
         private System.Windows.Forms.ToolStripMenuItem monthlyCustomerReportToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2PictureBox picGoBackLogin;
         private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

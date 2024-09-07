@@ -34,7 +34,7 @@ namespace Tripple_A_Supermart_Management_System
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            viewSupplier showSupplier = new viewSupplier();
+            showSupplier showSupplier = new showSupplier();
             showSupplier.Show();
             this.Hide();
         }
@@ -56,6 +56,13 @@ namespace Tripple_A_Supermart_Management_System
         private void picClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login back = new Login();
+            back.Show();
+            this.Hide();
         }
     }
 }

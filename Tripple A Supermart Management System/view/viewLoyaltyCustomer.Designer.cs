@@ -32,9 +32,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLoyaltyCustomers = new System.Windows.Forms.DataGridView();
             this.btn_Search_Loyalty_Customer = new Guna.UI2.WinForms.Guna2Button();
+            this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
             this.picGoBackGeneralManager = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -81,26 +81,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Loyalty_Customer.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Loyalty_Customer.TabIndex = 148;
             this.btn_Search_Loyalty_Customer.Text = "Search ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 29);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Mobile";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(360, 44);
-            this.label7.TabIndex = 149;
-            this.label7.Text = "View Loyalty Customer";
+            this.btn_Search_Loyalty_Customer.Click += new System.EventHandler(this.btn_Search_Loyalty_Customer_Click);
             // 
             // txtMobile
             // 
@@ -123,6 +104,26 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtMobile.Size = new System.Drawing.Size(230, 34);
             this.txtMobile.TabIndex = 147;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 29);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Mobile";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(360, 44);
+            this.label7.TabIndex = 149;
+            this.label7.Text = "View Loyalty Customer";
+            // 
             // picGoBackGeneralManager
             // 
             this.picGoBackGeneralManager.BackColor = System.Drawing.Color.Transparent;
@@ -135,6 +136,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackGeneralManager.TabIndex = 151;
             this.picGoBackGeneralManager.TabStop = false;
             this.picGoBackGeneralManager.UseTransparentBackground = true;
+            this.picGoBackGeneralManager.Click += new System.EventHandler(this.picGoBackGeneralManager_Click);
             // 
             // pictureBox1
             // 

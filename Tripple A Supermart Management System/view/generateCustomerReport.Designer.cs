@@ -31,6 +31,8 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btn_Generate_Customer = new Guna.UI2.WinForms.Guna2Button();
+            this.picGeneralDash = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picGeneralDash)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -59,6 +61,21 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Generate_Customer.Size = new System.Drawing.Size(112, 41);
             this.btn_Generate_Customer.TabIndex = 149;
             this.btn_Generate_Customer.Text = "Generate";
+            this.btn_Generate_Customer.Click += new System.EventHandler(this.btn_Generate_Customer_Click);
+            // 
+            // picGeneralDash
+            // 
+            this.picGeneralDash.BackColor = System.Drawing.Color.Transparent;
+            this.picGeneralDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGeneralDash.ImageRotate = 0F;
+            this.picGeneralDash.Location = new System.Drawing.Point(12, 505);
+            this.picGeneralDash.Name = "picGeneralDash";
+            this.picGeneralDash.Size = new System.Drawing.Size(33, 42);
+            this.picGeneralDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGeneralDash.TabIndex = 152;
+            this.picGeneralDash.TabStop = false;
+            this.picGeneralDash.UseTransparentBackground = true;
+            this.picGeneralDash.Click += new System.EventHandler(this.picGeneralDash_Click);
             // 
             // generateCustomerReport
             // 
@@ -66,12 +83,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 597);
+            this.Controls.Add(this.picGeneralDash);
             this.Controls.Add(this.btn_Generate_Customer);
             this.Controls.Add(this.crystalReportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "generateCustomerReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "generateCustomerReport";
+            ((System.ComponentModel.ISupportInitialize)(this.picGeneralDash)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,5 +99,6 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Guna.UI2.WinForms.Guna2Button btn_Generate_Customer;
+        private Guna.UI2.WinForms.Guna2PictureBox picGeneralDash;
     }
 }

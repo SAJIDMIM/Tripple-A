@@ -1,7 +1,7 @@
 ﻿
 namespace Tripple_A_Supermart_Management_System.view
 {
-    partial class viewSupplier
+    partial class showSupplier
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@ namespace Tripple_A_Supermart_Management_System.view
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvNormalSupplier = new System.Windows.Forms.DataGridView();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.btn_Search_Supplier = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSupplierId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSupplierId = new Guna.UI2.WinForms.Guna2TextBox();
             this.picGoBackGeneralManager = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNormalSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackGeneralManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SpringGreen;
-            this.panel1.Controls.Add(this.dgvNormalSupplier);
+            this.panel1.Controls.Add(this.dgvSupplier);
             this.panel1.Controls.Add(this.btn_Search_Supplier);
             this.panel1.Controls.Add(this.txtSupplierId);
             this.panel1.Controls.Add(this.label3);
@@ -55,16 +55,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Size = new System.Drawing.Size(560, 415);
             this.panel1.TabIndex = 150;
             // 
-            // dgvNormalSupplier
+            // dgvSupplier
             // 
-            this.dgvNormalSupplier.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNormalSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNormalSupplier.Location = new System.Drawing.Point(32, 108);
-            this.dgvNormalSupplier.Name = "dgvNormalSupplier";
-            this.dgvNormalSupplier.RowHeadersWidth = 62;
-            this.dgvNormalSupplier.RowTemplate.Height = 28;
-            this.dgvNormalSupplier.Size = new System.Drawing.Size(482, 285);
-            this.dgvNormalSupplier.TabIndex = 149;
+            this.dgvSupplier.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.Location = new System.Drawing.Point(32, 108);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.RowHeadersWidth = 62;
+            this.dgvSupplier.RowTemplate.Height = 28;
+            this.dgvSupplier.Size = new System.Drawing.Size(482, 285);
+            this.dgvSupplier.TabIndex = 149;
             // 
             // btn_Search_Supplier
             // 
@@ -81,26 +81,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Supplier.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Supplier.TabIndex = 148;
             this.btn_Search_Supplier.Text = "Search ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 29);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Supplier Id";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, -1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(366, 44);
-            this.label7.TabIndex = 149;
-            this.label7.Text = "View Normal Customer";
+            this.btn_Search_Supplier.Click += new System.EventHandler(this.btn_Search_Supplier_Click);
             // 
             // txtSupplierId
             // 
@@ -123,6 +104,26 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtSupplierId.Size = new System.Drawing.Size(230, 34);
             this.txtSupplierId.TabIndex = 147;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 29);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Supplier Id";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, -1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(366, 44);
+            this.label7.TabIndex = 149;
+            this.label7.Text = "View Normal Customer";
+            // 
             // picGoBackGeneralManager
             // 
             this.picGoBackGeneralManager.BackColor = System.Drawing.Color.Transparent;
@@ -135,6 +136,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackGeneralManager.TabIndex = 151;
             this.picGoBackGeneralManager.TabStop = false;
             this.picGoBackGeneralManager.UseTransparentBackground = true;
+            this.picGoBackGeneralManager.Click += new System.EventHandler(this.picGoBackGeneralManager_Click);
             // 
             // pictureBox1
             // 
@@ -146,7 +148,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.TabIndex = 148;
             this.pictureBox1.TabStop = false;
             // 
-            // viewSupplier
+            // showSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,12 +159,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Controls.Add(this.picGoBackGeneralManager);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "viewSupplier";
+            this.Name = "showSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewSupplier";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNormalSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackGeneralManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -173,7 +175,7 @@ namespace Tripple_A_Supermart_Management_System.view
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvNormalSupplier;
+        private System.Windows.Forms.DataGridView dgvSupplier;
         private Guna.UI2.WinForms.Guna2Button btn_Search_Supplier;
         private Guna.UI2.WinForms.Guna2TextBox txtSupplierId;
         private System.Windows.Forms.Label label3;
