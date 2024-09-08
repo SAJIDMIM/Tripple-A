@@ -136,10 +136,13 @@
   <ItemGroup>
     <Compile Include="controller\CAccount.cs" />
     <Compile Include="controller\CAdminLogin.cs" />
+    <Compile Include="controller\CBillingReminder.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CCustomer.cs" />
     <Compile Include="controller\CCustomerService.cs" />
     <Compile Include="controller\CLeave.cs" />
+    <Compile Include="controller\CMarketing.cs" />
+    <Compile Include="controller\CMarketingPromotion.cs" />
     <Compile Include="controller\CProfile.cs" />
     <Compile Include="controller\CSupplier.cs" />
     <Compile Include="controller\EmployeeController.cs" />
@@ -152,8 +155,11 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="model\BillingReminder.cs" />
     <Compile Include="model\Customer.cs" />
     <Compile Include="model\CustomerService.cs" />
+    <Compile Include="model\Marketing.cs" />
+    <Compile Include="model\MarketingPromotion.cs" />
     <Compile Include="model\Supplier.cs" />
     <Compile Include="view\approvePurchaseOrder.cs">
       <SubType>Form</SubType>
@@ -238,6 +244,18 @@
     </Compile>
     <Compile Include="view\juniorManagerDash.Designer.cs">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\monitorMarketing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorMarketing.Designer.cs">
+      <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewMarketing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewMarketing.Designer.cs">
+      <DependentUpon>viewMarketing.cs</DependentUpon>
     </Compile>
     <Compile Include="view\viewPromotion.cs">
       <SubType>Form</SubType>
@@ -522,6 +540,12 @@
     <EmbeddedResource Include="view\juniorManagerDash.resx">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorMarketing.resx">
+      <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewMarketing.resx">
+      <DependentUpon>viewMarketing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\viewPromotion.resx">
       <DependentUpon>viewPromotion.cs</DependentUpon>
     </EmbeddedResource>
@@ -706,6 +730,12 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\price-tag.png" />
+    <None Include="Resources\branding.png" />
+    <None Include="Resources\terms-and-conditions.png" />
+    <None Include="Resources\discount.png" />
+    <None Include="Resources\new-product.png" />
+    <None Include="Resources\scanner.png" />
     <None Include="Resources\230-2303549_purchase-order-logo-png.png" />
     <None Include="Resources\PngItem_30169631.png" />
     <None Include="Resources\PngItem_3016963.png" />

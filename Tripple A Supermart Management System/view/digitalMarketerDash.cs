@@ -37,5 +37,19 @@ namespace Tripple_A_Supermart_Management_System.view
             back.Show();
             this.Hide();
         }
+
+        private void marketingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            monitorMarketing showDetails = new monitorMarketing();
+            showDetails.Show();
+            this.Hide();
+        }
+
+        private void marketingToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            viewMarketing goBack = new viewMarketing();
+            goBack.Show();
+            this.Hide();
+        }
     }
 }
