@@ -92,13 +92,26 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
@@ -112,6 +125,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=5.64.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.64.0\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+    <Reference Include="TwoFactorAuthentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoTwoFactorAuthentication.1.0.0\lib\net462\TwoFactorAuthentication.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +138,7 @@
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CCustomer.cs" />
+    <Compile Include="controller\CCustomerService.cs" />
     <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\CProfile.cs" />
     <Compile Include="controller\CSupplier.cs" />
@@ -133,6 +153,7 @@
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
     <Compile Include="model\Customer.cs" />
+    <Compile Include="model\CustomerService.cs" />
     <Compile Include="model\Supplier.cs" />
     <Compile Include="view\approvePurchaseOrder.cs">
       <SubType>Form</SubType>
@@ -625,6 +646,7 @@
     <EmbeddedResource Include="view\VerificationCode.resx">
       <DependentUpon>VerificationCode.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App_Plugins\2FactorAuthentication\package.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -672,6 +694,16 @@
     <None Include="Resources\cross-mark_8369334.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\2FactorAuthentication\css\2fa.css" />
+    <Content Include="App_Plugins\2FactorAuthentication\install_guide.html" />
+    <Content Include="App_Plugins\2FactorAuthentication\js\2fa-backoffice.js" />
+    <Content Include="App_Plugins\2FactorAuthentication\js\2fa-login.js" />
+    <Content Include="App_Plugins\2FactorAuthentication\lang\en-US.xml" />
+    <Content Include="App_Plugins\2FactorAuthentication\lang\en.xml" />
+    <Content Include="App_Plugins\2FactorAuthentication\lang\nl-NL.xml" />
+    <Content Include="App_Plugins\2FactorAuthentication\readme.txt" />
+    <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
+    <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\230-2303549_purchase-order-logo-png.png" />

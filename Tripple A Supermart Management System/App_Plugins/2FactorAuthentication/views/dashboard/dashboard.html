@@ -1,0 +1,77 @@
+<div class="welcome-dashboard" ng-controller="twoFactorAuthy.dashboard.controller">
+
+
+    <umb-load-indicator ng-show="isLoading"></umb-load-indicator>
+
+    <div ng-show="currentPage == 'home'">
+        <div ng-show="settingsLoaded">
+            <div ng-show="twoFactorEnabled">
+                <h3>
+                    <localize key="dashboard_alreadySetup">
+                        You already setup two factor authentication!
+                    </localize>
+                </h3>
+                <h3>
+                    <localize key="dashboard_yourPhoneNumber">
+                        Your phone number:
+                    </localize>
+                    {{userPhoneNumber}}
+                </h3>
+
+                <a href class="btn btn-danger" ng-click="removeAuthenticator()"><i class="icon-unlocked"></i> <localize key="dashboard_removeauthenticator">Remove Autenticator</localize></a>
+            </div>
+            <div ng-show="!twoFactorEnabled">
+
+                <h1>
+                    <localize key="dashboard_notSetup">
+                        You are NOT setup!
+                    </localize>
+                </h1>
+                <p>
+                    <localize key="dashboard_wantsSetup">
+                        Wants setup 2FA?
+                    </localize>
+                </p>
+                <a href class="btn btn-primary" ng-click="setupAccount()"><i class="icon-locked"></i> <localize key="dashboard_setup">Setup</localize></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-show="currentPage == 'setupWizard'">
+
+        <div ng-show="!isLoading">
+            <div class="text-danger" ng-show="!responseResult.isSuccess" id="errorSection">
+                {{responseResult.error}}
+            </div>
+            <p>
+                <localize key="dashboard_phoneNumberHint">
+                    Enter phone number in +100000000000 format
+                </localize>
+            </p>
+
+            <div class="control-group">
+                <input type="text" ng-model="setupData.phoneNumber" name="phoneNumber" class="input-xlarge" placeholder="Phone number" />
+            </div>
+            <div ng-show="setupData.codeSended" class="control-group">
+                <input type="text" ng-model="setupData.smsCode" name="smsCode" class="input-xlarge" placeholder="Sms code" />
+            </div>
+            <div ng-show="!setupData.codeSended">
+                <button type="button" ng-click="sendVerifyCode(setupData.phoneNumber)" class="btn">
+                    <localize key="dashboard_sendCodeBtn">
+                        Send Code
+                    </localize>
+                </button>
+            </div>
+            <div ng-show="setupData.codeSended">
+                <button type="button" ng-click="confirm2FaAuth(setupData.phoneNumber, setupData.smsCode)">
+                    <localize key="dashboard_confirmBtn">
+                        Confirm
+                    </localize>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

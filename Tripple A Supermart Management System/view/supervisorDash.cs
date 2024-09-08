@@ -28,5 +28,12 @@ namespace Tripple_A_Supermart_Management_System.view
             newService.Show();
             this.Hide();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login back = new Login();
+            back.Show();
+            this.Hide();
+        }
     }
 }

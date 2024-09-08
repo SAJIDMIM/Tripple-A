@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+    <creator>
+        <name>Reinder</name>
+        <link></link>
+    </creator>
+	<area alias="dashboard">
+		<key alias="removeauthenticator">Remove two factor authentication</key>
+		<key alias="setup">Enable</key>
+		<key alias="alreadySetup">You already setup two factor authentication!</key>
+		<key alias="notSetup">Two factor authentication is not enabled</key>
+		<key alias="wantsSetup">Enable two factor authentication?</key>
+		<key alias="yourPhoneNumber">Your phone number:</key>
+
+		<key alias="phoneNumberHint">Enter phone number in +100000000000 format</key>
+		<key alias="sendCodeBtn">Send code</key>
+		<key alias="confirmBtn">Confirm</key>
+	</area>
+	<area alias="dashboardTabs">
+		<key alias="TwoFactorAuthTabName">Two Factor Authentication</key>
+	</area>
+</language>

@@ -37,24 +37,26 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.dtpResponseTime = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Retirement_Plan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFeedback = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCustomerId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Customer_ServiceId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picSupervisor = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_Assign_Service = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Search_Customer = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupervisor)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(217, 39);
+            this.label7.Location = new System.Drawing.Point(300, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(381, 44);
             this.label7.TabIndex = 83;
@@ -130,20 +132,25 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label8.TabIndex = 160;
             this.label8.Text = "Mobile";
             // 
-            // comboBox1
+            // cmbType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 573);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 162;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "In - Person Support",
+            "Call Center Support",
+            "Email Support",
+            "Mobile Support"});
+            this.cmbType.Location = new System.Drawing.Point(225, 573);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(121, 28);
+            this.cmbType.TabIndex = 162;
             // 
-            // dateTimePicker1
+            // dtpResponseTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(502, 215);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(271, 26);
-            this.dateTimePicker1.TabIndex = 163;
+            this.dtpResponseTime.Location = new System.Drawing.Point(502, 215);
+            this.dtpResponseTime.Name = "dtpResponseTime";
+            this.dtpResponseTime.Size = new System.Drawing.Size(271, 26);
+            this.dtpResponseTime.TabIndex = 163;
             // 
             // pictureBox1
             // 
@@ -155,133 +162,168 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.TabIndex = 164;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2TextBox6
+            // txtMobile
             // 
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.guna2TextBox6.Location = new System.Drawing.Point(512, 518);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox6.PlaceholderText = "Enter Mobile Number";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(169, 40);
-            this.guna2TextBox6.TabIndex = 161;
+            this.txtMobile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMobile.DefaultText = "";
+            this.txtMobile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMobile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMobile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobile.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.txtMobile.ForeColor = System.Drawing.Color.Black;
+            this.txtMobile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobile.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mobile;
+            this.txtMobile.Location = new System.Drawing.Point(512, 518);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.PasswordChar = '\0';
+            this.txtMobile.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtMobile.PlaceholderText = "Enter Mobile Number";
+            this.txtMobile.SelectedText = "";
+            this.txtMobile.Size = new System.Drawing.Size(169, 40);
+            this.txtMobile.TabIndex = 161;
             // 
-            // guna2TextBox5
+            // txtFeedback
             // 
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.guna2TextBox5.Location = new System.Drawing.Point(512, 334);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox5.PlaceholderText = "Enter Feedback Id";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(260, 103);
-            this.guna2TextBox5.TabIndex = 159;
+            this.txtFeedback.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFeedback.DefaultText = "";
+            this.txtFeedback.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFeedback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFeedback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFeedback.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFeedback.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.txtFeedback.ForeColor = System.Drawing.Color.Black;
+            this.txtFeedback.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFeedback.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.description;
+            this.txtFeedback.Location = new System.Drawing.Point(512, 334);
+            this.txtFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.PasswordChar = '\0';
+            this.txtFeedback.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtFeedback.PlaceholderText = "Enter Feedback ";
+            this.txtFeedback.SelectedText = "";
+            this.txtFeedback.Size = new System.Drawing.Size(260, 103);
+            this.txtFeedback.TabIndex = 159;
             // 
-            // guna2TextBox2
+            // txtCustomerName
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.guna2TextBox2.Location = new System.Drawing.Point(225, 462);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox2.PlaceholderText = "Enter Custoomer Name\r\n";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(169, 40);
-            this.guna2TextBox2.TabIndex = 153;
+            this.txtCustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCustomerName.DefaultText = "";
+            this.txtCustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.txtCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
+            this.txtCustomerName.Location = new System.Drawing.Point(225, 462);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.PasswordChar = '\0';
+            this.txtCustomerName.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtCustomerName.PlaceholderText = "Enter Custoomer Name\r\n";
+            this.txtCustomerName.SelectedText = "";
+            this.txtCustomerName.Size = new System.Drawing.Size(169, 40);
+            this.txtCustomerName.TabIndex = 153;
             // 
-            // guna2TextBox1
+            // txtCustomerId
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.guna2TextBox1.Location = new System.Drawing.Point(225, 334);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox1.PlaceholderText = "Enter Customer Id";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(169, 40);
-            this.guna2TextBox1.TabIndex = 151;
+            this.txtCustomerId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCustomerId.DefaultText = "";
+            this.txtCustomerId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCustomerId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCustomerId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerId.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.txtCustomerId.ForeColor = System.Drawing.Color.Black;
+            this.txtCustomerId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.txtCustomerId.Location = new System.Drawing.Point(225, 334);
+            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.PasswordChar = '\0';
+            this.txtCustomerId.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtCustomerId.PlaceholderText = "Enter Customer Id";
+            this.txtCustomerId.SelectedText = "";
+            this.txtCustomerId.Size = new System.Drawing.Size(169, 40);
+            this.txtCustomerId.TabIndex = 151;
             // 
-            // txt_Retirement_Plan
+            // txt_Customer_ServiceId
             // 
-            this.txt_Retirement_Plan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Retirement_Plan.DefaultText = "";
-            this.txt_Retirement_Plan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Retirement_Plan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Retirement_Plan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Retirement_Plan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Retirement_Plan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Retirement_Plan.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.txt_Retirement_Plan.ForeColor = System.Drawing.Color.Black;
-            this.txt_Retirement_Plan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Retirement_Plan.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.txt_Retirement_Plan.Location = new System.Drawing.Point(225, 202);
-            this.txt_Retirement_Plan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_Retirement_Plan.Name = "txt_Retirement_Plan";
-            this.txt_Retirement_Plan.PasswordChar = '\0';
-            this.txt_Retirement_Plan.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.txt_Retirement_Plan.PlaceholderText = "Enter Customer Service Id";
-            this.txt_Retirement_Plan.SelectedText = "";
-            this.txt_Retirement_Plan.Size = new System.Drawing.Size(169, 40);
-            this.txt_Retirement_Plan.TabIndex = 149;
+            this.txt_Customer_ServiceId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Customer_ServiceId.DefaultText = "";
+            this.txt_Customer_ServiceId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Customer_ServiceId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Customer_ServiceId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Customer_ServiceId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Customer_ServiceId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Customer_ServiceId.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.txt_Customer_ServiceId.ForeColor = System.Drawing.Color.Black;
+            this.txt_Customer_ServiceId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Customer_ServiceId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.txt_Customer_ServiceId.Location = new System.Drawing.Point(225, 202);
+            this.txt_Customer_ServiceId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Customer_ServiceId.Name = "txt_Customer_ServiceId";
+            this.txt_Customer_ServiceId.PasswordChar = '\0';
+            this.txt_Customer_ServiceId.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txt_Customer_ServiceId.PlaceholderText = "Enter Customer Service Id";
+            this.txt_Customer_ServiceId.SelectedText = "";
+            this.txt_Customer_ServiceId.Size = new System.Drawing.Size(169, 40);
+            this.txt_Customer_ServiceId.TabIndex = 149;
             // 
-            // picGoBackAdminLogin
+            // picSupervisor
             // 
-            this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackAdminLogin.ImageRotate = 0F;
-            this.picGoBackAdminLogin.Location = new System.Drawing.Point(721, 41);
-            this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";
-            this.picGoBackAdminLogin.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackAdminLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackAdminLogin.TabIndex = 147;
-            this.picGoBackAdminLogin.TabStop = false;
-            this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.picSupervisor.BackColor = System.Drawing.Color.Transparent;
+            this.picSupervisor.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picSupervisor.ImageRotate = 0F;
+            this.picSupervisor.Location = new System.Drawing.Point(739, 26);
+            this.picSupervisor.Name = "picSupervisor";
+            this.picSupervisor.Size = new System.Drawing.Size(33, 42);
+            this.picSupervisor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSupervisor.TabIndex = 147;
+            this.picSupervisor.TabStop = false;
+            this.picSupervisor.UseTransparentBackground = true;
+            this.picSupervisor.Click += new System.EventHandler(this.picSupervisor_Click);
+            // 
+            // btn_Assign_Service
+            // 
+            this.btn_Assign_Service.BorderThickness = 1;
+            this.btn_Assign_Service.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Assign_Service.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Assign_Service.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Assign_Service.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Assign_Service.FillColor = System.Drawing.Color.Cyan;
+            this.btn_Assign_Service.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Assign_Service.ForeColor = System.Drawing.Color.Black;
+            this.btn_Assign_Service.Location = new System.Drawing.Point(512, 585);
+            this.btn_Assign_Service.Name = "btn_Assign_Service";
+            this.btn_Assign_Service.Size = new System.Drawing.Size(99, 45);
+            this.btn_Assign_Service.TabIndex = 165;
+            this.btn_Assign_Service.Text = "Assign";
+            this.btn_Assign_Service.Click += new System.EventHandler(this.btn_Assign_Service_Click);
+            // 
+            // btn_Search_Customer
+            // 
+            this.btn_Search_Customer.BorderThickness = 1;
+            this.btn_Search_Customer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Customer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search_Customer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search_Customer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search_Customer.FillColor = System.Drawing.Color.Orange;
+            this.btn_Search_Customer.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Search_Customer.ForeColor = System.Drawing.Color.Black;
+            this.btn_Search_Customer.Location = new System.Drawing.Point(673, 585);
+            this.btn_Search_Customer.Name = "btn_Search_Customer";
+            this.btn_Search_Customer.Size = new System.Drawing.Size(99, 45);
+            this.btn_Search_Customer.TabIndex = 166;
+            this.btn_Search_Customer.Text = "Search";
+            this.btn_Search_Customer.Click += new System.EventHandler(this.btn_Search_Customer_Click);
             // 
             // assignCustomerService
             // 
@@ -289,29 +331,31 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 682);
+            this.Controls.Add(this.btn_Search_Customer);
+            this.Controls.Add(this.btn_Assign_Service);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.guna2TextBox6);
+            this.Controls.Add(this.dtpResponseTime);
+            this.Controls.Add(this.cmbType);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.guna2TextBox5);
+            this.Controls.Add(this.txtFeedback);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_Retirement_Plan);
+            this.Controls.Add(this.txt_Customer_ServiceId);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.picGoBackAdminLogin);
+            this.Controls.Add(this.picSupervisor);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "assignCustomerService";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "assignCustomerService";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupervisor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,21 +364,23 @@ namespace Tripple_A_Supermart_Management_System.view
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2PictureBox picGoBackAdminLogin;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Retirement_Plan;
+        private Guna.UI2.WinForms.Guna2PictureBox picSupervisor;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Customer_ServiceId;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCustomerId;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtFeedback;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtMobile;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.DateTimePicker dtpResponseTime;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Assign_Service;
+        private Guna.UI2.WinForms.Guna2Button btn_Search_Customer;
     }
 }

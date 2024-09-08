@@ -1,0 +1,69 @@
+<p>
+Package based on Twilio sms provider
+</p>
+<p>
+Needs to add
+</p>
+<p>
+    <pre>
+        <code>
+            &lt;add key="Twilio.AccountSID" value="AccountSIDKey" /&gt;
+            &lt;add key="Twilio.AuthToken" value="AuthTokenKey" /&gt;
+            &lt;add key="Twilio.ServiceSid" value="ServiceSidKey" /&gt;
+        </code>
+    </pre>
+</p>
+
+<p>
+And for enable 2Fa auth you need to change owin:appStartup key value to "TwoFactorBackOfficeOwinStartup"
+</p>
+<p>
+    <pre>
+        <code>
+            &lt;add key="owin:appStartup" value="UmbracoStandardOwinStartup" /&gt;
+        </code>
+    </pre>
+<p>
+Or override BackOfficeUserManager and BackOfficeUserStore in your OwinStartup:
+</p>
+<pre>
+    <code>
+       protected override void ConfigureUmbracoAuthentication(IAppBuilder app)
+            {
+                app.SetUmbracoLoggerFactory();
+
+                var applicationContext = Services;
+                // There are several overloads of this method that allow you to customize the BackOfficeUserManager or even custom BackOfficeUserStore.
+                app.ConfigureUserManagerForUmbracoBackOffice&lt;TwoFactorBackOfficeUserManager, BackOfficeIdentityUser&gt;(
+                     Umbraco.Web.Composing.Current.RuntimeState,
+                     GlobalSettings,
+                     (options, context) =>
+                     {
+                         var membershipProvider = MembershipProviderExtensions
+                            .GetUsersMembershipProvider()
+                            .AsUmbracoMembershipProvider();
+
+                         var userManager = TwoFactorBackOfficeUserManager.Create(
+                             options,
+                             applicationContext.UserService,
+                             applicationContext.MemberTypeService,
+                             applicationContext.EntityService,
+                             applicationContext.ExternalLoginService,
+                             membershipProvider,
+                             GlobalSettings,
+                             Mapper);
+
+                         return userManager;
+                     });
+
+                // Default ConfigureUmbracoAuthentication code
+                app
+                   .UseUmbracoBackOfficeCookieAuthentication(UmbracoContextAccessor, RuntimeState, Services.UserService, GlobalSettings, UmbracoSettings.Security, PipelineStage.Authenticate)
+                   .UseUmbracoBackOfficeExternalCookieAuthentication(UmbracoContextAccessor, RuntimeState, GlobalSettings, PipelineStage.Authenticate)
+                   .UseUmbracoPreviewAuthentication(UmbracoContextAccessor, RuntimeState, GlobalSettings, UmbracoSettings.Security, PipelineStage.Authorize)
+                   // For 2 fa auth
+                   .UseTwoFactorSignInCookie(global::Umbraco.Core.Constants.Security.BackOfficeTwoFactorAuthenticationType, TimeSpan.FromMinutes(5));
+            }
+    </code>
+</pre>
+</p>

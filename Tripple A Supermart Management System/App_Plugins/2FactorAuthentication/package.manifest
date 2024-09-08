@@ -1,0 +1,17 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/2FactorAuthentication/js/2fa-login.js",
+    "~/app_plugins/2FactorAuthentication/js/2fa-backoffice.js"
+  ],
+  "css": [
+    "~/app_plugins/2FactorAuthentication/css/2fa.css"
+  ],
+  "dashboards": [
+    {
+      "alias": "TwoFactorAuthTabName",
+      "view": "/App_Plugins/2FactorAuthentication/views/dashboard/dashboard.html",
+      "sections": [ "settings", "content" ],
+      "weight": -9
+    }
+  ]
+}

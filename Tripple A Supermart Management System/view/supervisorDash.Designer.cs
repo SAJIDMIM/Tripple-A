@@ -36,18 +36,19 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
-            this.assignCustomerServiceToolStripMenuItem});
+            this.assignCustomerServiceToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -106,18 +107,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.TabIndex = 146;
             this.label7.Text = "Supervsior";
             // 
-            // picGoBackAdminLogin
+            // logoutToolStripMenuItem
             // 
-            this.picGoBackAdminLogin.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackAdminLogin.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
-            this.picGoBackAdminLogin.ImageRotate = 0F;
-            this.picGoBackAdminLogin.Location = new System.Drawing.Point(12, 514);
-            this.picGoBackAdminLogin.Name = "picGoBackAdminLogin";
-            this.picGoBackAdminLogin.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackAdminLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackAdminLogin.TabIndex = 148;
-            this.picGoBackAdminLogin.TabStop = false;
-            this.picGoBackAdminLogin.UseTransparentBackground = true;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // supervisorDash
             // 
@@ -125,7 +120,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 568);
-            this.Controls.Add(this.picGoBackAdminLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
@@ -138,7 +132,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackAdminLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +146,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2PictureBox picGoBackAdminLogin;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
