@@ -1,9 +1,7 @@
 <div class="welcome-dashboard" ng-controller="twoFactorAuthy.dashboard.controller">
-
-
     <umb-load-indicator ng-show="isLoading"></umb-load-indicator>
 
-    <div ng-show="currentPage == 'home'">
+    <div ng-show="currentPage === 'home'">
         <div ng-show="settingsLoaded">
             <div ng-show="twoFactorEnabled">
                 <h3>
@@ -15,13 +13,17 @@
                     <localize key="dashboard_yourPhoneNumber">
                         Your phone number:
                     </localize>
-                    {{userPhoneNumber}}
+                    {{ userPhoneNumber }}
                 </h3>
 
-                <a href class="btn btn-danger" ng-click="removeAuthenticator()"><i class="icon-unlocked"></i> <localize key="dashboard_removeauthenticator">Remove Autenticator</localize></a>
+                <a href class="btn btn-danger" ng-click="removeAuthenticator()">
+                    <i class="icon-unlocked"></i>
+                    <localize key="dashboard_removeauthenticator">
+                        Remove Autenticator
+                    </localize>
+                </a>
             </div>
             <div ng-show="!twoFactorEnabled">
-
                 <h1>
                     <localize key="dashboard_notSetup">
                         You are NOT setup!
@@ -32,17 +34,20 @@
                         Wants setup 2FA?
                     </localize>
                 </p>
-                <a href class="btn btn-primary" ng-click="setupAccount()"><i class="icon-locked"></i> <localize key="dashboard_setup">Setup</localize></a>
+                <a href class="btn btn-primary" ng-click="setupAccount()">
+                    <i class="icon-locked"></i>
+                    <localize key="dashboard_setup">
+                        Setup
+                    </localize>
+                </a>
             </div>
         </div>
-
     </div>
 
-    <div ng-show="currentPage == 'setupWizard'">
-
+    <div ng-show="currentPage === 'setupWizard'">
         <div ng-show="!isLoading">
             <div class="text-danger" ng-show="!responseResult.isSuccess" id="errorSection">
-                {{responseResult.error}}
+                {{ responseResult.error }}
             </div>
             <p>
                 <localize key="dashboard_phoneNumberHint">
@@ -71,7 +76,5 @@
                 </button>
             </div>
         </div>
-
     </div>
-
 </div>
