@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Data.SqlClient;//without this statement sql won't be work
-using System.Drawing;
-
-
-
-
+using System.Data.SqlClient; // For SQL Server operations
+using System.Drawing; // For Image handling
 
 namespace Tripple_A_Supermart_Management_System.model
 {
@@ -15,54 +11,58 @@ namespace Tripple_A_Supermart_Management_System.model
         internal string gender;
         internal string email;
         internal DateTime doB;
-        internal Image adminPhoto;
+        internal Image adminPhoto; // Image handling requires logic to load/create images
 
         public string Username { get; set; }
         public string Role { get; set; }
-
-
     }
+
     public class MAdmin
     {
+        
 
-        public Admin Login(string Type, string username, string password)//declare method with enum
+        public Admin Login(string Type, string username, string password)
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-
-
-                con.Open();
-                string query_select = "select user_type,username,password from Admin where username = @Username and password = @Password and user_type = @UserType ";
-                using (SqlCommand cmd = new SqlCommand(query_select, con))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@UserType", Type);
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@Password", password);
+                    con.Open();
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    // Select statement to retrieve user information based on credentials
+                    string query_select = "SELECT user_type, username FROM Admin WHERE username = @Username AND password = @Password AND user_type = @UserType";
+                    using (SqlCommand cmd = new SqlCommand(query_select, con))
                     {
-                        if (reader.Read()) // Check if there are any rows
+                        cmd.Parameters.AddWithValue("@UserType", Type);
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            // If there are rows, create a new User object
-                            return new Admin
+                            if (reader.Read())
                             {
-                                Username = reader["username"].ToString(),
-                                Role = reader["user_type"].ToString()
-                            };
-                        }
-                        else
-                        {
-                            // If there are no rows, return null
-                            return null;
+                                // If the credentials match, create and return an Admin object
+                                return new Admin
+                                {
+                                    Username = reader["username"].ToString(),
+                                    Role = reader["user_type"].ToString()
+                                };
+                            }
+                            else
+                            {
+                                // If credentials are invalid, return null
+                                return null;
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    // Handle exceptions properly (log, display error message, etc.)
+                    Console.WriteLine($"Error during login: {ex.Message}");
+                    return null;
+                }
             }
         }
-
     }
-
 }
-
-
-
