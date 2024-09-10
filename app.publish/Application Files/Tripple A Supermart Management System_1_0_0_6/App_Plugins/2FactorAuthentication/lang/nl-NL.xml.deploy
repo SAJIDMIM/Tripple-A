@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+    <creator>
+        <name>Reinder</name>
+        <link></link>
+    </creator>
+	<area alias="dashboard">
+		<key alias="removeauthenticator">Twee-factor-authenticatie verwijderen</key>
+		<key alias="setup">Inschakelen</key>
+		<key alias="alreadySetup">Je hebt al tweefactorauthenticatie ingesteld!</key>
+		<key alias="notSetup">Tweefactorauthenticatie is niet ingeschakeld</key>
+		<key alias="wantsSetup">Tweefactorauthenticatie inschakelen?</key>
+		<key alias="yourPhoneNumber">Jouw telefoon nummer:</key>
+
+		<key alias="phoneNumberHint">Voer telefoonnummer in +100000000000 formaat</key>
+		<key alias="sendCodeBtn">Code verzenden</key>
+		<key alias="confirmBtn">Bevestigen</key>
+	</area>
+	<area alias="dashboardTabs">
+		<key alias="TwoFactorAuthTabName">Two Factor Authentication</key>
+	</area>
+</language>
