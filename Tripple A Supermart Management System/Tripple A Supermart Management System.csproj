@@ -197,11 +197,35 @@
     <Compile Include="model\Marketing.cs" />
     <Compile Include="model\MarketingPromotion.cs" />
     <Compile Include="model\Supplier.cs" />
+    <Compile Include="view\accountDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\accountDash.Designer.cs">
+      <DependentUpon>accountDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\approvePurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\approvePurchaseOrder.Designer.cs">
       <DependentUpon>approvePurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\BankAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\BankAccount.Designer.cs">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CashFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CashFlow.Designer.cs">
+      <DependentUpon>CashFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FinancialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FinancialView.Designer.cs">
+      <DependentUpon>FinancialView.cs</DependentUpon>
     </Compile>
     <Compile Include="view\GeneralDash.cs">
       <SubType>Form</SubType>
@@ -533,8 +557,20 @@
     <Compile Include="view\VerificationCode.Designer.cs">
       <DependentUpon>VerificationCode.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\accountDash.resx">
+      <DependentUpon>accountDash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\approvePurchaseOrder.resx">
       <DependentUpon>approvePurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\BankAccount.resx">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CashFlow.resx">
+      <DependentUpon>CashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FinancialView.resx">
+      <DependentUpon>FinancialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\GeneralDash.resx">
       <DependentUpon>GeneralDash.cs</DependentUpon>
@@ -765,6 +801,12 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\bank.png" />
+    <None Include="Resources\business1.png" />
+    <None Include="Resources\business.png" />
+    <None Include="Resources\images %284%291.png" />
+    <None Include="Resources\pngtree-wallet-with-credit-card-icons-set-png-image_2115805.jpg" />
+    <None Include="Resources\images %284%29.png" />
     <None Include="Resources\price-tag.png" />
     <None Include="Resources\branding.png" />
     <None Include="Resources\terms-and-conditions.png" />

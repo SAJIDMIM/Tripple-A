@@ -137,9 +137,7 @@ namespace Tripple_A_Supermart_Management_System.view
                         case "Junior":
                             juniorManagerDash show = new juniorManagerDash();
                             show.Show();
-                            this.Hide();
-                            
-                            
+                            this.Hide();   
                             break;
                         case "Supervisor":
                             supervisorDash showSup = new supervisorDash();
@@ -152,6 +150,9 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "Accountant":
+                            accountDash showAccount = new accountDash();
+                            showAccount.Show();
+                            this.Hide();
                             break;
                         case "Storekeeper":
                             break;
