@@ -14,14 +14,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Tripple A Supermart Management System.exe.manifest" size="29331">
+    <dependentAssembly dependencyType="install" codebase="Tripple A Supermart Management System.exe.manifest" size="37068">
       <assemblyIdentity name="Tripple A Supermart Management System.exe" version="1.0.0.24" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>loPq1iGTcJMdvxcyOLCHZMrs9upH7IWa9O8ublsslNw=</dsig:DigestValue>
+        <dsig:DigestValue>04HfZiuUGu2Z1hG815zSXSJTsQdOV145vDyHV7+fZmk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

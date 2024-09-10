@@ -51,9 +51,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -61,7 +59,6 @@ namespace Tripple_A_Supermart_Management_System.view
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +135,6 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setStockToolStripMenuItem,
@@ -150,7 +146,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(811, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(811, 33);
             this.menuStrip1.TabIndex = 83;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,7 +156,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.minimumStockToolStripMenuItem,
             this.stockPriceToolStripMenuItem});
             this.setStockToolStripMenuItem.Name = "setStockToolStripMenuItem";
-            this.setStockToolStripMenuItem.Size = new System.Drawing.Size(101, 32);
+            this.setStockToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
             this.setStockToolStripMenuItem.Text = "Set Stock";
             // 
             // minimumStockToolStripMenuItem
@@ -180,7 +176,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // transferItemToolStripMenuItem
             // 
             this.transferItemToolStripMenuItem.Name = "transferItemToolStripMenuItem";
-            this.transferItemToolStripMenuItem.Size = new System.Drawing.Size(130, 32);
+            this.transferItemToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
             this.transferItemToolStripMenuItem.Text = "Transfer Item";
             this.transferItemToolStripMenuItem.Click += new System.EventHandler(this.transferItemToolStripMenuItem_Click);
             // 
@@ -190,7 +186,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.accountToolStripMenuItem,
             this.toolStripMenuItem2});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
             this.viewToolStripMenuItem.Text = "View ";
             // 
             // accountToolStripMenuItem
@@ -210,7 +206,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // generateCustomerBillToolStripMenuItem
             // 
             this.generateCustomerBillToolStripMenuItem.Name = "generateCustomerBillToolStripMenuItem";
-            this.generateCustomerBillToolStripMenuItem.Size = new System.Drawing.Size(207, 32);
+            this.generateCustomerBillToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.generateCustomerBillToolStripMenuItem.Text = "Generate Customer Bill";
             this.generateCustomerBillToolStripMenuItem.Click += new System.EventHandler(this.generateCustomerBillToolStripMenuItem_Click);
             // 
@@ -220,7 +216,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.billingReminderToolStripMenuItem,
             this.feedbackToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 32);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 29);
             this.toolStripMenuItem1.Text = "Send ";
             // 
             // billingReminderToolStripMenuItem
@@ -238,7 +234,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 32);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -246,9 +242,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.panel1.BackColor = System.Drawing.Color.SpringGreen;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Location = new System.Drawing.Point(369, 32);
             this.panel1.Name = "panel1";
@@ -265,16 +259,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label4.TabIndex = 145;
             this.label4.Text = "Dashboard";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(321, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 29);
-            this.label3.TabIndex = 144;
-            this.label3.Text = "Name";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -285,19 +269,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label1.TabIndex = 82;
             this.label1.Text = "Welcome to Ordinary Admin";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2CirclePictureBox1.ImageRotate = 1F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(316, 26);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(86, 84);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 143;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // guna2PictureBox1
             // 
@@ -338,7 +309,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -367,8 +337,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem billingReminderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
