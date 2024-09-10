@@ -38,20 +38,20 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtBankName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtEmpName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtEmployeeId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtEmpSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_accountNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Search_Employee = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Add_Bank_Account = new Guna.UI2.WinForms.Guna2Button();
             this.picGoAccDash = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtBankName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmpName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmployeeId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAccountBalance = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_accountNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGoAccDash)).BeginInit();
@@ -84,7 +84,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtEmployeeId);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtAccountBalance);
+            this.panel1.Controls.Add(this.txtEmpSalary);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_accountNumber);
@@ -167,6 +167,31 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label8.TabIndex = 161;
             this.label8.Text = "Branch";
             // 
+            // txtBankName
+            // 
+            this.txtBankName.BorderColor = System.Drawing.Color.Black;
+            this.txtBankName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBankName.DefaultText = "";
+            this.txtBankName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBankName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBankName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBankName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBankName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBankName.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtBankName.ForeColor = System.Drawing.Color.Black;
+            this.txtBankName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBankName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.bank;
+            this.txtBankName.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtBankName.Location = new System.Drawing.Point(259, 354);
+            this.txtBankName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBankName.Name = "txtBankName";
+            this.txtBankName.PasswordChar = '\0';
+            this.txtBankName.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtBankName.PlaceholderText = "Enter Bank Name";
+            this.txtBankName.SelectedText = "";
+            this.txtBankName.Size = new System.Drawing.Size(146, 36);
+            this.txtBankName.TabIndex = 160;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -176,6 +201,31 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label6.Size = new System.Drawing.Size(126, 29);
             this.label6.TabIndex = 159;
             this.label6.Text = "Bank Name";
+            // 
+            // txtEmpName
+            // 
+            this.txtEmpName.BorderColor = System.Drawing.Color.Black;
+            this.txtEmpName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmpName.DefaultText = "";
+            this.txtEmpName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmpName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmpName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmpName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmpName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmpName.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtEmpName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmpName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
+            this.txtEmpName.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEmpName.Location = new System.Drawing.Point(259, 218);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.PasswordChar = '\0';
+            this.txtEmpName.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtEmpName.PlaceholderText = "Enter Employee Name";
+            this.txtEmpName.SelectedText = "";
+            this.txtEmpName.Size = new System.Drawing.Size(146, 36);
+            this.txtEmpName.TabIndex = 158;
             // 
             // label5
             // 
@@ -187,6 +237,31 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label5.TabIndex = 157;
             this.label5.Text = "Employee Name";
             // 
+            // txtEmployeeId
+            // 
+            this.txtEmployeeId.BorderColor = System.Drawing.Color.Black;
+            this.txtEmployeeId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmployeeId.DefaultText = "";
+            this.txtEmployeeId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmployeeId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmployeeId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmployeeId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmployeeId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmployeeId.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtEmployeeId.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmployeeId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.txtEmployeeId.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEmployeeId.Location = new System.Drawing.Point(259, 86);
+            this.txtEmployeeId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.PasswordChar = '\0';
+            this.txtEmployeeId.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeId.PlaceholderText = "Enter Employee Id";
+            this.txtEmployeeId.SelectedText = "";
+            this.txtEmployeeId.Size = new System.Drawing.Size(146, 36);
+            this.txtEmployeeId.TabIndex = 156;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -197,15 +272,40 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label4.TabIndex = 155;
             this.label4.Text = "Employee Id";
             // 
+            // txtEmpSalary
+            // 
+            this.txtEmpSalary.BorderColor = System.Drawing.Color.Black;
+            this.txtEmpSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmpSalary.DefaultText = "";
+            this.txtEmpSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmpSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmpSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmpSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmpSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmpSalary.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtEmpSalary.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmpSalary.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.salary;
+            this.txtEmpSalary.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtEmpSalary.Location = new System.Drawing.Point(32, 354);
+            this.txtEmpSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmpSalary.Name = "txtEmpSalary";
+            this.txtEmpSalary.PasswordChar = '\0';
+            this.txtEmpSalary.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtEmpSalary.PlaceholderText = "Enter Salary";
+            this.txtEmpSalary.SelectedText = "";
+            this.txtEmpSalary.Size = new System.Drawing.Size(146, 36);
+            this.txtEmpSalary.TabIndex = 154;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(27, 297);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 29);
+            this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 153;
-            this.label3.Text = "Account Balance";
+            this.label3.Text = "Salary";
             // 
             // label2
             // 
@@ -216,6 +316,31 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label2.Size = new System.Drawing.Size(146, 29);
             this.label2.TabIndex = 151;
             this.label2.Text = "Account Type";
+            // 
+            // txt_accountNumber
+            // 
+            this.txt_accountNumber.BorderColor = System.Drawing.Color.Black;
+            this.txt_accountNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_accountNumber.DefaultText = "";
+            this.txt_accountNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_accountNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_accountNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_accountNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_accountNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_accountNumber.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txt_accountNumber.ForeColor = System.Drawing.Color.Black;
+            this.txt_accountNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_accountNumber.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.business;
+            this.txt_accountNumber.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txt_accountNumber.Location = new System.Drawing.Point(32, 86);
+            this.txt_accountNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_accountNumber.Name = "txt_accountNumber";
+            this.txt_accountNumber.PasswordChar = '\0';
+            this.txt_accountNumber.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_accountNumber.PlaceholderText = "Enter Account Number";
+            this.txt_accountNumber.SelectedText = "";
+            this.txt_accountNumber.Size = new System.Drawing.Size(146, 36);
+            this.txt_accountNumber.TabIndex = 150;
             // 
             // label1
             // 
@@ -272,131 +397,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoAccDash.TabStop = false;
             this.picGoAccDash.UseTransparentBackground = true;
             // 
-            // txtBankName
-            // 
-            this.txtBankName.BorderColor = System.Drawing.Color.Black;
-            this.txtBankName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBankName.DefaultText = "";
-            this.txtBankName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBankName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBankName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBankName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBankName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBankName.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtBankName.ForeColor = System.Drawing.Color.Black;
-            this.txtBankName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBankName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.bank;
-            this.txtBankName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtBankName.Location = new System.Drawing.Point(259, 354);
-            this.txtBankName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBankName.Name = "txtBankName";
-            this.txtBankName.PasswordChar = '\0';
-            this.txtBankName.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtBankName.PlaceholderText = "Enter Bank Name";
-            this.txtBankName.SelectedText = "";
-            this.txtBankName.Size = new System.Drawing.Size(146, 36);
-            this.txtBankName.TabIndex = 160;
-            // 
-            // txtEmpName
-            // 
-            this.txtEmpName.BorderColor = System.Drawing.Color.Black;
-            this.txtEmpName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmpName.DefaultText = "";
-            this.txtEmpName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmpName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmpName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmpName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmpName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpName.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtEmpName.ForeColor = System.Drawing.Color.Black;
-            this.txtEmpName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.user;
-            this.txtEmpName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEmpName.Location = new System.Drawing.Point(259, 218);
-            this.txtEmpName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmpName.Name = "txtEmpName";
-            this.txtEmpName.PasswordChar = '\0';
-            this.txtEmpName.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtEmpName.PlaceholderText = "Enter Employee Name";
-            this.txtEmpName.SelectedText = "";
-            this.txtEmpName.Size = new System.Drawing.Size(146, 36);
-            this.txtEmpName.TabIndex = 158;
-            // 
-            // txtEmployeeId
-            // 
-            this.txtEmployeeId.BorderColor = System.Drawing.Color.Black;
-            this.txtEmployeeId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmployeeId.DefaultText = "";
-            this.txtEmployeeId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmployeeId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmployeeId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmployeeId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmployeeId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmployeeId.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtEmployeeId.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmployeeId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
-            this.txtEmployeeId.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtEmployeeId.Location = new System.Drawing.Point(259, 86);
-            this.txtEmployeeId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.PasswordChar = '\0';
-            this.txtEmployeeId.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeId.PlaceholderText = "Enter Employee Id";
-            this.txtEmployeeId.SelectedText = "";
-            this.txtEmployeeId.Size = new System.Drawing.Size(146, 36);
-            this.txtEmployeeId.TabIndex = 156;
-            // 
-            // txtAccountBalance
-            // 
-            this.txtAccountBalance.BorderColor = System.Drawing.Color.Black;
-            this.txtAccountBalance.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAccountBalance.DefaultText = "";
-            this.txtAccountBalance.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAccountBalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAccountBalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAccountBalance.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAccountBalance.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAccountBalance.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtAccountBalance.ForeColor = System.Drawing.Color.Black;
-            this.txtAccountBalance.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAccountBalance.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.business;
-            this.txtAccountBalance.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtAccountBalance.Location = new System.Drawing.Point(32, 354);
-            this.txtAccountBalance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAccountBalance.Name = "txtAccountBalance";
-            this.txtAccountBalance.PasswordChar = '\0';
-            this.txtAccountBalance.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtAccountBalance.PlaceholderText = "Enter Account Balance";
-            this.txtAccountBalance.SelectedText = "";
-            this.txtAccountBalance.Size = new System.Drawing.Size(146, 36);
-            this.txtAccountBalance.TabIndex = 154;
-            // 
-            // txt_accountNumber
-            // 
-            this.txt_accountNumber.BorderColor = System.Drawing.Color.Black;
-            this.txt_accountNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_accountNumber.DefaultText = "";
-            this.txt_accountNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_accountNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_accountNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_accountNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_accountNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_accountNumber.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txt_accountNumber.ForeColor = System.Drawing.Color.Black;
-            this.txt_accountNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_accountNumber.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.business;
-            this.txt_accountNumber.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txt_accountNumber.Location = new System.Drawing.Point(32, 86);
-            this.txt_accountNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_accountNumber.Name = "txt_accountNumber";
-            this.txt_accountNumber.PasswordChar = '\0';
-            this.txt_accountNumber.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_accountNumber.PlaceholderText = "Enter Account Number";
-            this.txt_accountNumber.SelectedText = "";
-            this.txt_accountNumber.Size = new System.Drawing.Size(146, 36);
-            this.txt_accountNumber.TabIndex = 150;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_wallet_with_credit_card_icons_set_png_image_2115805;
@@ -450,7 +450,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtEmployeeId;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtAccountBalance;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmpSalary;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txt_accountNumber;
