@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
@@ -8,7 +9,12 @@ namespace Tripple_A_Supermart_Management_System.model
     class Stock
     {
         private string stockId;
+        private string stockName;
+        private string stockType;
+        
         private int quantity;
+        private string Location;
+        private string supplierName;
         private string stockWeight;
         private DateTime lastUpdatedStock;
         private int reorderLevel;
@@ -199,6 +205,63 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return stockDetails;
         }
+        public DataTable getStockCost(string stockId)
+        {
+            DataTable stockDetails = new DataTable();
 
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT stockName,stockType,stockQuantity,cost,stockDate FROM Stock WHERE stockId = @stockId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@stockId", stockId);
+
+
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(stockDetails);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error retrieving stock details: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+
+            return stockDetails;
+        }
+        public void placeStockOrder(string stockId, string stockName, string stockType, int stockQuantity, string Location, double cost, DateTime stockDate, string supplierName)
+        {
+           
+            // Construct the email body with the place stock order details.
+            string emailBody = $"Place Stock Order Details:\n\n" +
+                                $"Stock ID: {stockId}\n" +
+                                $"Stock Name: {stockName}\n" +
+                                $"Stock Type: {stockType}\n" +
+                                $"Quantity: {stockQuantity}\n" +
+                                $"Location: {Location}\n" +
+                                $"Cost: {cost}\n" +
+                                $"Stock Date: {stockDate}\n" +
+                                $"Supplier Name: {supplierName}";
+
+            if (string.IsNullOrEmpty(emailBody))
+            {
+                MessageBox.Show("Stock order has not been placed. Please check the details and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Stock order has been successfully placed", "Stock Order Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

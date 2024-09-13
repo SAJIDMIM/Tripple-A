@@ -35,6 +35,21 @@ namespace Tripple_A_Supermart_Management_System.controller
             // Call the getStockDetails method from the model and return the result
             return newCost.getStockDetails(stockId);
         }
+        public void placeStockOrder(string stockId, string stockName, string stockType, int stockQuantity, string Location, double cost, DateTime stockDate, string supplierName)
+        {
+            Stock placeStock = new Stock();
+            placeStock.placeStockOrder(stockId, stockName, stockType, stockQuantity, Location, cost, stockDate, supplierName);
+        }
+        public DataTable getStockCost(string stockId)
+        {
+            Stock newCost = new Stock();
+            return newCost.getStockCost(stockId);
+
+
+
+        }
+
+
 
 
     }

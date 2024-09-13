@@ -155,6 +155,9 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "Storekeeper":
+                            StorekeeperDashboard showSKP = new StorekeeperDashboard();
+                            showSKP.Show();
+                            this.Hide();
                             break;
                         case "Sale":
                             break;

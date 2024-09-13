@@ -26,16 +26,12 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void cashFlowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CashFlow showCashFlow = new CashFlow();
-            showCashFlow.Show();
-            this.Hide();
+           
         }
 
         private void financialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FinancialView showFinancial = new FinancialView();
-            showFinancial.Show();
-            this.Hide();
+            
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

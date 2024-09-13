@@ -172,6 +172,7 @@
   <ItemGroup>
     <Compile Include="controller\CAccount.cs" />
     <Compile Include="controller\CAdminLogin.cs" />
+    <Compile Include="controller\CBankAccount.cs" />
     <Compile Include="controller\CBillingReminder.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CCustomer.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="model\BankAccount.cs" />
     <Compile Include="model\BillingReminder.cs" />
     <Compile Include="model\Customer.cs" />
     <Compile Include="model\CustomerService.cs" />
@@ -214,18 +216,6 @@
     </Compile>
     <Compile Include="view\BankAccount.Designer.cs">
       <DependentUpon>BankAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\CashFlow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\CashFlow.Designer.cs">
-      <DependentUpon>CashFlow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\FinancialView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\FinancialView.Designer.cs">
-      <DependentUpon>FinancialView.cs</DependentUpon>
     </Compile>
     <Compile Include="view\GeneralDash.cs">
       <SubType>Form</SubType>
@@ -310,6 +300,18 @@
     </Compile>
     <Compile Include="view\monitorMarketing.Designer.cs">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\StockOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\StockOrder.Designer.cs">
+      <DependentUpon>StockOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\StorekeeperDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\StorekeeperDashboard.Designer.cs">
+      <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="view\viewMarketing.cs">
       <SubType>Form</SubType>
@@ -566,12 +568,6 @@
     <EmbeddedResource Include="view\BankAccount.resx">
       <DependentUpon>BankAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\CashFlow.resx">
-      <DependentUpon>CashFlow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\FinancialView.resx">
-      <DependentUpon>FinancialView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\GeneralDash.resx">
       <DependentUpon>GeneralDash.cs</DependentUpon>
     </EmbeddedResource>
@@ -614,6 +610,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\monitorMarketing.resx">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\StockOrder.resx">
+      <DependentUpon>StockOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\StorekeeperDashboard.resx">
+      <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewMarketing.resx">
       <DependentUpon>viewMarketing.cs</DependentUpon>
@@ -801,6 +803,10 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\supplier.png" />
+    <None Include="Resources\ready-stock.png" />
+    <None Include="Resources\pngtree-transparent-order-now-png-png-image_6117014.png" />
+    <None Include="Resources\storekeeper.png" />
     <None Include="Resources\bank.png" />
     <None Include="Resources\business1.png" />
     <None Include="Resources\business.png" />

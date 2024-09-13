@@ -38,15 +38,14 @@ namespace Tripple_A_Supermart_Management_System
             this.promoteSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackDir = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
@@ -120,20 +119,6 @@ namespace Tripple_A_Supermart_Management_System
             this.label7.TabIndex = 82;
             this.label7.Text = "Director Admin Dashboard";
             // 
-            // picGoBackDir
-            // 
-            this.picGoBackDir.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackDir.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.login_arrow_symbol_entering_back_into_a_square;
-            this.picGoBackDir.ImageRotate = 0F;
-            this.picGoBackDir.Location = new System.Drawing.Point(12, 51);
-            this.picGoBackDir.Name = "picGoBackDir";
-            this.picGoBackDir.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackDir.TabIndex = 143;
-            this.picGoBackDir.TabStop = false;
-            this.picGoBackDir.UseTransparentBackground = true;
-            this.picGoBackDir.Click += new System.EventHandler(this.picGoBackDir_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_adminconsolepanelrootsoftware_flat_color_icon_vector_png_image_1494043;
@@ -150,7 +135,6 @@ namespace Tripple_A_Supermart_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 479);
-            this.Controls.Add(this.picGoBackDir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -161,7 +145,6 @@ namespace Tripple_A_Supermart_Management_System
             this.Text = "DirectorAdminDashboard";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGoBackDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,7 +162,6 @@ namespace Tripple_A_Supermart_Management_System
         private System.Windows.Forms.ToolStripMenuItem analyzeSaleDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem promoteSaleToolStripMenuItem;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2PictureBox picGoBackDir;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

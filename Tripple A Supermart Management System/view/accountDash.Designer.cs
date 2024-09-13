@@ -39,21 +39,22 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
             this.accessToolStripMenuItem,
+            this.updateProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(812, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(812, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,7 +63,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bankAccountToolStripMenuItem});
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 30);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
             this.addToolStripMenuItem.Text = "Add";
             // 
             // bankAccountToolStripMenuItem
@@ -78,7 +79,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.cashFlowToolStripMenuItem,
             this.financialToolStripMenuItem});
             this.accessToolStripMenuItem.Name = "accessToolStripMenuItem";
-            this.accessToolStripMenuItem.Size = new System.Drawing.Size(81, 30);
+            this.accessToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.accessToolStripMenuItem.Text = "Access";
             // 
             // cashFlowToolStripMenuItem
@@ -98,7 +99,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 30);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -131,6 +132,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 146;
             this.pictureBox1.TabStop = false;
+            // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
             // 
             // accountDash
             // 
@@ -167,5 +174,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
     }
 }

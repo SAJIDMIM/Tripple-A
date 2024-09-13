@@ -89,9 +89,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_accountNumber);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(96, 107);
+            this.panel1.Location = new System.Drawing.Point(81, 107);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 424);
+            this.panel1.Size = new System.Drawing.Size(689, 424);
             this.panel1.TabIndex = 148;
             // 
             // cmbAccountStatus
@@ -362,11 +362,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Employee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Search_Employee.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Search_Employee.ForeColor = System.Drawing.Color.Black;
-            this.btn_Search_Employee.Location = new System.Drawing.Point(618, 552);
+            this.btn_Search_Employee.Location = new System.Drawing.Point(559, 576);
             this.btn_Search_Employee.Name = "btn_Search_Employee";
             this.btn_Search_Employee.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Employee.TabIndex = 150;
             this.btn_Search_Employee.Text = "Search ";
+            this.btn_Search_Employee.Click += new System.EventHandler(this.btn_Search_Employee_Click);
             // 
             // btn_Add_Bank_Account
             // 
@@ -378,11 +379,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Bank_Account.FillColor = System.Drawing.Color.Aqua;
             this.btn_Add_Bank_Account.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Add_Bank_Account.ForeColor = System.Drawing.Color.Black;
-            this.btn_Add_Bank_Account.Location = new System.Drawing.Point(747, 552);
+            this.btn_Add_Bank_Account.Location = new System.Drawing.Point(676, 576);
             this.btn_Add_Bank_Account.Name = "btn_Add_Bank_Account";
             this.btn_Add_Bank_Account.Size = new System.Drawing.Size(94, 34);
             this.btn_Add_Bank_Account.TabIndex = 151;
             this.btn_Add_Bank_Account.Text = "Add";
+            this.btn_Add_Bank_Account.Click += new System.EventHandler(this.btn_Add_Bank_Account_Click);
             // 
             // picGoAccDash
             // 
@@ -396,6 +398,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoAccDash.TabIndex = 149;
             this.picGoAccDash.TabStop = false;
             this.picGoAccDash.UseTransparentBackground = true;
+            this.picGoAccDash.Click += new System.EventHandler(this.picGoAccDash_Click);
             // 
             // pictureBox1
             // 
