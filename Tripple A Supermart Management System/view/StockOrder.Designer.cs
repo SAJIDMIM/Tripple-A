@@ -52,7 +52,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picGoBackStr = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_Make_Payment = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackStr)).BeginInit();
@@ -61,7 +60,6 @@ namespace Tripple_A_Supermart_Management_System.view
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SpringGreen;
-            this.panel1.Controls.Add(this.btn_Make_Payment);
             this.panel1.Controls.Add(this.btn_Search_Stock_Cost);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtSupplierName);
@@ -184,7 +182,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Place_Stock.Name = "btn_Place_Stock";
             this.btn_Place_Stock.Size = new System.Drawing.Size(94, 34);
             this.btn_Place_Stock.TabIndex = 107;
-            this.btn_Place_Stock.Text = "Place";
+            this.btn_Place_Stock.Text = "Make";
             this.btn_Place_Stock.Click += new System.EventHandler(this.btn_Place_Stock_Click);
             // 
             // label8
@@ -397,22 +395,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackStr.UseTransparentBackground = true;
             this.picGoBackStr.Click += new System.EventHandler(this.picGoBackStr_Click);
             // 
-            // btn_Make_Payment
-            // 
-            this.btn_Make_Payment.BorderThickness = 1;
-            this.btn_Make_Payment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Make_Payment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Make_Payment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Make_Payment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Make_Payment.FillColor = System.Drawing.Color.Aqua;
-            this.btn_Make_Payment.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btn_Make_Payment.ForeColor = System.Drawing.Color.Black;
-            this.btn_Make_Payment.Location = new System.Drawing.Point(574, 329);
-            this.btn_Make_Payment.Name = "btn_Make_Payment";
-            this.btn_Make_Payment.Size = new System.Drawing.Size(94, 34);
-            this.btn_Make_Payment.TabIndex = 114;
-            this.btn_Make_Payment.Text = "Make";
-            // 
             // StockOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -459,6 +441,5 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2TextBox txtSupplierName;
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackStr;
         private Guna.UI2.WinForms.Guna2Button btn_Search_Stock_Cost;
-        private Guna.UI2.WinForms.Guna2Button btn_Make_Payment;
     }
 }

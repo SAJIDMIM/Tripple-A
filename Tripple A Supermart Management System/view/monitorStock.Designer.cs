@@ -409,6 +409,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Stock.Size = new System.Drawing.Size(108, 47);
             this.btn_Add_Stock.TabIndex = 181;
             this.btn_Add_Stock.Text = "Add";
+            this.btn_Add_Stock.Click += new System.EventHandler(this.btn_Add_Stock_Click);
             // 
             // btn_Clear_Stock
             // 
@@ -441,6 +442,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Delete_Stock.Size = new System.Drawing.Size(108, 47);
             this.btn_Delete_Stock.TabIndex = 183;
             this.btn_Delete_Stock.Text = "Delete";
+            this.btn_Delete_Stock.Click += new System.EventHandler(this.btn_Delete_Stock_Click);
             // 
             // btn_Update_Stock
             // 
@@ -457,6 +459,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Update_Stock.Size = new System.Drawing.Size(108, 47);
             this.btn_Update_Stock.TabIndex = 184;
             this.btn_Update_Stock.Text = "Update";
+            this.btn_Update_Stock.Click += new System.EventHandler(this.btn_Update_Stock_Click);
             // 
             // btn_Search_Stock
             // 
@@ -473,6 +476,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Stock.Size = new System.Drawing.Size(108, 34);
             this.btn_Search_Stock.TabIndex = 185;
             this.btn_Search_Stock.Text = "Search ";
+            this.btn_Search_Stock.Click += new System.EventHandler(this.btn_Search_Stock_Click);
             // 
             // label13
             // 

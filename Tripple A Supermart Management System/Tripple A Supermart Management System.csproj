@@ -180,6 +180,7 @@
     <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\CMarketing.cs" />
     <Compile Include="controller\CMarketingPromotion.cs" />
+    <Compile Include="controller\CProduct.cs" />
     <Compile Include="controller\CProfile.cs" />
     <Compile Include="controller\CSupplier.cs" />
     <Compile Include="controller\EmployeeController.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="model\CustomerService.cs" />
     <Compile Include="model\Marketing.cs" />
     <Compile Include="model\MarketingPromotion.cs" />
+    <Compile Include="model\Product.cs" />
     <Compile Include="model\Supplier.cs" />
     <Compile Include="view\accountDash.cs">
       <SubType>Form</SubType>
@@ -306,6 +308,12 @@
     </Compile>
     <Compile Include="view\monitorStock.Designer.cs">
       <DependentUpon>monitorStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="view\StockOrder.cs">
       <SubType>Form</SubType>
@@ -637,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\monitorStock.resx">
       <DependentUpon>monitorStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\StockOrder.resx">
       <DependentUpon>StockOrder.cs</DependentUpon>

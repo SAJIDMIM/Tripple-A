@@ -35,9 +35,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.picGoBackStr = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Search_Product = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.picGoBackStr = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Product_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -123,6 +123,20 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.TabIndex = 154;
             this.label7.Text = "View Product";
             // 
+            // picGoBackStr
+            // 
+            this.picGoBackStr.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackStr.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackStr.ImageRotate = 0F;
+            this.picGoBackStr.Location = new System.Drawing.Point(31, 22);
+            this.picGoBackStr.Name = "picGoBackStr";
+            this.picGoBackStr.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackStr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackStr.TabIndex = 153;
+            this.picGoBackStr.TabStop = false;
+            this.picGoBackStr.UseTransparentBackground = true;
+            this.picGoBackStr.Click += new System.EventHandler(this.picGoBackStr_Click);
+            // 
             // btn_Search_Product
             // 
             this.btn_Search_Product.BorderThickness = 1;
@@ -138,6 +152,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Product.Size = new System.Drawing.Size(108, 34);
             this.btn_Search_Product.TabIndex = 152;
             this.btn_Search_Product.Text = "Search ";
+            this.btn_Search_Product.Click += new System.EventHandler(this.btn_Search_Product_Click);
             // 
             // label3
             // 
@@ -149,20 +164,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3.Size = new System.Drawing.Size(114, 29);
             this.label3.TabIndex = 151;
             this.label3.Text = "Product Id";
-            // 
-            // picGoBackStr
-            // 
-            this.picGoBackStr.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackStr.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackStr.ImageRotate = 0F;
-            this.picGoBackStr.Location = new System.Drawing.Point(31, 22);
-            this.picGoBackStr.Name = "picGoBackStr";
-            this.picGoBackStr.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackStr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackStr.TabIndex = 153;
-            this.picGoBackStr.TabStop = false;
-            this.picGoBackStr.UseTransparentBackground = true;
-            this.picGoBackStr.Click += new System.EventHandler(this.picGoBackStr_Click);
             // 
             // txt_Product_Id
             // 

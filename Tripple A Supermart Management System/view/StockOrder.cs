@@ -98,12 +98,12 @@ namespace Tripple_A_Supermart_Management_System.view
                 }
                 else
                 {
-                    MessageBox.Show("Invalid input. Please enter a valid quantity and cost.","Invalid Transaction",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid input. Please enter a valid quantity and cost.", "Invalid Transaction", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("You cannot change quantity levels","Unauthorized Access",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("You cannot change quantity levels", "Unauthorized Access", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -129,5 +129,12 @@ namespace Tripple_A_Supermart_Management_System.view
             back.Show();
             this.Hide();
         }
+
+        private void btn_Make_Payment_Click(object sender, EventArgs e)
+        {
+            
+           
+        }
     }
 }
+

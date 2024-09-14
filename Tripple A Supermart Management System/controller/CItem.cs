@@ -1,4 +1,5 @@
-﻿using Tripple_A_Supermart_Management_System.model;
+﻿using System.Data;
+using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.controller
 {
@@ -14,6 +15,13 @@ namespace Tripple_A_Supermart_Management_System.controller
 
             // Call the transferItem method in the model class
             return itemModel.transferItem(itemId, itemName, description, quantity, category, recipientEmail);
+        }
+        public DataTable viewItem(string itemId)
+        {
+            Item newCost = new Item();
+
+
+            return newCost.viewItem(itemId);
         }
     }
 }

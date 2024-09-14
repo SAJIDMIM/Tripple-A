@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Windows.Forms;
 
@@ -61,6 +63,42 @@ namespace Tripple_A_Supermart_Management_System.model
 
             // The transfer is successful, but data is not stored in the database.
             return true;
+        }
+        public DataTable viewItem(string itemId)
+        {
+            DataTable stockDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM Item WHERE itemId = @itemId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@itemId", itemId);
+
+
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(stockDetails);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error retrieving Item details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+
+            return stockDetails;
         }
 
 
