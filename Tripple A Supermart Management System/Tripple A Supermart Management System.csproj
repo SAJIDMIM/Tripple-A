@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -301,6 +301,12 @@
     <Compile Include="view\monitorMarketing.Designer.cs">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\monitorStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorStock.Designer.cs">
+      <DependentUpon>monitorStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\StockOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,11 +319,23 @@
     <Compile Include="view\StorekeeperDashboard.Designer.cs">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\viewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewItems.Designer.cs">
+      <DependentUpon>viewItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\viewMarketing.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\viewMarketing.Designer.cs">
       <DependentUpon>viewMarketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewProduct.Designer.cs">
+      <DependentUpon>viewProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\viewPromotion.cs">
       <SubType>Form</SubType>
@@ -444,6 +462,12 @@
     </Compile>
     <Compile Include="view\showSupplier.Designer.cs">
       <DependentUpon>showSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewStock.Designer.cs">
+      <DependentUpon>viewStock.cs</DependentUpon>
     </Compile>
     <Compile Include="view\WeeklyStock.cs">
       <AutoGen>True</AutoGen>
@@ -611,14 +635,23 @@
     <EmbeddedResource Include="view\monitorMarketing.resx">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorStock.resx">
+      <DependentUpon>monitorStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\StockOrder.resx">
       <DependentUpon>StockOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\StorekeeperDashboard.resx">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\viewItems.resx">
+      <DependentUpon>viewItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\viewMarketing.resx">
       <DependentUpon>viewMarketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewProduct.resx">
+      <DependentUpon>viewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewPromotion.resx">
       <DependentUpon>viewPromotion.cs</DependentUpon>
@@ -685,6 +718,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\showSupplier.resx">
       <DependentUpon>showSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewStock.resx">
+      <DependentUpon>viewStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -803,6 +839,9 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\pngtree-supermarket-grocery-store-interior-flat-png-image_11952037.png" />
+    <None Include="Resources\list-items.png" />
+    <None Include="Resources\pngtree-vector-modern-new-item-label-png-image_6527461.png" />
     <None Include="Resources\supplier.png" />
     <None Include="Resources\ready-stock.png" />
     <None Include="Resources\pngtree-transparent-order-now-png-png-image_6117014.png" />

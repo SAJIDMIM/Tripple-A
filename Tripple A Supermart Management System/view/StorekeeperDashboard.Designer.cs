@@ -33,7 +33,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.placeStockOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,14 +58,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(846, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(846, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // placeStockOrderToolStripMenuItem
             // 
             this.placeStockOrderToolStripMenuItem.Name = "placeStockOrderToolStripMenuItem";
-            this.placeStockOrderToolStripMenuItem.Size = new System.Drawing.Size(167, 29);
+            this.placeStockOrderToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.placeStockOrderToolStripMenuItem.Text = "Place Stock Order";
             this.placeStockOrderToolStripMenuItem.Click += new System.EventHandler(this.placeStockOrderToolStripMenuItem_Click);
             // 
@@ -74,69 +73,69 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemToolStripMenuItem,
-            this.stockPaymentToolStripMenuItem,
             this.productToolStripMenuItem,
             this.stockToolStripMenuItem,
             this.updateProfileToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // itemToolStripMenuItem
             // 
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.itemToolStripMenuItem.Text = "Item";
-            // 
-            // stockPaymentToolStripMenuItem
-            // 
-            this.stockPaymentToolStripMenuItem.Name = "stockPaymentToolStripMenuItem";
-            this.stockPaymentToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
-            this.stockPaymentToolStripMenuItem.Text = "Stock Payment";
+            this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.productToolStripMenuItem.Text = "Product";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // updateProfileToolStripMenuItem
             // 
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(230, 34);
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
             // 
             // monitorStockToolStripMenuItem
             // 
             this.monitorStockToolStripMenuItem.Name = "monitorStockToolStripMenuItem";
-            this.monitorStockToolStripMenuItem.Size = new System.Drawing.Size(140, 29);
+            this.monitorStockToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
             this.monitorStockToolStripMenuItem.Text = "Monitor Stock";
+            this.monitorStockToolStripMenuItem.Click += new System.EventHandler(this.monitorStockToolStripMenuItem_Click);
             // 
             // generateStockReportToolStripMenuItem
             // 
             this.generateStockReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.weeklyStockReportToolStripMenuItem});
             this.generateStockReportToolStripMenuItem.Name = "generateStockReportToolStripMenuItem";
-            this.generateStockReportToolStripMenuItem.Size = new System.Drawing.Size(204, 29);
+            this.generateStockReportToolStripMenuItem.Size = new System.Drawing.Size(204, 30);
             this.generateStockReportToolStripMenuItem.Text = "Generate Stock Report";
+            this.generateStockReportToolStripMenuItem.Click += new System.EventHandler(this.generateStockReportToolStripMenuItem_Click);
             // 
             // weeklyStockReportToolStripMenuItem
             // 
             this.weeklyStockReportToolStripMenuItem.Name = "weeklyStockReportToolStripMenuItem";
             this.weeklyStockReportToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
             this.weeklyStockReportToolStripMenuItem.Text = "Weekly Stock Report";
+            this.weeklyStockReportToolStripMenuItem.Click += new System.EventHandler(this.weeklyStockReportToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 30);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // label7
             // 
@@ -185,7 +184,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem placeStockOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monitorStockToolStripMenuItem;

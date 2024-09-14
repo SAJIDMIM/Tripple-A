@@ -32,14 +32,11 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bankAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cashFlowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.financialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +46,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.accessToolStripMenuItem,
             this.updateProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -69,32 +65,15 @@ namespace Tripple_A_Supermart_Management_System.view
             // bankAccountToolStripMenuItem
             // 
             this.bankAccountToolStripMenuItem.Name = "bankAccountToolStripMenuItem";
-            this.bankAccountToolStripMenuItem.Size = new System.Drawing.Size(222, 34);
+            this.bankAccountToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.bankAccountToolStripMenuItem.Text = "Bank Account";
             this.bankAccountToolStripMenuItem.Click += new System.EventHandler(this.bankAccountToolStripMenuItem_Click);
             // 
-            // accessToolStripMenuItem
+            // updateProfileToolStripMenuItem
             // 
-            this.accessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cashFlowToolStripMenuItem,
-            this.financialToolStripMenuItem});
-            this.accessToolStripMenuItem.Name = "accessToolStripMenuItem";
-            this.accessToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
-            this.accessToolStripMenuItem.Text = "Access";
-            // 
-            // cashFlowToolStripMenuItem
-            // 
-            this.cashFlowToolStripMenuItem.Name = "cashFlowToolStripMenuItem";
-            this.cashFlowToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.cashFlowToolStripMenuItem.Text = "Cash Flow";
-            this.cashFlowToolStripMenuItem.Click += new System.EventHandler(this.cashFlowToolStripMenuItem_Click);
-            // 
-            // financialToolStripMenuItem
-            // 
-            this.financialToolStripMenuItem.Name = "financialToolStripMenuItem";
-            this.financialToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.financialToolStripMenuItem.Text = "Financial ";
-            this.financialToolStripMenuItem.Click += new System.EventHandler(this.financialToolStripMenuItem_Click);
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
+            this.updateProfileToolStripMenuItem.Text = "Update Profile";
             // 
             // logoutToolStripMenuItem
             // 
@@ -133,12 +112,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.TabIndex = 146;
             this.pictureBox1.TabStop = false;
             // 
-            // updateProfileToolStripMenuItem
-            // 
-            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
-            this.updateProfileToolStripMenuItem.Text = "Update Profile";
-            // 
             // accountDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -167,9 +140,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bankAccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accessToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cashFlowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem financialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;

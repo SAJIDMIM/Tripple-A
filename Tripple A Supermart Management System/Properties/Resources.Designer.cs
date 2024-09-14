@@ -693,6 +693,16 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_items {
+            get {
+                object obj = ResourceManager.GetObject("list-items", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap location {
             get {
                 object obj = ResourceManager.GetObject("location", resourceCulture);
@@ -925,9 +935,29 @@ namespace Tripple_A_Supermart_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_supermarket_grocery_store_interior_flat_png_image_11952037 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-supermarket-grocery-store-interior-flat-png-image_11952037", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_transparent_order_now_png_png_image_6117014 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-transparent-order-now-png-png-image_6117014", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_vector_modern_new_item_label_png_image_6527461 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-vector-modern-new-item-label-png-image_6527461", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
