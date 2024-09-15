@@ -29,19 +29,22 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string stockId = txt_Stock_Id.Text;
 
-            if (stockId == null)
+            if (string.IsNullOrWhiteSpace(stockId))
             {
-                MessageBox.Show("Please enter valid Stock Id to be process", "Invalid Stock Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid Stock Id to be processed", "Invalid Stock Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            CStock viewStock = new CStock();
+
+            DataTable stockDetails = viewStock.viewStock(stockId);
+
+            if (stockDetails == null || stockDetails.Rows.Count == 0)
+            {
+                MessageBox.Show("Stock ID not found", "Invalid Stock Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                CStock viewStock = new CStock();
-
-
-                DataTable stockDetails = viewStock.viewStock(stockId);
-
-
-
                 dgvStock.DataSource = stockDetails;
             }
         }

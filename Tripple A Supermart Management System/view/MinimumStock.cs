@@ -32,15 +32,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 return;
             }
 
-            reorderLevel = int.Parse(cmbReorderLevel.SelectedItem.ToString());
-
-            // Validation: Check if the reorder level is within a valid range
-            if (reorderLevel < 0)
-            {
-                MessageBox.Show("Reorder level must be a non-negative value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
+            
 
             CStock minimumStock = new CStock();
             minimumStock.setMinimumStock(stockId, quantity, lastUpdatedStock, reorderLevel);
@@ -52,6 +44,10 @@ namespace Tripple_A_Supermart_Management_System.view
             dtpStockDate.Value = DateTime.Now;
             dtpLastStock.Value = DateTime.Now;
             cmbReorderLevel.SelectedIndex = -1;
+           
+
+
+          
 
 
         }

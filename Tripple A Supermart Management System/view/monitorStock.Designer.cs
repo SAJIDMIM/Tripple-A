@@ -183,6 +183,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Stock_Qty.SelectedText = "";
             this.txt_Stock_Qty.Size = new System.Drawing.Size(244, 34);
             this.txt_Stock_Qty.TabIndex = 158;
+            this.txt_Stock_Qty.TextChanged += new System.EventHandler(this.txt_Stock_Qty_TextChanged);
             // 
             // label5
             // 
@@ -258,6 +259,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Stock_Cost.SelectedText = "";
             this.txt_Stock_Cost.Size = new System.Drawing.Size(244, 34);
             this.txt_Stock_Cost.TabIndex = 164;
+            this.txt_Stock_Cost.TextChanged += new System.EventHandler(this.txt_Stock_Cost_TextChanged);
             // 
             // label8
             // 
@@ -359,6 +361,10 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbStockType
             // 
             this.cmbStockType.FormattingEnabled = true;
+            this.cmbStockType.Items.AddRange(new object[] {
+            "Vejetables",
+            "Fruits",
+            "Chocolates"});
             this.cmbStockType.Location = new System.Drawing.Point(201, 416);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.Size = new System.Drawing.Size(109, 28);
@@ -367,6 +373,9 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbStockWeight
             // 
             this.cmbStockWeight.FormattingEnabled = true;
+            this.cmbStockWeight.Items.AddRange(new object[] {
+            "Per Kilo Grams",
+            "Per Grams"});
             this.cmbStockWeight.Location = new System.Drawing.Point(201, 648);
             this.cmbStockWeight.Name = "cmbStockWeight";
             this.cmbStockWeight.Size = new System.Drawing.Size(109, 28);
@@ -375,10 +384,16 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbReorderLevel
             // 
             this.cmbReorderLevel.FormattingEnabled = true;
+            this.cmbReorderLevel.Items.AddRange(new object[] {
+            "10",
+            "12",
+            "20",
+            "30"});
             this.cmbReorderLevel.Location = new System.Drawing.Point(549, 541);
             this.cmbReorderLevel.Name = "cmbReorderLevel";
             this.cmbReorderLevel.Size = new System.Drawing.Size(109, 28);
             this.cmbReorderLevel.TabIndex = 178;
+            this.cmbReorderLevel.SelectedIndexChanged += new System.EventHandler(this.cmbReorderLevel_SelectedIndexChanged);
             // 
             // dtp_Stock_Date
             // 
@@ -393,6 +408,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.dtp_Last_Date.Name = "dtp_Last_Date";
             this.dtp_Last_Date.Size = new System.Drawing.Size(244, 26);
             this.dtp_Last_Date.TabIndex = 180;
+            this.dtp_Last_Date.ValueChanged += new System.EventHandler(this.dtp_Last_Date_ValueChanged);
             // 
             // btn_Add_Stock
             // 

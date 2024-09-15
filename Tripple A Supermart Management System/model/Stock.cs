@@ -21,7 +21,6 @@ namespace Tripple_A_Supermart_Management_System.model
         private DateTime stockDate { get; set; }
         private DateTime lastDateUpdated { get; set; }
         private string stockDescription { get; set; }
-
         public void setMinimumStock(string stockId, int quantity, DateTime lastUpdatedStock, int reorderLevel)
         {
             this.stockId = stockId;
@@ -44,18 +43,20 @@ namespace Tripple_A_Supermart_Management_System.model
                 throw new ArgumentException("Reorder level cannot be negative.");
             }
 
+            if (quantity > reorderLevel)
+            {
+                MessageBox.Show("Quantity cannot be greater than the reorder level.Please insert a number below reorder level in order to be set stock level", "Invalid Set Stock ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (SqlConnection connection = MDBConnection.createConnection())
             {
-
                 try
                 {
-
-
                     connection.Open(); // Open the connection
 
                     // Update stock quantity and lastUpdatedDate
-                    string updateQuery = "update Stock set stockQuantity = @stockQuantity,reorderLevel = @reorderLevel,lastUpdatedDate = @lastUpdatedDate where stockId = @stockId AND @stockQuantity < reorderLevel";
-
+                    string updateQuery = "update Stock set stockQuantity = @stockQuantity, reorderLevel = @reorderLevel, lastUpdatedDate = @lastUpdatedDate where stockId = @stockId";
                     using (SqlCommand command = new SqlCommand(updateQuery, connection))
                     {
                         // Add parameters to the command
@@ -65,31 +66,26 @@ namespace Tripple_A_Supermart_Management_System.model
                         command.Parameters.AddWithValue("@reorderLevel", reorderLevel);
                         command.Parameters.AddWithValue("@lastUpdatedDate", DateTime.Now);
 
-
-
                         // Execute the update command
-                        int rowsAffected = command.ExecuteNonQuery();
+                        int count = command.ExecuteNonQuery();
 
-
-                        if (rowsAffected > 0)
+                        if (count > 0)
                         {
                             MessageBox.Show("Stocks have been updated successfully", "Updated Minimum Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Invalid Stock update on Quantity.Please check on reorder level and maintain the quantity level", "Invalid Quantity Level Updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Reorder level is less than the quantity.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-
                 }
-
             }
         }
-
         public DataTable getStockDetails(string stockId)
         {
             DataTable stockDetails = new DataTable();
@@ -266,7 +262,7 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        public void addStock(string stockId, string stockName, string stockType, int stockQuantity, string stockWeight, string location, double cost, string supplierName, int reorderLevel, DateTime stockDate, DateTime lastUpdatedDate, string stockDescription)
+        public void addStock(string stockId, string stockName, string stockType, int stockQuantity,string stockWeight, string location, double cost, string supplierName, int reorderLevel, DateTime stockDate, DateTime lastUpdatedDate, string stockDescription)
         {
             try
             {
@@ -319,38 +315,37 @@ namespace Tripple_A_Supermart_Management_System.model
             }
         }
 
-        public void updateStock(string stockId, string stockName, string stockType, int stockQuantity, string stockWeight, string location, double cost, string supplierName, int reorderLevel, DateTime stockDate, DateTime lastUpdatedDate, string stockDescription)
+        public void updateStock(string stockId, string stockName, string stockType,string stockWeight, string location,string supplierName,DateTime stockDate,string stockDescription)
         {
             try
             {
                 this.stockId = stockId;
                 this.stockName = stockName;
                 this.stockType = stockType;
-                this.stockQuantity = stockQuantity;
+               
                 this.stockWeight = stockWeight;
                 this.Location = location;
-                this.cost = cost;
+                
                 this.SupplierName = supplierName;
-                this.reorderLevel = reorderLevel;
+                
                 this.stockDate = stockDate;
-                this.lastDateUpdated = lastUpdatedDate;
+               
                 this.stockDescription = stockDescription;
 
                 using (SqlConnection con = MDBConnection.createConnection())
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE Stock SET stockName = @stockName, stockType = @stockType, stockQuantity = @stockQuantity, stockWeight = @stockWeight, location = @location, cost = @cost, supplierName = @supplierName, reorderLevel = @reorderLevel, stockDate = @stockDate, lastUpdatedDate = @lastUpdatedDate, stockDescription = @stockDescription WHERE stockId = @stockId", con))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Stock SET stockName = @stockName, stockType = @stockType,stockWeight = @stockWeight, location = @location,  supplierName = @supplierName, stockDate = @stockDate, stockDescription = @stockDescription WHERE stockId = @stockId", con))
                     {
                         cmd.Parameters.AddWithValue("@stockId", this.stockId);
                         cmd.Parameters.AddWithValue("@stockName", this.stockName);
                         cmd.Parameters.AddWithValue("@stockType", this.stockType);
-                        cmd.Parameters.AddWithValue("@stockQuantity", this.stockQuantity);
+                        
                         cmd.Parameters.AddWithValue("@stockWeight", this.stockWeight);
                         cmd.Parameters.AddWithValue("@location", this.Location);
-                        cmd.Parameters.AddWithValue("@cost", this.cost);
+                      
                         cmd.Parameters.AddWithValue("@supplierName", this.SupplierName);
-                        cmd.Parameters.AddWithValue("@reorderLevel", this.reorderLevel);
                         cmd.Parameters.AddWithValue("@stockDate", this.stockDate);
-                        cmd.Parameters.AddWithValue("@lastUpdatedDate", this.lastDateUpdated);
+                       
                         cmd.Parameters.AddWithValue("@stockDescription", this.stockDescription);
 
                         con.Open();

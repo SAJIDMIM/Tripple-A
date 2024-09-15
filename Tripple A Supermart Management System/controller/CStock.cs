@@ -56,10 +56,10 @@ namespace Tripple_A_Supermart_Management_System.controller
             Stock addStock = new Stock();
             addStock.addStock(stockId, stockName, stockType, stockQuantity, stockWeight, location, cost, supplierName, reorderLevel, stockDate, lastUpdatedDate, stockDescription);
         }
-        public void updateStock(string stockId, string stockName, string stockType, int stockQuantity, string stockWeight, string location, double cost, string supplierName, int reorderLevel, DateTime stockDate, DateTime lastUpdatedDate, string stockDescription)
+        public void updateStock(string stockId, string stockName, string stockType,string stockWeight, string location,string supplierName,DateTime stockDate,string stockDescription)
         {
             Stock updateStock = new Stock();
-            updateStock.updateStock(stockId, stockName, stockType, stockQuantity, stockWeight, location, cost, supplierName, reorderLevel, stockDate, lastUpdatedDate, stockDescription);
+            updateStock.updateStock(stockId, stockName, stockType,stockWeight, location,supplierName, stockDate, stockDescription);
         }
         public void deleteStock(string stockId)
         {
