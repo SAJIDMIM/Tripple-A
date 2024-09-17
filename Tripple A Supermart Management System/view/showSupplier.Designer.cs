@@ -118,11 +118,11 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, -1);
+            this.label7.Location = new System.Drawing.Point(20, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(366, 44);
+            this.label7.Size = new System.Drawing.Size(226, 44);
             this.label7.TabIndex = 149;
-            this.label7.Text = "View Normal Customer";
+            this.label7.Text = "View Supplier";
             // 
             // picGoBackGeneralManager
             // 

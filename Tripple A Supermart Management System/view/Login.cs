@@ -160,6 +160,9 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "Sale":
+                            SaleDash showSale = new SaleDash();
+                            showSale.Show();
+                            this.Hide();
                             break;
                         case "Cashier":
                             break;

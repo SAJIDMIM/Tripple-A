@@ -221,7 +221,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
-            this.txtCost.PlaceholderText = "Enter User Id";
+            this.txtCost.PlaceholderText = "Enter Cost";
             this.txtCost.SelectedText = "";
             this.txtCost.Size = new System.Drawing.Size(157, 34);
             this.txtCost.TabIndex = 103;
@@ -252,9 +252,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
-            this.txtLocation.PlaceholderText = "Enter User Id";
+            this.txtLocation.PlaceholderText = "Enter Location";
             this.txtLocation.SelectedText = "";
-            this.txtLocation.Size = new System.Drawing.Size(227, 53);
+            this.txtLocation.Size = new System.Drawing.Size(227, 34);
             this.txtLocation.TabIndex = 101;
             // 
             // label4

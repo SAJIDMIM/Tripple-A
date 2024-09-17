@@ -391,7 +391,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_leaveId.Name = "txt_leaveId";
             this.txt_leaveId.PasswordChar = '\0';
             this.txt_leaveId.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_leaveId.PlaceholderText = "";
+            this.txt_leaveId.PlaceholderText = "Enter Leave Id";
             this.txt_leaveId.SelectedText = "";
             this.txt_leaveId.Size = new System.Drawing.Size(202, 44);
             this.txt_leaveId.TabIndex = 128;

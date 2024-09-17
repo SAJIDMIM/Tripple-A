@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -219,6 +219,12 @@
     <Compile Include="view\BankAccount.Designer.cs">
       <DependentUpon>BankAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\creaSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\creaSale.Designer.cs">
+      <DependentUpon>creaSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\GeneralDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,11 +303,29 @@
     <Compile Include="view\juniorManagerDash.Designer.cs">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\monitorDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorDelivery.Designer.cs">
+      <DependentUpon>monitorDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\monitorItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorItem.Designer.cs">
+      <DependentUpon>monitorItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\monitorMarketing.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\monitorMarketing.Designer.cs">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\monitorProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorProduct.Designer.cs">
+      <DependentUpon>monitorProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="view\monitorStock.cs">
       <SubType>Form</SubType>
@@ -309,11 +333,23 @@
     <Compile Include="view\monitorStock.Designer.cs">
       <DependentUpon>monitorStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\monitorSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorSupplier.Designer.cs">
+      <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\ReceiptForm.Designer.cs">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\SaleDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\SaleDash.Designer.cs">
+      <DependentUpon>SaleDash.cs</DependentUpon>
     </Compile>
     <Compile Include="view\StockOrder.cs">
       <SubType>Form</SubType>
@@ -326,6 +362,12 @@
     </Compile>
     <Compile Include="view\StorekeeperDashboard.Designer.cs">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\viewCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewCustomerOrder.Designer.cs">
+      <DependentUpon>viewCustomerOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="view\viewItems.cs">
       <SubType>Form</SubType>
@@ -471,6 +513,12 @@
     <Compile Include="view\showSupplier.Designer.cs">
       <DependentUpon>showSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\viewSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\viewSale.Designer.cs">
+      <DependentUpon>viewSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\viewStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,6 +648,9 @@
     <EmbeddedResource Include="view\BankAccount.resx">
       <DependentUpon>BankAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\creaSale.resx">
+      <DependentUpon>creaSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\GeneralDash.resx">
       <DependentUpon>GeneralDash.cs</DependentUpon>
     </EmbeddedResource>
@@ -640,20 +691,38 @@
     <EmbeddedResource Include="view\juniorManagerDash.resx">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorDelivery.resx">
+      <DependentUpon>monitorDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorItem.resx">
+      <DependentUpon>monitorItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\monitorMarketing.resx">
       <DependentUpon>monitorMarketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorProduct.resx">
+      <DependentUpon>monitorProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\monitorStock.resx">
       <DependentUpon>monitorStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorSupplier.resx">
+      <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\SaleDash.resx">
+      <DependentUpon>SaleDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\StockOrder.resx">
       <DependentUpon>StockOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\StorekeeperDashboard.resx">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewCustomerOrder.resx">
+      <DependentUpon>viewCustomerOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewItems.resx">
       <DependentUpon>viewItems.cs</DependentUpon>
@@ -729,6 +798,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\showSupplier.resx">
       <DependentUpon>showSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\viewSale.resx">
+      <DependentUpon>viewSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewStock.resx">
       <DependentUpon>viewStock.cs</DependentUpon>
@@ -850,6 +922,22 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\images %281%292.png" />
+    <None Include="Resources\Inventory-Template.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\shop.png" />
+    <None Include="Resources\Sale-label_PNG_pngimagesfree.com_-1.png" />
+    <None Include="Resources\images %281%291.png" />
+    <None Include="Resources\pngtree-transparent-order-now-png-png-image_61170141.png" />
+    <None Include="Resources\charge.png" />
+    <None Include="Resources\pngtree-customer-and-supplier-shake-hands-on-smartphone-screens-png-image_4745924 %281%29.png" />
+    <None Include="Resources\fast-delivery1.png" />
+    <None Include="Resources\fast-delivery.png" />
+    <None Include="Resources\id-cards.png" />
+    <None Include="Resources\images %286%29.png" />
+    <None Include="Resources\Asset 4%402x1.png" />
+    <None Include="Resources\images %285%29.png" />
+    <None Include="Resources\product.png" />
     <None Include="Resources\pngtree-supermarket-grocery-store-interior-flat-png-image_11952037.png" />
     <None Include="Resources\list-items.png" />
     <None Include="Resources\pngtree-vector-modern-new-item-label-png-image_6527461.png" />

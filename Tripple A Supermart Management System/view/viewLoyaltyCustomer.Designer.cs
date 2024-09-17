@@ -153,7 +153,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 605);
+            this.ClientSize = new System.Drawing.Size(796, 605);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.picGoBackGeneralManager);

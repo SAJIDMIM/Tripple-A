@@ -30,17 +30,17 @@ namespace Tripple_A_Supermart_Management_System.view
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackStr = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Search_Product = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.picGoBackStr = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_Product_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackStr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,6 +57,17 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Size = new System.Drawing.Size(583, 613);
             this.panel1.TabIndex = 3;
             // 
+            // dgvProduct
+            // 
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(42, 222);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowHeadersWidth = 62;
+            this.dgvProduct.RowTemplate.Height = 28;
+            this.dgvProduct.Size = new System.Drawing.Size(501, 368);
+            this.dgvProduct.TabIndex = 155;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -67,20 +78,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.Size = new System.Drawing.Size(219, 44);
             this.label7.TabIndex = 154;
             this.label7.Text = "View Product";
-            // 
-            // picGoBackStr
-            // 
-            this.picGoBackStr.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackStr.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackStr.ImageRotate = 0F;
-            this.picGoBackStr.Location = new System.Drawing.Point(31, 22);
-            this.picGoBackStr.Name = "picGoBackStr";
-            this.picGoBackStr.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackStr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackStr.TabIndex = 153;
-            this.picGoBackStr.TabStop = false;
-            this.picGoBackStr.UseTransparentBackground = true;
-            this.picGoBackStr.Click += new System.EventHandler(this.picGoBackStr_Click);
             // 
             // btn_Search_Product
             // 
@@ -110,6 +107,20 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3.TabIndex = 151;
             this.label3.Text = "Product Id";
             // 
+            // picGoBackStr
+            // 
+            this.picGoBackStr.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackStr.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackStr.ImageRotate = 0F;
+            this.picGoBackStr.Location = new System.Drawing.Point(31, 22);
+            this.picGoBackStr.Name = "picGoBackStr";
+            this.picGoBackStr.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackStr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackStr.TabIndex = 153;
+            this.picGoBackStr.TabStop = false;
+            this.picGoBackStr.UseTransparentBackground = true;
+            this.picGoBackStr.Click += new System.EventHandler(this.picGoBackStr_Click);
+            // 
             // txt_Product_Id
             // 
             this.txt_Product_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -121,12 +132,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Product_Id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Product_Id.Font = new System.Drawing.Font("Calibri", 10F);
             this.txt_Product_Id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Product_Id.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
+            this.txt_Product_Id.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.product;
             this.txt_Product_Id.Location = new System.Drawing.Point(159, 150);
             this.txt_Product_Id.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txt_Product_Id.Name = "txt_Product_Id";
             this.txt_Product_Id.PasswordChar = '\0';
-            this.txt_Product_Id.PlaceholderText = "Enter Stock Id";
+            this.txt_Product_Id.PlaceholderText = "Enter Product Id";
             this.txt_Product_Id.SelectedText = "";
             this.txt_Product_Id.Size = new System.Drawing.Size(244, 34);
             this.txt_Product_Id.TabIndex = 150;
@@ -140,17 +151,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Location = new System.Drawing.Point(42, 222);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.RowHeadersWidth = 62;
-            this.dgvProduct.RowTemplate.Height = 28;
-            this.dgvProduct.Size = new System.Drawing.Size(501, 368);
-            this.dgvProduct.TabIndex = 155;
             // 
             // viewProduct
             // 
@@ -166,9 +166,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Text = "viewProduct";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackStr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
