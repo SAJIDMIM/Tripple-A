@@ -165,6 +165,9 @@ namespace Tripple_A_Supermart_Management_System.view
                             this.Hide();
                             break;
                         case "Cashier":
+                            cashierDash showCashier = new cashierDash();
+                            showCashier.Show();
+                            this.Hide();
                             break;
                         default:
                             MessageBox.Show("Invalid role.");

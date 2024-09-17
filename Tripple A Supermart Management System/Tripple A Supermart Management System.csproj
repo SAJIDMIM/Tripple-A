@@ -207,6 +207,12 @@
     <Compile Include="view\accountDash.Designer.cs">
       <DependentUpon>accountDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\AddtoCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AddtoCart.Designer.cs">
+      <DependentUpon>AddtoCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\approvePurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     </Compile>
     <Compile Include="view\BankAccount.Designer.cs">
       <DependentUpon>BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\cashierDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\cashierDash.Designer.cs">
+      <DependentUpon>cashierDash.cs</DependentUpon>
     </Compile>
     <Compile Include="view\creaSale.cs">
       <SubType>Form</SubType>
@@ -303,6 +315,12 @@
     <Compile Include="view\juniorManagerDash.Designer.cs">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\monitorCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\monitorCustomer.Designer.cs">
+      <DependentUpon>monitorCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\monitorDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +356,18 @@
     </Compile>
     <Compile Include="view\monitorSupplier.Designer.cs">
       <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\placeCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\placeCustomerOrder.Designer.cs">
+      <DependentUpon>placeCustomerOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\proceeRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\proceeRefund.Designer.cs">
+      <DependentUpon>proceeRefund.cs</DependentUpon>
     </Compile>
     <Compile Include="view\ReceiptForm.cs">
       <SubType>Form</SubType>
@@ -525,6 +555,12 @@
     <Compile Include="view\viewStock.Designer.cs">
       <DependentUpon>viewStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\weeklyPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\weeklyPayment.Designer.cs">
+      <DependentUpon>weeklyPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\WeeklyStock.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -642,11 +678,17 @@
     <EmbeddedResource Include="view\accountDash.resx">
       <DependentUpon>accountDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\AddtoCart.resx">
+      <DependentUpon>AddtoCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\approvePurchaseOrder.resx">
       <DependentUpon>approvePurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\BankAccount.resx">
       <DependentUpon>BankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\cashierDash.resx">
+      <DependentUpon>cashierDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\creaSale.resx">
       <DependentUpon>creaSale.cs</DependentUpon>
@@ -691,6 +733,9 @@
     <EmbeddedResource Include="view\juniorManagerDash.resx">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\monitorCustomer.resx">
+      <DependentUpon>monitorCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\monitorDelivery.resx">
       <DependentUpon>monitorDelivery.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +753,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\monitorSupplier.resx">
       <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\placeCustomerOrder.resx">
+      <DependentUpon>placeCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\proceeRefund.resx">
+      <DependentUpon>proceeRefund.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
@@ -804,6 +855,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewStock.resx">
       <DependentUpon>viewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\weeklyPayment.resx">
+      <DependentUpon>weeklyPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -922,6 +976,18 @@
     <Content Include="App_Plugins\2FactorAuthentication\views\dashboard\dashboard.html" />
     <Content Include="App_Plugins\2FactorAuthentication\views\login\2fa-login.html" />
     <Content Include="favicon %281%29.ico" />
+    <None Include="Resources\customers8745.jpg" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\taxes.png" />
+    <None Include="Resources\Yellow-Add-To-Cart-Button-PNG-Pic.png" />
+    <None Include="Resources\reasoning1.png" />
+    <None Include="Resources\reasoning.png" />
+    <None Include="Resources\refund.png" />
+    <None Include="Resources\pngtree-transparent-order-now-png-png-image_61170142.png" />
+    <None Include="Resources\pngtree-cashier-png-image_6119602.png" />
+    <None Include="Resources\images %287%29.png" />
     <None Include="Resources\images %281%292.png" />
     <None Include="Resources\Inventory-Template.png" />
     <None Include="Resources\package.png" />
