@@ -36,11 +36,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.dtpResponseTime = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFeedback = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCustomerId = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,9 +76,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(220, 280);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 29);
+            this.label1.Size = new System.Drawing.Size(84, 29);
             this.label1.TabIndex = 150;
-            this.label1.Text = "Customer Id";
+            this.label1.Text = "Mobile";
             // 
             // label2
             // 
@@ -122,16 +120,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label6.TabIndex = 158;
             this.label6.Text = "Feedback";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(507, 473);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 29);
-            this.label8.TabIndex = 160;
-            this.label8.Text = "Mobile";
-            // 
             // cmbType
             // 
             this.cmbType.FormattingEnabled = true;
@@ -161,29 +149,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 164;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMobile.DefaultText = "";
-            this.txtMobile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMobile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMobile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMobile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMobile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobile.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.txtMobile.ForeColor = System.Drawing.Color.Black;
-            this.txtMobile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobile.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mobile;
-            this.txtMobile.Location = new System.Drawing.Point(512, 518);
-            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.PasswordChar = '\0';
-            this.txtMobile.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.txtMobile.PlaceholderText = "Enter Mobile Number";
-            this.txtMobile.SelectedText = "";
-            this.txtMobile.Size = new System.Drawing.Size(169, 40);
-            this.txtMobile.TabIndex = 161;
             // 
             // txtFeedback
             // 
@@ -243,7 +208,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCustomerId.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.txtCustomerId.ForeColor = System.Drawing.Color.Black;
             this.txtCustomerId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.txtCustomerId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mobile;
             this.txtCustomerId.Location = new System.Drawing.Point(225, 334);
             this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerId.Name = "txtCustomerId";
@@ -336,8 +301,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtpResponseTime);
             this.Controls.Add(this.cmbType);
-            this.Controls.Add(this.txtMobile);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtFeedback);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -375,8 +338,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtFeedback;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtMobile;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.DateTimePicker dtpResponseTime;
         private System.Windows.Forms.PictureBox pictureBox1;

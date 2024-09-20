@@ -177,6 +177,7 @@
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CCustomer.cs" />
     <Compile Include="controller\CCustomerService.cs" />
+    <Compile Include="controller\CDelivery.cs" />
     <Compile Include="controller\CLeave.cs" />
     <Compile Include="controller\CMarketing.cs" />
     <Compile Include="controller\CMarketingPromotion.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="model\BillingReminder.cs" />
     <Compile Include="model\Customer.cs" />
     <Compile Include="model\CustomerService.cs" />
+    <Compile Include="model\Delivery.cs" />
     <Compile Include="model\Marketing.cs" />
     <Compile Include="model\MarketingPromotion.cs" />
     <Compile Include="model\Product.cs" />

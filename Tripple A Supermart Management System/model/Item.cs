@@ -9,11 +9,29 @@ namespace Tripple_A_Supermart_Management_System.model
 {
     class Item
     {
-        private string itemId { get; set; }
-        private string itemName { get; set; }
-        private string Description { get; set; }
-        private int Quantity { get; set; }
-        private string Category { get; set; }
+        private string itemId;
+        private string itemName;
+        private string description;
+        private string department;
+        private int quantity;
+        private double unitPrice;
+        private double totalPrice;
+        private string category;
+        private DateTime manufactureDate;
+        private DateTime expiryDate;
+        private string manufacturer;
+
+        public string ItemId { get { return itemId; } set { itemId = value; } }
+        public string ItemName { get { return itemName; } set { itemName = value; } }
+        public string Description { get { return description; } set { description = value; } }
+        public string Department { get { return department; } set { department = value; } }
+        public int Quantity { get { return quantity; } set { quantity = value; } }
+        public double UnitPrice { get { return unitPrice; } set { unitPrice = value; } }
+        public double TotalPrice { get { return totalPrice; } set { totalPrice = value; } }
+        public string Category { get { return category; } set { category = value; } }
+        public DateTime ManufactureDate { get { return manufactureDate; } set { manufactureDate = value; } }
+        public DateTime ExpiryDate { get { return expiryDate; } set { expiryDate = value; } }
+        public string Manufacturer { get { return manufacturer; } set { manufacturer = value; } }
 
         // Fixed sender email address
         private const string senderEmail = "mohamedsajid450@gmail.com";
@@ -64,7 +82,7 @@ namespace Tripple_A_Supermart_Management_System.model
             // The transfer is successful, but data is not stored in the database.
             return true;
         }
-        public DataTable viewItem(string itemId)
+        public DataTable viewItems(string itemId)
         {
             DataTable stockDetails = new DataTable();
 
@@ -102,6 +120,136 @@ namespace Tripple_A_Supermart_Management_System.model
         }
 
 
+        public void addItem(string itemId, string itemName, string description, string department, int quantity, double unitPrice, double totalPrice, string category, DateTime manufactureDate, DateTime expiryDate, string manufacturer)
+        {
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("INSERT INTO Item (itemId, itemName, Description, department, Quantity, unitPrice, totalPrice, Category, manufactureDate, expiryDate, manufacturer) VALUES (@ItemId, @ItemName, @Description, @Department, @Quantity, @UnitPrice, @TotalPrice, @Category, @ManufactureDate, @ExpiryDate, @Manufacturer)", connection);
+
+                command.Parameters.AddWithValue("@ItemId", itemId);
+                command.Parameters.AddWithValue("@ItemName", itemName);
+                command.Parameters.AddWithValue("@Description", description);
+                command.Parameters.AddWithValue("@Department", department);
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.Parameters.AddWithValue("@UnitPrice", unitPrice);
+                command.Parameters.AddWithValue("@TotalPrice", totalPrice);
+                command.Parameters.AddWithValue("@Category", category);
+                command.Parameters.AddWithValue("@ManufactureDate", manufactureDate);
+                command.Parameters.AddWithValue("@ExpiryDate", expiryDate);
+                command.Parameters.AddWithValue("@Manufacturer", manufacturer);
+
+                int count = command.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    MessageBox.Show("Item has been added successfully", "Item Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Item Details has not been saved. An error occurred", "Invalid Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        public void editItem(string itemId, string itemName, string description, string department, int quantity, double unitPrice, double totalPrice, string category, DateTime manufactureDate, DateTime expiryDate, string manufacturer)
+        {
+            ItemId = itemId;
+            ItemName = itemName;
+            Description = description;
+            Department = department;
+            Quantity = quantity;
+            UnitPrice = unitPrice;
+            TotalPrice = totalPrice;
+            Category = category;
+            ManufactureDate = manufactureDate;
+            ExpiryDate = expiryDate;
+            Manufacturer = manufacturer;
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("UPDATE Item SET itemName = @ItemName, Description = @Description, department = @Department, Quantity = @Quantity, unitPrice = @UnitPrice, totalPrice = @TotalPrice, Category = @Category, manufactureDate = @ManufactureDate, expiryDate = @ExpiryDate, manufacturer = @Manufacturer WHERE itemId = @ItemId", connection);
+
+                command.Parameters.AddWithValue("@ItemId", itemId);
+                command.Parameters.AddWithValue("@ItemName", itemName);
+                command.Parameters.AddWithValue("@Description", description);
+                command.Parameters.AddWithValue("@Department", department);
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.Parameters.AddWithValue("@UnitPrice", unitPrice);
+                command.Parameters.AddWithValue("@TotalPrice", totalPrice);
+                command.Parameters.AddWithValue("@Category", category);
+                command.Parameters.AddWithValue("@ManufactureDate", manufactureDate);
+                command.Parameters.AddWithValue("@ExpiryDate", expiryDate);
+                command.Parameters.AddWithValue("@Manufacturer", manufacturer);
+
+                int count = command.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    MessageBox.Show("Item has been updated successfully", "Item Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Item Details has not been updated. An error occurred", "Invalid Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        public void removeItem(string itemId)
+        {
+            ItemId = itemId;
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Item?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (SqlConnection connection = MDBConnection.createConnection())
+                {
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand("DELETE FROM Item WHERE itemId = @ItemId", connection);
+
+                    command.Parameters.AddWithValue("@ItemId", itemId);
+
+                    int count = command.ExecuteNonQuery();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Item has been deleted successfully", "Item Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item Details has not been deleted. An error occurred", "Invalid Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Delete operation cancelled", "Delete Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public DataTable viewItem(string itemId)
+        {
+            DataTable productDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT * FROM Item WHERE itemId = @ItemId", connection);
+
+                command.Parameters.AddWithValue("@ItemId", itemId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                productDetails.Load(reader);
+            }
+
+            return productDetails;
+        }
     }
+
+
 }
 

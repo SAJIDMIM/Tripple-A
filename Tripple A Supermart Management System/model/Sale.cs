@@ -8,11 +8,83 @@ namespace Tripple_A_Supermart_Management_System.model
     class Sale
     {
         private int saleId;
+        private string productId;
+        private string productName;
+        private double price;
+        private int quantity;
         private DateTime saleStartDate;
         private DateTime saleEndDate;
-        private double price;
+        private double priceCalculate;
         private double discount;
+        private string payMethod;
+        private string customerId;
+        private string customerName;
 
+        public int SaleId
+        {
+            get { return saleId; }
+            set { saleId = value; }
+        }
+
+        public string ProductId
+        {
+            get { return productId; }
+            set { productId = value; }
+        }
+
+        public string ProductName
+        {
+            get { return productName; }
+            set { productName = value; }
+        }
+
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+
+        public int Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
+        }
+
+        public DateTime SaleDate
+        {
+            get { return saleStartDate; }
+            set { saleEndDate = value; }
+        }
+
+        public double PriceCalculate
+        {
+            get { return priceCalculate; }
+            set { priceCalculate = value; }
+        }
+
+        public double Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
+
+        public string PayMethod
+        {
+            get { return payMethod; }
+            set { payMethod = value; }
+        }
+
+        public string CustomerId
+        {
+            get { return customerId; }
+            set { customerId = value; }
+        }
+
+        public string CustomerName
+        {
+            get { return customerName; }
+            set { customerName = value; }
+        }
 
         public DataTable analyzeSale()
         {
@@ -167,5 +239,140 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return saleDetails;
         }
+        public void createSale(string productId, string productName, double price, int quantity, DateTime saleDate, DateTime saleEndDate, double priceCalculate, double discount, string payMethod, string customerId, string customerName)
+        {
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("INSERT INTO Sale (productId, productName, price,Quantity, saleStartDate,saleEndDate,priceCalculate, discount, payMethod,mobile, customerName) VALUES (@ProductId, @ProductName, @Price, @Quantity, @SaleDate,@saleEndDate, @PriceCalculate, @Discount, @PayMethod, @mobile, @CustomerName)", connection);
+
+
+                command.Parameters.AddWithValue("@ProductId", productId);
+                command.Parameters.AddWithValue("@ProductName", productName);
+                command.Parameters.AddWithValue("@Price", price);
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.Parameters.AddWithValue("@SaleDate", saleDate);
+                command.Parameters.AddWithValue("@SaleEndDate", saleEndDate);
+                command.Parameters.AddWithValue("@PriceCalculate", priceCalculate);
+                command.Parameters.AddWithValue("@Discount", discount);
+                command.Parameters.AddWithValue("@PayMethod", payMethod);
+                command.Parameters.AddWithValue("@mobile", customerId);
+                command.Parameters.AddWithValue("@CustomerName", customerName);
+
+                int count = command.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    MessageBox.Show("Sale has been added successfully", "Sale Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sale not been added yet", "Invalid Sale", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        public DataTable getProduct(string productId)
+        {
+            DataTable productDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT productName, price FROM Product WHERE productId = @productId", connection);
+
+                command.Parameters.AddWithValue("@productId", productId);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(productDetails);
+            }
+
+            return productDetails;
+        }
+
+
+
+        public DataTable viewCustomer(string mobile)
+        {
+            DataTable customerDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT customerName FROM Customer WHERE mobile = @mobile", connection);
+
+                command.Parameters.AddWithValue("@mobile", mobile);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                customerDetails.Load(reader);
+            }
+
+            return customerDetails;
+        }
+
+        public static int GetNextSaleId()
+        {
+            int nextSaleId = 1;
+            try
+            {
+                using (SqlConnection con = MDBConnection.createConnection())
+                {
+                    con.Open();
+                    string query = "SELECT ISNULL(MAX(saleId), 0) + 1 FROM Sale";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            nextSaleId = (int)result;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return nextSaleId;
+        }
+
+        public DataTable viewSale(string saleId)
+        {
+            DataTable saleDetails = new DataTable(); // Create a DataTable to hold results
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                string query = "SELECT * FROM Sale WHERE saleId = @saleId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@saleId", saleId); // Use the userId parameter
+
+                    try
+                    {
+                        connection.Open(); // Open the connection
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(saleDetails); // Fill the DataTable with retrieved data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any exceptions, such as connection errors or database issues
+                        Console.WriteLine("Error retrieving Sale details: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close(); // Close the connection
+                    }
+                }
+            }
+
+            return saleDetails; // Return the DataTable with user details
+        }
     }
 }
+

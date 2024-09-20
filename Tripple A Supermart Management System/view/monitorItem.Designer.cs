@@ -78,6 +78,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Item.Size = new System.Drawing.Size(116, 45);
             this.btn_Search_Item.TabIndex = 188;
             this.btn_Search_Item.Text = "Search";
+            this.btn_Search_Item.Click += new System.EventHandler(this.btn_Search_Item_Click);
             // 
             // btn_Clear_Item
             // 
@@ -94,6 +95,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Clear_Item.Size = new System.Drawing.Size(116, 45);
             this.btn_Clear_Item.TabIndex = 187;
             this.btn_Clear_Item.Text = "Clear";
+            this.btn_Clear_Item.Click += new System.EventHandler(this.btn_Clear_Item_Click);
             // 
             // btn_Update_Item
             // 
@@ -110,6 +112,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Update_Item.Size = new System.Drawing.Size(116, 45);
             this.btn_Update_Item.TabIndex = 186;
             this.btn_Update_Item.Text = "Update";
+            this.btn_Update_Item.Click += new System.EventHandler(this.btn_Update_Item_Click);
             // 
             // btn_Delete_Item
             // 
@@ -126,6 +129,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Delete_Item.Size = new System.Drawing.Size(116, 45);
             this.btn_Delete_Item.TabIndex = 185;
             this.btn_Delete_Item.Text = "Delete";
+            this.btn_Delete_Item.Click += new System.EventHandler(this.btn_Delete_Item_Click);
             // 
             // btn_Add_Item
             // 
@@ -142,6 +146,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Item.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Item.TabIndex = 184;
             this.btn_Add_Item.Text = "Add";
+            this.btn_Add_Item.Click += new System.EventHandler(this.btn_Add_Item_Click);
             // 
             // label6
             // 
@@ -225,6 +230,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Sale_Dash.TabIndex = 189;
             this.pic_Sale_Dash.TabStop = false;
             this.pic_Sale_Dash.UseTransparentBackground = true;
+            this.pic_Sale_Dash.Click += new System.EventHandler(this.pic_Sale_Dash_Click);
             // 
             // txtUnitPrice
             // 
@@ -248,6 +254,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtUnitPrice.SelectedText = "";
             this.txtUnitPrice.Size = new System.Drawing.Size(195, 40);
             this.txtUnitPrice.TabIndex = 182;
+            this.txtUnitPrice.TextChanged += new System.EventHandler(this.txtUnitPrice_TextChanged);
             // 
             // txt_Item_Name
             // 
@@ -294,6 +301,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Item_Id.SelectedText = "";
             this.txt_Item_Id.Size = new System.Drawing.Size(179, 40);
             this.txt_Item_Id.TabIndex = 173;
+            this.txt_Item_Id.TextChanged += new System.EventHandler(this.txt_Item_Id_TextChanged);
             // 
             // pictureBox1
             // 
@@ -426,6 +434,9 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbDep
             // 
             this.cmbDep.FormattingEnabled = true;
+            this.cmbDep.Items.AddRange(new object[] {
+            "abc",
+            "bbc"});
             this.cmbDep.Location = new System.Drawing.Point(283, 612);
             this.cmbDep.Name = "cmbDep";
             this.cmbDep.Size = new System.Drawing.Size(121, 28);
@@ -453,10 +464,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtQty.SelectedText = "";
             this.txtQty.Size = new System.Drawing.Size(195, 40);
             this.txtQty.TabIndex = 202;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // cmbCategory
             // 
             this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Items.AddRange(new object[] {
+            "Fruits",
+            "Vejetables"});
             this.cmbCategory.Location = new System.Drawing.Point(559, 611);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 28);

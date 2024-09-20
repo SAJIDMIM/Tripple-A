@@ -42,8 +42,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,6 +65,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.menuStrip1.Size = new System.Drawing.Size(606, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // monToolStripMenuItem
             // 
@@ -82,28 +81,28 @@ namespace Tripple_A_Supermart_Management_System.view
             // deliveryToolStripMenuItem
             // 
             this.deliveryToolStripMenuItem.Name = "deliveryToolStripMenuItem";
-            this.deliveryToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deliveryToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.deliveryToolStripMenuItem.Text = "Delivery";
             this.deliveryToolStripMenuItem.Click += new System.EventHandler(this.deliveryToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.supplierToolStripMenuItem.Text = "Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.productToolStripMenuItem.Text = "Product";
             this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // itemToolStripMenuItem
             // 
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(179, 34);
             this.itemToolStripMenuItem.Text = "Item";
             this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
@@ -119,14 +118,14 @@ namespace Tripple_A_Supermart_Management_System.view
             // saleToolStripMenuItem1
             // 
             this.saleToolStripMenuItem1.Name = "saleToolStripMenuItem1";
-            this.saleToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.saleToolStripMenuItem1.Size = new System.Drawing.Size(204, 34);
             this.saleToolStripMenuItem1.Text = "Sale";
             this.saleToolStripMenuItem1.Click += new System.EventHandler(this.saleToolStripMenuItem1_Click);
             // 
             // saleReportToolStripMenuItem
             // 
             this.saleReportToolStripMenuItem.Name = "saleReportToolStripMenuItem";
-            this.saleReportToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.saleReportToolStripMenuItem.Size = new System.Drawing.Size(204, 34);
             this.saleReportToolStripMenuItem.Text = "Sale Report";
             this.saleReportToolStripMenuItem.Click += new System.EventHandler(this.saleReportToolStripMenuItem_Click);
             // 
@@ -135,8 +134,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerOrderToolStripMenuItem,
             this.saleToolStripMenuItem,
-            this.productToolStripMenuItem1,
-            this.itemToolStripMenuItem1,
             this.updateProfileToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
@@ -145,35 +142,21 @@ namespace Tripple_A_Supermart_Management_System.view
             // customerOrderToolStripMenuItem
             // 
             this.customerOrderToolStripMenuItem.Name = "customerOrderToolStripMenuItem";
-            this.customerOrderToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.customerOrderToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.customerOrderToolStripMenuItem.Text = "Customer Order";
             this.customerOrderToolStripMenuItem.Click += new System.EventHandler(this.customerOrderToolStripMenuItem_Click);
             // 
             // saleToolStripMenuItem
             // 
             this.saleToolStripMenuItem.Name = "saleToolStripMenuItem";
-            this.saleToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.saleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.saleToolStripMenuItem.Text = "Sale";
             this.saleToolStripMenuItem.Click += new System.EventHandler(this.saleToolStripMenuItem_Click);
-            // 
-            // productToolStripMenuItem1
-            // 
-            this.productToolStripMenuItem1.Name = "productToolStripMenuItem1";
-            this.productToolStripMenuItem1.Size = new System.Drawing.Size(242, 34);
-            this.productToolStripMenuItem1.Text = "Product";
-            this.productToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem1_Click);
-            // 
-            // itemToolStripMenuItem1
-            // 
-            this.itemToolStripMenuItem1.Name = "itemToolStripMenuItem1";
-            this.itemToolStripMenuItem1.Size = new System.Drawing.Size(242, 34);
-            this.itemToolStripMenuItem1.Text = "Item";
-            this.itemToolStripMenuItem1.Click += new System.EventHandler(this.itemToolStripMenuItem1_Click);
             // 
             // updateProfileToolStripMenuItem
             // 
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
             // 
             // logoutToolStripMenuItem
@@ -256,13 +239,11 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem saleReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerOrderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
     }
 }

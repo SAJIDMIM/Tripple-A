@@ -11,26 +11,26 @@ namespace Tripple_A_Supermart_Management_System.model
 {
     class CustomerService
     {
-     
-        public string customerId { get; private set; }
+
+        public string mobile { get; private set; }
         public string customerName { get; private set; }
         public string  Type { get; private set; }
         public DateTime responseTime { get; private set; }
         public string feedback { get; private set; }
-        public string mobile { get; private set; }
-        public void sendCustomerService(string customerId,string customerName,string Type,DateTime responseTime,string feedback,string mobile)
+        
+        public void sendCustomerService(string mobile,string customerName,string Type,DateTime responseTime,string feedback)
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query_insert = "INSERT INTO CustomerService (customerId, customerName, Type, responseTime, feedback, mobile) VALUES (@customerId, @customerName, @Type, @responseTime, @feedback, @mobile)";
+                string query_insert = "INSERT INTO CustomerService (mobile, customerName, Type, responseTime, feedback, mobile) VALUES (@mobile, @customerName, @Type, @responseTime, @feedback)";
                 using (SqlCommand cmd = new SqlCommand(query_insert, con))
                 {
-                    cmd.Parameters.AddWithValue("@customerId", customerId);
+                    cmd.Parameters.AddWithValue("@mobile", mobile);
                     cmd.Parameters.AddWithValue("@customerName", customerName);
                     cmd.Parameters.AddWithValue("@Type", Type);
                     cmd.Parameters.AddWithValue("@responseTime", responseTime);
                     cmd.Parameters.AddWithValue("@feedback", feedback);
-                    cmd.Parameters.AddWithValue("@mobile", mobile);
+                    
                     con.Open();
                     int count =  cmd.ExecuteNonQuery();
                     if(count > 0)
@@ -51,7 +51,7 @@ namespace Tripple_A_Supermart_Management_System.model
             DataTable customerDetails = new DataTable();
             using (SqlConnection connection = MDBConnection.createConnection())
             {
-                string query = "SELECT customerId,customerName,mobile FROM Customer WHERE mobile = @mobile";
+                string query = "SELECT customerName FROM Customer WHERE mobile = @mobile";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@mobile",mobile);

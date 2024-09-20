@@ -33,17 +33,11 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Customer_Click(object sender, EventArgs e)
         {
-            string customerId = txtCustomerId.Text;
-            string mobile = txtMobile.Text;
+            string mobile = txtCustomerId.Text;
+           
             string customerName = txtCustomerName.Text;
 
-            // Validate input
-            if (string.IsNullOrEmpty(mobile))
-            {
-                MessageBox.Show("Please enter a mobile number to search for a customer.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
+           
             CCustomerService showCustomer = new CCustomerService();
             DataTable customerDetails = showCustomer.getCustomerDetails(mobile);
 
@@ -54,7 +48,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 // Update the fields with the retrieved data
                 txtCustomerId.Text = row["customerId"].ToString();
                 txtCustomerName.Text = row["customerName"].ToString();
-                txtMobile.Text = row["mobile"].ToString(); // Assuming "mobile" is a column in your DataTable
+               
             }
             else
             {
@@ -73,8 +67,9 @@ namespace Tripple_A_Supermart_Management_System.view
                 string.IsNullOrEmpty(txtCustomerId.Text) ||
                 string.IsNullOrEmpty(txtCustomerName.Text) ||
                 cmbType.SelectedItem == null ||
-                string.IsNullOrEmpty(txtFeedback.Text) ||
-                string.IsNullOrEmpty(txtMobile.Text))
+                string.IsNullOrEmpty(txtFeedback.Text))
+
+
             {
                 MessageBox.Show("All fields are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -87,22 +82,17 @@ namespace Tripple_A_Supermart_Management_System.view
                 return;
             }
 
-            // Validate mobile number
-            if (!IsValidMobileNumber(txtMobile.Text))
-            {
-                MessageBox.Show("Invalid mobile number. Please enter a valid 10-digit mobile number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+           
 
             // Validate customer ID
             if (!IsValidCustomerId(txtCustomerId.Text))
             {
-                MessageBox.Show("Invalid customer ID. Please enter a valid customer ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Mobile Number. Please enter a valid Mobile Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             //int HealthInsuranceID = Convert.ToInt32(txt_health_InsuranceId.Text);
             int CustomerServiceId = Convert.ToInt32(txt_Customer_ServiceId.Text);
-            string customerId = txtCustomerId.Text;
+            string mobile = txtCustomerId.Text;
             string customerName = txtCustomerName.Text;
             string Type = cmbType.SelectedItem.ToString();
           
@@ -110,11 +100,10 @@ namespace Tripple_A_Supermart_Management_System.view
            
             string feedback = txtFeedback.Text;
             
-            string mobile = txtMobile.Text;
-
+           
      
             CCustomerService newService = new CCustomerService();
-            newService.sendCustomerService(customerId, customerName, Type, responseTime, feedback, mobile);
+            newService.sendCustomerService(mobile, customerName, Type, responseTime, feedback);
 
             // Clear the fields
             txt_Customer_ServiceId.Text = string.Empty;
@@ -123,7 +112,7 @@ namespace Tripple_A_Supermart_Management_System.view
             cmbType.SelectedItem = null;
             dtpResponseTime.Value = DateTime.Now; // Set the response time to the current time
             txtFeedback.Text = string.Empty;
-            txtMobile.Text = string.Empty;
+            
         }
         private bool IsValidMobileNumber(string mobileNumber)
         {

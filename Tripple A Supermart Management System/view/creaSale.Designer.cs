@@ -47,17 +47,17 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtCusId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMobile = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCusName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_Add_Sale = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Search_Product = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_Search_Customer = new Guna.UI2.WinForms.Guna2Button();
-            this.dtpSale = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartSale = new System.Windows.Forms.DateTimePicker();
             this.cmbPayMethod = new System.Windows.Forms.ComboBox();
             this.pic_Sale_Dash = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Cancel_Sale = new Guna.UI2.WinForms.Guna2Button();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Sale_Dash)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +138,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Product_Id.SelectedText = "";
             this.txt_Product_Id.Size = new System.Drawing.Size(179, 40);
             this.txt_Product_Id.TabIndex = 177;
+            this.txt_Product_Id.TextChanged += new System.EventHandler(this.txt_Product_Id_TextChanged);
             // 
             // label1
             // 
@@ -204,6 +205,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(179, 40);
             this.txtPrice.TabIndex = 181;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // label3
             // 
@@ -237,6 +239,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtQty.SelectedText = "";
             this.txtQty.Size = new System.Drawing.Size(179, 40);
             this.txtQty.TabIndex = 183;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // label5
             // 
@@ -254,9 +257,9 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(597, 254);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 29);
+            this.label6.Size = new System.Drawing.Size(158, 29);
             this.label6.TabIndex = 184;
-            this.label6.Text = "Sale Date";
+            this.label6.Text = "Sale Start Date";
             // 
             // txtTotalPrice
             // 
@@ -271,7 +274,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalPrice.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
-            this.txtTotalPrice.Location = new System.Drawing.Point(606, 443);
+            this.txtTotalPrice.Location = new System.Drawing.Point(602, 583);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PasswordChar = '\0';
@@ -285,7 +288,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(599, 384);
+            this.label8.Location = new System.Drawing.Point(597, 524);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 29);
             this.label8.TabIndex = 186;
@@ -304,7 +307,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtDiscount.ForeColor = System.Drawing.Color.Black;
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiscount.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
-            this.txtDiscount.Location = new System.Drawing.Point(608, 583);
+            this.txtDiscount.Location = new System.Drawing.Point(878, 178);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
@@ -313,12 +316,13 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtDiscount.SelectedText = "";
             this.txtDiscount.Size = new System.Drawing.Size(179, 40);
             this.txtDiscount.TabIndex = 189;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(601, 524);
+            this.label9.Location = new System.Drawing.Point(873, 127);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 29);
             this.label9.TabIndex = 188;
@@ -328,44 +332,45 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(873, 127);
+            this.label10.Location = new System.Drawing.Point(879, 254);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 29);
             this.label10.TabIndex = 190;
             this.label10.Text = "Pay Method";
             // 
-            // txtCusId
+            // txtMobile
             // 
-            this.txtCusId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCusId.DefaultText = "";
-            this.txtCusId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCusId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCusId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCusId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCusId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCusId.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.txtCusId.ForeColor = System.Drawing.Color.Black;
-            this.txtCusId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCusId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
-            this.txtCusId.Location = new System.Drawing.Point(880, 313);
-            this.txtCusId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCusId.Name = "txtCusId";
-            this.txtCusId.PasswordChar = '\0';
-            this.txtCusId.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtCusId.PlaceholderText = "Enter Customer Id";
-            this.txtCusId.SelectedText = "";
-            this.txtCusId.Size = new System.Drawing.Size(179, 40);
-            this.txtCusId.TabIndex = 193;
+            this.txtMobile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMobile.DefaultText = "";
+            this.txtMobile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMobile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMobile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobile.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMobile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobile.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.txtMobile.ForeColor = System.Drawing.Color.Black;
+            this.txtMobile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMobile.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.mobile;
+            this.txtMobile.Location = new System.Drawing.Point(878, 443);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.PasswordChar = '\0';
+            this.txtMobile.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtMobile.PlaceholderText = "Enter Mobile";
+            this.txtMobile.SelectedText = "";
+            this.txtMobile.Size = new System.Drawing.Size(179, 40);
+            this.txtMobile.TabIndex = 193;
+            this.txtMobile.TextChanged += new System.EventHandler(this.txtCusId_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(873, 254);
+            this.label11.Location = new System.Drawing.Point(873, 384);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 29);
+            this.label11.Size = new System.Drawing.Size(184, 29);
             this.label11.TabIndex = 192;
-            this.label11.Text = "Customer Id";
+            this.label11.Text = "Customer Mobile";
             // 
             // txtCusName
             // 
@@ -380,7 +385,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCusName.ForeColor = System.Drawing.Color.Black;
             this.txtCusName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCusName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
-            this.txtCusName.Location = new System.Drawing.Point(880, 443);
+            this.txtCusName.Location = new System.Drawing.Point(878, 583);
             this.txtCusName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.PasswordChar = '\0';
@@ -394,7 +399,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(873, 384);
+            this.label12.Location = new System.Drawing.Point(873, 524);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(172, 29);
             this.label12.TabIndex = 194;
@@ -410,55 +415,29 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Sale.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Add_Sale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Add_Sale.ForeColor = System.Drawing.Color.Black;
-            this.btn_Add_Sale.Location = new System.Drawing.Point(878, 524);
+            this.btn_Add_Sale.Location = new System.Drawing.Point(1079, 173);
             this.btn_Add_Sale.Name = "btn_Add_Sale";
             this.btn_Add_Sale.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Sale.TabIndex = 196;
             this.btn_Add_Sale.Text = "Add";
+            this.btn_Add_Sale.Click += new System.EventHandler(this.btn_Add_Sale_Click);
             // 
-            // btn_Search_Product
+            // dtpStartSale
             // 
-            this.btn_Search_Product.BorderThickness = 1;
-            this.btn_Search_Product.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search_Product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search_Product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Search_Product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Search_Product.FillColor = System.Drawing.Color.Orange;
-            this.btn_Search_Product.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Search_Product.ForeColor = System.Drawing.Color.Black;
-            this.btn_Search_Product.Location = new System.Drawing.Point(1009, 524);
-            this.btn_Search_Product.Name = "btn_Search_Product";
-            this.btn_Search_Product.Size = new System.Drawing.Size(116, 45);
-            this.btn_Search_Product.TabIndex = 197;
-            this.btn_Search_Product.Text = "Search";
-            // 
-            // txt_Search_Customer
-            // 
-            this.txt_Search_Customer.BorderThickness = 1;
-            this.txt_Search_Customer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txt_Search_Customer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txt_Search_Customer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txt_Search_Customer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txt_Search_Customer.FillColor = System.Drawing.Color.Orange;
-            this.txt_Search_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Search_Customer.ForeColor = System.Drawing.Color.Black;
-            this.txt_Search_Customer.Location = new System.Drawing.Point(878, 593);
-            this.txt_Search_Customer.Name = "txt_Search_Customer";
-            this.txt_Search_Customer.Size = new System.Drawing.Size(116, 45);
-            this.txt_Search_Customer.TabIndex = 198;
-            this.txt_Search_Customer.Text = "Analyze";
-            // 
-            // dtpSale
-            // 
-            this.dtpSale.Location = new System.Drawing.Point(602, 327);
-            this.dtpSale.Name = "dtpSale";
-            this.dtpSale.Size = new System.Drawing.Size(229, 26);
-            this.dtpSale.TabIndex = 199;
+            this.dtpStartSale.Location = new System.Drawing.Point(602, 327);
+            this.dtpStartSale.Name = "dtpStartSale";
+            this.dtpStartSale.Size = new System.Drawing.Size(229, 26);
+            this.dtpStartSale.TabIndex = 199;
             // 
             // cmbPayMethod
             // 
             this.cmbPayMethod.FormattingEnabled = true;
-            this.cmbPayMethod.Location = new System.Drawing.Point(878, 189);
+            this.cmbPayMethod.Items.AddRange(new object[] {
+            "koko",
+            "mintpay",
+            "cash",
+            "card"});
+            this.cmbPayMethod.Location = new System.Drawing.Point(884, 325);
             this.cmbPayMethod.Name = "cmbPayMethod";
             this.cmbPayMethod.Size = new System.Drawing.Size(121, 28);
             this.cmbPayMethod.TabIndex = 200;
@@ -475,6 +454,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Sale_Dash.TabIndex = 201;
             this.pic_Sale_Dash.TabStop = false;
             this.pic_Sale_Dash.UseTransparentBackground = true;
+            this.pic_Sale_Dash.Click += new System.EventHandler(this.pic_Sale_Dash_Click);
             // 
             // btn_Cancel_Sale
             // 
@@ -486,28 +466,46 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Cancel_Sale.FillColor = System.Drawing.Color.LightGray;
             this.btn_Cancel_Sale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Cancel_Sale.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cancel_Sale.Location = new System.Drawing.Point(1009, 593);
+            this.btn_Cancel_Sale.Location = new System.Drawing.Point(1079, 254);
             this.btn_Cancel_Sale.Name = "btn_Cancel_Sale";
             this.btn_Cancel_Sale.Size = new System.Drawing.Size(116, 45);
             this.btn_Cancel_Sale.TabIndex = 202;
             this.btn_Cancel_Sale.Text = "Cancel";
+            this.btn_Cancel_Sale.Click += new System.EventHandler(this.btn_Cancel_Sale_Click);
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Location = new System.Drawing.Point(602, 457);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(229, 26);
+            this.dtpEndDate.TabIndex = 204;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(597, 384);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(149, 29);
+            this.label13.TabIndex = 203;
+            this.label13.Text = "Sale End Date";
             // 
             // creaSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
-            this.ClientSize = new System.Drawing.Size(1130, 670);
+            this.ClientSize = new System.Drawing.Size(1219, 670);
+            this.Controls.Add(this.dtpEndDate);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btn_Cancel_Sale);
             this.Controls.Add(this.pic_Sale_Dash);
             this.Controls.Add(this.cmbPayMethod);
-            this.Controls.Add(this.dtpSale);
-            this.Controls.Add(this.txt_Search_Customer);
-            this.Controls.Add(this.btn_Search_Product);
+            this.Controls.Add(this.dtpStartSale);
             this.Controls.Add(this.btn_Add_Sale);
             this.Controls.Add(this.txtCusName);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtCusId);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDiscount);
@@ -558,16 +556,16 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2TextBox txtDiscount;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox txtCusId;
+        private Guna.UI2.WinForms.Guna2TextBox txtMobile;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtCusName;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2Button btn_Add_Sale;
-        private Guna.UI2.WinForms.Guna2Button btn_Search_Product;
-        private Guna.UI2.WinForms.Guna2Button txt_Search_Customer;
-        private System.Windows.Forms.DateTimePicker dtpSale;
+        private System.Windows.Forms.DateTimePicker dtpStartSale;
         private System.Windows.Forms.ComboBox cmbPayMethod;
         private Guna.UI2.WinForms.Guna2PictureBox pic_Sale_Dash;
         private Guna.UI2.WinForms.Guna2Button btn_Cancel_Sale;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -45,5 +45,10 @@ namespace Tripple_A_Supermart_Management_System.view
                 dgvProduct.DataSource = productDetails;
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,11 +31,11 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvSaleDetails = new System.Windows.Forms.DataGridView();
+            this.picGoBackSaleDash = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Search_Sale = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtSaleId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackSaleDash = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtUserId = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
@@ -50,7 +50,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Controls.Add(this.picGoBackSaleDash);
             this.panel1.Controls.Add(this.btn_Search_Sale);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtUserId);
+            this.panel1.Controls.Add(this.txtSaleId);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(72, 49);
             this.panel1.Name = "panel1";
@@ -68,6 +68,20 @@ namespace Tripple_A_Supermart_Management_System.view
             this.dgvSaleDetails.Size = new System.Drawing.Size(514, 253);
             this.dgvSaleDetails.TabIndex = 147;
             // 
+            // picGoBackSaleDash
+            // 
+            this.picGoBackSaleDash.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackSaleDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackSaleDash.ImageRotate = 0F;
+            this.picGoBackSaleDash.Location = new System.Drawing.Point(22, 15);
+            this.picGoBackSaleDash.Name = "picGoBackSaleDash";
+            this.picGoBackSaleDash.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackSaleDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackSaleDash.TabIndex = 146;
+            this.picGoBackSaleDash.TabStop = false;
+            this.picGoBackSaleDash.UseTransparentBackground = true;
+            this.picGoBackSaleDash.Click += new System.EventHandler(this.picGoBackSaleDash_Click);
+            // 
             // btn_Search_Sale
             // 
             this.btn_Search_Sale.BorderThickness = 1;
@@ -83,6 +97,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Sale.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Sale.TabIndex = 105;
             this.btn_Search_Sale.Text = "Search ";
+            this.btn_Search_Sale.Click += new System.EventHandler(this.btn_Search_Sale_Click);
             // 
             // label3
             // 
@@ -94,50 +109,37 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3.TabIndex = 93;
             this.label3.Text = "Sale Id";
             // 
+            // txtSaleId
+            // 
+            this.txtSaleId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSaleId.DefaultText = "";
+            this.txtSaleId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSaleId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSaleId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSaleId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSaleId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSaleId.Font = new System.Drawing.Font("Calibri", 10F);
+            this.txtSaleId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSaleId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.shop;
+            this.txtSaleId.Location = new System.Drawing.Point(133, 114);
+            this.txtSaleId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSaleId.Name = "txtSaleId";
+            this.txtSaleId.PasswordChar = '\0';
+            this.txtSaleId.PlaceholderText = "Enter Sale Id";
+            this.txtSaleId.SelectedText = "";
+            this.txtSaleId.Size = new System.Drawing.Size(309, 34);
+            this.txtSaleId.TabIndex = 83;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label7.Location = new System.Drawing.Point(228, 36);
+            this.label7.Location = new System.Drawing.Point(207, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(165, 44);
             this.label7.TabIndex = 82;
             this.label7.Text = "View Sale";
-            // 
-            // picGoBackSaleDash
-            // 
-            this.picGoBackSaleDash.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackSaleDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackSaleDash.ImageRotate = 0F;
-            this.picGoBackSaleDash.Location = new System.Drawing.Point(22, 15);
-            this.picGoBackSaleDash.Name = "picGoBackSaleDash";
-            this.picGoBackSaleDash.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackSaleDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackSaleDash.TabIndex = 146;
-            this.picGoBackSaleDash.TabStop = false;
-            this.picGoBackSaleDash.UseTransparentBackground = true;
-            // 
-            // txtUserId
-            // 
-            this.txtUserId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserId.DefaultText = "";
-            this.txtUserId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserId.Font = new System.Drawing.Font("Calibri", 10F);
-            this.txtUserId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.shop;
-            this.txtUserId.Location = new System.Drawing.Point(133, 114);
-            this.txtUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.PasswordChar = '\0';
-            this.txtUserId.PlaceholderText = "Enter Sale Id";
-            this.txtUserId.SelectedText = "";
-            this.txtUserId.Size = new System.Drawing.Size(309, 34);
-            this.txtUserId.TabIndex = 83;
             // 
             // pictureBox1
             // 
@@ -177,7 +179,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private Guna.UI2.WinForms.Guna2PictureBox picGoBackSaleDash;
         private Guna.UI2.WinForms.Guna2Button btn_Search_Sale;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtUserId;
+        private Guna.UI2.WinForms.Guna2TextBox txtSaleId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

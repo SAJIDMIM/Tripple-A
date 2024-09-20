@@ -9,10 +9,10 @@ namespace Tripple_A_Supermart_Management_System.controller
 {
     class CCustomerService
     {
-        public void sendCustomerService(string customerId, string customerName, string Type, DateTime responseTime, string feedback, string mobile)
+        public void sendCustomerService(string mobile, string customerName, string Type, DateTime responseTime, string feedback)
         {
             CustomerService newCustomerService = new CustomerService();
-            newCustomerService.sendCustomerService(customerId, customerName, Type, responseTime, feedback, mobile);
+            newCustomerService.sendCustomerService(mobile, customerName, Type, responseTime, feedback);
         }
         public DataTable getCustomerDetails(string mobile)
         {

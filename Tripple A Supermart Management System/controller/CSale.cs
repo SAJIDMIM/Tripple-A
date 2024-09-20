@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Tripple_A_Supermart_Management_System.model;
 
 namespace Tripple_A_Supermart_Management_System.controller
 {
@@ -27,6 +28,30 @@ namespace Tripple_A_Supermart_Management_System.controller
             // Call the model's getSaleDetails method to get the sale data
             return modelSale.getSaleDetails(saleId);
         }
+        public void createSale(string productId, string productName, double price, int quantity, DateTime saleDate, DateTime saleEndDate, double priceCalculate, double discount, string payMethod, string customerId, string customerName)
+        {
+            Sale newSale = new Sale();
+            newSale.createSale(productId, productName, price, quantity, saleDate, saleEndDate, priceCalculate, discount, payMethod, customerId, customerName);
+        }
+        public DataTable getProduct(string productId)
+        {
+            Sale productModel = new Sale();
+
+            return productModel.getProduct(productId);
+        }
+        public DataTable viewCustomer(string mobile)
+        {
+            Sale customerModel = new Sale();
+
+            return customerModel.viewCustomer(mobile);
+        }
+        public DataTable viewSale(string saleId)
+        {
+            Sale saleModel = new Sale();
+
+            return saleModel.viewSale(saleId);
+        }
+
 
 
     }

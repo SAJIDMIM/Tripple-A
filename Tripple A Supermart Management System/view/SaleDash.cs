@@ -93,5 +93,10 @@ namespace Tripple_A_Supermart_Management_System.view
             createNew.Show();
             this.Hide();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+        }
     }
 }

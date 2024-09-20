@@ -60,8 +60,10 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbProductType.FormattingEnabled = true;
             this.cmbProductType.Items.AddRange(new object[] {
-            "Full - Time",
-            "Part - Time"});
+            "Apple",
+            "Cosmetic",
+            "Cheese",
+            "Vejetables"});
             this.cmbProductType.Location = new System.Drawing.Point(407, 283);
             this.cmbProductType.Name = "cmbProductType";
             this.cmbProductType.Size = new System.Drawing.Size(121, 28);
@@ -82,6 +84,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Clear_Supplier.Size = new System.Drawing.Size(116, 45);
             this.btn_Clear_Supplier.TabIndex = 254;
             this.btn_Clear_Supplier.Text = "Clear";
+            this.btn_Clear_Supplier.Click += new System.EventHandler(this.btn_Clear_Supplier_Click);
             // 
             // btn_Delete_Supplier
             // 
@@ -98,6 +101,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Delete_Supplier.Size = new System.Drawing.Size(116, 45);
             this.btn_Delete_Supplier.TabIndex = 253;
             this.btn_Delete_Supplier.Text = "Delete";
+            this.btn_Delete_Supplier.Click += new System.EventHandler(this.btn_Delete_Supplier_Click);
             // 
             // btn_Update_Supplier
             // 
@@ -114,6 +118,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Update_Supplier.Size = new System.Drawing.Size(116, 45);
             this.btn_Update_Supplier.TabIndex = 252;
             this.btn_Update_Supplier.Text = "Update";
+            this.btn_Update_Supplier.Click += new System.EventHandler(this.btn_Update_Supplier_Click);
             // 
             // btn_Add_Supplier
             // 
@@ -130,6 +135,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Supplier.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Supplier.TabIndex = 251;
             this.btn_Add_Supplier.Text = "Add";
+            this.btn_Add_Supplier.Click += new System.EventHandler(this.btn_Add_Supplier_Click);
             // 
             // label6
             // 
@@ -287,6 +293,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackSaleDash.TabIndex = 257;
             this.picGoBackSaleDash.TabStop = false;
             this.picGoBackSaleDash.UseTransparentBackground = true;
+            this.picGoBackSaleDash.Click += new System.EventHandler(this.picGoBackSaleDash_Click);
             // 
             // txt_Supplier_Company
             // 
@@ -379,6 +386,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Supplier_Id.SelectedText = "";
             this.txt_Supplier_Id.Size = new System.Drawing.Size(193, 40);
             this.txt_Supplier_Id.TabIndex = 242;
+            this.txt_Supplier_Id.TextChanged += new System.EventHandler(this.txt_Supplier_Id_TextChanged);
             // 
             // pictureBox1
             // 

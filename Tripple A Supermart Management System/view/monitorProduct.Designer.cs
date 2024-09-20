@@ -42,13 +42,13 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbProductType = new System.Windows.Forms.ComboBox();
             this.btn_Clear_Product = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Update_Product = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Delete_Product = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Add_Product = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Search_Product = new Guna.UI2.WinForms.Guna2Button();
             this.pic_Sale_Dash = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.cmbProductType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Sale_Dash)).BeginInit();
             this.SuspendLayout();
@@ -170,6 +170,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtQty.SelectedText = "";
             this.txtQty.Size = new System.Drawing.Size(179, 40);
             this.txtQty.TabIndex = 153;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // label3
             // 
@@ -247,14 +248,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label6.TabIndex = 156;
             this.label6.Text = "Price";
             // 
-            // cmbProductType
-            // 
-            this.cmbProductType.FormattingEnabled = true;
-            this.cmbProductType.Location = new System.Drawing.Point(277, 481);
-            this.cmbProductType.Name = "cmbProductType";
-            this.cmbProductType.Size = new System.Drawing.Size(121, 28);
-            this.cmbProductType.TabIndex = 158;
-            // 
             // btn_Clear_Product
             // 
             this.btn_Clear_Product.BorderThickness = 1;
@@ -270,6 +263,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Clear_Product.Size = new System.Drawing.Size(116, 45);
             this.btn_Clear_Product.TabIndex = 162;
             this.btn_Clear_Product.Text = "Clear";
+            this.btn_Clear_Product.Click += new System.EventHandler(this.btn_Clear_Product_Click);
             // 
             // btn_Update_Product
             // 
@@ -286,6 +280,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Update_Product.Size = new System.Drawing.Size(116, 45);
             this.btn_Update_Product.TabIndex = 161;
             this.btn_Update_Product.Text = "Update";
+            this.btn_Update_Product.Click += new System.EventHandler(this.btn_Update_Product_Click);
             // 
             // btn_Delete_Product
             // 
@@ -302,6 +297,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Delete_Product.Size = new System.Drawing.Size(116, 45);
             this.btn_Delete_Product.TabIndex = 160;
             this.btn_Delete_Product.Text = "Delete";
+            this.btn_Delete_Product.Click += new System.EventHandler(this.btn_Delete_Product_Click);
             // 
             // btn_Add_Product
             // 
@@ -318,6 +314,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Product.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Product.TabIndex = 159;
             this.btn_Add_Product.Text = "Add";
+            this.btn_Add_Product.Click += new System.EventHandler(this.btn_Add_Product_Click);
             // 
             // btn_Search_Product
             // 
@@ -334,6 +331,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Product.Size = new System.Drawing.Size(116, 45);
             this.btn_Search_Product.TabIndex = 168;
             this.btn_Search_Product.Text = "Search";
+            this.btn_Search_Product.Click += new System.EventHandler(this.btn_Search_Product_Click);
             // 
             // pic_Sale_Dash
             // 
@@ -347,6 +345,18 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Sale_Dash.TabIndex = 169;
             this.pic_Sale_Dash.TabStop = false;
             this.pic_Sale_Dash.UseTransparentBackground = true;
+            this.pic_Sale_Dash.Click += new System.EventHandler(this.pic_Sale_Dash_Click);
+            // 
+            // cmbProductType
+            // 
+            this.cmbProductType.FormattingEnabled = true;
+            this.cmbProductType.Items.AddRange(new object[] {
+            "Fruits"});
+            this.cmbProductType.Location = new System.Drawing.Point(275, 458);
+            this.cmbProductType.Name = "cmbProductType";
+            this.cmbProductType.Size = new System.Drawing.Size(121, 28);
+            this.cmbProductType.TabIndex = 170;
+            this.cmbProductType.SelectedIndexChanged += new System.EventHandler(this.cmbProductType_SelectedIndexChanged);
             // 
             // monitorProduct
             // 
@@ -354,13 +364,13 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 670);
+            this.Controls.Add(this.cmbProductType);
             this.Controls.Add(this.pic_Sale_Dash);
             this.Controls.Add(this.btn_Search_Product);
             this.Controls.Add(this.btn_Clear_Product);
             this.Controls.Add(this.btn_Update_Product);
             this.Controls.Add(this.btn_Delete_Product);
             this.Controls.Add(this.btn_Add_Product);
-            this.Controls.Add(this.cmbProductType);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDescription);
@@ -400,12 +410,12 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbProductType;
         private Guna.UI2.WinForms.Guna2Button btn_Clear_Product;
         private Guna.UI2.WinForms.Guna2Button btn_Update_Product;
         private Guna.UI2.WinForms.Guna2Button btn_Delete_Product;
         private Guna.UI2.WinForms.Guna2Button btn_Add_Product;
         private Guna.UI2.WinForms.Guna2Button btn_Search_Product;
         private Guna.UI2.WinForms.Guna2PictureBox pic_Sale_Dash;
+        private System.Windows.Forms.ComboBox cmbProductType;
     }
 }

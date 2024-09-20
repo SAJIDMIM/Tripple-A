@@ -138,6 +138,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Clear_Delivery.Size = new System.Drawing.Size(116, 45);
             this.btn_Clear_Delivery.TabIndex = 234;
             this.btn_Clear_Delivery.Text = "Clear";
+            this.btn_Clear_Delivery.Click += new System.EventHandler(this.btn_Clear_Delivery_Click);
             // 
             // btn_Delete_Delivery
             // 
@@ -154,6 +155,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Delete_Delivery.Size = new System.Drawing.Size(116, 45);
             this.btn_Delete_Delivery.TabIndex = 233;
             this.btn_Delete_Delivery.Text = "Delete";
+            this.btn_Delete_Delivery.Click += new System.EventHandler(this.btn_Delete_Delivery_Click);
             // 
             // btn_Update_Delivery
             // 
@@ -170,6 +172,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Update_Delivery.Size = new System.Drawing.Size(116, 45);
             this.btn_Update_Delivery.TabIndex = 232;
             this.btn_Update_Delivery.Text = "Update";
+            this.btn_Update_Delivery.Click += new System.EventHandler(this.btn_Update_Delivery_Click);
             // 
             // btn_Add_Delivery
             // 
@@ -186,6 +189,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Delivery.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Delivery.TabIndex = 231;
             this.btn_Add_Delivery.Text = "Add";
+            this.btn_Add_Delivery.Click += new System.EventHandler(this.btn_Add_Delivery_Click);
             // 
             // txt_Delivery_Address
             // 
@@ -278,6 +282,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Delivery_Id.SelectedText = "";
             this.txt_Delivery_Id.Size = new System.Drawing.Size(193, 40);
             this.txt_Delivery_Id.TabIndex = 200;
+            this.txt_Delivery_Id.TextChanged += new System.EventHandler(this.txt_Delivery_Id_TextChanged);
             // 
             // pictureBox1
             // 
@@ -324,6 +329,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackSaleDash.TabIndex = 238;
             this.picGoBackSaleDash.TabStop = false;
             this.picGoBackSaleDash.UseTransparentBackground = true;
+            this.picGoBackSaleDash.Click += new System.EventHandler(this.picGoBackSaleDash_Click);
             // 
             // monitorDelivery
             // 
