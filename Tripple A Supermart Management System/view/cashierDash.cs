@@ -66,5 +66,27 @@ namespace Tripple_A_Supermart_Management_System.view
             showPayment.Show();
             this.Hide();
         }
+
+        private void issueReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            issueReceipt newReceipt = new issueReceipt();
+            newReceipt.Show();
+            this.Hide();
+        }
+
+        private void generateCustomerBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerBill newBill = new CustomerBill();
+            newBill.Show();
+            this.Hide();
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login back = new Login();
+            back.Show();
+            this.Hide();
+        }
     }
 }

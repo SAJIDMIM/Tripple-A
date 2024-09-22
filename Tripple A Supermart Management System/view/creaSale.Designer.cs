@@ -419,7 +419,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Add_Sale.Name = "btn_Add_Sale";
             this.btn_Add_Sale.Size = new System.Drawing.Size(116, 45);
             this.btn_Add_Sale.TabIndex = 196;
-            this.btn_Add_Sale.Text = "Add";
+            this.btn_Add_Sale.Text = "Create";
             this.btn_Add_Sale.Click += new System.EventHandler(this.btn_Add_Sale_Click);
             // 
             // dtpStartSale

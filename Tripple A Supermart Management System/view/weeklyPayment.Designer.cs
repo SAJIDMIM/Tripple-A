@@ -58,6 +58,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Cash_Dash.TabIndex = 153;
             this.pic_Cash_Dash.TabStop = false;
             this.pic_Cash_Dash.UseTransparentBackground = true;
+            this.pic_Cash_Dash.Click += new System.EventHandler(this.pic_Cash_Dash_Click);
             // 
             // btn_Generate_Weekly_Payment
             // 
@@ -74,6 +75,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Generate_Weekly_Payment.Size = new System.Drawing.Size(108, 45);
             this.btn_Generate_Weekly_Payment.TabIndex = 152;
             this.btn_Generate_Weekly_Payment.Text = "Generate ";
+            this.btn_Generate_Weekly_Payment.Click += new System.EventHandler(this.btn_Generate_Weekly_Payment_Click);
             // 
             // weeklyPayment
             // 

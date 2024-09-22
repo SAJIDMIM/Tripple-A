@@ -108,7 +108,7 @@ namespace Tripple_A_Supermart_Management_System.view
                     }
                     else
                     {
-                        MessageBox.Show("No customer found with the provided Product ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("No customer found with the Mobile Number.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         txtCusName.Clear();
                     }
@@ -160,35 +160,35 @@ namespace Tripple_A_Supermart_Management_System.view
             int saleId;
             if (!int.TryParse(txt_Sale_Id.Text, out saleId))
             {
-                MessageBox.Show("Invalid sale ID. Please enter a valid integer value.");
+                MessageBox.Show("Invalid sale ID. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string productId = txt_Product_Id.Text;
             if (string.IsNullOrEmpty(productId))
             {
-                MessageBox.Show("Product ID is required.");
+                MessageBox.Show("Product ID is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string productName = txtProdName.Text;
             if (string.IsNullOrEmpty(productName))
             {
-                MessageBox.Show("Product name is required.");
+                MessageBox.Show("Product name is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             double price;
             if (!double.TryParse(txtPrice.Text, out price))
             {
-                MessageBox.Show("Invalid price. Please enter a valid decimal value.");
+                MessageBox.Show("Invalid price. Please enter a valid decimal value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             int quantity;
             if (!int.TryParse(txtQty.Text, out quantity))
             {
-                MessageBox.Show("Invalid quantity. Please enter a valid integer value.");
+                MessageBox.Show("Invalid quantity. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -198,35 +198,50 @@ namespace Tripple_A_Supermart_Management_System.view
             double totalPrice;
             if (!double.TryParse(txtTotalPrice.Text, out totalPrice))
             {
-                MessageBox.Show("Invalid total price. Please enter a valid decimal value.");
+                MessageBox.Show("Invalid total price. Please enter a valid decimal value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             double discount;
             if (!double.TryParse(txtDiscount.Text, out discount))
             {
-                MessageBox.Show("Invalid discount. Please enter a valid decimal value.");
+                MessageBox.Show("Invalid discount. Please enter a valid decimal value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string payMethod = cmbPayMethod.SelectedItem.ToString();
             if (string.IsNullOrEmpty(payMethod))
             {
-                MessageBox.Show("Pay method is required.");
+                MessageBox.Show("Pay method is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string mobile = txtMobile.Text;
             if (string.IsNullOrEmpty(mobile))
             {
-                MessageBox.Show("Mobile number is required.");
+                MessageBox.Show("Mobile number is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string customerName = txtCusName.Text;
             if (string.IsNullOrEmpty(customerName))
             {
-                MessageBox.Show("Customer name is required.");
+                MessageBox.Show("Customer name is required.","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+            // Check if all fields are required
+            if (string.IsNullOrEmpty(txt_Sale_Id.Text) ||
+                string.IsNullOrEmpty(txt_Product_Id.Text) ||
+                string.IsNullOrEmpty(txtProdName.Text) ||
+                string.IsNullOrEmpty(txtPrice.Text) ||
+                string.IsNullOrEmpty(txtQty.Text) ||
+                string.IsNullOrEmpty(txtTotalPrice.Text) ||
+                string.IsNullOrEmpty(txtDiscount.Text) ||
+                string.IsNullOrEmpty(cmbPayMethod.SelectedItem.ToString()) ||
+                string.IsNullOrEmpty(txtMobile.Text) ||
+                string.IsNullOrEmpty(txtCusName.Text))
+            {
+                MessageBox.Show("All fields are required. Please fill in all fields.");
                 return;
             }
 

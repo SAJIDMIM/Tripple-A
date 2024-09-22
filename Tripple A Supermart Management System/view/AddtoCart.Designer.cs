@@ -44,11 +44,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.cmbPayMethod = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_Make_Payment = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Issue_Receipt = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Generate_Bill = new Guna.UI2.WinForms.Guna2Button();
             this.pic_Cash_Dash = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pic_Minus_Qty = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pic_Add_Qty = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtOrderId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTax = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,9 +56,11 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCustName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_Cart_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtStockName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btn_Issue_Receipt = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Generate_Customer_Bill = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cash_Dash)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Minus_Qty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Add_Qty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,7 +193,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(816, 530);
+            this.label12.Location = new System.Drawing.Point(816, 651);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 29);
             this.label12.TabIndex = 158;
@@ -211,43 +209,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Make_Payment.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Make_Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Make_Payment.ForeColor = System.Drawing.Color.Black;
-            this.btn_Make_Payment.Location = new System.Drawing.Point(40, 670);
+            this.btn_Make_Payment.Location = new System.Drawing.Point(40, 693);
             this.btn_Make_Payment.Name = "btn_Make_Payment";
             this.btn_Make_Payment.Size = new System.Drawing.Size(124, 45);
             this.btn_Make_Payment.TabIndex = 166;
             this.btn_Make_Payment.Text = "Make";
-            // 
-            // btn_Issue_Receipt
-            // 
-            this.btn_Issue_Receipt.BorderThickness = 1;
-            this.btn_Issue_Receipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Issue_Receipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Issue_Receipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Issue_Receipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Issue_Receipt.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Issue_Receipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Issue_Receipt.ForeColor = System.Drawing.Color.Black;
-            this.btn_Issue_Receipt.Location = new System.Drawing.Point(566, 670);
-            this.btn_Issue_Receipt.Name = "btn_Issue_Receipt";
-            this.btn_Issue_Receipt.Size = new System.Drawing.Size(124, 68);
-            this.btn_Issue_Receipt.TabIndex = 167;
-            this.btn_Issue_Receipt.Text = "Issue Receipt";
-            // 
-            // btn_Generate_Bill
-            // 
-            this.btn_Generate_Bill.BorderThickness = 1;
-            this.btn_Generate_Bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Generate_Bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Generate_Bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Generate_Bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Generate_Bill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Generate_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Generate_Bill.ForeColor = System.Drawing.Color.Black;
-            this.btn_Generate_Bill.Location = new System.Drawing.Point(305, 670);
-            this.btn_Generate_Bill.Name = "btn_Generate_Bill";
-            this.btn_Generate_Bill.Size = new System.Drawing.Size(133, 68);
-            this.btn_Generate_Bill.TabIndex = 168;
-            this.btn_Generate_Bill.Text = "Generate Bill";
+            this.btn_Make_Payment.Click += new System.EventHandler(this.btn_Make_Payment_Click);
             // 
             // pic_Cash_Dash
             // 
@@ -261,32 +228,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Cash_Dash.TabIndex = 174;
             this.pic_Cash_Dash.TabStop = false;
             this.pic_Cash_Dash.UseTransparentBackground = true;
-            // 
-            // pic_Minus_Qty
-            // 
-            this.pic_Minus_Qty.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Minus_Qty.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.minus;
-            this.pic_Minus_Qty.ImageRotate = 0F;
-            this.pic_Minus_Qty.Location = new System.Drawing.Point(305, 449);
-            this.pic_Minus_Qty.Name = "pic_Minus_Qty";
-            this.pic_Minus_Qty.Size = new System.Drawing.Size(28, 42);
-            this.pic_Minus_Qty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Minus_Qty.TabIndex = 173;
-            this.pic_Minus_Qty.TabStop = false;
-            this.pic_Minus_Qty.UseTransparentBackground = true;
-            // 
-            // pic_Add_Qty
-            // 
-            this.pic_Add_Qty.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Add_Qty.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.add;
-            this.pic_Add_Qty.ImageRotate = 0F;
-            this.pic_Add_Qty.Location = new System.Drawing.Point(456, 449);
-            this.pic_Add_Qty.Name = "pic_Add_Qty";
-            this.pic_Add_Qty.Size = new System.Drawing.Size(28, 42);
-            this.pic_Add_Qty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Add_Qty.TabIndex = 172;
-            this.pic_Add_Qty.TabStop = false;
-            this.pic_Add_Qty.UseTransparentBackground = true;
+            this.pic_Cash_Dash.Click += new System.EventHandler(this.pic_Cash_Dash_Click);
             // 
             // txtOrderId
             // 
@@ -301,7 +243,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtOrderId.ForeColor = System.Drawing.Color.Black;
             this.txtOrderId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderId.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
-            this.txtOrderId.Location = new System.Drawing.Point(821, 594);
+            this.txtOrderId.Location = new System.Drawing.Point(821, 698);
             this.txtOrderId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOrderId.Name = "txtOrderId";
             this.txtOrderId.PasswordChar = '\0';
@@ -310,6 +252,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtOrderId.SelectedText = "";
             this.txtOrderId.Size = new System.Drawing.Size(203, 40);
             this.txtOrderId.TabIndex = 159;
+            this.txtOrderId.TextChanged += new System.EventHandler(this.txtOrderId_TextChanged);
             // 
             // txtTotal
             // 
@@ -356,6 +299,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtTax.SelectedText = "";
             this.txtTax.Size = new System.Drawing.Size(179, 40);
             this.txtTax.TabIndex = 150;
+            this.txtTax.TextChanged += new System.EventHandler(this.txtTax_TextChanged);
             // 
             // txtDiscount
             // 
@@ -379,6 +323,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtDiscount.SelectedText = "";
             this.txtDiscount.Size = new System.Drawing.Size(179, 40);
             this.txtDiscount.TabIndex = 148;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
             // txtUnitPrice
             // 
@@ -402,6 +347,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtUnitPrice.SelectedText = "";
             this.txtUnitPrice.Size = new System.Drawing.Size(179, 40);
             this.txtUnitPrice.TabIndex = 146;
+            this.txtUnitPrice.TextChanged += new System.EventHandler(this.txtUnitPrice_TextChanged);
             // 
             // txtQty
             // 
@@ -416,15 +362,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtQty.ForeColor = System.Drawing.Color.Black;
             this.txtQty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQty.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.quantity;
-            this.txtQty.Location = new System.Drawing.Point(351, 449);
+            this.txtQty.Location = new System.Drawing.Point(305, 449);
             this.txtQty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQty.Name = "txtQty";
             this.txtQty.PasswordChar = '\0';
             this.txtQty.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtQty.PlaceholderText = "";
+            this.txtQty.PlaceholderText = "Enter Quantity";
             this.txtQty.SelectedText = "";
-            this.txtQty.Size = new System.Drawing.Size(78, 40);
+            this.txtQty.Size = new System.Drawing.Size(159, 40);
             this.txtQty.TabIndex = 144;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // txtIN
             // 
@@ -529,17 +476,84 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
             // 
+            // txtStockName
+            // 
+            this.txtStockName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStockName.DefaultText = "";
+            this.txtStockName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStockName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStockName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockName.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.txtStockName.ForeColor = System.Drawing.Color.Black;
+            this.txtStockName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockName.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.ready_stock;
+            this.txtStockName.Location = new System.Drawing.Point(821, 594);
+            this.txtStockName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStockName.Name = "txtStockName";
+            this.txtStockName.PasswordChar = '\0';
+            this.txtStockName.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtStockName.PlaceholderText = "Enter Stock Name";
+            this.txtStockName.SelectedText = "";
+            this.txtStockName.Size = new System.Drawing.Size(203, 40);
+            this.txtStockName.TabIndex = 176;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(816, 530);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(130, 29);
+            this.label13.TabIndex = 175;
+            this.label13.Text = "Stock Name";
+            // 
+            // btn_Issue_Receipt
+            // 
+            this.btn_Issue_Receipt.BorderThickness = 1;
+            this.btn_Issue_Receipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Issue_Receipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Issue_Receipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Issue_Receipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Issue_Receipt.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Issue_Receipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Issue_Receipt.ForeColor = System.Drawing.Color.Black;
+            this.btn_Issue_Receipt.Location = new System.Drawing.Point(305, 651);
+            this.btn_Issue_Receipt.Name = "btn_Issue_Receipt";
+            this.btn_Issue_Receipt.Size = new System.Drawing.Size(112, 45);
+            this.btn_Issue_Receipt.TabIndex = 177;
+            this.btn_Issue_Receipt.Text = "Issue ";
+            this.btn_Issue_Receipt.Click += new System.EventHandler(this.btn_Issue_Receipt_Click_1);
+            // 
+            // btn_Generate_Customer_Bill
+            // 
+            this.btn_Generate_Customer_Bill.BorderThickness = 1;
+            this.btn_Generate_Customer_Bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Generate_Customer_Bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Generate_Customer_Bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Generate_Customer_Bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Generate_Customer_Bill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Generate_Customer_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Generate_Customer_Bill.ForeColor = System.Drawing.Color.Black;
+            this.btn_Generate_Customer_Bill.Location = new System.Drawing.Point(566, 651);
+            this.btn_Generate_Customer_Bill.Name = "btn_Generate_Customer_Bill";
+            this.btn_Generate_Customer_Bill.Size = new System.Drawing.Size(148, 65);
+            this.btn_Generate_Customer_Bill.TabIndex = 178;
+            this.btn_Generate_Customer_Bill.Text = "Generate Bill";
+            this.btn_Generate_Customer_Bill.Click += new System.EventHandler(this.btn_Generate_Customer_Bill_Click);
+            // 
             // AddtoCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.ClientSize = new System.Drawing.Size(1067, 765);
-            this.Controls.Add(this.pic_Cash_Dash);
-            this.Controls.Add(this.pic_Minus_Qty);
-            this.Controls.Add(this.pic_Add_Qty);
-            this.Controls.Add(this.btn_Generate_Bill);
+            this.Controls.Add(this.btn_Generate_Customer_Bill);
             this.Controls.Add(this.btn_Issue_Receipt);
+            this.Controls.Add(this.txtStockName);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.pic_Cash_Dash);
             this.Controls.Add(this.btn_Make_Payment);
             this.Controls.Add(this.txtOrderId);
             this.Controls.Add(this.label12);
@@ -572,8 +586,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Text = "AddtoCart";
             this.Load += new System.EventHandler(this.AddtoCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cash_Dash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Minus_Qty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Add_Qty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -607,10 +619,10 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txtOrderId;
         private Guna.UI2.WinForms.Guna2Button btn_Make_Payment;
-        private Guna.UI2.WinForms.Guna2Button btn_Issue_Receipt;
-        private Guna.UI2.WinForms.Guna2Button btn_Generate_Bill;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_Add_Qty;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_Minus_Qty;
         private Guna.UI2.WinForms.Guna2PictureBox pic_Cash_Dash;
+        private Guna.UI2.WinForms.Guna2TextBox txtStockName;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2Button btn_Issue_Receipt;
+        private Guna.UI2.WinForms.Guna2Button btn_Generate_Customer_Bill;
     }
 }

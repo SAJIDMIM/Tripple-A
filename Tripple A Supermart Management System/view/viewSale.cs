@@ -43,7 +43,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             SaleDash back = new SaleDash();
             back.Show();
-            this.Show();
+            this.Hide();
         }
     }
 }

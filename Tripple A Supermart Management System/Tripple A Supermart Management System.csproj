@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -37,7 +37,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -171,11 +171,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\CAccount.cs" />
+    <Compile Include="controller\CAddtoCart.cs" />
     <Compile Include="controller\CAdminLogin.cs" />
     <Compile Include="controller\CBankAccount.cs" />
     <Compile Include="controller\CBillingReminder.cs" />
     <Compile Include="controller\CCreateAccount.cs" />
     <Compile Include="controller\CCustomer.cs" />
+    <Compile Include="controller\CCustomerOrder.cs" />
     <Compile Include="controller\CCustomerService.cs" />
     <Compile Include="controller\CDelivery.cs" />
     <Compile Include="controller\CLeave.cs" />
@@ -183,6 +185,7 @@
     <Compile Include="controller\CMarketingPromotion.cs" />
     <Compile Include="controller\CProduct.cs" />
     <Compile Include="controller\CProfile.cs" />
+    <Compile Include="controller\CRefund.cs" />
     <Compile Include="controller\CSupplier.cs" />
     <Compile Include="controller\EmployeeController.cs" />
     <Compile Include="controller\CForgotPassword.cs" />
@@ -194,14 +197,17 @@
     <Compile Include="controller\CItem.cs" />
     <Compile Include="controller\CSale.cs" />
     <Compile Include="controller\CStock.cs" />
+    <Compile Include="model\AddtoCart.cs" />
     <Compile Include="model\BankAccount.cs" />
     <Compile Include="model\BillingReminder.cs" />
     <Compile Include="model\Customer.cs" />
+    <Compile Include="model\CustomerOrder.cs" />
     <Compile Include="model\CustomerService.cs" />
     <Compile Include="model\Delivery.cs" />
     <Compile Include="model\Marketing.cs" />
     <Compile Include="model\MarketingPromotion.cs" />
     <Compile Include="model\Product.cs" />
+    <Compile Include="model\Refund.cs" />
     <Compile Include="model\Supplier.cs" />
     <Compile Include="view\accountDash.cs">
       <SubType>Form</SubType>
@@ -311,6 +317,12 @@
     <Compile Include="view\BillingReminder.Designer.cs">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\issueReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\issueReceipt.Designer.cs">
+      <DependentUpon>issueReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\juniorManagerDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +370,12 @@
     </Compile>
     <Compile Include="view\monitorSupplier.Designer.cs">
       <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\paymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\paymentReport.Designer.cs">
+      <DependentUpon>paymentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="view\placeCustomerOrder.cs">
       <SubType>Form</SubType>
@@ -563,6 +581,12 @@
     <Compile Include="view\weeklyPayment.Designer.cs">
       <DependentUpon>weeklyPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\weeklyPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>weeklyPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="view\WeeklyStock.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -732,6 +756,9 @@
     <EmbeddedResource Include="view\BillingReminder.resx">
       <DependentUpon>BillingReminder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\issueReceipt.resx">
+      <DependentUpon>issueReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\juniorManagerDash.resx">
       <DependentUpon>juniorManagerDash.cs</DependentUpon>
     </EmbeddedResource>
@@ -755,6 +782,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\monitorSupplier.resx">
       <DependentUpon>monitorSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\paymentReport.resx">
+      <DependentUpon>paymentReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\placeCustomerOrder.resx">
       <DependentUpon>placeCustomerOrder.cs</DependentUpon>
@@ -860,6 +890,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\weeklyPayment.resx">
       <DependentUpon>weeklyPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\weeklyPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>weeklyPaymentReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

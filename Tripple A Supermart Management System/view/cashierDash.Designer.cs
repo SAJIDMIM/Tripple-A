@@ -35,8 +35,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.addToCartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monitorCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generatePaymentReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +47,6 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.processRefundToolStripMenuItem,
@@ -60,62 +57,46 @@ namespace Tripple_A_Supermart_Management_System.view
             this.generatePaymentReportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(948, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1118, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // processRefundToolStripMenuItem
             // 
             this.processRefundToolStripMenuItem.Name = "processRefundToolStripMenuItem";
-            this.processRefundToolStripMenuItem.Size = new System.Drawing.Size(149, 30);
+            this.processRefundToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
             this.processRefundToolStripMenuItem.Text = "Process Refund";
             this.processRefundToolStripMenuItem.Click += new System.EventHandler(this.processRefundToolStripMenuItem_Click);
             // 
             // placeCustomerOrderToolStripMenuItem
             // 
             this.placeCustomerOrderToolStripMenuItem.Name = "placeCustomerOrderToolStripMenuItem";
-            this.placeCustomerOrderToolStripMenuItem.Size = new System.Drawing.Size(201, 30);
+            this.placeCustomerOrderToolStripMenuItem.Size = new System.Drawing.Size(201, 29);
             this.placeCustomerOrderToolStripMenuItem.Text = "Place Customer Order";
             this.placeCustomerOrderToolStripMenuItem.Click += new System.EventHandler(this.placeCustomerOrderToolStripMenuItem_Click);
             // 
             // addToCartToolStripMenuItem
             // 
             this.addToCartToolStripMenuItem.Name = "addToCartToolStripMenuItem";
-            this.addToCartToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.addToCartToolStripMenuItem.Size = new System.Drawing.Size(121, 29);
             this.addToCartToolStripMenuItem.Text = "Add to Cart";
             this.addToCartToolStripMenuItem.Click += new System.EventHandler(this.addToCartToolStripMenuItem_Click);
             // 
             // monitorCustomerToolStripMenuItem
             // 
             this.monitorCustomerToolStripMenuItem.Name = "monitorCustomerToolStripMenuItem";
-            this.monitorCustomerToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
+            this.monitorCustomerToolStripMenuItem.Size = new System.Drawing.Size(174, 29);
             this.monitorCustomerToolStripMenuItem.Text = "Monitor Customer";
             this.monitorCustomerToolStripMenuItem.Click += new System.EventHandler(this.monitorCustomerToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemToolStripMenuItem,
-            this.productToolStripMenuItem,
             this.updateProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.viewToolStripMenuItem.Text = "View";
-            // 
-            // itemToolStripMenuItem
-            // 
-            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(227, 34);
-            this.itemToolStripMenuItem.Text = "Item";
-            this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(227, 34);
-            this.productToolStripMenuItem.Text = "Product";
-            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // updateProfileToolStripMenuItem
             // 
@@ -128,13 +109,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(227, 34);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // generatePaymentReportToolStripMenuItem
             // 
             this.generatePaymentReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.weekltPaymentReportToolStripMenuItem});
             this.generatePaymentReportToolStripMenuItem.Name = "generatePaymentReportToolStripMenuItem";
-            this.generatePaymentReportToolStripMenuItem.Size = new System.Drawing.Size(229, 30);
+            this.generatePaymentReportToolStripMenuItem.Size = new System.Drawing.Size(229, 29);
             this.generatePaymentReportToolStripMenuItem.Text = "Generate Payment Report";
             // 
             // weekltPaymentReportToolStripMenuItem
@@ -148,7 +130,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(350, 68);
+            this.label7.Location = new System.Drawing.Point(452, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(300, 44);
             this.label7.TabIndex = 83;
@@ -159,7 +141,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.pngtree_cashier_png_image_6119602;
             this.pictureBox1.Location = new System.Drawing.Point(0, 209);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(948, 396);
+            this.pictureBox1.Size = new System.Drawing.Size(1118, 396);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
@@ -169,7 +151,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(948, 598);
+            this.ClientSize = new System.Drawing.Size(1118, 598);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.menuStrip1);
@@ -194,8 +176,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem addToCartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monitorCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generatePaymentReportToolStripMenuItem;
