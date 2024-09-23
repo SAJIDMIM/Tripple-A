@@ -73,6 +73,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
             this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
             // promotionToolStripMenuItem1
             // 

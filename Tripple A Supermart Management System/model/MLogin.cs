@@ -1,5 +1,6 @@
-﻿using System.Data.SqlClient;
-
+﻿using System;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Tripple_A_Supermart_Management_System.model
 
@@ -8,10 +9,12 @@ namespace Tripple_A_Supermart_Management_System.model
     {
         public string Username { get; set; }
         public string Role { get; set; }
+
+      
     }
     public class MLogin
     {
-
+       
 
         public Users Login(string usertype, string username, string password)
         {
@@ -47,6 +50,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
             }
         }
+  
     }
 }
 

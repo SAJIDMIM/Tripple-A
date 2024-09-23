@@ -46,7 +46,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.generateCustomerBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.billingReminderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -197,8 +196,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.billingReminderToolStripMenuItem,
-            this.feedbackToolStripMenuItem});
+            this.billingReminderToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 29);
             this.toolStripMenuItem1.Text = "Send ";
@@ -206,14 +204,8 @@ namespace Tripple_A_Supermart_Management_System.view
             // billingReminderToolStripMenuItem
             // 
             this.billingReminderToolStripMenuItem.Name = "billingReminderToolStripMenuItem";
-            this.billingReminderToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
+            this.billingReminderToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.billingReminderToolStripMenuItem.Text = "Billing Reminder";
-            // 
-            // feedbackToolStripMenuItem
-            // 
-            this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
-            this.feedbackToolStripMenuItem.Text = "Feedback";
             // 
             // logoutToolStripMenuItem
             // 
@@ -318,7 +310,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem billingReminderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;

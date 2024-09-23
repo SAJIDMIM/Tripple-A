@@ -81,6 +81,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackSaleDash.TabIndex = 146;
             this.picGoBackSaleDash.TabStop = false;
             this.picGoBackSaleDash.UseTransparentBackground = true;
+            this.picGoBackSaleDash.Click += new System.EventHandler(this.picGoBackSaleDash_Click);
             // 
             // btn_Search_Order
             // 

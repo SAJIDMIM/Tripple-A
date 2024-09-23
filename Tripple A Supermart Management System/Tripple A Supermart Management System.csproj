@@ -413,6 +413,12 @@
     <Compile Include="view\StorekeeperDashboard.Designer.cs">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\userProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\userProfile.Designer.cs">
+      <DependentUpon>userProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\viewCustomerOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -803,6 +809,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\StorekeeperDashboard.resx">
       <DependentUpon>StorekeeperDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\userProfile.resx">
+      <DependentUpon>userProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\viewCustomerOrder.resx">
       <DependentUpon>viewCustomerOrder.cs</DependentUpon>

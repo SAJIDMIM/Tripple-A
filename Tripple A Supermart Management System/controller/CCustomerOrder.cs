@@ -39,6 +39,18 @@ namespace Tripple_A_Supermart_Management_System.controller
 
             return stockModel.viewStock(stockId);
         }
+        public DataTable viewOrder(string orderId)
+        {
+            CustomerOrder orderModel = new CustomerOrder();
+
+            return orderModel.viewStock(orderId);
+        }
+        public void approvePurchaseOrder(string orderId, string status)
+        {
+            CustomerOrder approval = new CustomerOrder();
+            approval.approvePurchaseOrder(orderId, status);
+        }
+
 
     }
 }

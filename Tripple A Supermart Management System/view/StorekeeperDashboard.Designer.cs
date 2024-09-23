@@ -58,14 +58,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(846, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(846, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // placeStockOrderToolStripMenuItem
             // 
             this.placeStockOrderToolStripMenuItem.Name = "placeStockOrderToolStripMenuItem";
-            this.placeStockOrderToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.placeStockOrderToolStripMenuItem.Size = new System.Drawing.Size(167, 29);
             this.placeStockOrderToolStripMenuItem.Text = "Place Stock Order";
             this.placeStockOrderToolStripMenuItem.Click += new System.EventHandler(this.placeStockOrderToolStripMenuItem_Click);
             // 
@@ -77,7 +77,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.stockToolStripMenuItem,
             this.updateProfileToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // itemToolStripMenuItem
@@ -106,11 +106,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
             this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
             // monitorStockToolStripMenuItem
             // 
             this.monitorStockToolStripMenuItem.Name = "monitorStockToolStripMenuItem";
-            this.monitorStockToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
+            this.monitorStockToolStripMenuItem.Size = new System.Drawing.Size(140, 29);
             this.monitorStockToolStripMenuItem.Text = "Monitor Stock";
             this.monitorStockToolStripMenuItem.Click += new System.EventHandler(this.monitorStockToolStripMenuItem_Click);
             // 
@@ -119,7 +120,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.generateStockReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.weeklyStockReportToolStripMenuItem});
             this.generateStockReportToolStripMenuItem.Name = "generateStockReportToolStripMenuItem";
-            this.generateStockReportToolStripMenuItem.Size = new System.Drawing.Size(204, 30);
+            this.generateStockReportToolStripMenuItem.Size = new System.Drawing.Size(204, 29);
             this.generateStockReportToolStripMenuItem.Text = "Generate Stock Report";
             this.generateStockReportToolStripMenuItem.Click += new System.EventHandler(this.generateStockReportToolStripMenuItem_Click);
             // 
@@ -133,7 +134,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 30);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 

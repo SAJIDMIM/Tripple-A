@@ -38,12 +38,12 @@ namespace Tripple_A_Supermart_Management_System
             this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateCustomerReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyCustomerReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -78,29 +78,30 @@ namespace Tripple_A_Supermart_Management_System
             // normalCustomerToolStripMenuItem
             // 
             this.normalCustomerToolStripMenuItem.Name = "normalCustomerToolStripMenuItem";
-            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.normalCustomerToolStripMenuItem.Text = "Normal Customer";
             this.normalCustomerToolStripMenuItem.Click += new System.EventHandler(this.normalCustomerToolStripMenuItem_Click);
             // 
             // loyaltyCustomerToolStripMenuItem
             // 
             this.loyaltyCustomerToolStripMenuItem.Name = "loyaltyCustomerToolStripMenuItem";
-            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.loyaltyCustomerToolStripMenuItem.Text = "Loyalty Customer";
             this.loyaltyCustomerToolStripMenuItem.Click += new System.EventHandler(this.loyaltyCustomerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.supplierToolStripMenuItem.Text = "Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // updateProfileToolStripMenuItem
             // 
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
+            this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
             // generateCustomerReportToolStripMenuItem
             // 
@@ -116,6 +117,13 @@ namespace Tripple_A_Supermart_Management_System
             this.monthlyCustomerReportToolStripMenuItem.Size = new System.Drawing.Size(320, 34);
             this.monthlyCustomerReportToolStripMenuItem.Text = "Monthly Customer Report";
             this.monthlyCustomerReportToolStripMenuItem.Click += new System.EventHandler(this.monthlyCustomerReportToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -174,13 +182,6 @@ namespace Tripple_A_Supermart_Management_System
             this.guna2PictureBox1.TabIndex = 148;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // GeneralDash
             // 

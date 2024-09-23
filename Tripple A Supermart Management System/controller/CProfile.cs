@@ -4,9 +4,6 @@ using System.Data;
 public class CProfile
 {
 
-
-
-
     private Profile profile = new Profile();
 
     public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB)
@@ -18,6 +15,16 @@ public class CProfile
         Profile adminDetails = new Profile();
         return adminDetails.getAdminDetails(adminId);
     }
+    public void updateUserProfile(string firstName, string lastName, string Gender, DateTime doB, string email,string userType, Byte[] userPhoto)
+    {
+        profile.updateUserProfile(firstName, lastName, Gender, doB,email,userType, userPhoto);
+    }
+    public DataTable getUserDetails(int userId)
+    {
+        Profile userDetails = new Profile();
+        return userDetails.getUserDetails(userId);
+    }
+
 
 
 }

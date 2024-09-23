@@ -300,5 +300,48 @@ namespace Tripple_A_Supermart_Management_System.model
 
             return stockDetails;
         }
+        public DataTable viewOrder(string orderId)
+        {
+            DataTable orderDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT * FROM CustomerOrder WHERE orderId = @orderId", connection);
+
+                command.Parameters.AddWithValue("@orderId", orderId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                orderDetails.Load(reader);
+            }
+
+            return orderDetails;
+        }
+        public void approvePurchaseOrder(string orderId,string status)
+        {
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("UPDATE CustomerOrder SET status = @status WHERE orderId = @orderId", connection);
+
+                command.Parameters.AddWithValue("@orderId", orderId);
+                command.Parameters.AddWithValue("@status", status);
+                
+
+                int count = command.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    MessageBox.Show("Approval has been given for the Order {orderId}", "Approval Order Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Approval cannot be granted.An error occurred", "Invalid Approval", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

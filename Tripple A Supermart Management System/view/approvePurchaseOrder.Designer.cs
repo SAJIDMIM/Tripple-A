@@ -48,6 +48,8 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtProductId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOrderd = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Cancel_Order = new Guna.UI2.WinForms.Guna2Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGoBackJuniorManger)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +58,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(334, 31);
+            this.label7.Location = new System.Drawing.Point(403, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(384, 44);
             this.label7.TabIndex = 83;
@@ -92,11 +94,12 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Approve_Order.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Approve_Order.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Approve_Order.ForeColor = System.Drawing.Color.Black;
-            this.btn_Approve_Order.Location = new System.Drawing.Point(556, 527);
+            this.btn_Approve_Order.Location = new System.Drawing.Point(839, 184);
             this.btn_Approve_Order.Name = "btn_Approve_Order";
             this.btn_Approve_Order.Size = new System.Drawing.Size(105, 47);
             this.btn_Approve_Order.TabIndex = 106;
             this.btn_Approve_Order.Text = "Approve";
+            this.btn_Approve_Order.Click += new System.EventHandler(this.btn_Approve_Order_Click);
             // 
             // label2
             // 
@@ -142,7 +145,7 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(551, 406);
+            this.label8.Location = new System.Drawing.Point(551, 527);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 29);
             this.label8.TabIndex = 157;
@@ -151,7 +154,10 @@ namespace Tripple_A_Supermart_Management_System.view
             // cmbApproveStatus
             // 
             this.cmbApproveStatus.FormattingEnabled = true;
-            this.cmbApproveStatus.Location = new System.Drawing.Point(556, 469);
+            this.cmbApproveStatus.Items.AddRange(new object[] {
+            "Approved",
+            "Not Approved"});
+            this.cmbApproveStatus.Location = new System.Drawing.Point(556, 591);
             this.cmbApproveStatus.Name = "cmbApproveStatus";
             this.cmbApproveStatus.Size = new System.Drawing.Size(121, 28);
             this.cmbApproveStatus.TabIndex = 158;
@@ -205,7 +211,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtItem.PasswordChar = '\0';
             this.txtItem.PlaceholderText = "Enter Item Name";
             this.txtItem.SelectedText = "";
-            this.txtItem.Size = new System.Drawing.Size(309, 34);
+            this.txtItem.Size = new System.Drawing.Size(195, 34);
             this.txtItem.TabIndex = 152;
             this.txtItem.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
@@ -248,7 +254,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtProductName.PasswordChar = '\0';
             this.txtProductName.PlaceholderText = "Enter Product Name";
             this.txtProductName.SelectedText = "";
-            this.txtProductName.Size = new System.Drawing.Size(309, 34);
+            this.txtProductName.Size = new System.Drawing.Size(231, 34);
             this.txtProductName.TabIndex = 148;
             // 
             // picGoBackJuniorManger
@@ -256,13 +262,14 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackJuniorManger.BackColor = System.Drawing.Color.Transparent;
             this.picGoBackJuniorManger.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picGoBackJuniorManger.ImageRotate = 0F;
-            this.picGoBackJuniorManger.Location = new System.Drawing.Point(818, 33);
+            this.picGoBackJuniorManger.Location = new System.Drawing.Point(911, 31);
             this.picGoBackJuniorManger.Name = "picGoBackJuniorManger";
             this.picGoBackJuniorManger.Size = new System.Drawing.Size(33, 42);
             this.picGoBackJuniorManger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGoBackJuniorManger.TabIndex = 147;
             this.picGoBackJuniorManger.TabStop = false;
             this.picGoBackJuniorManger.UseTransparentBackground = true;
+            this.picGoBackJuniorManger.Click += new System.EventHandler(this.picGoBackJuniorManger_Click);
             // 
             // txtProductId
             // 
@@ -316,18 +323,52 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Cancel_Order.FillColor = System.Drawing.Color.Silver;
             this.btn_Cancel_Order.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_Cancel_Order.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cancel_Order.Location = new System.Drawing.Point(746, 527);
+            this.btn_Cancel_Order.Location = new System.Drawing.Point(839, 264);
             this.btn_Cancel_Order.Name = "btn_Cancel_Order";
             this.btn_Cancel_Order.Size = new System.Drawing.Size(105, 47);
             this.btn_Cancel_Order.TabIndex = 160;
             this.btn_Cancel_Order.Text = "Cancel";
+            this.btn_Cancel_Order.Click += new System.EventHandler(this.btn_Cancel_Order_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(551, 406);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 29);
+            this.label9.TabIndex = 162;
+            this.label9.Text = "Total Price";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Calibri", 10F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.identification;
+            this.guna2TextBox1.Location = new System.Drawing.Point(556, 464);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Enter Total Price";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(231, 34);
+            this.guna2TextBox1.TabIndex = 161;
             // 
             // approvePurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(874, 652);
+            this.ClientSize = new System.Drawing.Size(982, 652);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.btn_Cancel_Order);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbApproveStatus);
@@ -380,5 +421,7 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.ComboBox cmbApproveStatus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btn_Cancel_Order;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

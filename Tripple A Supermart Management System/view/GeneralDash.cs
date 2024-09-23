@@ -64,5 +64,12 @@ namespace Tripple_A_Supermart_Management_System
             back.Show();
             this.Hide();
         }
+
+        private void updateProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userProfile newProfile = new userProfile();
+            newProfile.Show();
+            this.Hide();
+        }
     }
 }

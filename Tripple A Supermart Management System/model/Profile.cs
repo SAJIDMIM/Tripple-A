@@ -17,6 +17,16 @@ public class Profile
     public DateTime DoB { get; set; }
     public byte[] AdminPhoto { get; set; }
 
+    //users profile
+    public int UserId { get; set; }
+    public string firstName { get; set; }
+    public string lastName { get; set; }
+    public string gender { get; set; }
+    public DateTime doB { get; set; }
+    public string email { get; set; }
+    public string userType { get; set; }
+
+
 
     public void updateProfile(int adminId, string firstName, string lastName, string gender, string email, DateTime doB)
     {
@@ -113,6 +123,73 @@ public class Profile
         }
 
         return adminDetails;
+    }
+    public void updateUserProfile(string firstName, string lastName, string Gender, DateTime doB,string email, string userType, Byte[] userPhoto)
+    {
+
+        using (SqlConnection connection = MDBConnection.createConnection())
+        {
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE UserLogin SET userId = @userId,firstName = @firstName,lastName = @lastName,Gender = @gender,doB = @doB,Email = @Email,user_type = @user_type,userPhoto = @userPhoto WHERE userId = @userId", connection);
+
+         
+            command.Parameters.AddWithValue("@firstName", firstName);
+            command.Parameters.AddWithValue("@lastName", lastName);
+            command.Parameters.AddWithValue("@gender", Gender);
+            command.Parameters.AddWithValue("@doB", doB);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@user_type", userType);
+            command.Parameters.AddWithValue("@userPhoto", userPhoto);
+
+            int count = command.ExecuteNonQuery();
+            if (count > 0)
+            {
+                MessageBox.Show("Updated Profile successfully", "User Profile Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Profile Details has not been updated.An error occurred", "Invalid Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+    }
+    public DataTable getUserDetails(int userId)
+    {
+        DataTable userDetails = new DataTable();
+
+        using (SqlConnection connection = MDBConnection.createConnection())
+        {
+            string query = "SELECT user_type,Email FROM UserLogin WHERE userId = @userId";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@userId", userId);
+
+                try
+                {
+                    // Open the connection before executing the command
+                    connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(userDetails);
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error retrieving stock details: " + ex.Message);
+                }
+                finally
+                {
+                    // Close the connection even if an exception occurred
+                    connection.Close();
+                }
+            }
+        }
+
+        return userDetails;
     }
 
 
