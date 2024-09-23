@@ -14,22 +14,42 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Sale_Click(object sender, EventArgs e)
         {
-            int leaveRequestId = Convert.ToInt32(txt_Leave_Id.Text);
-          
+            int leaveRequestId;
 
-            if (leaveRequestId <=0)
+            // Check if the leave request ID is a valid integer
+            if (!int.TryParse(txt_Leave_Id.Text, out leaveRequestId))
             {
-                MessageBox.Show("Please enter valid Leave Id to be process", "Invalid Leave Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                CLeave viewLeaveDetails = new CLeave();
-                DataTable leaveDetails = viewLeaveDetails.getLeave(leaveRequestId);
-                dgvLeaveRequest.DataSource = leaveDetails;
+                MessageBox.Show("Please enter a valid leave request ID.", "Invalid Leave Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            if (leaveRequestId <= 0)
+            {
+                MessageBox.Show("Please enter a valid leave request ID to be processed", "Invalid Leave Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            CLeave viewLeaveDetails = new CLeave();
+            DataTable leaveDetails = viewLeaveDetails.getLeave(leaveRequestId);
+
+            if (leaveDetails == null)
+            {
+                MessageBox.Show("Leave request ID not found. Please enter a valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dgvLeave.DataSource = leaveDetails;
 
 
+
+
+        }
+
+        private void picGoBackAdminLogin_Click(object sender, EventArgs e)
+        {
+            HRManager back = new HRManager();
+            back.Show();
+            this.Hide();
         }
     }
 }

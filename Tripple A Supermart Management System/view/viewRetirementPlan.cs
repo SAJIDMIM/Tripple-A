@@ -16,24 +16,22 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string retirementId = txtRetireId.Text;
 
-            if (retirementId == null)
+            if (string.IsNullOrWhiteSpace(retirementId))
             {
-                MessageBox.Show("Please enter valid Retirement Id to be process", "Invalid Retirement Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                CRetirementPlan viewRetireDetails = new CRetirementPlan();
-
-
-
-                DataTable retireDetails = viewRetireDetails.viewretirementPlan(retirementId);
-
-
-                dgvRetire.DataSource = retireDetails;
+                MessageBox.Show("Please enter a valid retirement ID to be processed", "Invalid Retirement Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            CRetirementPlan viewRetireDetails = new CRetirementPlan();
+            DataTable retireDetails = viewRetireDetails.viewretirementPlan(retirementId);
 
+            if (retireDetails == null || retireDetails.Rows.Count == 0)
+            {
+                MessageBox.Show("Retirement ID not found. Please enter a valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            dgvRetire.DataSource = retireDetails;
 
         }
 

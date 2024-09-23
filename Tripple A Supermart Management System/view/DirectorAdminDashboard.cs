@@ -49,9 +49,7 @@ namespace Tripple_A_Supermart_Management_System
 
         private void monthlySaleReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaleReport newReport = new SaleReport();
-            newReport.Show();
-            this.Hide();
+           
         }
     }
 }

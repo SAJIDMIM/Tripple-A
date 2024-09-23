@@ -26,7 +26,22 @@ namespace Tripple_A_Supermart_Management_System.view
         }
         private void btn_Clear_Click(object sender, EventArgs e)
         {
+            // Clear all text fields
+            txt_employeeId.Text = string.Empty;
+            txtFirstname.Text = string.Empty;
+            txtLastname.Text = string.Empty;
+            txtReason.Text = string.Empty;
 
+            // Reset combo box selections
+            cmbuserType.SelectedItem = null;
+            cmbLeaveType.SelectedItem = null;
+
+            // Reset date pickers
+            dtpleaveStartDate.Value = DateTime.Now;
+            dtpLeaveEndDate.Value = DateTime.Now;
+
+            // Focus on the employee ID field
+            txt_employeeId.Focus();
         }
 
         private void pic_back_login_Click(object sender, EventArgs e)
@@ -88,6 +103,23 @@ namespace Tripple_A_Supermart_Management_System.view
 
             CLeave newLeave = new CLeave();
             newLeave.addLeaveRequest(employeeId, userType, firstName, lastName,leaveType,reason,leaveStartDate,leaveEndDate);
+
+            // Clear all text fields
+            txt_employeeId.Text = string.Empty;
+            txtFirstname.Text = string.Empty;
+            txtLastname.Text = string.Empty;
+            txtReason.Text = string.Empty;
+
+            // Reset combo box selections
+            cmbuserType.SelectedItem = null;
+            cmbLeaveType.SelectedItem = null;
+
+            // Reset date pickers
+            dtpleaveStartDate.Value = DateTime.Now;
+            dtpLeaveEndDate.Value = DateTime.Now;
+
+            // Focus on the employee ID field
+            txt_employeeId.Focus();
 
 
         }

@@ -128,6 +128,7 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Update_Employee_Click(object sender, EventArgs e)
         {
+           
             string originalEmployeeId = txt_Employee_Id.Text; // Store the original employee ID
             string employeeId = txt_Employee_Id.Text;
             string firstName = txt_First_Name.Text;
@@ -198,6 +199,12 @@ namespace Tripple_A_Supermart_Management_System.view
             double salary = double.Parse(txt_Salary.Text);
             string retirement = cmbRetirement.SelectedItem.ToString();
 
+            if (string.IsNullOrEmpty(employeeId))
+            {
+                MessageBox.Show("Employee ID is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             EmployeeController updateEmployee = new EmployeeController();
             updateEmployee.deleteEmployee(employeeId);
 
@@ -265,6 +272,18 @@ namespace Tripple_A_Supermart_Management_System.view
             dtp_Date_Join.Value = DateTime.Now;
             txt_Salary.Text = string.Empty;
             cmbRetirement.SelectedItem = null;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pic_Hr_Dashboard_Click(object sender, EventArgs e)
+        {
+            HRManager back = new HRManager();
+            back.Show();
+            this.Hide();
         }
     }
 }

@@ -42,12 +42,10 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.picHrDish = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpPostDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHrDish)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -245,7 +243,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picHrDish.BackColor = System.Drawing.Color.Transparent;
             this.picHrDish.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
             this.picHrDish.ImageRotate = 0F;
-            this.picHrDish.Location = new System.Drawing.Point(573, 29);
+            this.picHrDish.Location = new System.Drawing.Point(604, 29);
             this.picHrDish.Name = "picHrDish";
             this.picHrDish.Size = new System.Drawing.Size(33, 42);
             this.picHrDish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -253,20 +251,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picHrDish.TabStop = false;
             this.picHrDish.UseTransparentBackground = true;
             this.picHrDish.Click += new System.EventHandler(this.picHrDish_Click);
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.Transparent;
-            this.picClose.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.cross_mark_8369334;
-            this.picClose.ImageRotate = 0F;
-            this.picClose.Location = new System.Drawing.Point(618, 29);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(33, 42);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 145;
-            this.picClose.TabStop = false;
-            this.picClose.UseTransparentBackground = true;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label5
             // 
@@ -293,7 +277,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.ClientSize = new System.Drawing.Size(663, 709);
             this.Controls.Add(this.dtpPostDate);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.picClose);
             this.Controls.Add(this.picHrDish);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
@@ -313,7 +296,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.Text = "Job";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHrDish)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +315,6 @@ namespace Tripple_A_Supermart_Management_System.view
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox picHrDish;
-        private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpPostDate;
     }

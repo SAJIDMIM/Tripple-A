@@ -21,20 +21,33 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Search_Health_Click(object sender, EventArgs e)
         {
 
-            int HealthInsuranceId = Convert.ToInt32(txtHealthId.Text);
+            int healthInsuranceId;
 
+            // Check if the health insurance ID is a valid integer
+            if (!int.TryParse(txtHealthId.Text, out healthInsuranceId))
+            {
+                MessageBox.Show("Please enter a valid health insurance ID.", "Invalid Insurance Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            if (HealthInsuranceId<= 0)
+            if (healthInsuranceId <= 0)
             {
-                MessageBox.Show("Please enter valid Health Insurance Id to be process", "Invalid Insurance Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid health insurance ID to be processed", "Invalid Insurance Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            CHealthInsurance viewHealthDetails = new CHealthInsurance();
+            DataTable healthDetails = viewHealthDetails.viewHealthInsurance(healthInsuranceId);
+
+            if (healthDetails == null || healthDetails.Rows.Count == 0)
             {
-                CHealthInsurance viewHealthDetails = new CHealthInsurance();
-                DataTable healthDetails = viewHealthDetails.viewHealthInsurance(HealthInsuranceId);
-                dgvHealth.DataSource = healthDetails;
+                MessageBox.Show("Health insurance ID not found. Please enter a valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dgvHealth.DataSource = healthDetails;
         }
+    
 
         private void picGoBackHR_Click(object sender, EventArgs e)
         {

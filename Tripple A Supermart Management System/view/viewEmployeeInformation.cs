@@ -22,18 +22,24 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string employeeId = txt_Employee_Id.Text;
 
+            if (string.IsNullOrWhiteSpace(employeeId))
+            {
+                MessageBox.Show("Please enter a valid employee ID to be processed", "Invalid Employee Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            if (employeeId == null)
+            EmployeeController viewEmployeeDetails = new EmployeeController();
+            DataTable employeeDetails = viewEmployeeDetails.viewEmployee(employeeId);
+
+            if (employeeDetails == null || employeeDetails.Rows.Count == 0)
             {
-                MessageBox.Show("Please enter valid Employee Id to be process", "Invalid Employee Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Employee ID not found. Please enter a valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
-            {
-                EmployeeController viewEmployeeDetails = new EmployeeController();
-                DataTable employeeDetails = viewEmployeeDetails.viewEmployee(employeeId);
-                dgvEmployee.DataSource = employeeDetails;
-            }
+
+            dgvEmployee.DataSource = employeeDetails;
         }
+    
 
         private void picGoBackAdminLogin_Click(object sender, EventArgs e)
         {
