@@ -44,6 +44,20 @@ namespace Tripple_A_Supermart_Management_System.view
             string mobile = txtMobile.Text;
             string Type = cmbType.SelectedItem.ToString();
 
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(customerId) || string.IsNullOrWhiteSpace(customerName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(City) || string.IsNullOrWhiteSpace(Street) || string.IsNullOrWhiteSpace(txtPoastalCode.Text) || string.IsNullOrWhiteSpace(mobile) || string.IsNullOrWhiteSpace(Type))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if postal code is a valid number
+            if (!int.TryParse(txtPoastalCode.Text, out PoastalCode))
+            {
+                MessageBox.Show("Invalid postal code", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             CCustomer newCustomer = new CCustomer();
             newCustomer.addCustomer(customerId, customerName, DoB, Gender, Email, City, Street, PoastalCode, mobile, Type);
             clearAllFields();
@@ -74,6 +88,20 @@ namespace Tripple_A_Supermart_Management_System.view
             string mobile = txtMobile.Text;
             string Type = cmbType.SelectedItem.ToString();
 
+
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(customerId) || string.IsNullOrWhiteSpace(customerName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(City) || string.IsNullOrWhiteSpace(Street) || string.IsNullOrWhiteSpace(txtPoastalCode.Text) || string.IsNullOrWhiteSpace(mobile) || string.IsNullOrWhiteSpace(Type))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if postal code is a valid number
+            if (!int.TryParse(txtPoastalCode.Text, out PoastalCode))
+            {
+                MessageBox.Show("Invalid postal code", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             CCustomer newCustomer = new CCustomer();
             newCustomer.editCustomer(customerId, customerName, DoB, Gender, Email, City, Street, PoastalCode, mobile, Type);
             clearAllFields();
@@ -85,12 +113,27 @@ namespace Tripple_A_Supermart_Management_System.view
 
             string mobile = txtMobile.Text;
 
+            // Check if mobile number is filled
+            if (string.IsNullOrWhiteSpace(mobile))
+            {
+                MessageBox.Show("Mobile number is required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if mobile number is valid (assuming it's a unique identifier)
+            if (!IsValidCustomerId(mobile))
+            {
+                MessageBox.Show("Invalid mobile number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CCustomer newCustomer = new CCustomer();
             newCustomer.removeCustomer(mobile);
             clearAllFields();
 
         }
+        
+      
         private void clearAllFields()
         {
             txt_Cus_Id.Text = "";
@@ -162,6 +205,13 @@ namespace Tripple_A_Supermart_Management_System.view
                 // Clear or reset the fields if the text box is empty
                 clearAllFields();
             }
+        }
+
+        private void pic_Cash_Dash_Click(object sender, EventArgs e)
+        {
+            cashierDash back = new cashierDash();
+            back.Show();
+            this.Hide();
         }
     }
 }

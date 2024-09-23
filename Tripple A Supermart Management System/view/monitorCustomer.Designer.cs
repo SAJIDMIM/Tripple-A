@@ -253,6 +253,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pic_Cash_Dash.TabIndex = 235;
             this.pic_Cash_Dash.TabStop = false;
             this.pic_Cash_Dash.UseTransparentBackground = true;
+            this.pic_Cash_Dash.Click += new System.EventHandler(this.pic_Cash_Dash_Click);
             // 
             // txtMobile
             // 
