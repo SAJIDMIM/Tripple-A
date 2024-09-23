@@ -29,21 +29,23 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string productId = txt_Product_Id.Text;
 
-            if (productId == null)
+            if (string.IsNullOrWhiteSpace(productId))
             {
-                MessageBox.Show("Please enter valid Product Id to be process", "Invalid Product Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid Product ID to be processed", "Invalid Product ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            CProduct viewProduct = new CProduct();
+
+            DataTable productDetails = viewProduct.viewProduct(productId);
+
+            if (productDetails == null || productDetails.Rows.Count == 0)
             {
-                CProduct viewProduct = new CProduct();
-
-
-                DataTable productDetails = viewProduct.viewProduct(productId);
-
-
-
-                dgvProduct.DataSource = productDetails;
+                MessageBox.Show("Product ID not found or unknown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dgvProduct.DataSource = productDetails;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

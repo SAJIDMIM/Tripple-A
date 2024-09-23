@@ -29,6 +29,19 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime stockDate = dtpDateStock.Value;
             string supplierName = txtSupplierName.Text;
 
+            if (string.IsNullOrWhiteSpace(stockId) ||
+        string.IsNullOrWhiteSpace(stockName) ||
+        string.IsNullOrWhiteSpace(stockType) ||
+        string.IsNullOrWhiteSpace(txtQuantity.Text) ||
+        string.IsNullOrWhiteSpace(txtLocation.Text) ||
+        string.IsNullOrWhiteSpace(txtCost.Text) ||
+        string.IsNullOrWhiteSpace(supplierName))
+            {
+                MessageBox.Show("Please fill in all required fields", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           
             CStock placeStock = new CStock();
             placeStock.placeStockOrder(stockId, stockName, stockType, stockQuantity, Location, cost, stockDate, supplierName);
 
