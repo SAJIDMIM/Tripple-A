@@ -20,23 +20,34 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Sale_Click(object sender, EventArgs e)
         {
+
             string saleId = txtSaleId.Text;
 
+            // Check if sale ID is empty or null
+            if (string.IsNullOrWhiteSpace(saleId))
+            {
+                MessageBox.Show("Please enter a valid Sale ID", "Invalid Sale ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            CSale viewSale = new CSale();
+
+            // Check if sale ID exists before viewing sale details
             if (saleId == null)
             {
-                MessageBox.Show("Please enter valid Product Id to be process", "Invalid Product Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sale ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            DataTable saleDetails = viewSale.viewSale(saleId);
+
+            if (saleDetails == null || saleDetails.Rows.Count == 0)
             {
-                CSale viewSale = new CSale();
-
-
-                DataTable saleDetails = viewSale.viewSale(saleId);
-
-
-
-                dgvSaleDetails.DataSource = saleDetails;
+                MessageBox.Show("No sale details found for the given Sale ID", "No Data Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+
+            dgvSaleDetails.DataSource = saleDetails;
         }
 
         private void picGoBackSaleDash_Click(object sender, EventArgs e)

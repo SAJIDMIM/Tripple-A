@@ -32,6 +32,20 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime expiryDate = dtpED.Value;
             string manufacturer = txtManufacturer.Text;
 
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(itemId) || string.IsNullOrWhiteSpace(itemName) || string.IsNullOrWhiteSpace(Description) || string.IsNullOrWhiteSpace(department) || string.IsNullOrWhiteSpace(txtQty.Text) || string.IsNullOrWhiteSpace(txtUnitPrice.Text) || string.IsNullOrWhiteSpace(txtTotalPrice.Text) || string.IsNullOrWhiteSpace(Category) || string.IsNullOrWhiteSpace(manufacturer))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if quantity, unit price, and total price are valid numbers
+            if (!int.TryParse(txtQty.Text, out int quantity) || !double.TryParse(txtUnitPrice.Text, out  unitprice) || !double.TryParse(txtTotalPrice.Text, out  totalprice))
+            {
+                MessageBox.Show("Invalid quantity, unit price, or total price", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             CItem newItem = new CItem();
             newItem.addItem(itemId, itemName, Description, department, Quantity, unitprice, totalprice, Category,manufactureDate,expiryDate,manufacturer);
             txt_Item_Name.Text = "";
@@ -61,27 +75,52 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime expiryDate = dtpED.Value;
             string manufacturer = txtManufacturer.Text;
 
-            CItem newItem = new CItem();
-            newItem.editItem(itemId, itemName, Description, department, Quantity, unitprice, totalprice, Category, manufactureDate, expiryDate, manufacturer);
-            txt_Item_Name.Text = "";
-            txtDesc.Text = "";
-            cmbDep.SelectedIndex = -1; // Reset the combobox
-            txtQty.Text = "";
-            txtUnitPrice.Text = "";
-            txtTotalPrice.Text = "";
-            cmbCategory.SelectedIndex = -1; // Reset the combobox
-            dtpMD.Value = DateTime.Now;
-            dtpED.Value = DateTime.Now;
-            txtManufacturer.Text = "";
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(itemId) || string.IsNullOrWhiteSpace(itemName) || string.IsNullOrWhiteSpace(Description) || string.IsNullOrWhiteSpace(department) || string.IsNullOrWhiteSpace(txtQty.Text) || string.IsNullOrWhiteSpace(txtUnitPrice.Text) || string.IsNullOrWhiteSpace(txtTotalPrice.Text) || string.IsNullOrWhiteSpace(Category) || string.IsNullOrWhiteSpace(manufacturer))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(txt_Item_Id.Text != null)
+            {
+                CItem newItem = new CItem();
+                newItem.editItem(itemId, itemName, Description, department, Quantity, unitprice, totalprice, Category, manufactureDate, expiryDate, manufacturer);
+                txt_Item_Name.Text = "";
+                txtDesc.Text = "";
+                cmbDep.SelectedIndex = -1; // Reset the combobox
+                txtQty.Text = "";
+                txtUnitPrice.Text = "";
+                txtTotalPrice.Text = "";
+                cmbCategory.SelectedIndex = -1; // Reset the combobox
+                dtpMD.Value = DateTime.Now;
+                dtpED.Value = DateTime.Now;
+                txtManufacturer.Text = "";
+            }
+           
         }
 
         private void btn_Delete_Item_Click(object sender, EventArgs e)
         {
             string itemId = txt_Item_Id.Text;
-           
+
+            // Check if the item ID is filled
+            if (string.IsNullOrWhiteSpace(itemId))
+            {
+                MessageBox.Show("Item ID is required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if the item ID is valid (assuming it's a unique identifier)
+            if (!IsValidItemId(itemId))
+            {
+                MessageBox.Show("Invalid item ID", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CItem newItem = new CItem();
             newItem.removeItem(itemId);
+
+            // Clear or reset the fields
             txt_Item_Name.Text = "";
             txtDesc.Text = "";
             cmbDep.SelectedIndex = -1; // Reset the combobox

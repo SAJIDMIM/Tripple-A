@@ -31,11 +31,11 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvOrderDetails = new System.Windows.Forms.DataGridView();
+            this.picGoBackSaleDash = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Search_Order = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.picGoBackSaleDash = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtOrderId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetails)).BeginInit();
@@ -56,6 +56,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 480);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dgvOrderDetails
             // 
@@ -67,6 +68,19 @@ namespace Tripple_A_Supermart_Management_System.view
             this.dgvOrderDetails.RowTemplate.Height = 28;
             this.dgvOrderDetails.Size = new System.Drawing.Size(514, 294);
             this.dgvOrderDetails.TabIndex = 147;
+            // 
+            // picGoBackSaleDash
+            // 
+            this.picGoBackSaleDash.BackColor = System.Drawing.Color.Transparent;
+            this.picGoBackSaleDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
+            this.picGoBackSaleDash.ImageRotate = 0F;
+            this.picGoBackSaleDash.Location = new System.Drawing.Point(22, 15);
+            this.picGoBackSaleDash.Name = "picGoBackSaleDash";
+            this.picGoBackSaleDash.Size = new System.Drawing.Size(33, 42);
+            this.picGoBackSaleDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGoBackSaleDash.TabIndex = 146;
+            this.picGoBackSaleDash.TabStop = false;
+            this.picGoBackSaleDash.UseTransparentBackground = true;
             // 
             // btn_Search_Order
             // 
@@ -83,6 +97,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Search_Order.Size = new System.Drawing.Size(94, 34);
             this.btn_Search_Order.TabIndex = 105;
             this.btn_Search_Order.Text = "Search ";
+            this.btn_Search_Order.Click += new System.EventHandler(this.btn_Search_Order_Click);
             // 
             // label3
             // 
@@ -93,29 +108,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label3.Size = new System.Drawing.Size(94, 29);
             this.label3.TabIndex = 93;
             this.label3.Text = "Order Id";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(125, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(341, 44);
-            this.label7.TabIndex = 82;
-            this.label7.Text = "View Customer Order";
-            // 
-            // picGoBackSaleDash
-            // 
-            this.picGoBackSaleDash.BackColor = System.Drawing.Color.Transparent;
-            this.picGoBackSaleDash.Image = global::Tripple_A_Supermart_Management_System.Properties.Resources.home;
-            this.picGoBackSaleDash.ImageRotate = 0F;
-            this.picGoBackSaleDash.Location = new System.Drawing.Point(22, 15);
-            this.picGoBackSaleDash.Name = "picGoBackSaleDash";
-            this.picGoBackSaleDash.Size = new System.Drawing.Size(33, 42);
-            this.picGoBackSaleDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picGoBackSaleDash.TabIndex = 146;
-            this.picGoBackSaleDash.TabStop = false;
-            this.picGoBackSaleDash.UseTransparentBackground = true;
             // 
             // txtOrderId
             // 
@@ -137,6 +129,16 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtOrderId.SelectedText = "";
             this.txtOrderId.Size = new System.Drawing.Size(289, 34);
             this.txtOrderId.TabIndex = 83;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(125, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(341, 44);
+            this.label7.TabIndex = 82;
+            this.label7.Text = "View Customer Order";
             // 
             // pictureBox1
             // 

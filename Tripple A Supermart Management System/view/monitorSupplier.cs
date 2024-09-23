@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tripple_A_Supermart_Management_System.controller;
@@ -21,17 +22,41 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Add_Supplier_Click(object sender, EventArgs e)
         {
             string supplierId = txt_Supplier_Id.Text;
+
+            // Check if supplier ID is empty or null
+            if (string.IsNullOrWhiteSpace(supplierId))
+            {
+                MessageBox.Show("Please enter a valid Supplier ID", "Invalid Supplier ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string supplierName = txt_Supplier_Name.Text;
             string mobile = txt_Supplier_Contact.Text;
-            string Company = txt_Supplier_Company.Text;
-            string productType = cmbProductType.SelectedItem.ToString();
-            DateTime deliverySchedule = dtpDelSchedule.Value;
+            string company = txt_Supplier_Company.Text;
+            string productType = cmbProductType.SelectedItem?.ToString();
             string payTerm = txtPayTerms.Text;
             string comment = txtComment.Text;
 
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(supplierName) || string.IsNullOrWhiteSpace(mobile) || string.IsNullOrWhiteSpace(company) || string.IsNullOrWhiteSpace(productType) || string.IsNullOrWhiteSpace(payTerm) || string.IsNullOrWhiteSpace(comment))
+            {
+                MessageBox.Show("Please fill in all required fields", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if mobile number is a valid phone number
+            if (!Regex.IsMatch(mobile, @"^\d{10}$"))
+            {
+                MessageBox.Show("Please enter a valid 10-digit phone number", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DateTime deliverySchedule = dtpDelSchedule.Value;
+
             CSupplier newSupplier = new CSupplier();
-            newSupplier.addSupplierDetails(supplierId, supplierName, mobile, Company, productType, deliverySchedule, payTerm, comment);
-            // Clear or reset the fields if the text box is empty
+            newSupplier.addSupplierDetails(supplierId, supplierName, mobile, company, productType, deliverySchedule, payTerm, comment);
+
+            // Clear or reset the fields
             txt_Supplier_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txt_Supplier_Contact.Text = "";
@@ -40,21 +65,52 @@ namespace Tripple_A_Supermart_Management_System.view
             txtPayTerms.Text = "";
             txtComment.Text = "";
         }
-
+        
         private void btn_Update_Supplier_Click(object sender, EventArgs e)
         {
             string supplierId = txt_Supplier_Id.Text;
+
+            // Check if supplier ID is empty or null
+            if (string.IsNullOrWhiteSpace(supplierId))
+            {
+                MessageBox.Show("Please enter a valid Supplier ID", "Invalid Supplier ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string supplierName = txt_Supplier_Name.Text;
             string mobile = txt_Supplier_Contact.Text;
-            string Company = txt_Supplier_Company.Text;
-            string productType = cmbProductType.SelectedItem.ToString();
-            DateTime deliverySchedule = dtpDelSchedule.Value;
+            string company = txt_Supplier_Company.Text;
+            string productType = cmbProductType.SelectedItem?.ToString();
             string payTerm = txtPayTerms.Text;
             string comment = txtComment.Text;
 
+            // Check if all required fields are filled
+            if (string.IsNullOrWhiteSpace(supplierName) || string.IsNullOrWhiteSpace(mobile) || string.IsNullOrWhiteSpace(company) || string.IsNullOrWhiteSpace(productType) || string.IsNullOrWhiteSpace(payTerm) || string.IsNullOrWhiteSpace(comment))
+            {
+                MessageBox.Show("Please fill in all required fields", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if mobile number is a valid phone number
+            if (!Regex.IsMatch(mobile, @"^\d{10}$"))
+            {
+                MessageBox.Show("Please enter a valid 10-digit phone number", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DateTime deliverySchedule = dtpDelSchedule.Value;
+
+            // Check if supplier ID exists before updating
             CSupplier newSupplier = new CSupplier();
-            newSupplier.updateSupplierDetails(supplierId, supplierName, mobile, Company, productType, deliverySchedule, payTerm, comment);
-            // Clear or reset the fields if the text box is empty
+            if (supplierId == null)
+            {
+                MessageBox.Show("Supplier ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            newSupplier.updateSupplierDetails(supplierId, supplierName, mobile, company, productType, deliverySchedule, payTerm, comment);
+
+            // Clear or reset the fields
             txt_Supplier_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txt_Supplier_Contact.Text = "";
@@ -67,11 +123,26 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Delete_Supplier_Click(object sender, EventArgs e)
         {
             string supplierId = txt_Supplier_Id.Text;
-            
+
+            // Check if supplier ID is empty or null
+            if (string.IsNullOrWhiteSpace(supplierId))
+            {
+                MessageBox.Show("Please enter a valid Supplier ID", "Invalid Supplier ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CSupplier newSupplier = new CSupplier();
+
+            // Check if supplier ID exists before deleting
+            if (supplierId == null)
+            {
+                MessageBox.Show("Supplier ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             newSupplier.deleteSupplierDetails(supplierId);
-            // Clear or reset the fields if the text box is empty
+
+            // Clear or reset the fields
             txt_Supplier_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txt_Supplier_Contact.Text = "";

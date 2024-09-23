@@ -47,17 +47,47 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Update_Delivery_Click(object sender, EventArgs e)
         {
-            string DeliveryId = txt_Delivery_Id.Text;
+            string deliveryId = txt_Delivery_Id.Text;
+
+            // Check if delivery ID is empty or null
+            if (string.IsNullOrWhiteSpace(deliveryId))
+            {
+                MessageBox.Show("Please enter a valid Delivery ID", "Invalid Delivery ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string deliveryName = txt_Delivery_Name.Text;
             string contactNumber = txt_Delivery_Contact.Text;
             string deliveryAddress = txt_Delivery_Address.Text;
-            string deliveryType = cmbDeliveryType.SelectedItem.ToString();
-            string availableStatus = cmbAvailableStatus.SelectedItem.ToString();
+
+            // Check if required fields are empty or null
+            if (string.IsNullOrWhiteSpace(deliveryName) || string.IsNullOrWhiteSpace(contactNumber) || string.IsNullOrWhiteSpace(deliveryAddress))
+            {
+                MessageBox.Show("Please fill in all required fields", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if contact number is a valid phone number
+            if (!Regex.IsMatch(contactNumber, @"^\d{10}$"))
+            {
+                MessageBox.Show("Please enter a valid 10-digit phone number", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string deliveryType = cmbDeliveryType.SelectedItem?.ToString();
+            string availableStatus = cmbAvailableStatus.SelectedItem?.ToString();
+
+            // Check if delivery type and available status are selected
+            if (string.IsNullOrWhiteSpace(deliveryType) || string.IsNullOrWhiteSpace(availableStatus))
+            {
+                MessageBox.Show("Please select a delivery type and available status", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CDelivery newDelivery = new CDelivery();
-            newDelivery.updateDelivery(DeliveryId, deliveryName, contactNumber, deliveryAddress, deliveryType, availableStatus);
-            // Clear or reset the fields if the text box is empty
+            newDelivery.updateDelivery(deliveryId, deliveryName, contactNumber, deliveryAddress, deliveryType, availableStatus);
+
+            // Clear or reset the fields
             txt_Delivery_Name.Text = "";
             cmbDeliveryType.SelectedIndex = -1; // Reset the combobox
             txt_Delivery_Contact.Text = "";
@@ -67,12 +97,27 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Delete_Delivery_Click(object sender, EventArgs e)
         {
-            string DeliveryId = txt_Delivery_Id.Text;
+            string deliveryId = txt_Delivery_Id.Text;
 
+            // Check if delivery ID is empty or null
+            if (string.IsNullOrWhiteSpace(deliveryId))
+            {
+                MessageBox.Show("Please enter a valid Delivery ID", "Invalid Delivery ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CDelivery newDelivery = new CDelivery();
-            newDelivery.deleteDelivery(DeliveryId);
-            // Clear or reset the fields if the text box is empty
+
+            // Check if the delivery ID exists before deleting
+            if (deliveryId == null)
+            {
+                MessageBox.Show("Delivery ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            newDelivery.deleteDelivery(deliveryId);
+
+            // Clear or reset the fields
             txt_Delivery_Name.Text = "";
             cmbDeliveryType.SelectedIndex = -1; // Reset the combobox
             txt_Delivery_Contact.Text = "";

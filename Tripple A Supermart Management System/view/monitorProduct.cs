@@ -24,20 +24,41 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string productId = txt_Product_Id.Text;
             string productName = txt_Product_Name.Text;
-            string category = cmbProductType.SelectedItem.ToString();
-            int Quantity = int.Parse(txtQty.Text);
-            string Description = txtDescription.Text;
-            double price = double.Parse(txtPrice.Text);
+            string category = cmbProductType.SelectedItem?.ToString();
+            string qtyText = txtQty.Text;
+            string description = txtDescription.Text;
+            string priceText = txtPrice.Text;
+
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(productId) || string.IsNullOrWhiteSpace(productName) || string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(qtyText) || string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(priceText))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int quantity;
+            if (!int.TryParse(qtyText, out quantity))
+            {
+                MessageBox.Show("Invalid quantity", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double productPrice;
+            if (!double.TryParse(priceText, out productPrice))
+            {
+                MessageBox.Show("Invalid price", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CProduct newProduct = new CProduct();
-            newProduct.addProduct(productId, productName, category, Quantity, Description, price);
-            // Clear or reset the fields if the text box is empty
+            newProduct.addProduct(productId, productName, category, quantity, description, productPrice);
+
+            // Clear or reset the fields
             txt_Product_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txtQty.Text = "";
             txtDescription.Text = "";
             txtPrice.Text = "";
-
 
         }
 
@@ -45,14 +66,43 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string productId = txt_Product_Id.Text;
             string productName = txt_Product_Name.Text;
-            string category = cmbProductType.SelectedItem.ToString();
-            int Quantity = int.Parse(txtQty.Text);
-            string Description = txtDescription.Text;
-            double price = double.Parse(txtPrice.Text);
+            string category = cmbProductType.SelectedItem?.ToString();
+            string qtyText = txtQty.Text;
+            string description = txtDescription.Text;
+            string priceText = txtPrice.Text;
 
+            // Check if all fields are filled
+            if (string.IsNullOrWhiteSpace(productId) || string.IsNullOrWhiteSpace(productName) || string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(qtyText) || string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(priceText))
+            {
+                MessageBox.Show("All fields are required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int quantity;
+            if (!int.TryParse(qtyText, out quantity))
+            {
+                MessageBox.Show("Invalid quantity", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double productPrice;
+            if (!double.TryParse(priceText, out productPrice))
+            {
+                MessageBox.Show("Invalid price", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if product ID exists before updating
             CProduct newProduct = new CProduct();
-            newProduct.updateProduct(productId, productName, category, Quantity, Description, price);
-            // Clear or reset the fields if the text box is empty
+            if (productId == null)
+            {
+                MessageBox.Show("Product ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            newProduct.updateProduct(productId, productName, category, quantity, description, productPrice);
+
+            // Clear or reset the fields
             txt_Product_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txtQty.Text = "";
@@ -63,11 +113,25 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Delete_Product_Click(object sender, EventArgs e)
         {
             string productId = txt_Product_Id.Text;
-            
 
+            // Check if product ID is filled
+            if (string.IsNullOrWhiteSpace(productId))
+            {
+                MessageBox.Show("Product ID is required", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if product ID exists before deleting
             CProduct newProduct = new CProduct();
+            if (productId == null)
+            {
+                MessageBox.Show("Product ID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             newProduct.removeProduct(productId);
-            // Clear or reset the fields if the text box is empty
+
+            // Clear or reset the fields
             txt_Product_Name.Text = "";
             cmbProductType.SelectedIndex = -1; // Reset the combobox
             txtQty.Text = "";
