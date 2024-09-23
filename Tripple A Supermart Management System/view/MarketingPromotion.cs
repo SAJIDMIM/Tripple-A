@@ -65,23 +65,75 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Update_Marketing_Promotion_Click(object sender, EventArgs e)
         {
+            string markPromotionId = txt_MP_Id.Text;
+            string marketPromotionName = txt_Marketing_Name.Text;
+            DateTime startDate = dtp_Start_Date.Value;
+            DateTime endDate = dtp_End_Date.Value;
+            double discount;
 
-           
-                string markPromotionId = txt_MP_Id.Text;
-                string marketPromotionName = txt_Marketing_Name.Text;
-                DateTime startDate = dtp_Start_Date.Value;
-                DateTime endDate = dtp_End_Date.Value;
-                double discount = double.Parse(txt_Discount.Text);
-                string offer = cmb_Offer_Type.SelectedItem.ToString();
-                string emailMarketing = txtEmail.Text;
-                string contentMarketing = cmb_Marketing.SelectedItem.ToString();
-                string inStorePromotion = cmbStore.SelectedItem.ToString();
-                string condition = txtCondition.Text;
+            if (string.IsNullOrWhiteSpace(markPromotionId))
+            {
+                MessageBox.Show("Marketing Promotion ID is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                // Create an instance of the CMarketingPromotion controller
-                CMarketingPromotion cMarketingPromotion = new CMarketingPromotion();
+            if (string.IsNullOrWhiteSpace(marketPromotionName))
+            {
+                MessageBox.Show("Marketing Promotion Name is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                cMarketingPromotion.updatePromotionMarketing(markPromotionId, marketPromotionName, startDate, endDate, discount, offer, emailMarketing, contentMarketing, inStorePromotion, condition);
+            if (startDate > endDate)
+            {
+                MessageBox.Show("Start date cannot be greater than end date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!double.TryParse(txt_Discount.Text, out discount))
+            {
+                MessageBox.Show("Invalid discount value. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string offer = cmb_Offer_Type.SelectedItem?.ToString();
+            if (string.IsNullOrWhiteSpace(offer))
+            {
+                MessageBox.Show("Offer type is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string emailMarketing = txtEmail.Text;
+            if (string.IsNullOrWhiteSpace(emailMarketing))
+            {
+                MessageBox.Show("Email marketing is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string contentMarketing = cmb_Marketing.SelectedItem?.ToString();
+            if (string.IsNullOrWhiteSpace(contentMarketing))
+            {
+                MessageBox.Show("Content marketing is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string inStorePromotion = cmbStore.SelectedItem?.ToString();
+            if (string.IsNullOrWhiteSpace(inStorePromotion))
+            {
+                MessageBox.Show("In-store promotion is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string condition = txtCondition.Text;
+            if (string.IsNullOrWhiteSpace(condition))
+            {
+                MessageBox.Show("Condition is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Create an instance of the CMarketingPromotion controller
+            CMarketingPromotion cMarketingPromotion = new CMarketingPromotion();
+
+            cMarketingPromotion.updatePromotionMarketing(markPromotionId, marketPromotionName, startDate, endDate, discount, offer, emailMarketing, contentMarketing, inStorePromotion, condition);
 
             // Clear or reset the fields if no marketing promotion is found
             txt_Marketing_Name.Text = "";
@@ -93,15 +145,24 @@ namespace Tripple_A_Supermart_Management_System.view
             cmb_Marketing.SelectedIndex = -1;
             cmbStore.SelectedIndex = -1;
             txtCondition.Text = "";
+
         }
 
         private void btn_Delete_Marketing_Promotion_Click(object sender, EventArgs e)
         {
             string markPromotionId = txt_MP_Id.Text;
+
+            if (string.IsNullOrWhiteSpace(markPromotionId))
+            {
+                MessageBox.Show("Marketing Promotion ID is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Create an instance of the CMarketingPromotion controller
             CMarketingPromotion cMarketingPromotion = new CMarketingPromotion();
 
             cMarketingPromotion.removePromotionMarketing(markPromotionId);
+
             // Clear or reset the fields if no marketing promotion is found
             txt_Marketing_Name.Text = "";
             dtp_Start_Date.Value = DateTime.Now; // Or a default date

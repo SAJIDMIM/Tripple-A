@@ -28,21 +28,23 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string markPromotion_Id = txt_Promotion_Id.Text;
 
-            if (markPromotion_Id == null)
+            if (string.IsNullOrWhiteSpace(markPromotion_Id))
             {
-                MessageBox.Show("Please enter valid Promotion Id to be process", "Invalid Retirement Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid Promotion ID to be processed", "Invalid Promotion ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            CMarketingPromotion viewPromoDetails = new CMarketingPromotion();
+
+            DataTable promoDetails = viewPromoDetails.viewMarketingPromotion(markPromotion_Id);
+
+            if (promoDetails == null || promoDetails.Rows.Count == 0)
             {
-                CMarketingPromotion viewPromoDetails = new CMarketingPromotion();
-
-
-                DataTable promoDetails = viewPromoDetails.viewMarketingPromotion(markPromotion_Id);
-                
-
-
-                dgvPromo.DataSource = promoDetails;
+                MessageBox.Show("Promotion ID not found or invalid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dgvPromo.DataSource = promoDetails;
 
         }
 

@@ -70,11 +70,18 @@ namespace Tripple_A_Supermart_Management_System.view
         private void btn_Delete_Marketing_Click(object sender, EventArgs e)
         {
             string marketingId = txt_Mark_Id.Text;
-            
 
+            if (string.IsNullOrWhiteSpace(marketingId))
+            {
+                MessageBox.Show("Marketing ID is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CMarketing newMarketing = new CMarketing();
             newMarketing.removeMarketing(marketingId);
+
+            // Clear or reset the fields if no marketing is found
+            txt_Mark_Id.Clear();
 
         }
 

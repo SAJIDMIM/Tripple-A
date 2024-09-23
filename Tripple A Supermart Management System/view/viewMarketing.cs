@@ -22,22 +22,25 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             string marketingId = txt_Marketing_Id.Text;
 
-            if (marketingId == null)
+            if (string.IsNullOrWhiteSpace(marketingId))
             {
-                MessageBox.Show("Please enter valid Marketing Id to be process", "Invalid Marketing Id", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid Marketing ID to be processed", "Invalid Marketing ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            CMarketing viewMarketingDetails = new CMarketing();
+
+            DataTable marketDetails = viewMarketingDetails.viewMarketing(marketingId);
+
+            if (marketDetails == null || marketDetails.Rows.Count == 0)
             {
-                CMarketing viewMarketingDetails = new CMarketing();
-
-
-                DataTable marketDetails = viewMarketingDetails.viewMarketing(marketingId);
-
-
-
-                dgvMarketing.DataSource = marketDetails;
+                MessageBox.Show("Marketing ID not found or invalid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dgvMarketing.DataSource = marketDetails;
         }
+       
 
         private void picDMDashboard_Click(object sender, EventArgs e)
         {
