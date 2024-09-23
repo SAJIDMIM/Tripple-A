@@ -33,12 +33,15 @@ namespace Tripple_A_Supermart_Management_System.view
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Cancel = new Guna.UI2.WinForms.Guna2Button();
+            this.txtdueAmount = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_Send_Bill_Reminder = new Guna.UI2.WinForms.Guna2Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.dtp_Next_Date = new System.Windows.Forms.DateTimePicker();
             this.cmbOption = new System.Windows.Forms.ComboBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.picGoBackAdminLogin = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_Send_Bill_Reminder = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Email_Notify = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_reminder_Id = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtdueAmount = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btn_Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -115,6 +115,75 @@ namespace Tripple_A_Supermart_Management_System.view
             this.panel3.Size = new System.Drawing.Size(703, 515);
             this.panel3.TabIndex = 0;
             // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.BorderThickness = 1;
+            this.btn_Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Cancel.FillColor = System.Drawing.Color.LightGray;
+            this.btn_Cancel.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Cancel.ForeColor = System.Drawing.Color.Black;
+            this.btn_Cancel.Location = new System.Drawing.Point(577, 432);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(99, 45);
+            this.btn_Cancel.TabIndex = 153;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // txtdueAmount
+            // 
+            this.txtdueAmount.BorderColor = System.Drawing.Color.Black;
+            this.txtdueAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtdueAmount.DefaultText = "";
+            this.txtdueAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtdueAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtdueAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdueAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdueAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtdueAmount.Font = new System.Drawing.Font("Calibri", 9F);
+            this.txtdueAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtdueAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtdueAmount.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.price_tag;
+            this.txtdueAmount.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtdueAmount.Location = new System.Drawing.Point(297, 291);
+            this.txtdueAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtdueAmount.Name = "txtdueAmount";
+            this.txtdueAmount.PasswordChar = '\0';
+            this.txtdueAmount.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.txtdueAmount.PlaceholderText = "Enter Message";
+            this.txtdueAmount.SelectedText = "";
+            this.txtdueAmount.Size = new System.Drawing.Size(163, 38);
+            this.txtdueAmount.TabIndex = 152;
+            // 
+            // btn_Send_Bill_Reminder
+            // 
+            this.btn_Send_Bill_Reminder.BorderThickness = 1;
+            this.btn_Send_Bill_Reminder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Send_Bill_Reminder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Send_Bill_Reminder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Send_Bill_Reminder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Send_Bill_Reminder.FillColor = System.Drawing.Color.Red;
+            this.btn_Send_Bill_Reminder.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_Send_Bill_Reminder.ForeColor = System.Drawing.Color.Black;
+            this.btn_Send_Bill_Reminder.Location = new System.Drawing.Point(577, 361);
+            this.btn_Send_Bill_Reminder.Name = "btn_Send_Bill_Reminder";
+            this.btn_Send_Bill_Reminder.Size = new System.Drawing.Size(99, 45);
+            this.btn_Send_Bill_Reminder.TabIndex = 110;
+            this.btn_Send_Bill_Reminder.Text = "Send";
+            this.btn_Send_Bill_Reminder.Click += new System.EventHandler(this.btn_Set_Minimum_Stock_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(292, 237);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 29);
+            this.label9.TabIndex = 151;
+            this.label9.Text = "Due Amount";
+            // 
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
@@ -163,23 +232,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.picGoBackAdminLogin.TabIndex = 146;
             this.picGoBackAdminLogin.TabStop = false;
             this.picGoBackAdminLogin.UseTransparentBackground = true;
-            // 
-            // btn_Send_Bill_Reminder
-            // 
-            this.btn_Send_Bill_Reminder.BorderThickness = 1;
-            this.btn_Send_Bill_Reminder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Send_Bill_Reminder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Send_Bill_Reminder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Send_Bill_Reminder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Send_Bill_Reminder.FillColor = System.Drawing.Color.Red;
-            this.btn_Send_Bill_Reminder.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btn_Send_Bill_Reminder.ForeColor = System.Drawing.Color.Black;
-            this.btn_Send_Bill_Reminder.Location = new System.Drawing.Point(577, 361);
-            this.btn_Send_Bill_Reminder.Name = "btn_Send_Bill_Reminder";
-            this.btn_Send_Bill_Reminder.Size = new System.Drawing.Size(99, 45);
-            this.btn_Send_Bill_Reminder.TabIndex = 110;
-            this.btn_Send_Bill_Reminder.Text = "Send";
-            this.btn_Send_Bill_Reminder.Click += new System.EventHandler(this.btn_Set_Minimum_Stock_Click);
+            this.picGoBackAdminLogin.Click += new System.EventHandler(this.picGoBackAdminLogin_Click);
             // 
             // txt_Email_Notify
             // 
@@ -337,58 +390,6 @@ namespace Tripple_A_Supermart_Management_System.view
             this.label7.Size = new System.Drawing.Size(345, 44);
             this.label7.TabIndex = 82;
             this.label7.Text = "Send Billing Reminder";
-            // 
-            // txtdueAmount
-            // 
-            this.txtdueAmount.BorderColor = System.Drawing.Color.Black;
-            this.txtdueAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdueAmount.DefaultText = "";
-            this.txtdueAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtdueAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtdueAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdueAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdueAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdueAmount.Font = new System.Drawing.Font("Calibri", 9F);
-            this.txtdueAmount.ForeColor = System.Drawing.Color.Black;
-            this.txtdueAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdueAmount.IconLeft = global::Tripple_A_Supermart_Management_System.Properties.Resources.price_tag;
-            this.txtdueAmount.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtdueAmount.Location = new System.Drawing.Point(297, 291);
-            this.txtdueAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtdueAmount.Name = "txtdueAmount";
-            this.txtdueAmount.PasswordChar = '\0';
-            this.txtdueAmount.PlaceholderForeColor = System.Drawing.Color.LightGray;
-            this.txtdueAmount.PlaceholderText = "Enter Message";
-            this.txtdueAmount.SelectedText = "";
-            this.txtdueAmount.Size = new System.Drawing.Size(163, 38);
-            this.txtdueAmount.TabIndex = 152;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(292, 237);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 29);
-            this.label9.TabIndex = 151;
-            this.label9.Text = "Due Amount";
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.BorderThickness = 1;
-            this.btn_Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Cancel.FillColor = System.Drawing.Color.LightGray;
-            this.btn_Cancel.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btn_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cancel.Location = new System.Drawing.Point(577, 432);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(99, 45);
-            this.btn_Cancel.TabIndex = 153;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // BillingReminder
             // 

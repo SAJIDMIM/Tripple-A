@@ -35,7 +35,7 @@ namespace Tripple_A_Supermart_Management_System.view
             }
             else
             {
-                MessageBox.Show("No sale id was found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Sale Id was found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -55,20 +55,16 @@ namespace Tripple_A_Supermart_Management_System.view
             double price = Convert.ToDouble(txtPrice.Text);
             double discount = Convert.ToDouble(txtDiscount.Text);
 
-
+            if (string.IsNullOrWhiteSpace(txt_saleId.Text) || string.IsNullOrWhiteSpace(productId) || string.IsNullOrWhiteSpace(productName) || string.IsNullOrWhiteSpace(txtPrice.Text) || string.IsNullOrWhiteSpace(txtDiscount.Text))
+            {
+                MessageBox.Show("All fields are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Proceed with promoting the sale (no need for the if condition now)
             controller.CSale promoteSale = new controller.CSale();
             promoteSale.promoteSale(saleId, dtpStartSale.Value, dtpSaleEndDate.Value, price, discount);
             ClearFormFields();
-
-
-
-
-
-
-
-
 
         }
 

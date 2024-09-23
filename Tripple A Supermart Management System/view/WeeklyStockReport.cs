@@ -23,6 +23,13 @@ namespace Tripple_A_Supermart_Management_System.view
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found for the report.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 ReportDocument rprt = new ReportDocument();
                 rprt.Load(@"C:\Users\Defaulter\source\repos\Tripple A Supermart Management System\Tripple A Supermart Management System\view\WeeklyStock.rpt");
                 rprt.SetDataSource(dataTable);

@@ -65,7 +65,7 @@ namespace Tripple_A_Supermart_Management_System.view
             }
             else
             {
-                MessageBox.Show("No data found!"); // Display a message if no data is found
+                MessageBox.Show("No data found for given Sale Id!","Invalid Sale Search",MessageBoxButtons.OK,MessageBoxIcon.Error); // Display a message if no data is found
             }
 
 

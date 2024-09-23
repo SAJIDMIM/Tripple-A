@@ -79,6 +79,19 @@ namespace Tripple_A_Supermart_Management_System.view
             double cost = Convert.ToDouble(txtCost.Text); // Assuming txtCost is the TextBox control where the user enters the cost
             DateTime lastUpdatedStock = dtpLastUpdated.Value;
 
+            if (string.IsNullOrWhiteSpace(stockId))
+            {
+                MessageBox.Show("All fields are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+            if (!double.TryParse(txtCost.Text, out cost))
+            {
+                MessageBox.Show("Invalid cost. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             CStock setPrice = new CStock();
             setPrice.setStockPrice(stockId, cost, lastUpdatedStock);
 

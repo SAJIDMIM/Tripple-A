@@ -88,6 +88,7 @@ namespace Tripple_A_Supermart_Management_System
             this.monthlySaleReportToolStripMenuItem.Name = "monthlySaleReportToolStripMenuItem";
             this.monthlySaleReportToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
             this.monthlySaleReportToolStripMenuItem.Text = "Monthly Sale Report";
+            this.monthlySaleReportToolStripMenuItem.Click += new System.EventHandler(this.monthlySaleReportToolStripMenuItem_Click);
             // 
             // analyzeSaleDataToolStripMenuItem
             // 

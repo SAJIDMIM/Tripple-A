@@ -28,6 +28,18 @@ namespace Tripple_A_Supermart_Management_System.view
             DateTime NextDate = dtp_Next_Date.Value;
             string status = cmbStatus.SelectedItem.ToString();
             string emailNotify = txt_Email_Notify.Text;
+            if (string.IsNullOrWhiteSpace(ReminderId) || Option == null || string.IsNullOrWhiteSpace(Message) || string.IsNullOrWhiteSpace(txtdueAmount.Text) || status == null || string.IsNullOrWhiteSpace(emailNotify))
+            {
+                MessageBox.Show("All fields are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+          
+            if (!double.TryParse(txtdueAmount.Text, out dueAmount))
+            {
+                MessageBox.Show("Invalid due amount. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             CBillingReminder sendBill = new CBillingReminder();
             sendBill.sendBillingReminder(ReminderId, Date, Option, Message, dueAmount, NextDate, status, emailNotify);
@@ -42,6 +54,13 @@ namespace Tripple_A_Supermart_Management_System.view
             }
            
 
+        }
+
+        private void picGoBackAdminLogin_Click(object sender, EventArgs e)
+        {
+            AdminLogin back = new AdminLogin();
+            back.Show();
+            this.Hide();
         }
     }
 }

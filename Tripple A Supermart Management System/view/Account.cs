@@ -24,25 +24,33 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Search_Account_Click(object sender, EventArgs e)
         {
-            int userId = Convert.ToInt32(txtUserId.Text);
-
+            int userId;
 
             // Validate User ID
-            if (userId <= 0)
+            if (!int.TryParse(txtUserId.Text, out userId) || userId <= 0)
             {
                 MessageBox.Show("Please enter a valid User ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvAccountDetails.DataSource = null; // Clear the DataGridView
                 return;
             }
 
             // Create an instance of the CAccount class.
             CAccount viewAccountDetails = new CAccount();
 
-
             // Call the viewAccount method to retrieve and display account details.
             DataTable accountDetails = viewAccountDetails.viewAccount(userId);
 
-            // Now you need to populate the DataGridView with the accountDetails data
-            dgvAccountDetails.DataSource = accountDetails; // Assuming you have a DataGridView named guna2DataGridView1
+            if (accountDetails != null && accountDetails.Rows.Count > 0)
+            {
+                // Populate the DataGridView with the accountDetails data
+                dgvAccountDetails.DataSource = accountDetails;
+                txtUserId.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No account details found for the given User ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvAccountDetails.DataSource = null; // Clear the DataGridView
+            }
         }
 
         private void picGoBackAdminLogin_Click(object sender, EventArgs e)
