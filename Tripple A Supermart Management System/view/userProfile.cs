@@ -46,7 +46,7 @@ namespace Tripple_A_Supermart_Management_System.view
             }
 
             CProfile newProfile2 = new CProfile();
-            newProfile2.updateUserProfile(firstName, lastName, gender, doB, userType, userPhoto);
+           // newProfile2.updateUserProfile(firstName, lastName, gender, doB, userType, userPhoto);
 
             // Load the updated profile details for users only
             // When the ordinary users logs in
@@ -176,7 +176,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 byte[] userPhoto = (byte[])profile.AdminPhoto;
 
                 CProfile newProfile = new CProfile();
-                newProfile.updateUserProfile(firstName, lastName, gender, doB, userType, userPhoto);
+               // newProfile.updateUserProfile(firstName, lastName, gender, doB, userType, userPhoto);
             }
         }
 
