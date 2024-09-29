@@ -82,7 +82,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             // Implement your ID validation logic here
             // For example:
-            return deliveryId.Length == 4; // Assuming the ID should have a length of 10 characters
+            return deliveryId.Length == 5; // Assuming the ID should have a length of 10 characters
         }
 
         private void txtProductId_TextChanged(object sender, EventArgs e)
@@ -178,6 +178,24 @@ namespace Tripple_A_Supermart_Management_System.view
             CCustomerOrder newOrder = new CCustomerOrder();
             newOrder.placeOrder(orderId, mobile, customerName, productId, productName, itemId, itemName, Quantity, unitprice, discount, tax, totalprice, paymentMethod, payDate, status,stockId,stockName);
 
+            // Clear the fields
+            txt_Order_Id.Text = string.Empty;
+            txtCustId.Text = string.Empty;
+            txtCustName.Text = string.Empty;
+            txtProductId.Text = string.Empty;
+            txtProductName.Text = string.Empty;
+            txtItemId.Text = string.Empty;
+            txtItemName.Text = string.Empty;
+            txtQty.Text = string.Empty;
+            txtUnitPrice.Text = string.Empty;
+            txtDiscount.Text = string.Empty;
+            
+            txtTotalAmount.Text = string.Empty;
+            cmbPaymentMethod.SelectedItem = null;
+            dtpPayDate.Value = DateTime.Now;
+            cmbPaymentStatus.SelectedItem = null;
+            txt_Stock_Id.Text = string.Empty;
+            txt_Stock_Name.Text = string.Empty;
         }
 
         private void btn_Cancel_Customer_Order_Click(object sender, EventArgs e)
@@ -264,13 +282,12 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txt_Stock_Id_TextChanged(object sender, EventArgs e)
         {
-            if (txt_Stock_Id.Text != "")
+            if (txt_Stock_Id.Text.Length >= 4) // adjust this value to the length of your stock ID
             {
                 string stockId = txt_Stock_Id.Text;
 
                 // Check if the ID is valid (e.g. it has a certain length or format)
                 try
-
                 {
                     CCustomerOrder newStock = new CCustomerOrder();
                     DataTable stockDetails = newStock.viewStock(stockId);
@@ -279,20 +296,21 @@ namespace Tripple_A_Supermart_Management_System.view
                     {
                         DataRow row = stockDetails.Rows[0];
                         txt_Stock_Name.Text = row["stockName"].ToString();
-                        
                     }
                     else
                     {
                         MessageBox.Show("No Stock found with the provided Stock ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txt_Stock_Name.Text = "";
-                        
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex.Message);
                 }
-
+            }
+            else
+            {
+                txt_Stock_Name.Text = "";
             }
         }
 
