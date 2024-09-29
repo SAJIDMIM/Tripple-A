@@ -435,8 +435,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbDep.FormattingEnabled = true;
             this.cmbDep.Items.AddRange(new object[] {
-            "abc",
-            "bbc"});
+            "Fruit",
+            "Vejetable",
+            "Meat",
+            "Beverage",
+            "Diary",
+            "Grain"});
             this.cmbDep.Location = new System.Drawing.Point(283, 612);
             this.cmbDep.Name = "cmbDep";
             this.cmbDep.Size = new System.Drawing.Size(121, 28);
@@ -470,8 +474,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Items.AddRange(new object[] {
-            "Fruits",
-            "Vejetables"});
+            "Fruit",
+            "Vejetable",
+            "Meat",
+            "Beverage",
+            "Diary",
+            "Grain"});
             this.cmbCategory.Location = new System.Drawing.Point(559, 611);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 28);

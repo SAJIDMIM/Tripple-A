@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/Tripple A Supermart Management System/</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -587,18 +587,6 @@
     <Compile Include="view\weeklyPayment.Designer.cs">
       <DependentUpon>weeklyPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\weeklyPaymentReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>weeklyPaymentReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="view\WeeklyStock.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WeeklyStock.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="view\CustomerBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -610,6 +598,18 @@
     </Compile>
     <Compile Include="view\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\weeklyPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>weeklyPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\WeeklyStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeeklyStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="view\WeeklyStockReport.cs">
       <SubType>Form</SubType>
@@ -900,6 +900,12 @@
     <EmbeddedResource Include="view\weeklyPayment.resx">
       <DependentUpon>weeklyPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\CustomerBill.resx">
+      <DependentUpon>CustomerBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\weeklyPaymentReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>weeklyPaymentReport.cs</LastGenOutput>
@@ -907,12 +913,6 @@
     <EmbeddedResource Include="view\WeeklyStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>WeeklyStock.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\CustomerBill.resx">
-      <DependentUpon>CustomerBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\WeeklyStockReport.resx">
       <DependentUpon>WeeklyStockReport.cs</DependentUpon>

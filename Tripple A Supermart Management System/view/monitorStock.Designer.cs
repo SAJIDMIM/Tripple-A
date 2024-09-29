@@ -362,9 +362,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbStockType.FormattingEnabled = true;
             this.cmbStockType.Items.AddRange(new object[] {
-            "Vejetables",
-            "Fruits",
-            "Chocolates"});
+            "Fruit",
+            "Vejetable",
+            "Meat",
+            "Beverage",
+            "Diary",
+            "Grain"});
             this.cmbStockType.Location = new System.Drawing.Point(201, 416);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.Size = new System.Drawing.Size(109, 28);
@@ -374,8 +377,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbStockWeight.FormattingEnabled = true;
             this.cmbStockWeight.Items.AddRange(new object[] {
-            "Per Kilo Grams",
-            "Per Grams"});
+            "10kg",
+            "5kg",
+            "2kg",
+            "500g",
+            "2L",
+            "1L"});
             this.cmbStockWeight.Location = new System.Drawing.Point(201, 648);
             this.cmbStockWeight.Name = "cmbStockWeight";
             this.cmbStockWeight.Size = new System.Drawing.Size(109, 28);
@@ -385,9 +392,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbReorderLevel.FormattingEnabled = true;
             this.cmbReorderLevel.Items.AddRange(new object[] {
-            "10",
-            "12",
+            "50",
+            "30",
+            "80",
+            "25",
             "20",
+            "40",
             "30"});
             this.cmbReorderLevel.Location = new System.Drawing.Point(549, 541);
             this.cmbReorderLevel.Name = "cmbReorderLevel";

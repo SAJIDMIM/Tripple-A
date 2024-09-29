@@ -351,7 +351,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // 
             this.cmbProductType.FormattingEnabled = true;
             this.cmbProductType.Items.AddRange(new object[] {
-            "Fruits"});
+            "Fruit",
+            "Vejetable",
+            "Meat",
+            "Beverage",
+            "Diary",
+            "Grain"});
             this.cmbProductType.Location = new System.Drawing.Point(275, 458);
             this.cmbProductType.Name = "cmbProductType";
             this.cmbProductType.Size = new System.Drawing.Size(121, 28);
