@@ -30,7 +30,11 @@ namespace Tripple_A_Supermart_Management_System.view
 
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query = "select employeeId,firstName,lastName,empType,actorId,position,department,DateJoined,Salary,Retirement from Employee";
+                // Update the query to exclude employees with Retirement = 'Yes'
+                string query = "SELECT employeeId, firstName, lastName, empType, position, department, DateJoined, Salary, Retirement " +
+                               "FROM Employee " +
+                               "WHERE Retirement != 'Yes'";  // Exclude retired employees
+
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
 

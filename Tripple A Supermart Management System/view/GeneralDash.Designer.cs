@@ -78,28 +78,28 @@ namespace Tripple_A_Supermart_Management_System
             // normalCustomerToolStripMenuItem
             // 
             this.normalCustomerToolStripMenuItem.Name = "normalCustomerToolStripMenuItem";
-            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.normalCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.normalCustomerToolStripMenuItem.Text = "Normal Customer";
             this.normalCustomerToolStripMenuItem.Click += new System.EventHandler(this.normalCustomerToolStripMenuItem_Click);
             // 
             // loyaltyCustomerToolStripMenuItem
             // 
             this.loyaltyCustomerToolStripMenuItem.Name = "loyaltyCustomerToolStripMenuItem";
-            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.loyaltyCustomerToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.loyaltyCustomerToolStripMenuItem.Text = "Loyalty Customer";
             this.loyaltyCustomerToolStripMenuItem.Click += new System.EventHandler(this.loyaltyCustomerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.supplierToolStripMenuItem.Text = "Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // updateProfileToolStripMenuItem
             // 
             this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.updateProfileToolStripMenuItem.Text = "Update Profile";
             this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
             // 
@@ -110,6 +110,7 @@ namespace Tripple_A_Supermart_Management_System
             this.generateCustomerReportToolStripMenuItem.Name = "generateCustomerReportToolStripMenuItem";
             this.generateCustomerReportToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
             this.generateCustomerReportToolStripMenuItem.Text = "Generate Customer Report";
+            this.generateCustomerReportToolStripMenuItem.Click += new System.EventHandler(this.generateCustomerReportToolStripMenuItem_Click);
             // 
             // monthlyCustomerReportToolStripMenuItem
             // 

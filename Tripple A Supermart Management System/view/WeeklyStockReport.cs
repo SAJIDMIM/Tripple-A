@@ -19,7 +19,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query = "select * from Stock";
+                string query = "select stockId,stockName,stockType,stockQuantity,stockWeight,cost,reorderLevel,stockDate,lastUpdatedDate from Stock";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);

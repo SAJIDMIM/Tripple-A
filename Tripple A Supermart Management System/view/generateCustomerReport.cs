@@ -24,7 +24,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query = "select * from Customer";
+                string query = "select customerId,customerName,DoB,Gender,City,Street,PostalCode,mobile,Type from Customer";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);

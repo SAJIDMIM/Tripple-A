@@ -71,5 +71,10 @@ namespace Tripple_A_Supermart_Management_System
             newProfile.Show();
             this.Hide();
         }
+
+        private void generateCustomerReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

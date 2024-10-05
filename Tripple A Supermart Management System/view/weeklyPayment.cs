@@ -22,7 +22,6 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Generate_Weekly_Payment_Click(object sender, EventArgs e)
         {
-           
 
             using (SqlConnection con = MDBConnection.createConnection())
             {
@@ -33,7 +32,11 @@ namespace Tripple_A_Supermart_Management_System.view
                     return;
                 }
 
-                string query = "select * from CustomerOrder";
+                // Modify the query to include only approved orders
+                string query = "SELECT orderId, mobile, customerName, productName, itemName, Quantity, unitprice, discount, tax, totalprice, paymentMethod, payDate, status " +
+                               "FROM CustomerOrder " +
+                               "WHERE status = 'approved'";  // Only include approved orders
+
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -41,7 +44,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 // Check if the query returned any results
                 if (dataTable.Rows.Count == 0)
                 {
-                    MessageBox.Show("No data found for weekly payment report", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No approved orders found for the weekly payment report", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
