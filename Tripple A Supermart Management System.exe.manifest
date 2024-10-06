@@ -451,14 +451,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tripple A Supermart Management System.exe" size="21277688">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tripple A Supermart Management System.exe" size="21280248">
       <assemblyIdentity name="Tripple A Supermart Management System" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UzgD1XxpwmfNePbXERoiXTmsFjNd8pAAYrmRawHW6ps=</dsig:DigestValue>
+        <dsig:DigestValue>mbA6Up/iheMuMPeavSkxaXSHS/HpOJcclzbscVYufP4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

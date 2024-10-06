@@ -19,7 +19,7 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             InitializeComponent();
             DisplayNextCartId();
-            
+
         }
         private void DisplayNextCartId()
         {
@@ -40,58 +40,59 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void txtOrderId_TextChanged(object sender, EventArgs e)
         {
+            // Only proceed when there is text in the Order ID field
             if (!string.IsNullOrWhiteSpace(txtOrderId.Text))
             {
                 string orderId = txtOrderId.Text.Trim(); // Trim whitespace
 
-                // Validate Order ID format if needed (e.g., length, characters)
-                if (orderId.Length < 2) // Example validation: must be at least 2 characters
+                // Wait until at least 2 characters are entered before checking the order
+                if (orderId.Length >= 2) // Example: Start fetching data when length is 2 or more
                 {
-                    MessageBox.Show("Please enter a valid Order ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    ClearFields();
-                    return;
-                }
-
-                // Check if the ID is valid
-                try
-                {
-                    CAddtoCart newOrder = new CAddtoCart();
-                    DataTable orderDetails = newOrder.viewOrder(orderId);
-
-                    if (orderDetails.Rows.Count > 0)
+                    try
                     {
-                        DataRow row = orderDetails.Rows[0];
+                        CAddtoCart newOrder = new CAddtoCart();
+                        DataTable orderDetails = newOrder.viewOrder(orderId);
 
-                        // Populate fields with retrieved data
-                        txtCustName.Text = row["customerName"].ToString();
-                        txtPN.Text = row["productName"].ToString();
-                        txtIN.Text = row["itemName"].ToString();
-                        txtQty.Text = row["Quantity"].ToString();
-                        txtUnitPrice.Text = row["unitprice"].ToString();
-                        txtDiscount.Text = row["discount"].ToString();
-                        txtTax.Text = row["tax"].ToString();
-                        txtTotal.Text = row["totalprice"].ToString();
-
-                        // Handle DateTime parsing
-                        if (DateTime.TryParse(row["payDate"].ToString(), out DateTime payDate))
+                        if (orderDetails.Rows.Count > 0)
                         {
-                            dtpPayDate.Value = payDate;
-                        }
+                            DataRow row = orderDetails.Rows[0];
 
-                        cmbPayMethod.Text = row["paymentMethod"].ToString();
-                        txtStockName.Text = row["stockName"].ToString();
+                            // Populate fields with retrieved data
+                            txtCustName.Text = row["customerName"].ToString();
+                            txtPN.Text = row["productName"].ToString();
+                            txtIN.Text = row["itemName"].ToString();
+                            txtQty.Text = row["Quantity"].ToString();
+                            txtUnitPrice.Text = row["unitprice"].ToString();
+                            txtDiscount.Text = row["discount"].ToString();
+                            txtTax.Text = row["tax"].ToString();
+                            txtTotal.Text = row["totalprice"].ToString();
+
+                            // Handle DateTime parsing
+                            if (DateTime.TryParse(row["payDate"].ToString(), out DateTime payDate))
+                            {
+                                dtpPayDate.Value = payDate;
+                            }
+
+                            cmbPayMethod.Text = row["paymentMethod"].ToString();
+                            txtStockName.Text = row["stockName"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No order found with the provided Order ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearFields(); // Clear fields if no order found
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("No order found with the provided Order ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields(); // Clear fields if no order found
+                        Console.WriteLine("Error: " + ex.Message);
+                        MessageBox.Show("An error occurred while retrieving the order details. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearFields(); // Clear fields in case of an error
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine("Error: " + ex.Message);
-                    MessageBox.Show("An error occurred while retrieving the order details. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearFields(); // Clear fields in case of an error
+                    // If the entered text is less than 2 characters, simply clear the fields and do not show an error
+                    ClearFields();
                 }
             }
             else
@@ -199,11 +200,12 @@ namespace Tripple_A_Supermart_Management_System.view
 
         private void btn_Issue_Receipt_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btn_Issue_Receipt_Click_1(object sender, EventArgs e)
         {
+
             // 1. Retrieve Order Data
             string orderId = txtOrderId.Text.Trim(); // Trim for safety
             if (string.IsNullOrEmpty(orderId))
@@ -215,28 +217,50 @@ namespace Tripple_A_Supermart_Management_System.view
             CAddtoCart cart = new CAddtoCart();
 
             // 2. Fetch Receipt Data
-            DataTable receiptData = cart.GetReceiptData(orderId);
+            DataTable receiptData;
+            try
+            {
+                receiptData = cart.GetReceiptData(orderId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while retrieving receipt data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-         
+            // Check if any data was retrieved
+            if (receiptData == null || receiptData.Rows.Count == 0)
+            {
+                MessageBox.Show("No data found for the provided Order ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // 4. Format Receipt Content (Example using RichTextBox)
             RichTextBox receiptText = new RichTextBox();
             receiptText.Font = new Font("Courier New", 10);
             receiptText.Text = "Order Receipt\n\n";
 
-            DataRow row = receiptData.Rows[0];
-            receiptText.Text += $"Order ID: {row["orderId"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Customer Name: {row["CustomerName"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Product Name: {row["ProductName"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Item Name: {row["ItemName"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Quantity: {row["Quantity"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Unit Price: {row["UnitPrice"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Discount: {row["Discount"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Tax: {row["Tax"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Total Price: {row["TotalPrice"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Pay Date: {row["PayDate"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Payment Method: {row["PaymentMethod"]}\n"; // Adjust field names if needed
-            receiptText.Text += $"Stock Name: {row["StockName"]}\n"; // Adjust field names if needed
+            try
+            {
+                DataRow row = receiptData.Rows[0];
+                receiptText.Text += $"Order ID: {row["orderId"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Customer Name: {row["CustomerName"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Product Name: {row["ProductName"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Item Name: {row["ItemName"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Quantity: {row["Quantity"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Unit Price: {row["UnitPrice"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Discount: {row["Discount"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Tax: {row["Tax"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Total Price: {row["TotalPrice"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Pay Date: {row["PayDate"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Payment Method: {row["PaymentMethod"]}\n"; // Adjust field names if needed
+                receiptText.Text += $"Stock Name: {row["StockName"]}\n"; // Adjust field names if needed
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while formatting the receipt: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // 5. Print the Receipt
             PrintDocument printDocument = new PrintDocument();
@@ -250,9 +274,17 @@ namespace Tripple_A_Supermart_Management_System.view
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument;
 
+            // Open the print dialog and check the user's response
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
-                printDocument.Print();
+                try
+                {
+                    printDocument.Print();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while printing: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -276,58 +308,100 @@ namespace Tripple_A_Supermart_Management_System.view
             CAddtoCart cart = new CAddtoCart();
 
             // 2. Fetch Bill Data
-            DataTable billData = cart.GetReceiptData(orderId);
+            DataTable billData;
+            try
+            {
+                billData = cart.GetReceiptData(orderId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while retrieving bill data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-         
-            // 4. Format Bill Content (Example using RichTextBox)
+            // Check if any data was retrieved
+            if (billData == null || billData.Rows.Count == 0)
+            {
+                MessageBox.Show("No data found for the provided Order ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 4. Format Bill Content
             RichTextBox billText = new RichTextBox();
             billText.Font = new Font("Courier New", 10);
-            billText.Text = "Bill\n\n";
+            billText.Text = "------------------------------------------------------------------------------\n";
+            billText.Text += "           CUSTOMER BILL           \n";
+            billText.Text += "-----------------------------------------------------------------------------\n";
+            billText.Text += "Order Details\n";
+            billText.Text += "-----------------------------------------------------------------------------\n";
 
-            DataRow row = billData.Rows[0];
-            billText.Text += $"Order ID: {row["orderId"]}\n"; // Adjust field names if needed
-            billText.Text += $"Customer Name: {row["CustomerName"]}\n"; // Adjust field names if needed
-            billText.Text += $"Product Name: {row["ProductName"]}\n"; // Adjust field names if needed
-            billText.Text += $"Item Name: {row["ItemName"]}\n"; // Adjust field names if needed
-            billText.Text += $"Quantity: {row["Quantity"]}\n"; // Adjust field names if needed
-            billText.Text += $"Unit Price: {row["UnitPrice"]}\n"; // Adjust field names if needed
-            billText.Text += $"Discount: {row["Discount"]}\n"; // Adjust field names if needed
-            billText.Text += $"Tax: {row["Tax"]}\n"; // Adjust field names if needed
-            billText.Text += $"Total Price: {row["TotalPrice"]}\n"; // Adjust field names if needed
-            billText.Text += $"Pay Date: {row["PayDate"]}\n"; // Adjust field names if needed
-            billText.Text += $"Payment Method: {row["PaymentMethod"]}\n"; // Adjust field names if needed
-            billText.Text += $"Stock Name: {row["StockName"]}\n"; // Adjust field names if needed
+            try
+            {
+                DataRow row = billData.Rows[0];
+
+                billText.Text += $"Order ID: {row["orderId"]}\n"; // Adjust field names if needed
+                billText.Text += $"Customer Name: {row["CustomerName"]}\n"; // Adjust field names if needed
+                billText.Text += $"Date: {row["PayDate"]}\n"; // Adjust field names if needed
+                billText.Text += $"Payment Method: {row["PaymentMethod"]}\n"; // Adjust field names if needed
+                billText.Text += "--------------------------------------------------------------------------\n";
+
+                // Add item details in a structured way
+                billText.Text += "Items Purchased:\n";
+                billText.Text += "--------------------------------------------------------------------------\n";
+                billText.Text += $"{"Item Name",-20} {"Quantity",-10} {"Unit Price",-10} {"Total Price",-10}\n";
+                billText.Text += "--------------------------------------------------------------------------\n";
+
+                // You may need to loop through billData if there are multiple items
+                foreach (DataRow itemRow in billData.Rows)
+                {
+                    string itemName = itemRow["ItemName"].ToString();
+                    int quantity = Convert.ToInt32(itemRow["Quantity"]);
+                    decimal unitPrice = Convert.ToDecimal(itemRow["UnitPrice"]);
+                    decimal totalPrice = quantity * unitPrice; // Calculate total price for this item
+
+                    billText.Text += $"{itemName,-20} {quantity,-10} {unitPrice,-10:C} {totalPrice,-10:C}\n"; // Adjust field names if needed
+                }
+
+                billText.Text += "---------------------------------------------------------------------------\n";
+                billText.Text += $"Discount: {row["Discount"]:C}\n"; // Adjust field names if needed
+                billText.Text += $"Tax: {row["Tax"]:C}\n"; // Adjust field names if needed
+                billText.Text += $"Grand Total: {row["TotalPrice"]:C}\n"; // Adjust field names if needed
+                billText.Text += "---------------------------------------------------------------------------\n";
+                billText.Text += "Thank you for shopping with us!\n";
+                billText.Text += "---------------------------------------------------------------------------\n";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while formatting the bill: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // 5. Print the Bill
             PrintDocument printDocument = new PrintDocument();
             printDocument.PrintPage += (s, args) =>
             {
                 // Draw the bill content from the RichTextBox
-                args.Graphics.DrawString(billText.Text, billText.Font,
-                                          Brushes.Black, new PointF(10, 10));
+                args.Graphics.DrawString(billText.Text, billText.Font, Brushes.Black, new PointF(10, 10));
             };
 
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument;
+
+            // Open the print dialog and check the user's response
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    // This is the correct way to call the Print function
                     printDocument.Print();
 
-                    // Navigate to another form to display the copy
-                    CustomerBill newBill = new CustomerBill();
-                    newBill.Show();
-                    this.Hide();
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Failed to print the bill. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
     }
-    }
+}
 
