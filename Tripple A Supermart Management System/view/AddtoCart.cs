@@ -42,7 +42,15 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             if (!string.IsNullOrWhiteSpace(txtOrderId.Text))
             {
-                string orderId = txtOrderId.Text;
+                string orderId = txtOrderId.Text.Trim(); // Trim whitespace
+
+                // Validate Order ID format if needed (e.g., length, characters)
+                if (orderId.Length < 2) // Example validation: must be at least 2 characters
+                {
+                    MessageBox.Show("Please enter a valid Order ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ClearFields();
+                    return;
+                }
 
                 // Check if the ID is valid
                 try
@@ -75,14 +83,15 @@ namespace Tripple_A_Supermart_Management_System.view
                     }
                     else
                     {
-                        MessageBox.Show("No Order found with the provided Order ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
+                        MessageBox.Show("No order found with the provided Order ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearFields(); // Clear fields if no order found
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex.Message);
-                    MessageBox.Show("An error occurred while retrieving the order details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred while retrieving the order details. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearFields(); // Clear fields in case of an error
                 }
             }
             else

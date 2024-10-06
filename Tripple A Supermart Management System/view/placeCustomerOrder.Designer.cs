@@ -270,6 +270,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.cmbPaymentStatus.Name = "cmbPaymentStatus";
             this.cmbPaymentStatus.Size = new System.Drawing.Size(121, 28);
             this.cmbPaymentStatus.TabIndex = 168;
+            this.cmbPaymentStatus.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentStatus_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -571,6 +572,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txt_Order_Id.SelectedText = "";
             this.txt_Order_Id.Size = new System.Drawing.Size(179, 40);
             this.txt_Order_Id.TabIndex = 134;
+            this.txt_Order_Id.TextChanged += new System.EventHandler(this.txt_Order_Id_TextChanged);
             // 
             // pictureBox1
             // 

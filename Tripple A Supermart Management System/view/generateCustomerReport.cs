@@ -24,7 +24,15 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query = "select customerId,customerName,DoB,Gender,City,Street,PostalCode,mobile,Type from Customer";
+                string query = @"
+            SELECT c.customerId, c.customerName, c.DoB, c.Gender, c.City, c.Street, c.PostalCode, c.mobile, c.Type
+            FROM Customer c
+            WHERE c.customerId IN (
+                SELECT o.customerId
+                FROM Order o
+                WHERE o.approvalStatus = 'Approved'
+            )
+        ";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);

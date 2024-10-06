@@ -145,6 +145,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 try
                 {
                     // Insert order record
+                    
                     SqlCommand command = new SqlCommand("INSERT INTO CustomerOrder (orderId, mobile, customerName, productId, productName, itemId, itemName, Quantity, unitPrice, discount, tax, totalprice, paymentMethod, payDate, status,stockId,stockName) VALUES (@OrderId, @Mobile, @CustomerName, @ProductId, @ProductName, @ItemId, @ItemName, @Quantity, @UnitPrice, @Discount, @Tax, @TotalPrice, @PaymentMethod, @PayDate, @Status,@stockId,@stockName)", connection, transaction);
 
                     command.Parameters.AddWithValue("@OrderId", orderId);
@@ -328,9 +329,10 @@ namespace Tripple_A_Supermart_Management_System.model
 
                 SqlCommand command = new SqlCommand("UPDATE CustomerOrder SET status = @status WHERE orderId = @orderId", connection);
 
+               
+
                 command.Parameters.AddWithValue("@orderId", orderId);
                 command.Parameters.AddWithValue("@status", status);
-                
 
                 int count = command.ExecuteNonQuery();
                 if (count > 0)
@@ -339,9 +341,28 @@ namespace Tripple_A_Supermart_Management_System.model
                 }
                 else
                 {
-                    MessageBox.Show("Approval cannot be granted.An error occurred", "Invalid Approval", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Approval cannot be granted. An error occurred", "Invalid Approval", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+        public DataTable getOrder(string orderId)
+        {
+            DataTable orderDetails = new DataTable();
+
+            using (SqlConnection connection = MDBConnection.createConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT status FROM CustomerOrder WHERE orderId = @orderId", connection);
+
+                command.Parameters.AddWithValue("@orderId", orderId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                orderDetails.Load(reader);
+            }
+
+            return orderDetails;
         }
     }
 }

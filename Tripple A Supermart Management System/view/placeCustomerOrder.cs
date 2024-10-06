@@ -84,6 +84,12 @@ namespace Tripple_A_Supermart_Management_System.view
             // For example:
             return deliveryId.Length == 5; // Assuming the ID should have a length of 10 characters
         }
+        private bool IsValidOrderId(string orderId)
+        {
+            // Implement your ID validation logic here
+            // For example:
+            return orderId.Length == 2; // Assuming the ID should have a length of 10 characters
+        }
 
         private void txtProductId_TextChanged(object sender, EventArgs e)
         {
@@ -175,10 +181,18 @@ namespace Tripple_A_Supermart_Management_System.view
             string stockId = txt_Stock_Id.Text;
             string stockName = txt_Stock_Name.Text;
 
+            
+
             CCustomerOrder newOrder = new CCustomerOrder();
-            newOrder.placeOrder(orderId, mobile, customerName, productId, productName, itemId, itemName, Quantity, unitprice, discount, tax, totalprice, paymentMethod, payDate, status,stockId,stockName);
+            newOrder.placeOrder(orderId, mobile, customerName, productId, productName, itemId, itemName, Quantity, unitprice, discount, tax, totalprice, paymentMethod, payDate, status, stockId, stockName);
 
             // Clear the fields
+            ClearFields();
+
+           
+        }
+        private void ClearFields()
+        {
             txt_Order_Id.Text = string.Empty;
             txtCustId.Text = string.Empty;
             txtCustName.Text = string.Empty;
@@ -189,7 +203,6 @@ namespace Tripple_A_Supermart_Management_System.view
             txtQty.Text = string.Empty;
             txtUnitPrice.Text = string.Empty;
             txtDiscount.Text = string.Empty;
-            
             txtTotalAmount.Text = string.Empty;
             cmbPaymentMethod.SelectedItem = null;
             dtpPayDate.Value = DateTime.Now;
@@ -317,6 +330,74 @@ namespace Tripple_A_Supermart_Management_System.view
         private void txt_Stock_Name_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Order_Id_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_Order_Id.Text != "")
+            {
+                string orderId = txt_Order_Id.Text;
+
+                // Check if the ID is valid (e.g. it has a certain length or format)
+                if (IsValidOrderId(orderId))
+                {
+                    CCustomerOrder newOrder = new CCustomerOrder();
+                    DataTable orderDetails = newOrder.getOrder(orderId);
+
+                    if (orderDetails.Rows.Count > 0)
+                    {
+                        DataRow row = orderDetails.Rows[0];
+
+
+                        string status = row["status"].ToString();
+
+                        // Check if the status is in the combobox items
+                        if (cmbPaymentStatus.Items.Contains(status))
+                        {
+                            cmbPaymentStatus.SelectedItem = status;
+                        }
+                        else
+                        {
+                            // If the status is not in the combobox items, add it
+                            cmbPaymentStatus.Items.Add(status);
+                            cmbPaymentStatus.SelectedItem = status;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No order found with the provided Order ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Clear or reset the fields if no product is found
+                        txtProductName.Text = "";
+                        cmbPaymentStatus.SelectedItem = null;
+                    }
+                }
+                else
+                {
+                    // Do nothing, the ID is not valid
+                }
+
+
+
+            }
+        }
+
+        private void cmbPaymentStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if an item is selected
+            if (cmbPaymentStatus.SelectedItem != null)
+            {
+                // Check if the selected item is not "Approved"
+                if (!cmbPaymentStatus.SelectedItem.ToString().Equals("Approved", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("Order is not approved. Please approve the order before placing it and contact the Junior Manager to be approved.", "Order Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                // Handle the case where no item is selected, if necessary
+                MessageBox.Show("Please select a payment status.", "Order Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -414,7 +414,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtPN.Name = "txtPN";
             this.txtPN.PasswordChar = '\0';
             this.txtPN.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPN.PlaceholderText = "Enter Product Id";
+            this.txtPN.PlaceholderText = "Enter Product Name";
             this.txtPN.SelectedText = "";
             this.txtPN.Size = new System.Drawing.Size(179, 40);
             this.txtPN.TabIndex = 140;
@@ -437,7 +437,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.txtCustName.Name = "txtCustName";
             this.txtCustName.PasswordChar = '\0';
             this.txtCustName.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtCustName.PlaceholderText = "Enter Customer Id";
+            this.txtCustName.PlaceholderText = "Enter Customer Name";
             this.txtCustName.SelectedText = "";
             this.txtCustName.Size = new System.Drawing.Size(179, 40);
             this.txtCustName.TabIndex = 138;
@@ -519,7 +519,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Issue_Receipt.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Issue_Receipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Issue_Receipt.ForeColor = System.Drawing.Color.Black;
-            this.btn_Issue_Receipt.Location = new System.Drawing.Point(305, 651);
+            this.btn_Issue_Receipt.Location = new System.Drawing.Point(310, 693);
             this.btn_Issue_Receipt.Name = "btn_Issue_Receipt";
             this.btn_Issue_Receipt.Size = new System.Drawing.Size(112, 45);
             this.btn_Issue_Receipt.TabIndex = 177;
@@ -536,7 +536,7 @@ namespace Tripple_A_Supermart_Management_System.view
             this.btn_Generate_Customer_Bill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Generate_Customer_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Generate_Customer_Bill.ForeColor = System.Drawing.Color.Black;
-            this.btn_Generate_Customer_Bill.Location = new System.Drawing.Point(566, 651);
+            this.btn_Generate_Customer_Bill.Location = new System.Drawing.Point(566, 688);
             this.btn_Generate_Customer_Bill.Name = "btn_Generate_Customer_Bill";
             this.btn_Generate_Customer_Bill.Size = new System.Drawing.Size(148, 65);
             this.btn_Generate_Customer_Bill.TabIndex = 178;
