@@ -153,12 +153,12 @@ namespace Tripple_A_Supermart_Management_System.view
         }
         private void CalculateTotalPrice()
         {
-            if (txtQty.Text != "" && txtUnitPrice.Text != "" && txtDiscount.Text != "")
+            if (!string.IsNullOrEmpty(txtQty.Text) && !string.IsNullOrEmpty(txtUnitPrice.Text) && !string.IsNullOrEmpty(txtDiscount.Text))
             {
                 int quantity = int.Parse(txtQty.Text);
                 double unitPrice = double.Parse(txtUnitPrice.Text);
                 double discountPercentage = double.Parse(txtDiscount.Text);
-                double taxRate = 0.3; // Use the fixed tax rate value
+                double taxRate = 0.3; // Fixed tax rate value
 
                 double totalPrice = quantity * unitPrice;
                 double discountAmount = totalPrice * (discountPercentage / 100);
@@ -166,7 +166,11 @@ namespace Tripple_A_Supermart_Management_System.view
                 double taxAmount = taxableAmount * (taxRate / 100);
                 double finalPrice = taxableAmount + taxAmount;
 
-                txtTotal.Text = finalPrice.ToString();
+                // Round off to 2 decimal places
+                finalPrice = Math.Round(finalPrice, 2);
+
+                // Display the final price as a string with 2 decimal points
+                txtTotal.Text = finalPrice.ToString("F2");
             }
             else
             {

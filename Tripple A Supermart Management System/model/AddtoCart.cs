@@ -125,7 +125,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 using (SqlConnection con = MDBConnection.createConnection())
                 {
                     con.Open();
-                    string query = "SELECT ISNULL(MAX(addtoCart), 0) + 1 FROM AddtoCart";
+                    string query = "SELECT ISNULL(MAX(addCartId), 0) + 1 FROM Cart";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         object result = cmd.ExecuteScalar();
@@ -153,7 +153,7 @@ namespace Tripple_A_Supermart_Management_System.model
                 SqlTransaction transaction = connection.BeginTransaction(); // Use transaction for atomicity
                 try
                 {
-                    // Check if order Id exists
+                    // Check if the order ID exists in the Cart
                     SqlCommand checkOrderCommand = new SqlCommand("SELECT Quantity FROM Cart WHERE orderId = @OrderId", connection, transaction);
                     checkOrderCommand.Parameters.AddWithValue("@OrderId", orderId);
                     object result = checkOrderCommand.ExecuteScalar();
@@ -161,40 +161,40 @@ namespace Tripple_A_Supermart_Management_System.model
                     if (result != null)
                     {
                         // Order exists, update the existing record
-                        int existingQuantity = (int)result;
-                        int newQuantity = existingQuantity + quantity; // Add new quantity to existing quantity
+                        int currentQuantity = (int)result;
+                        int newQuantity = currentQuantity + quantity; // Add new quantity to existing quantity
 
-                        // Update existing order quantity
+                        // Update the existing order with new quantity
                         SqlCommand updateOrderQuantityCommand = new SqlCommand("UPDATE Cart SET Quantity = @NewQuantity WHERE orderId = @OrderId", connection, transaction);
                         updateOrderQuantityCommand.Parameters.AddWithValue("@NewQuantity", newQuantity);
                         updateOrderQuantityCommand.Parameters.AddWithValue("@OrderId", orderId);
                         updateOrderQuantityCommand.ExecuteNonQuery();
 
-                        // Update Stock table
-                        SqlCommand updateStockCommand = new SqlCommand("UPDATE Stock SET stockQuantity = stockQuantity - @Quantity WHERE stockName = @stockName", connection, transaction);
+                        // Update the Stock table (deduct only the newly added quantity)
+                        SqlCommand updateStockCommand = new SqlCommand("UPDATE Stock SET stockQuantity = stockQuantity - @Quantity WHERE stockName = @StockName", connection, transaction);
                         updateStockCommand.Parameters.AddWithValue("@Quantity", quantity);
-                        updateStockCommand.Parameters.AddWithValue("@stockName", stockName);
+                        updateStockCommand.Parameters.AddWithValue("@StockName", stockName);
                         updateStockCommand.ExecuteNonQuery();
 
-                        // Update product table
+                        // Update the Product table
                         SqlCommand updateProductCommand = new SqlCommand("UPDATE Product SET Quantity = Quantity - @Quantity WHERE productName = @ProductName", connection, transaction);
                         updateProductCommand.Parameters.AddWithValue("@Quantity", quantity);
                         updateProductCommand.Parameters.AddWithValue("@ProductName", productName);
                         updateProductCommand.ExecuteNonQuery();
 
-                        // Update item table
+                        // Update the Item table
                         SqlCommand updateItemCommand = new SqlCommand("UPDATE Item SET Quantity = Quantity - @Quantity WHERE itemName = @ItemName", connection, transaction);
                         updateItemCommand.Parameters.AddWithValue("@Quantity", quantity);
                         updateItemCommand.Parameters.AddWithValue("@ItemName", itemName);
                         updateItemCommand.ExecuteNonQuery();
 
                         transaction.Commit(); // Commit transaction
-                        MessageBox.Show("Order quantity has been updated successfully", "Order Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Order quantity has been updated successfully.", "Order Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        // Insert new order record if order does not exist
-                        SqlCommand command = new SqlCommand("INSERT INTO Cart (customerName, productName, itemName, Quantity, unitPrice, discount, tax, totalprice, paymentMethod, payDate, stockName, orderId) VALUES (@CustomerName, @ProductName, @ItemName, @Quantity, @UnitPrice, @Discount, @Tax, @TotalPrice, @PaymentMethod, @PayDate, @stockName, @orderId)", connection, transaction);
+                        // Insert new order if it doesn't exist
+                        SqlCommand command = new SqlCommand("INSERT INTO Cart (customerName, productName, itemName, Quantity, unitPrice, discount, tax, totalprice, paymentMethod, payDate, stockName, orderId) VALUES (@CustomerName, @ProductName, @ItemName, @Quantity, @UnitPrice, @Discount, @Tax, @TotalPrice, @PaymentMethod, @PayDate, @StockName, @OrderId)", connection, transaction);
 
                         command.Parameters.AddWithValue("@OrderId", orderId);
                         command.Parameters.AddWithValue("@CustomerName", customerName);
@@ -207,30 +207,30 @@ namespace Tripple_A_Supermart_Management_System.model
                         command.Parameters.AddWithValue("@TotalPrice", totalPrice);
                         command.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
                         command.Parameters.AddWithValue("@PayDate", payDate);
-                        command.Parameters.AddWithValue("@stockName", stockName);
+                        command.Parameters.AddWithValue("@StockName", stockName);
 
                         int count = command.ExecuteNonQuery();
 
-                        // Update stock and quantities after inserting
-                        SqlCommand updateStockCommand = new SqlCommand("UPDATE Stock SET stockQuantity = stockQuantity - @Quantity WHERE stockName = @stockName", connection, transaction);
+                        // Update the Stock table (deduct newly added quantity)
+                        SqlCommand updateStockCommand = new SqlCommand("UPDATE Stock SET stockQuantity = stockQuantity - @Quantity WHERE stockName = @StockName", connection, transaction);
                         updateStockCommand.Parameters.AddWithValue("@Quantity", quantity);
-                        updateStockCommand.Parameters.AddWithValue("@stockName", stockName);
+                        updateStockCommand.Parameters.AddWithValue("@StockName", stockName);
                         updateStockCommand.ExecuteNonQuery();
 
-                        // Update product table
+                        // Update Product table
                         SqlCommand updateProductCommand = new SqlCommand("UPDATE Product SET Quantity = Quantity - @Quantity WHERE productName = @ProductName", connection, transaction);
                         updateProductCommand.Parameters.AddWithValue("@Quantity", quantity);
                         updateProductCommand.Parameters.AddWithValue("@ProductName", productName);
                         updateProductCommand.ExecuteNonQuery();
 
-                        // Update item table
+                        // Update Item table
                         SqlCommand updateItemCommand = new SqlCommand("UPDATE Item SET Quantity = Quantity - @Quantity WHERE itemName = @ItemName", connection, transaction);
                         updateItemCommand.Parameters.AddWithValue("@Quantity", quantity);
                         updateItemCommand.Parameters.AddWithValue("@ItemName", itemName);
                         updateItemCommand.ExecuteNonQuery();
 
                         transaction.Commit(); // Commit transaction
-                        MessageBox.Show("Order has been placed successfully", "Order Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Order has been placed successfully.", "Order Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
