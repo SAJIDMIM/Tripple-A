@@ -24,24 +24,21 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
-                string query = @"
-            SELECT c.customerId, c.customerName, c.DoB, c.Gender, c.City, c.Street, c.PostalCode, c.mobile, c.Type
-            FROM Customer c
-            WHERE c.customerId IN (
-                SELECT o.customerId
-                FROM Order o
-                WHERE o.approvalStatus = 'Approved'
-            )
-        ";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                con.Open(); // Open the connection
+
+                string query = "select * from Customer";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+
                 ReportDocument rprt = new ReportDocument();
                 rprt.Load(@"C:\Users\Defaulter\source\repos\Tripple A Supermart Management System\Tripple A Supermart Management System\view\MonthlyCustomerReport.rpt");
                 rprt.SetDataSource(dataTable);
 
                 crystalReportViewer1.ReportSource = rprt;
-            }
+            } // Closing brace for the using statement
         }
 
         private void picGeneralDash_Click(object sender, EventArgs e)

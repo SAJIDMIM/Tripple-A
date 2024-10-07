@@ -28,16 +28,17 @@ namespace Tripple_A_Supermart_Management_System.view
                 // Check if the connection is open
                 if (con.State != ConnectionState.Open)
                 {
-                    MessageBox.Show("Failed to open database connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    con.Open(); // Open the connection if it's not already open
                 }
 
                 // Modify the query to include only approved orders
                 string query = "SELECT orderId, mobile, customerName, productName, itemName, Quantity, unitprice, discount, tax, totalprice, paymentMethod, payDate, status " +
                                "FROM CustomerOrder " +
-                               "WHERE status = 'approved'";  // Only include approved orders
+                               "WHERE status = 'Approved';"; // Only include approved orders
 
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
@@ -55,6 +56,7 @@ namespace Tripple_A_Supermart_Management_System.view
                 crystalReportViewer1.ReportSource = rprt;
             }
         }
+        
 
         private void pic_Cash_Dash_Click(object sender, EventArgs e)
         {

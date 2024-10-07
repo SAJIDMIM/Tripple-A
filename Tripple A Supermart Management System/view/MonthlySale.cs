@@ -19,12 +19,24 @@ namespace Tripple_A_Supermart_Management_System.view
         {
             using (SqlConnection con = MDBConnection.createConnection())
             {
+                con.Open(); // Open the connection
+
                 string query = "select saleId,productId,productName,price,Quantity,saleStartDate,saleEndDate,priceCalculate,discount,payMethod,customerName from Sale";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+
+                // Check if the query returned any results
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No sales data found for the monthly sale report", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 ReportDocument rprt = new ReportDocument();
-                rprt.Load(@"C:\Users\Defaulter\source\repos\Tripple A Supermart Management System\Tripple A Supermart Management System\view\WeeklyStock.rpt");
+                rprt.Load(@"C:\Users\Defaulter\source\repos\Tripple A Supermart Management System\Tripple A Supermart Management System\view\MonthlySaleReport.rpt"); // Correct report file path
                 rprt.SetDataSource(dataTable);
 
                 crystalReportViewer1.ReportSource = rprt;
